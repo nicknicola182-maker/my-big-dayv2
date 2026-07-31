@@ -127,6 +127,9 @@ const VOICE = {
   albumTitle:  v("The album", "The album", "Everyone's photos", "THE COVER SHOOT", "Album"),
   moreTitle:   v("Everything else", "Everything else", "Bits and bobs", "THE DESK", "More"),
   homeTitle:   v("Tonight's business", "The plan", "The table", "THE ISSUE", "Home"),
+  /* Ziggy's composer is the only world whose nav model writes data, so it is
+     the only one that needs an acknowledgement. The others inherit house. */
+  composerAck: v("noted, babe.", "Noted.", "got it, love.", "NOTED.", "Added to your list"),
 };
 
 /* Tab labels are their own table, not the long titles above — a tab bar has

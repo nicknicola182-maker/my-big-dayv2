@@ -546,6 +546,154 @@ h2,#ob .qtitle,header.app .names,.land-title,.big{
 [data-world="monograph"] .petal,[data-world="monograph"] .spark{display:none}
 [data-world="order"] #landing,[data-world="monograph"] #landing{animation:none}
 
+/* ═══ card / row models ══════════════════════════════════════════════════
+   Every tab and sheet is ~80% "a list of rows". Varying the row here is what
+   makes four worlds cost far less than four times the work. */
+
+/* Anneke — a ruled ledger. The dotted leader between a name and its figure is
+   the single most recognisable thing about an account book, and it is one rule. */
+[data-world="order"] .row{
+  border-top:none;position:relative;align-items:baseline;gap:0;
+}
+[data-world="order"] .row > span:first-child{position:relative;padding-right:8px;background:var(--paper)}
+[data-world="order"] .row::before{
+  content:"";position:absolute;left:0;right:0;bottom:.42em;
+  border-bottom:1.5px dotted #C9B8A0;z-index:0;
+}
+[data-world="order"] .row .money,[data-world="order"] .row > span:last-child{
+  position:relative;background:var(--paper);padding-left:8px;z-index:1;
+}
+[data-world="order"] .task{border-top:none;border-bottom:1px solid var(--line)}
+
+/* Perdita — a magazine contents page. Entries are hairline-topped and carry a
+   page reference, which is what turns a list into an issue. */
+[data-world="monograph"] .row{border-top:1px solid var(--line);align-items:baseline}
+[data-world="monograph"] .task{border-top:1px solid var(--line);counter-increment:entry}
+[data-world="monograph"] .task .tx::after{
+  content:" — p." counter(entry);
+  font-size:10.5px;letter-spacing:.18em;color:var(--muted);white-space:nowrap;
+}
+[data-world="monograph"] .card{counter-reset:entry}
+
+/* The budget sections carry a per-section tint set inline (Ceremony pink,
+   Attire lilac…). That reads as a scrapbook, which is right for Ziggy and
+   Rosie and wrong for a ledger and a magazine — so those two flatten it and
+   keep the section colour only as a hairline. !important is required because
+   the tint is an inline style, not a class. */
+[data-world="order"] .secpanel,[data-world="monograph"] .secpanel{
+  background:transparent!important;border-radius:0;padding-left:0;padding-right:0;
+  border-top:1px solid var(--line);
+}
+[data-world="monograph"] .secpanel{border-top:2px solid var(--ink)}
+/* Square ticks. A round green pill is a friendly affordance; a ledger uses a
+   box you rule through and a magazine uses a hard square. */
+[data-world="order"] .tickc,[data-world="monograph"] .tickc{
+  border-radius:0;width:26px;height:26px;font-size:14px;box-shadow:none;
+  background:transparent;border:1.5px solid var(--ink);color:var(--ink);
+}
+[data-world="order"] .tickc.off,[data-world="monograph"] .tickc.off{
+  background:transparent;border-color:var(--line);color:transparent;
+}
+[data-world="order"] .pill,[data-world="order"] .qpill,[data-world="order"] .lockpill,
+[data-world="monograph"] .pill,[data-world="monograph"] .qpill,[data-world="monograph"] .lockpill{
+  border-radius:0;text-transform:uppercase;letter-spacing:.14em;font-size:9.5px;
+}
+
+/* The money field and the savebar are the two most-touched controls in the
+   app, so they are the last places a world should leak. */
+.costwrap input{border-radius:var(--w-radius-sm);box-shadow:var(--w-shadow)}
+.minifields input{border-radius:var(--w-radius-sm)}
+.savebar{background:var(--paper);border-top:1px solid var(--line)}
+.savebar .fabplus{border-radius:var(--w-btn-radius)}
+.savebar .send{border-radius:var(--w-btn-radius);letter-spacing:var(--w-btn-track)}
+[data-world="order"] .savebar .fabplus,[data-world="monograph"] .savebar .fabplus{
+  background:transparent;border:1.5px solid var(--ink);color:var(--ink);box-shadow:none;
+  width:44px;height:44px;font-size:22px;
+}
+[data-world="order"] .savebar .send,[data-world="monograph"] .savebar .send{
+  box-shadow:none;text-transform:uppercase;font-size:11.5px;
+}
+[data-world="order"] .costwrap input,[data-world="monograph"] .costwrap input{
+  border:1px solid var(--line);background:transparent;
+}
+[data-world="dressing"] .savebar{background:#2A0A26;border-top:1px solid rgba(232,190,110,.28)}
+[data-world="dressing"] .savebar .tot{color:#FBEDF4}
+
+/* Rosie — the objects on the table are the navigation. */
+.objnav{display:grid;gap:11px;padding:4px var(--gut,22px) 16px}
+[data-world="linen"] .objnav .obj{
+  display:flex;align-items:center;gap:13px;width:100%;text-align:left;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--w-radius);
+  padding:14px 16px;box-shadow:var(--w-shadow);position:relative;
+  transform:rotate(var(--w-rotate));
+}
+[data-world="linen"] .objnav .obj:nth-child(even){transform:rotate(calc(var(--w-rotate) * -1))}
+[data-world="linen"] .objnav .obj::before{
+  content:"";position:absolute;top:-8px;left:50%;transform:translateX(-50%) rotate(-1.5deg);
+  width:56px;height:15px;background:rgba(233,214,180,.75);
+}
+.objnav .oem{font-size:24px;flex:none}
+.objnav .obd{display:flex;flex-direction:column;gap:1px}
+.objnav .onm{font-family:var(--w-display);font-size:17px;color:var(--ink)}
+.objnav .osub{font-size:12.5px;color:var(--muted)}
+/* Only Rosie gets objects; if another world ever sets nav:objects it inherits
+   the plain stack rather than her tape. */
+.objnav{display:none}
+[data-world="linen"] .objnav{display:grid}
+/* Her stat grid gives way to them — two navigations would be one too many. */
+[data-world="linen"] .statgrid{display:none}
+/* And the tab bar recedes to a quiet strip rather than disappearing, so nobody
+   is ever stranded on a screen with no way back. */
+[data-world="linen"] #tabbar button{font-size:9.5px;opacity:.82}
+
+/* Ziggy — a thread with your best mate. The composer is his navigation model's
+   whole point, so it sits where a tab bar's send button would. */
+.composer{display:none}
+[data-world="dressing"] .composer{
+  display:flex;gap:9px;align-items:center;position:fixed;bottom:calc(58px + env(safe-area-inset-bottom));
+  left:0;right:0;max-width:440px;margin:0 auto;z-index:39;
+  /* Opaque, not translucent — at .92 the content behind it read through the
+     input and made the placeholder unreadable. */
+  padding:9px 14px;background:#1F0720;border-top:1px solid rgba(232,190,110,.28);
+}
+[data-world="dressing"] .composer input{
+  flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(232,190,110,.34);
+  color:#FBEDF4;border-radius:18px;padding:10px 15px;font-size:14px;
+}
+[data-world="dressing"] .composer input::placeholder{color:#C08FB0}
+[data-world="dressing"] .composer input:focus{outline:2px solid rgba(232,190,110,.55)}
+[data-world="dressing"] .composer .csend{
+  flex:none;width:38px;height:38px;border-radius:50%;font-size:17px;font-weight:700;
+  background:linear-gradient(135deg,#F5D8A8,#D9A855);color:#3A1230;
+}
+[data-world="dressing"] main{padding-bottom:150px}
+
+/* ═══ sheet models ═══════════════════════════════════════════════════════
+   One chrome, four worlds — all fourteen sheets inherit these. */
+.sheetsign{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);
+  font-family:var(--w-hand);text-transform:var(--w-hand-case);letter-spacing:var(--w-hand-track);
+  color:var(--rose);font-size:16px;text-align:right}
+[data-world="monograph"] .sheetsign{font-size:11px;font-weight:700}
+.sheet{background:var(--card);border-radius:var(--w-radius) var(--w-radius) 0 0;color:var(--ink)}
+/* Anneke and Perdita: not a bottom sheet at all — a full-height page. A ledger
+   and a magazine do not slide up from the bottom of a phone. */
+[data-world="order"] .sheetwrap,[data-world="monograph"] .sheetwrap{align-items:stretch}
+[data-world="order"] .sheet,[data-world="monograph"] .sheet{
+  max-height:100vh;height:100%;border-radius:0;padding-top:26px;
+}
+[data-world="order"] .sheet h2{border-bottom:3px double var(--line);padding-bottom:8px}
+[data-world="monograph"] .sheet h2{border-bottom:2px solid var(--ink);padding-bottom:6px}
+/* Rosie: a card set down on the table, tape and all. */
+[data-world="linen"] .sheet{
+  margin-bottom:14px;border-radius:var(--w-radius);max-width:410px;position:relative;
+}
+[data-world="linen"] .sheet::before{
+  content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(1.2deg);
+  width:76px;height:18px;background:rgba(233,214,180,.85);
+}
+/* Ziggy: gold-ruled, lifted off the dark ground. */
+[data-world="dressing"] .sheet{box-shadow:0 -8px 40px rgba(0,0,0,.4), 0 0 0 1.5px rgba(232,190,110,.5)}
+
 /* ═══ the persona gate ═══════════════════════════════════════════════════
    Deliberately world-blind: it is the screen you pick a world on. */
 #gate{position:relative;height:100%;max-width:440px;margin:0 auto;overflow-y:auto;
@@ -3030,6 +3178,9 @@ const VOICE = {
   albumTitle:  v("The album", "The album", "Everyone's photos", "THE COVER SHOOT", "Album"),
   moreTitle:   v("Everything else", "Everything else", "Bits and bobs", "THE DESK", "More"),
   homeTitle:   v("Tonight's business", "The plan", "The table", "THE ISSUE", "Home"),
+  /* Ziggy's composer is the only world whose nav model writes data, so it is
+     the only one that needs an acknowledgement. The others inherit house. */
+  composerAck: v("noted, babe.", "Noted.", "got it, love.", "NOTED.", "Added to your list"),
 };
 
 /* Tab labels are their own table, not the long titles above — a tab bar has
@@ -4088,6 +4239,7 @@ function renderApp(){
       ${header}
       <main id="main">${VIEWS[t]? VIEWS[t]() : VIEWS.home()}</main>
       ${t==="budget"? savebar() : ""}
+      ${shape().nav==="composer" && t==="home"? composer() : ""}
       <nav id="tabbar">
         ${TABS().map(([k,i,l])=>
           `<button class="${t===k?"on":""}" style="position:relative" onclick="S.tab='${k}';save();render()"><span class="ico">${i}</span>${esc(l)}${k==="album"?'<span class="tabdot"></span>':''}</button>`).join("")}
@@ -4122,6 +4274,7 @@ VIEWS.home = function(){
     <div class="flourish"></div>
     ${whereBits.length? `<div class="where">${whereBits.map(esc).join(" &nbsp;·&nbsp; ")}</div>`:""}
   </div>
+  ${shape().nav==="objects" ? objectNav() : ""}
   <div class="statgrid">
     <div class="sc" style="border-top-color:#9BC0A6" onclick="askBudget()">
       <div class="em">💫</div><div class="lb">${S.budgetEstimated?"Sample budget":"Our budget"}</div>
@@ -4157,6 +4310,56 @@ VIEWS.home = function(){
     <div class="small" style="margin:4px 0 10px">Guests scan a QR code and every photo lands in your album — then the best become a printed book.</div>
     <button class="btn sec" onclick="openPhotos()">Open the album tab</button></div>`;
 };
+/* Rosie's world has no dashboard — it has a laid table, and the objects on it
+   are how you get anywhere. Each one is a real object with a real count on it,
+   tilted and taped by worlds.css. The tab bar stays underneath, receded, so
+   nobody is ever stranded. */
+function objectNav(){
+  const pl = S.plan;
+  const left = pl.timeline.filter(t=>!t.done).length + pl.paperwork.filter(p=>!p.done).length;
+  const yes = S.guests.filter(g=>g.rsvp==="yes").length;
+  const objects = [
+    ["budget", "💷", "The purse",   S.budgetTotal? fmt(S.budgetTotal) : "not set yet"],
+    ["guests", "🍽️", "Who we're feeding", guestCount()? guestCount()+" at table"+(yes? ", "+yes+" said yes":"") : "nobody yet"],
+    ["list",   "📋", "The jobs",    left? left+" still to do" : "all done, love"],
+    ["album",  "📷", "The photos",  (S.photos||[]).length? (S.photos.length+" so far") : "empty for now"],
+    ["more",   "🧺", "Bits and bobs", "everything else"],
+  ];
+  return `<div class="objnav">${objects.map(([k,em,name,sub])=>`
+    <button class="obj" onclick="S.tab='${k}';save();render()">
+      <span class="oem">${em}</span>
+      <span class="obd"><span class="onm">${esc(name)}</span><span class="osub">${esc(sub)}</span></span>
+    </button>`).join("")}</div>`;
+}
+
+/* Ziggy's world is a thread with your best mate, not a dashboard — so the
+   bottom of his home is a composer. It is a real one: whatever you type becomes
+   a to-do on your list, which is the thing couples actually reach for their
+   phone to do at eleven at night. */
+function composer(){
+  const p = persona();
+  return `<div class="composer">
+    <input id="zsay" placeholder="tell ${p? esc(p.first) : "me"} something to remember…"
+      onkeydown="if(event.key==='Enter')composerSend()">
+    <button class="csend" onclick="composerSend()" aria-label="Add it">↑</button>
+  </div>`;
+}
+function composerSend(){
+  const el = document.getElementById("zsay");
+  const text = (el && el.value || "").trim();
+  if(!text) return;
+  S.customTodos = S.customTodos || [];
+  /* Same shape every other writer of customTodos uses — `name`, not `task`.
+     The List view renders c.name, so a `task` key would have shown a blank row. */
+  const row = {id:uid(), name:text, who:"Us", desc:"", done:false};
+  touch(row);
+  S.customTodos.push(row);
+  save();
+  el.value = "";
+  toast(say("composerAck"));
+  render();
+}
+
 function donutCard(){
   const bySec = {};
   S.plan.items.filter(i=>i.on).forEach(i=>{ bySec[i.section]=(bySec[i.section]||0)+(i.agreed??i.alloc??0); });
@@ -4452,8 +4655,20 @@ function restartOB(){ S.onboarded=false; S.obIx=0; S.plan=null; save(); render()
 function swapPlanner(){ renderGate(); }
 
 /* ----- sub-screens (sheets) ----- */
-function sheet(html){ document.getElementById("sheets").innerHTML =
-  `<div class="sheetwrap" onclick="if(event.target===this)closeSheet()"><div class="sheet">${html}</div></div>`; }
+/* One chrome, four worlds. All fourteen sheets inherit this, which is why the
+   sheet model is worth varying here rather than in each of them: Ziggy gets a
+   gold-ruled bottom sheet, Anneke a full-height ledger page, Rosie a taped card
+   on the table, Perdita a magazine spread with a masthead rule.
+
+   The signoff is the cheapest identity in the app — one line, and every sheet
+   closes in the planner's hand. */
+function sheet(html){
+  const sig = persona();
+  document.getElementById("sheets").innerHTML =
+  `<div class="sheetwrap" data-overlay onclick="if(event.target===this)closeSheet()"><div class="sheet">${html}${
+    sig? `<div class="sheetsign">${esc(sig.signoff)}</div>` : ""
+  }</div></div>`;
+}
 function closeSheet(){ document.getElementById("sheets").innerHTML=""; }
 
 function openTraditions(){

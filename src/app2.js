@@ -81,6 +81,7 @@ function renderApp(){
       ${header}
       <main id="main">${VIEWS[t]? VIEWS[t]() : VIEWS.home()}</main>
       ${t==="budget"? savebar() : ""}
+      ${shape().nav==="composer" && t==="home"? composer() : ""}
       <nav id="tabbar">
         ${TABS().map(([k,i,l])=>
           `<button class="${t===k?"on":""}" style="position:relative" onclick="S.tab='${k}';save();render()"><span class="ico">${i}</span>${esc(l)}${k==="album"?'<span class="tabdot"></span>':''}</button>`).join("")}
@@ -115,6 +116,7 @@ VIEWS.home = function(){
     <div class="flourish"></div>
     ${whereBits.length? `<div class="where">${whereBits.map(esc).join(" &nbsp;·&nbsp; ")}</div>`:""}
   </div>
+  ${shape().nav==="objects" ? objectNav() : ""}
   <div class="statgrid">
     <div class="sc" style="border-top-color:#9BC0A6" onclick="askBudget()">
       <div class="em">💫</div><div class="lb">${S.budgetEstimated?"Sample budget":"Our budget"}</div>
@@ -150,6 +152,56 @@ VIEWS.home = function(){
     <div class="small" style="margin:4px 0 10px">Guests scan a QR code and every photo lands in your album — then the best become a printed book.</div>
     <button class="btn sec" onclick="openPhotos()">Open the album tab</button></div>`;
 };
+/* Rosie's world has no dashboard — it has a laid table, and the objects on it
+   are how you get anywhere. Each one is a real object with a real count on it,
+   tilted and taped by worlds.css. The tab bar stays underneath, receded, so
+   nobody is ever stranded. */
+function objectNav(){
+  const pl = S.plan;
+  const left = pl.timeline.filter(t=>!t.done).length + pl.paperwork.filter(p=>!p.done).length;
+  const yes = S.guests.filter(g=>g.rsvp==="yes").length;
+  const objects = [
+    ["budget", "💷", "The purse",   S.budgetTotal? fmt(S.budgetTotal) : "not set yet"],
+    ["guests", "🍽️", "Who we're feeding", guestCount()? guestCount()+" at table"+(yes? ", "+yes+" said yes":"") : "nobody yet"],
+    ["list",   "📋", "The jobs",    left? left+" still to do" : "all done, love"],
+    ["album",  "📷", "The photos",  (S.photos||[]).length? (S.photos.length+" so far") : "empty for now"],
+    ["more",   "🧺", "Bits and bobs", "everything else"],
+  ];
+  return `<div class="objnav">${objects.map(([k,em,name,sub])=>`
+    <button class="obj" onclick="S.tab='${k}';save();render()">
+      <span class="oem">${em}</span>
+      <span class="obd"><span class="onm">${esc(name)}</span><span class="osub">${esc(sub)}</span></span>
+    </button>`).join("")}</div>`;
+}
+
+/* Ziggy's world is a thread with your best mate, not a dashboard — so the
+   bottom of his home is a composer. It is a real one: whatever you type becomes
+   a to-do on your list, which is the thing couples actually reach for their
+   phone to do at eleven at night. */
+function composer(){
+  const p = persona();
+  return `<div class="composer">
+    <input id="zsay" placeholder="tell ${p? esc(p.first) : "me"} something to remember…"
+      onkeydown="if(event.key==='Enter')composerSend()">
+    <button class="csend" onclick="composerSend()" aria-label="Add it">↑</button>
+  </div>`;
+}
+function composerSend(){
+  const el = document.getElementById("zsay");
+  const text = (el && el.value || "").trim();
+  if(!text) return;
+  S.customTodos = S.customTodos || [];
+  /* Same shape every other writer of customTodos uses — `name`, not `task`.
+     The List view renders c.name, so a `task` key would have shown a blank row. */
+  const row = {id:uid(), name:text, who:"Us", desc:"", done:false};
+  touch(row);
+  S.customTodos.push(row);
+  save();
+  el.value = "";
+  toast(say("composerAck"));
+  render();
+}
+
 function donutCard(){
   const bySec = {};
   S.plan.items.filter(i=>i.on).forEach(i=>{ bySec[i.section]=(bySec[i.section]||0)+(i.agreed??i.alloc??0); });
@@ -445,8 +497,20 @@ function restartOB(){ S.onboarded=false; S.obIx=0; S.plan=null; save(); render()
 function swapPlanner(){ renderGate(); }
 
 /* ----- sub-screens (sheets) ----- */
-function sheet(html){ document.getElementById("sheets").innerHTML =
-  `<div class="sheetwrap" onclick="if(event.target===this)closeSheet()"><div class="sheet">${html}</div></div>`; }
+/* One chrome, four worlds. All fourteen sheets inherit this, which is why the
+   sheet model is worth varying here rather than in each of them: Ziggy gets a
+   gold-ruled bottom sheet, Anneke a full-height ledger page, Rosie a taped card
+   on the table, Perdita a magazine spread with a masthead rule.
+
+   The signoff is the cheapest identity in the app — one line, and every sheet
+   closes in the planner's hand. */
+function sheet(html){
+  const sig = persona();
+  document.getElementById("sheets").innerHTML =
+  `<div class="sheetwrap" data-overlay onclick="if(event.target===this)closeSheet()"><div class="sheet">${html}${
+    sig? `<div class="sheetsign">${esc(sig.signoff)}</div>` : ""
+  }</div></div>`;
+}
 function closeSheet(){ document.getElementById("sheets").innerHTML=""; }
 
 function openTraditions(){

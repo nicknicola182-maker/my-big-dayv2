@@ -138,6 +138,46 @@ export function run({ describe, ok, eq, group }) {
     group('wiring', 'gate → worldId → data-world → tokens');
   }
 
+  describe('worlds — bespoke composition, not just colour');
+  {
+    /* The point of the worlds is that they are laid out differently, not tinted
+       differently. These assert the structural promotions actually exist —
+       without them a world could pass every token check above and still be the
+       same screen in another palette. */
+    ok(/function objectNav/.test(app2), 'Rosie’s table has objects as its navigation');
+    ok(/shape\(\)\.nav==="objects" \? objectNav\(\)/.test(app2), 'and home routes through it');
+    ok(css.includes('[data-world="linen"] .statgrid{display:none}'),
+      'her stat grid gives way to them — two navigations would be one too many');
+    ok(/\[data-world="linen"\] #tabbar button\{font-size/.test(css),
+      'and her tab bar recedes rather than vanishing, so nobody is stranded');
+
+    ok(/function composer\(\)/.test(app2), 'Ziggy’s world has a composer');
+    ok(/function composerSend/.test(app2), 'that actually writes something');
+    ok(/shape\(\)\.nav==="composer" && t==="home"/.test(app2), 'shown on his home only');
+    ok(/touch\(row\)/.test(app2), 'and the row it writes is stamped, so it survives a sync');
+    // It must use the same row shape as every other writer of customTodos.
+    // The List view renders c.name; a `task` key showed a blank row.
+    ok(/const row = \{id:uid\(\), name:text/.test(app2),
+      'and uses the shape the List view actually renders');
+
+    // The sheet model is the single highest-leverage thing varied — all
+    // fourteen sheets inherit it from one function.
+    ok(/const sig = persona\(\);/.test(app2), 'sheets are signed in the planner’s hand');
+    ok(css.includes('[data-world="order"] .sheetwrap'), 'Anneke’s sheets are full-height pages');
+    ok(/\[data-world="linen"\] \.sheet\{/.test(css), 'Rosie’s are cards set on the table');
+    ok(/\[data-world="dressing"\] \.sheet\{/.test(css), 'Ziggy’s are gold-ruled');
+
+    // Row models: a ledger has dotted leaders, a magazine has page references.
+    ok(/border-bottom:1\.5px dotted/.test(css), 'Anneke’s rows carry a dotted leader');
+    ok(/content:" — p\." counter\(entry\)/.test(css), 'Perdita’s entries carry a page reference');
+
+    // Inline styles are the one thing a token cannot reach, so the two worlds
+    // that must flatten them do it explicitly.
+    ok(/background:transparent!important/.test(css),
+      'the inline section tint is overridden where it would read wrong');
+    group('composition', 'nav models · sheet models · row models');
+  }
+
   describe('worlds — pack content is never persona-varied');
   {
     // Paperwork, customs, gotchas and timeline text are research, not voice.

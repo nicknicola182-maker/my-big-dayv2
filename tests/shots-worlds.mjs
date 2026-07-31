@@ -55,7 +55,7 @@ for (const w of WORLDS) {
   const attr = await page.evaluate(() => document.documentElement.getAttribute('data-world'));
   if (attr !== w) { console.error(`✗ ${w}: data-world is "${attr}"`); process.exitCode = 1; }
 
-  for (const tab of ['home', 'budget', 'list']) {
+  for (const tab of ['home', 'budget', 'list', 'guests']) {
     await page.evaluate(t => { S.tab = t; save(); render(); }, tab);
     await page.waitForTimeout(300);
     await page.screenshot({ path: path.join(out, `${w}-${tab}.png`) });
@@ -67,7 +67,17 @@ for (const w of WORLDS) {
   await page.waitForTimeout(300);
   await page.screenshot({ path: path.join(out, `${w}-question.png`) });
 
-  console.log(`✓ ${w}: home · budget · list · question`);
+  /* A sheet too — the sheet model is the highest-leverage thing varied, since
+     all fourteen inherit it. */
+  await page.evaluate(() => {
+    // the question shot above left the app in onboarding, where #sheets does not exist
+    S.onboarded = true; S.revealSeen = true; S.tab = 'home'; save(); render(); openTraditions();
+  });
+  await page.waitForTimeout(350);
+  await page.screenshot({ path: path.join(out, `${w}-sheet.png`) });
+  await page.evaluate(() => closeSheet());
+
+  console.log(`✓ ${w}: home · budget · list · guests · question · sheet`);
 }
 
 await browser.close();
