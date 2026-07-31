@@ -1,0 +1,21 @@
+name = "wedding-app-api"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+
+# Real resources, already provisioned on this account (30 Jul 2026)
+[[d1_databases]]
+binding = "DB"
+database_name = "wedding-app"
+database_id = "49cbc7dc-92e7-4be5-8132-8ef23898e2bf"
+
+[[r2_buckets]]
+binding = "ALBUM"
+bucket_name = "wedding-app-albums"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "883274f452fc44e787ae38d4ab807ab1"
+
+# Secrets (set after deploy, each optional — endpoints degrade gracefully without them):
+#   npx wrangler secret put ANTHROPIC_API_KEY      → enables /api/scan  (AI quote/invoice reading)
+#   npx wrangler secret put GOOGLE_PLACES_API_KEY  → enables /api/suppliers (in-app supplier results)

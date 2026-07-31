@@ -1,0 +1,1036 @@
+{
+  "id": "sikh",
+  "name": "Sikh (Anand Karaj)",
+  "shortName": "Sikh",
+  "faithGroup": "Sikh",
+  "blurb": "The Anand Karaj in the gurdwara, with the four laavan sung as you walk around the Guru Granth Sahib, and the days of Punjabi celebration around it: mehndi, jaggo, the baraat, the milni and the doli.",
+  "commonCountries": [
+    "IN",
+    "GB",
+    "CA",
+    "US",
+    "AU",
+    "MY",
+    "SG",
+    "NZ",
+    "KE",
+    "IT"
+  ],
+  "typicalGuests": {
+    "low": 150,
+    "typical": 300,
+    "high": 800
+  },
+  "typicalDays": 3,
+  "terms": {
+    "officiant": "granthi",
+    "ceremonyVenue": "gurdwara",
+    "ceremony": "Anand Karaj",
+    "bestMan": "best man",
+    "maidOfHonour": "maid of honour",
+    "reception": "reception",
+    "firstDance": "first dance",
+    "witnesses": "witnesses"
+  },
+  "events": [
+    {
+      "id": "roka",
+      "name": "Roka and kurmai (engagement)",
+      "when": "Six to eighteen months before",
+      "optional": true,
+      "default": true,
+      "description": "The roka marks the end of the search: both families meet, exchange sweets and gifts and agree the match. The kurmai is the formal engagement, often held in the gurdwara or at home, where the bride's father blesses the groom and rings or gifts are exchanged. Some families also hold a chunni ceremony, where the groom's family presents the bride with a headscarf as a sign of welcome. Families vary in how many of these they hold and whether they are combined.",
+      "hosts": "The bride's family for the kurmai, though practice varies"
+    },
+    {
+      "id": "path",
+      "name": "Sukhmani Sahib or Akhand Path",
+      "when": "One to four weeks before",
+      "optional": true,
+      "default": true,
+      "description": "Many families hold a prayer service before the wedding: a recitation of Sukhmani Sahib, or an Akhand Path, the continuous forty-eight-hour reading of the entire Guru Granth Sahib, concluding with ardas and langar. It is held at the gurdwara or at home and sets the wedding within the family's religious life rather than apart from it.",
+      "hosts": "Either or both families"
+    },
+    {
+      "id": "mehndi",
+      "name": "Mehndi night",
+      "when": "Two to four days before",
+      "optional": true,
+      "default": true,
+      "description": "Henna is applied to the bride's hands and feet, and to the hands of the women of the family, with music and food. This is a Punjabi cultural celebration rather than a religious one: the Sikh Rehat Maryada does not require it, and some strictly observant families keep the wedding week plainer. Often combined with the sangeet into one evening.",
+      "hosts": "The bride's family, with a smaller gathering on the groom's side"
+    },
+    {
+      "id": "maiyan",
+      "name": "Maiyan (vatna)",
+      "when": "One to three days before",
+      "optional": true,
+      "default": true,
+      "description": "Held at each family's home. A paste of turmeric, flour and oil, the vatna, is rubbed on the couple's skin by relatives amid singing, to bless and brighten them before the wedding. Each side holds its own maiyan for its own child. A cultural custom, not a religious requirement, and one that observant families sometimes simplify.",
+      "hosts": "Each family at its own home"
+    },
+    {
+      "id": "sangeet",
+      "name": "Sangeet",
+      "when": "One to three days before",
+      "optional": true,
+      "default": true,
+      "description": "An evening of song and dance, traditionally the women of both families singing Punjabi folk wedding songs and dancing giddha, now often a full party with a DJ or dhol players. In the diaspora it is frequently the biggest pre-wedding event and may be merged with the mehndi or jaggo.",
+      "hosts": "Either family, or both together"
+    },
+    {
+      "id": "jaggo",
+      "name": "Jaggo",
+      "when": "The night before",
+      "optional": true,
+      "default": true,
+      "description": "Jaggo means 'wake up'. The bride's and groom's families take to the streets or the party hall late at night with decorated brass pots carrying lamps balanced on the heads of aunts, singing and dancing to announce the wedding. Historically the party went from house to house waking the village; now it is usually the high point of the final pre-wedding night.",
+      "hosts": "Each family, led by the maternal relatives"
+    },
+    {
+      "id": "chooda",
+      "name": "Chooda ceremony",
+      "when": "Wedding morning, or the day before",
+      "optional": true,
+      "default": true,
+      "description": "The bride's maternal uncle and aunt present her with the chooda, the set of red and cream bangles she will wear as a new bride, after they have been purified in milk and rosewater. Relatives then tie kalire, gold or silver hanging ornaments, to the bangles. An emotional family moment on the bride's side, held at home before leaving for the gurdwara.",
+      "hosts": "The bride's family, led by her maternal uncle"
+    },
+    {
+      "id": "baraat",
+      "name": "Baraat and milni",
+      "when": "Wedding morning",
+      "optional": true,
+      "default": true,
+      "description": "The groom arrives in procession with his family and friends, traditionally on a decorated mare with dhol drummers, and is met by the bride's family at the gurdwara. In the milni, an ardas is said and then corresponding relatives from each side, father to father, uncle to uncle, are introduced in pairs, exchange garlands and embrace, with the bride's side giving gifts. Music and dancing stop at the gurdwara gate: many gurdwaras do not permit dhol or dancing on the premises.",
+      "hosts": "The groom's side brings the baraat; the bride's side receives it"
+    },
+    {
+      "id": "anand-karaj",
+      "name": "Anand Karaj",
+      "when": "Wedding day, in the morning",
+      "optional": false,
+      "default": true,
+      "description": "The Sikh marriage ceremony, held in the presence of the Guru Granth Sahib, by convention in the morning. After kirtan and an opening ardas, the couple and their parents stand for prayer, the granthi explains the duties of married life, and the bride's father places the palla, the groom's scarf, in the bride's hand. The granthi reads each of the four laavan; after each, the ragis sing it while the couple walk slowly clockwise around the Guru Granth Sahib, the groom leading and the bride holding the palla. Six stanzas of Anand Sahib, a closing ardas, a hukamnama and karah prashad complete the ceremony, which takes roughly an hour.",
+      "hosts": "Traditionally arranged by the bride's family"
+    },
+    {
+      "id": "langar",
+      "name": "Langar",
+      "when": "Straight after the ceremony",
+      "optional": false,
+      "default": true,
+      "description": "The free vegetarian meal from the gurdwara's community kitchen, served to everyone after the ceremony, usually eaten sitting together at floor level or at long tables depending on the gurdwara. Langar is open to all comers as a matter of principle, so the numbers eating can exceed your invitation list. Families usually make a donation towards it and often help serve.",
+      "hosts": "The gurdwara, with a donation from the families"
+    },
+    {
+      "id": "doli",
+      "name": "Doli (vidaai)",
+      "when": "After the ceremony and langar",
+      "optional": true,
+      "default": true,
+      "description": "The bride's farewell to her parents' family. As she leaves, she throws handfuls of puffed rice back over her head, a wish for her parents' home to stay prosperous, and her brothers escort her to the car. It is expected to be tearful. At the groom's family home she is welcomed with pani varna, his mother circling a vessel of water around her at the door.",
+      "hosts": "The bride's family"
+    },
+    {
+      "id": "reception",
+      "name": "Reception",
+      "when": "Wedding evening, or the following day",
+      "optional": true,
+      "default": true,
+      "description": "A separate evening party, almost always at a non-religious venue because alcohol, meat and dancing are not permitted on gurdwara premises. Expect dinner, speeches, an open dance floor with bhangra, and often dhol players and a DJ or live act. Traditionally hosted by the groom's side, though many couples now share it; some families choose a dry reception.",
+      "hosts": "Traditionally the groom's family, now often shared"
+    },
+    {
+      "id": "civil-ceremony",
+      "name": "Civil ceremony or registration",
+      "when": "Before or shortly after the Anand Karaj",
+      "optional": true,
+      "default": false,
+      "description": "Whether the Anand Karaj is legally binding depends on the country and the gurdwara. In England and Wales it counts in law only if the gurdwara building is registered for marriages and an authorised person or registrar acts; otherwise a register office ceremony is needed. In the United States, Canada and Australia the civil side is a licence or notice plus an authorised officiant, which many granthis are. In India, Anand Karaj marriages are valid and states are rolling out registration under the Anand Marriage Act.",
+      "hosts": "The couple"
+    }
+  ],
+  "items": [
+    {
+      "id": "gurdwara-donation",
+      "name": "Gurdwara donation and booking",
+      "section": "Ceremony",
+      "event": "anand-karaj",
+      "note": "Gurdwaras do not charge a price for the Anand Karaj; families make a donation, and many gurdwaras suggest an amount that covers the hall, staff and upkeep. Book early: large gurdwaras run several weddings on popular days with fixed time slots.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "fixed",
+      "supplierCategory": "Gurdwara",
+      "religiousRequirement": true
+    },
+    {
+      "id": "granthi-ragi-offering",
+      "name": "Offering for the granthi and ragis",
+      "section": "Ceremony",
+      "event": "anand-karaj",
+      "note": "The granthi leads the ceremony and reads the laavan; the ragi jatha, usually three musicians, sing the kirtan and each laav as you walk. An offering for each is customary, given on the day. Some gurdwaras include this in the suggested donation, so ask what is expected.",
+      "essential": true,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Gurdwara",
+      "religiousRequirement": true
+    },
+    {
+      "id": "karah-prashad",
+      "name": "Karah prashad (deg)",
+      "section": "Ceremony",
+      "event": "anand-karaj",
+      "note": "The warm sweet prashad of flour, ghee and sugar distributed to everyone at the end of the ceremony. Families sponsor the deg for their wedding; the gurdwara kitchen prepares it. It is received seated, in cupped hands.",
+      "essential": true,
+      "shareOfBudget": 0.004,
+      "unit": "fixed",
+      "supplierCategory": "Gurdwara",
+      "religiousRequirement": true
+    },
+    {
+      "id": "langar-contribution",
+      "name": "Langar contribution",
+      "section": "Ceremony",
+      "event": "langar",
+      "note": "The donation towards the vegetarian meal served to all after the ceremony. Some gurdwaras insist all food comes from their own kitchen; others allow an approved caterer to cook in it. Confirm the rule and the expected numbers, and remember langar is open to anyone present, not just your list.",
+      "essential": true,
+      "shareOfBudget": 0.03,
+      "unit": "perGuest",
+      "supplierCategory": "Gurdwara",
+      "religiousRequirement": true
+    },
+    {
+      "id": "head-coverings",
+      "name": "Head coverings for guests",
+      "section": "Ceremony",
+      "event": "anand-karaj",
+      "note": "Everyone in the gurdwara covers their head, men included, and removes their shoes. Gurdwaras keep baskets of rumals at the door, but supplying your own matching scarves for non-Sikh guests is a kind touch and avoids a queue.",
+      "essential": true,
+      "shareOfBudget": 0.003,
+      "unit": "perGuest",
+      "supplierCategory": "Gurdwara",
+      "religiousRequirement": true
+    },
+    {
+      "id": "palla",
+      "name": "Palla",
+      "section": "Ceremony",
+      "event": "anand-karaj",
+      "note": "The long scarf, usually pink or saffron, placed over the groom's shoulder; the bride's father puts one end in her hands before the laavan and she holds it as they walk. It is a required part of the ceremony and is often kept afterwards.",
+      "essential": true,
+      "shareOfBudget": 0.002,
+      "unit": "fixed",
+      "supplierCategory": "Asian bridal wear",
+      "religiousRequirement": true
+    },
+    {
+      "id": "milni-garlands",
+      "name": "Milni garlands and shagun",
+      "section": "Ceremony",
+      "event": "baraat",
+      "note": "A garland for each pair introduced at the milni, plus the gifts, traditionally cash or items of clothing, that the bride's side gives the groom's relatives. Agree the list of pairs with both families beforehand so nobody is missed.",
+      "essential": true,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "sehra-kalgi",
+      "name": "Sehra and kalgi",
+      "section": "Ceremony",
+      "event": "baraat",
+      "note": "The veil of flowers or beads tied over the groom's turban by his sister before the baraat, and the plumed brooch pinned to the turban. Cultural, not religious: some gurdwaras ask the groom to remove the sehra and kalgi before sitting in front of the Guru Granth Sahib, so check your gurdwara's practice.",
+      "essential": false,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Asian bridal wear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "civil-fees",
+      "name": "Civil notice, licence and registration fees",
+      "section": "Ceremony",
+      "event": "civil-ceremony",
+      "note": "The legal side varies by country: notice of marriage and possibly a registrar or a register office ceremony in England and Wales, a state licence in the United States, a Notice of Intended Marriage in Australia, a provincial licence in Canada, registration under the Anand Marriage Act or another statute in India.",
+      "essential": true,
+      "shareOfBudget": 0.004,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": false
+    },
+    {
+      "id": "venue-hire",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Almost always a second venue, because alcohol, meat and dancing are not permitted at the gurdwara. Punjabi guest counts are large, so banqueting halls built for Asian weddings are the usual choice. Check whether the venue lets you bring your own caterer, which is standard for Punjabi food and much better value.",
+      "essential": true,
+      "shareOfBudget": 0.09,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "catering",
+      "name": "Reception catering",
+      "section": "Reception",
+      "event": "reception",
+      "note": "The biggest line in the budget. Punjabi wedding catering is generous by design: starters circulating for an hour or more, a large buffet or served dinner, and dessert. Get the per-head price, minimum numbers and staffing in writing, and decide early whether the menu is vegetarian or mixed, which affects venue choice too.",
+      "essential": true,
+      "shareOfBudget": 0.2,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks and bar",
+      "section": "Reception",
+      "event": "reception",
+      "note": "An open bar is common at Punjabi receptions, and whisky consumption at them is famous, but a fully dry reception is also normal for observant families, particularly where many guests are amritdhari. Decide which wedding you are having before you sign the bar contract. Corkage on your own spirits can be a large saving at these numbers.",
+      "essential": false,
+      "shareOfBudget": 0.055,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "late-food",
+      "name": "Late-night food",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Punjabi receptions run late and a second service, often a light supper or street-food station, keeps the dance floor going.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "event": "reception",
+      "note": "A Western import that most couples keep for the reception. Indian sweets, mithai, are given and served as well, so the cake does not need to feed everyone.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Cake maker",
+      "religiousRequirement": false
+    },
+    {
+      "id": "service-staffing",
+      "name": "Service charge and staffing",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Waiting and bar staff, cloakroom and security where required. At several hundred guests this is a real line of its own and is often quoted separately from the per-head food price.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bridal-outfits",
+      "name": "Bridal outfits",
+      "section": "Attire",
+      "event": "",
+      "note": "Most brides wear a red or deep-coloured lehenga or salwar kameez for the Anand Karaj, with a chunni over the head throughout the ceremony, and separate outfits for the mehndi, sangeet and reception. Buying trips to Punjab or ordering from Indian designers need months of lead time plus alterations.",
+      "essential": true,
+      "shareOfBudget": 0.05,
+      "unit": "fixed",
+      "supplierCategory": "Asian bridal wear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bridal-jewellery",
+      "name": "Bridal jewellery",
+      "section": "Attire",
+      "event": "",
+      "note": "Gold jewellery carries family and cultural weight at Punjabi weddings and is often gifted by both families as well as bought. Decide early what is being given, what is being lent and what is being bought, so it is not counted twice.",
+      "essential": true,
+      "shareOfBudget": 0.04,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "chooda-kalire",
+      "name": "Chooda and kalire",
+      "section": "Attire",
+      "event": "chooda",
+      "note": "The red and cream bangle set given by the bride's maternal uncle, and the hanging gold or silver ornaments tied to it by sisters and friends. Traditionally the chooda is worn for a period after the wedding, forty days or longer depending on family custom. The maternal uncle traditionally buys it, so coordinate rather than duplicate.",
+      "essential": false,
+      "shareOfBudget": 0.005,
+      "unit": "fixed",
+      "supplierCategory": "Asian bridal wear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "groom-outfits",
+      "name": "Groom's outfits and turbans",
+      "section": "Attire",
+      "event": "",
+      "note": "A sherwani or achkan with a coordinating turban for the wedding day, and usually a second outfit for the reception. A groom who does not routinely tie a turban should book someone to tie it on the morning and practise sitting and walking in the full outfit.",
+      "essential": true,
+      "shareOfBudget": 0.022,
+      "unit": "fixed",
+      "supplierCategory": "Asian bridal wear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "family-outfits",
+      "name": "Family and wedding party outfits",
+      "section": "Attire",
+      "event": "",
+      "note": "Parents, siblings and close family usually dress new for each event, and many couples coordinate colours for the wedding party. Who pays varies by family.",
+      "essential": false,
+      "shareOfBudget": 0.015,
+      "unit": "perPerson",
+      "supplierCategory": "Asian bridal wear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "gurdwara-decor",
+      "name": "Gurdwara floral decoration",
+      "section": "Flowers & Styling",
+      "event": "anand-karaj",
+      "note": "Kept deliberately modest. The darbar hall is already dressed around the Guru Granth Sahib and most gurdwaras restrict what can be added; some permit garlands and small arrangements at the entrance only. Ask before ordering anything.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "reception-styling",
+      "name": "Reception styling and centrepieces",
+      "section": "Flowers & Styling",
+      "event": "reception",
+      "note": "Centrepieces, linen and room styling. At Punjabi guest counts this scales per table, so a small saving per centrepiece multiplies quickly.",
+      "essential": true,
+      "shareOfBudget": 0.035,
+      "unit": "perTable",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "stage-backdrop",
+      "name": "Stage and backdrop",
+      "section": "Flowers & Styling",
+      "event": "reception",
+      "note": "A decorated stage where the couple sit and receive guests is standard at Punjabi receptions, and it is where most of the formal photographs happen.",
+      "essential": false,
+      "shareOfBudget": 0.012,
+      "unit": "fixed",
+      "supplierCategory": "Event decorator",
+      "religiousRequirement": false
+    },
+    {
+      "id": "prewedding-decor",
+      "name": "Mehndi and sangeet decor",
+      "section": "Flowers & Styling",
+      "event": "sangeet",
+      "note": "Marquees, seating, phulkari textiles and colour for the home events. Hiring props such as decorated jaggo pots is common in the diaspora.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Event decorator",
+      "religiousRequirement": false
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Sikh weddings are multi-day, multi-venue bookings: mehndi and jaggo, the morning at both houses, the gurdwara and the reception. Book someone who has shot an Anand Karaj before: they must cover their head and work shoeless in the darbar hall, the gurdwara controls where they stand, and they must never position themselves with their back to the Guru Granth Sahib or step across the ceremony area.",
+      "essential": true,
+      "shareOfBudget": 0.055,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Same constraints as the photographer inside the gurdwara. The laavan are the moments families most want captured, and each round is short, so agree positions with the gurdwara in advance.",
+      "essential": true,
+      "shareOfBudget": 0.045,
+      "unit": "fixed",
+      "supplierCategory": "Videographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "album",
+      "name": "Albums and prints",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Both families will expect albums, and with three or four events there is far more material to edit than at a single-day wedding. Confirm turnaround times in the contract.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dhol",
+      "name": "Dhol players",
+      "section": "Music & Entertainment",
+      "event": "baraat",
+      "note": "Dhol drummers lead the baraat and lift the jaggo and reception entrances. Most gurdwaras stop the dhol at the gate, so plan the procession to peak before you arrive. Book by the hour and confirm which events they cover.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "perHour",
+      "supplierCategory": "Entertainment",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dj-band",
+      "name": "DJ or live act",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "Bhangra keeps the floor full at Punjabi receptions, and DJs who know the repertoire, along with live singers or bands, are booked far ahead at popular dates. The same DJ often covers the sangeet at a package rate.",
+      "essential": true,
+      "shareOfBudget": 0.03,
+      "unit": "fixed",
+      "supplierCategory": "DJ",
+      "religiousRequirement": false
+    },
+    {
+      "id": "av-lighting",
+      "name": "Sound, lighting and dance floor",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "Uplighting, a proper PA and a dance floor sized for a crowd that actually dances. Often bundled with the DJ or the venue, but worth pricing separately at scale.",
+      "essential": false,
+      "shareOfBudget": 0.012,
+      "unit": "fixed",
+      "supplierCategory": "AV hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations",
+      "section": "Stationery",
+      "event": "",
+      "note": "Separate cards or inserts per event are usual, because the guest lists differ: the wider community may be welcome at the gurdwara and langar, while the reception is ticketed by seat. Many families still deliver cards to close relatives in person with sweets.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "perGuest",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "favours",
+      "name": "Favours and mithai boxes",
+      "section": "Stationery",
+      "event": "reception",
+      "note": "Boxes of Indian sweets are the traditional give-away, one per household rather than one per guest in most families.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "perGuest",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "ghodi",
+      "name": "Ghodi or baraat vehicle",
+      "section": "Transport",
+      "event": "baraat",
+      "note": "The decorated white mare the groom traditionally rides at the head of the baraat, with a handler; many grooms now use a vintage or luxury car instead. Check the gurdwara's rules on where the procession may form up and whether animals are allowed on site.",
+      "essential": false,
+      "shareOfBudget": 0.007,
+      "unit": "fixed",
+      "supplierCategory": "Car hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "wedding-cars",
+      "name": "Wedding cars and the doli car",
+      "section": "Transport",
+      "event": "doli",
+      "note": "Cars for the bride to the gurdwara and for the couple's departure at the doli, which is often decorated by the bride's family. The doli is a formal, photographed moment, so the car matters more than a normal transfer.",
+      "essential": true,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Car hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest coaches and parking",
+      "section": "Transport",
+      "event": "",
+      "note": "Coaches between the gurdwara and the reception venue save a large convoy, and parking at busy gurdwaras on a Saturday or Sunday is tight because the regular congregation is there too.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Coach hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "event": "",
+      "note": "Rings are not part of the Anand Karaj itself; the laavan are the marriage. Many couples exchange rings anyway at the engagement, the reception or the civil ceremony, and a kara, the steel bangle, is worn by many Sikhs as an article of faith rather than a wedding item.",
+      "essential": false,
+      "shareOfBudget": 0.02,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "family-gifts",
+      "name": "Family gift exchange and shagun",
+      "section": "Rings & Gifts",
+      "event": "",
+      "note": "Gifts flow in both directions across the week: at the roka and kurmai, at the milni, to the bride at the doli and to the couple afterwards. Punjabi families take the exchange seriously and it adds up, so agree between the families early what each side is giving. Note that the Sikh Rehat Maryada explicitly condemns dowry demands.",
+      "essential": true,
+      "shareOfBudget": 0.045,
+      "unit": "fixed",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bridal-beauty",
+      "name": "Bridal hair and make-up",
+      "section": "Beauty",
+      "event": "",
+      "note": "An early start: the Anand Karaj is a morning ceremony, so the bridal artist often begins before dawn. The chunni must stay pinned over the head for the whole ceremony, so the style has to work with it, and most brides book a second look for the reception.",
+      "essential": true,
+      "shareOfBudget": 0.014,
+      "unit": "fixed",
+      "supplierCategory": "Hair and make-up",
+      "religiousRequirement": false
+    },
+    {
+      "id": "mehndi-artist",
+      "name": "Mehndi artist",
+      "section": "Beauty",
+      "event": "mehndi",
+      "note": "Bridal mehndi takes several hours, and artists usually offer per-hand rates for guests at the mehndi night. Book the bride's session a day or two before the wedding so the colour is at its deepest on the day.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Mehndi artist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "family-beauty",
+      "name": "Hair and make-up for family",
+      "section": "Beauty",
+      "event": "",
+      "note": "Mothers, sisters and close family often book the same team across the events. With a morning ceremony this needs a bigger team, not a longer morning.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "perPerson",
+      "supplierCategory": "Hair and make-up",
+      "religiousRequirement": false
+    },
+    {
+      "id": "prewedding-hosting",
+      "name": "Pre-wedding event hosting",
+      "section": "Extras",
+      "event": "sangeet",
+      "note": "Food, drink and hire costs for the mehndi, maiyan, sangeet and jaggo, whether at home, in a marquee or in a hall. Each is small next to the reception, but three or four of them together are not.",
+      "essential": true,
+      "shareOfBudget": 0.03,
+      "unit": "fixed",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "path-donation",
+      "name": "Donation for the Sukhmani Sahib or Akhand Path",
+      "section": "Extras",
+      "event": "path",
+      "note": "If you hold a path before the wedding, a donation to the gurdwara covers the readers and the langar that follows the completion, the bhog.",
+      "essential": false,
+      "shareOfBudget": 0.005,
+      "unit": "fixed",
+      "supplierCategory": "Gurdwara",
+      "religiousRequirement": false
+    },
+    {
+      "id": "planner",
+      "name": "Wedding planner or coordinator",
+      "section": "Extras",
+      "event": "",
+      "note": "Worth serious thought at this scale: a coordinator who has run a multi-day Sikh wedding can manage the baraat timing, the gurdwara's rules, the venue change and several hundred guests while your families enjoy the week.",
+      "essential": false,
+      "shareOfBudget": 0.02,
+      "unit": "fixed",
+      "supplierCategory": "Planner",
+      "religiousRequirement": false
+    }
+  ],
+  "timeline": [
+    {
+      "monthsBefore": 15,
+      "task": "Speak to your gurdwara before booking anything else: confirm they will conduct your Anand Karaj, what declarations they require, and how their diary works",
+      "critical": true
+    },
+    {
+      "monthsBefore": 14,
+      "task": "If one of you is not Sikh, have the conversation with the gurdwara committee now: practice varies, some require the non-Sikh partner to formally adopt the Sikh faith, and alternatives such as a civil marriage followed by an ardas of blessing exist",
+      "critical": true
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Fix the date and book the gurdwara slot; any day is religiously acceptable, so popular weekends go early for practical rather than religious reasons",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the reception venue, checking its capacity, its own-caterer policy and whether your bar plans fit the venue",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the photographer and videographer, and confirm they have worked in a gurdwara before",
+      "critical": false
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Draw up the guest lists per event: gurdwara and langar, which are open and large, and the reception, which is seated and fixed",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Start outfit shopping or ordering, especially anything coming from India, and book tailoring time",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the caterer for the reception and agree per-head price, minimums and the vegetarian or mixed menu",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Book the DJ or band, and the dhol players for the baraat, jaggo and reception",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Meet the granthi to walk through the ceremony: the palla, the four laavan, where each family sits and stands, and what the gurdwara permits for photography and decoration",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Book the mehndi artist and the hair and make-up team, flagging the pre-dawn start on the wedding morning",
+      "critical": false
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Order invitations, with separate cards or inserts for each event",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Coordinate the chooda with the bride's maternal uncle and order the kalire",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Book the ghodi or baraat car, the wedding and doli cars, and guest coaches between venues",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Sort the legal route for your country: check whether your gurdwara is registered for marriages in England and Wales, or how you will obtain the licence in the United States or Canada, or lodge the Notice of Intended Marriage in Australia",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Give civil notice or apply for the licence within your country's window, and book the registrar or register office if your gurdwara ceremony will not itself be legally binding",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Confirm langar numbers with the gurdwara and whether food must come from the gurdwara kitchen or an approved caterer",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Book the Sukhmani Sahib or Akhand Path with the gurdwara if you are holding one",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Agree the milni list with both families: which pairs of relatives will be introduced, and prepare the garlands and gifts",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Order the palla, sehra, rumals for guests, and garlands, and check the gurdwara's position on the sehra and kalgi in the darbar hall",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Plan the wedding-day schedule around the morning ceremony: baraat arrival, milni, ceremony, langar, doli, and the gap before the evening reception",
+      "critical": true
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Brief non-Sikh guests: heads covered and shoes off for everyone, modest dress that works for sitting on the floor, no alcohol or tobacco anywhere on gurdwara premises, and no applause in the darbar hall",
+      "critical": true
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Prepare the offerings: the gurdwara donation, envelopes for the granthi and ragis, and the deg and langar contributions",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Confirm final numbers with the reception caterer and the running order with the DJ and dhol players",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "Hold the mehndi, maiyan, sangeet and jaggo in the final days, keeping the night before the ceremony from running too late: the wedding morning starts early",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "After the wedding, complete the legal registration and collect your marriage certificate; in India, register under the Anand Marriage Act where your state has notified rules",
+      "critical": true
+    }
+  ],
+  "paperwork": [
+    {
+      "item": "Gurdwara booking and declaration forms",
+      "who": "Both",
+      "note": "Most gurdwara committees have a booking form, and many, particularly in the UK following Sikh Council UK guidance, ask both parties to sign a declaration that they are Sikhs and owe allegiance to no other faith. Ask for the forms at your first meeting."
+    },
+    {
+      "item": "Photo identification and birth certificates",
+      "who": "Both",
+      "note": "For the gurdwara's records and for the civil authorities."
+    },
+    {
+      "item": "Decree absolute or final divorce decree",
+      "who": "Either party previously married",
+      "note": "Needed for the civil marriage everywhere, and some gurdwaras also ask to see it before agreeing to the Anand Karaj."
+    },
+    {
+      "item": "Death certificate of a former spouse",
+      "who": "Either party widowed",
+      "note": ""
+    },
+    {
+      "item": "Civil notice of marriage or marriage licence",
+      "who": "Both",
+      "note": "England and Wales: notice at the register office at least 29 days before. United States: a state marriage licence, valid for a limited window. Australia: a Notice of Intended Marriage at least one month before. Canada: a provincial licence. India: see the Anand Marriage Act entry."
+    },
+    {
+      "item": "Confirmation that the gurdwara is registered for marriages",
+      "who": "Both, in England and Wales",
+      "note": "A gurdwara wedding is legally binding only if the building is registered for the solemnisation of marriages and an authorised person or registrar acts. Many large gurdwaras are registered; many smaller ones are not, in which case you need a register office or approved-premises ceremony as well. Get the answer in writing before you plan around it."
+    },
+    {
+      "item": "Registrar or authorised person booking",
+      "who": "Both, where required",
+      "note": "If the gurdwara is registered but has no authorised person, the registrar must attend, and registrars book up on summer Saturdays. In the United States and Canada, check instead that your granthi is authorised to solemnise marriages in that state or province."
+    },
+    {
+      "item": "Registration under the Anand Marriage Act",
+      "who": "Both, in India",
+      "note": "The Anand Marriage Act 1909, amended in 2012, recognises Anand Karaj marriages, and states have been directed to notify registration rules. Where your state has rules, register there; where it has not yet, marriages are in practice recorded under other legislation. Check the current position in your state."
+    },
+    {
+      "item": "Marriage certificate copies",
+      "who": "Both",
+      "note": "Order extra certified copies at registration; you will need them for name changes, visas and joint accounts."
+    },
+    {
+      "item": "Declaration and welcome for a partner adopting the Sikh faith",
+      "who": "The partner joining the faith, where applicable",
+      "note": "Where a non-Sikh partner chooses to adopt the Sikh faith so the couple can have an Anand Karaj, UK guidelines involve a signed declaration, adoption of Singh or Kaur in the name on identity documents, and a welcome ardas at the gurdwara. This is a genuine commitment of faith, not paperwork to route around; discuss it honestly with the gurdwara and each other."
+    },
+    {
+      "item": "Two witnesses for the civil marriage",
+      "who": "Both",
+      "note": "Most jurisdictions require two adult witnesses to sign at the legal ceremony or registration."
+    },
+    {
+      "item": "Certificate of no impediment or equivalent",
+      "who": "Both, if marrying abroad",
+      "note": "Couples marrying in India or another country from abroad usually need proof from their home country that they are free to marry, plus apostilles or attestation. Allow weeks."
+    },
+    {
+      "item": "Gurdwara conduct agreement",
+      "who": "Both families",
+      "note": "Some gurdwaras ask the families to sign up to house rules: no alcohol, meat, tobacco or intoxicants anywhere on the premises including car parks, no dhol or dancing inside, and respectful dress. Share it with your suppliers as well as your guests."
+    },
+    {
+      "item": "Name change documents",
+      "who": "Either, optional",
+      "note": "Sikh naming practice varies: many women are Kaur and men Singh regardless of marriage, and not all Sikh women change surnames on marriage. Entirely a personal choice."
+    }
+  ],
+  "customs": [
+    {
+      "name": "The Anand Karaj",
+      "description": "The name means 'ceremony of bliss'. Sikh marriage is solemnised in the presence of the Guru Granth Sahib, the scripture that Sikhs revere as the living Guru, and it is the Guru, not the granthi, that the couple bind themselves before. The Sikh Rehat Maryada, the code of conduct, sets out the ceremony and states that Sikhs should marry by Anand Karaj alone.",
+      "optional": false
+    },
+    {
+      "name": "The four laavan",
+      "description": "The heart of the ceremony: four verses composed by Guru Ram Das, the fourth Guru. The granthi reads each laav from the Guru Granth Sahib, then the ragis sing it while the couple walk slowly clockwise around the scripture, the groom leading, the bride holding the palla, bowing together before and after each round. The verses trace a soul's journey to union with the divine, and the marriage is understood the same way: two souls becoming one light in two bodies.",
+      "optional": false
+    },
+    {
+      "name": "The palla",
+      "description": "Before the laavan begin, the bride's father places the end of the palla, the scarf draped over the groom's shoulder, into the bride's hands while a shabad is sung. It is his giving of her hand, and she holds the palla through all four rounds. The moment is short and quiet, and it is the one that fathers remember.",
+      "optional": false
+    },
+    {
+      "name": "Ardas and hukamnama",
+      "description": "The ardas is the standing congregational prayer, offered at the start of the ceremony with only the couple and their parents standing, to show the families' consent, and again by all at the end. After the closing ardas the Guru Granth Sahib is opened at random and the hymn on the page, the hukamnama, is read as the Guru's word to the new couple.",
+      "optional": false
+    },
+    {
+      "name": "Kirtan and the ragis",
+      "description": "Sacred hymns sung by the ragi jatha, usually a trio with harmonium and tabla, run through the ceremony from the arrival of the sangat to the close. There is no other music inside the darbar hall, and no applause: appreciation is expressed with the words 'Waheguru' rather than clapping.",
+      "optional": false
+    },
+    {
+      "name": "Karah prashad",
+      "description": "The warm sweet pudding of flour, ghee and sugar distributed to every person at the end of the ceremony, symbolising that all who sit in the Guru's presence are equal and none leaves empty-handed. It is received seated, with cupped hands. It contains dairy and wheat, worth telling guests with allergies.",
+      "optional": false
+    },
+    {
+      "name": "Langar",
+      "description": "The gurdwara's free vegetarian kitchen, founded on the principle that everyone eats together as equals regardless of faith, caste or status. Every wedding is followed by langar, families donate towards it and often serve it themselves, and it is open to whoever is present, not only wedding guests.",
+      "optional": false
+    },
+    {
+      "name": "No vows, no rings, no fixed 'lucky day'",
+      "description": "The laavan themselves are the marriage: there are no spoken vows, no ring exchange and no personalisation of the rite. The Rehat Maryada also rejects horoscopes and astrology outright; any day the families find convenient is acceptable, including days other traditions avoid. Couples who want rings exchange them at the engagement, the civil ceremony or the reception.",
+      "optional": false
+    },
+    {
+      "name": "Equality and no dowry",
+      "description": "The Rehat Maryada forbids matching by caste and condemns dowry. It also bars child marriage and requires the couple's own consent. Sikh weddings are, in principle, deliberately simple; much of the surrounding spectacle is Punjabi culture, which the faith tolerates in moderation rather than requires.",
+      "optional": false
+    },
+    {
+      "name": "Roka, kurmai and chunni",
+      "description": "The staged Punjabi engagement: the roka 'stops' the search and joins the families, the kurmai is the formal engagement with blessings and gifts, and at the chunni ceremony the groom's family drape the bride in a headscarf as a sign of acceptance. Families combine or skip these freely.",
+      "optional": true
+    },
+    {
+      "name": "Sukhmani Sahib or Akhand Path",
+      "description": "A devotional reading held before the wedding: Sukhmani Sahib, the 'psalm of peace', in a single sitting, or the Akhand Path, an unbroken forty-eight-hour reading of the whole Guru Granth Sahib by relay, ending with ardas, karah prashad and langar.",
+      "optional": true
+    },
+    {
+      "name": "Maiyan and vatna",
+      "description": "In the days before the wedding each family rubs a paste of turmeric, flour and mustard oil on their own child's skin, with folk songs, to bless and beautify them. In some families the couple then stay home until the wedding.",
+      "optional": true
+    },
+    {
+      "name": "Mehndi",
+      "description": "Henna for the bride's hands and feet and for the women of the family, applied at a party a few days out. The bride's design often hides the groom's initials for him to find. A Punjabi and broader South Asian custom, not a Sikh religious one.",
+      "optional": true
+    },
+    {
+      "name": "Sangeet and giddha",
+      "description": "The singing party. Traditionally the women of the family sang suhag and other folk wedding songs and danced giddha with spoken bolis, verses teasing the in-laws. Modern sangeets add a DJ, choreographed family dances and dinner.",
+      "optional": true
+    },
+    {
+      "name": "Jaggo",
+      "description": "On the final night the maternal family carry decorated brass pots topped with lamps on their heads, dancing and singing to 'wake' the neighbourhood and announce the wedding, historically going door to door being fed and toasted. The decorated jaggo pot is now often hired, lit with electric candles.",
+      "optional": true
+    },
+    {
+      "name": "Chooda",
+      "description": "The bride's maternal uncle and aunt give her the chooda, a set of red and cream bangles first purified in milk and rosewater, in a ceremony at home. Traditionally the bride does not look at the bangles as they are put on, and she wears the set for a fixed period after the wedding, commonly forty days or more depending on family custom.",
+      "optional": true
+    },
+    {
+      "name": "Kalire",
+      "description": "Umbrella-shaped gold or silver ornaments tied to the chooda by the bride's sisters, cousins and friends. At the doli or reception the bride shakes her wrists over the heads of her unmarried friends: whoever a piece falls on is said to marry next, a friendlier cousin of the bouquet toss.",
+      "optional": true
+    },
+    {
+      "name": "Sehra bandi and the ghodi",
+      "description": "On the wedding morning the groom's sister ties the sehra, a veil of flowers or beads, over his turban, and his sisters and cousins feed and decorate the mare, the ghodi, before he rides at the head of the baraat. Many gurdwaras ask that the sehra be lifted or removed before the Guru Granth Sahib, and many grooms now arrive by car instead.",
+      "optional": true
+    },
+    {
+      "name": "The baraat",
+      "description": "The groom's procession: family and friends dancing him in behind the dhol to meet the bride's family. It is loud by design, and it goes quiet at the gurdwara gate, where drums and dancing generally must stop.",
+      "optional": true
+    },
+    {
+      "name": "The milni",
+      "description": "The formal meeting of the families before the ceremony. After an ardas, matching relatives are called in pairs, the two fathers, the two eldest uncles and so on, to exchange garlands, embrace and receive gifts from the bride's side. Milni means 'meeting', and it makes the marriage a joining of families, not just of two people.",
+      "optional": true
+    },
+    {
+      "name": "Joota chupai",
+      "description": "The bride's sisters and cousins steal the groom's shoes, easy to do at a gurdwara where everyone's shoes are off, and ransom them back as he leaves. Negotiation is theatrical and the price is haggled with relish. Grooms should carry cash.",
+      "optional": true
+    },
+    {
+      "name": "Doli and vidaai",
+      "description": "The bride's farewell. Leaving her family, she throws puffed rice back over her head, wishing prosperity on the home she leaves, and her brothers walk her to the car. The name comes from the doli, the palanquin in which brides were once carried. It is the most emotional moment of the day on the bride's side.",
+      "optional": true
+    },
+    {
+      "name": "Pani varna and the welcome home",
+      "description": "At the groom's family home his mother greets the couple at the door, circling a vessel of water around them before they enter, and small welcome games and blessings follow. Families vary widely in how much of this they keep.",
+      "optional": true
+    },
+    {
+      "name": "Muklawa",
+      "description": "Historically the bride returned to her parents after the wedding and only moved to her husband's home at the muklawa, sometimes years later. Today it survives as a symbolic first visit back to the bride's family shortly after the wedding, often the next day.",
+      "optional": true
+    }
+  ],
+  "gotchas": [
+    "Talk to the gurdwara before booking anything. The Sikh Rehat Maryada states that the Anand Karaj is for Sikhs, and a 2007 directive from the Akal Takht requires a partner of another faith who wishes to marry by Anand Karaj to genuinely adopt the Sikh faith first. Some gurdwaras apply this strictly, including declaration forms; others are more flexible in practice. If one of you is not Sikh, ask early, honestly and without assuming the answer, and know that a civil marriage followed by an ardas of blessing at the gurdwara is a recognised alternative.",
+    "The Anand Karaj is a morning ceremony by strong convention, and busy gurdwaras run fixed slots with another wedding behind yours. Build the whole day backwards from a morning ceremony: hair and make-up before dawn, baraat mid-morning, langar at midday, and a long gap before the evening reception that out-of-town guests will need a plan for.",
+    "No alcohol, meat, tobacco or other intoxicants anywhere on gurdwara premises, including the car park. This is non-negotiable and applies to guests, suppliers and hip flasks in the baraat. It is also why the reception is almost always at a second venue.",
+    "Every guest covers their head and removes their shoes in the gurdwara, men included, and dresses modestly. A hat is not a substitute for a scarf or rumal. Brief non-Sikh guests in the invitation or on a wedding website, and put someone at the door with spare rumals.",
+    "Everyone sits on the carpeted floor of the darbar hall, cross-legged, without pointing feet towards the Guru Granth Sahib. Warn guests so they dress for it, and ask the gurdwara about chairs or benches for elderly and disabled guests; many provide seating at the back.",
+    "The dhol and dancing stop at the gurdwara boundary at most gurdwaras. Choreograph the baraat to reach its peak before the gate, not at it, and warn the dhol players, who will know, and your guests, who may not.",
+    "No applause inside the darbar hall, and phones on silent. The congregation says 'Waheguru' rather than clapping. Tell your guests, because the end of the laavan feels like a moment to applaud.",
+    "A gurdwara ceremony is not automatically a legal marriage. In England and Wales it is legally binding only if the building is registered for marriages and an authorised person or registrar acts, and not every gurdwara is registered; in that case you need a separate civil ceremony. In the United States and Canada, get the licence first and check the granthi is authorised to solemnise. In India, push through the registration paperwork after the wedding; the Anand Marriage Act now provides for it where states have notified rules.",
+    "Do not ask the granthi for an auspicious date. The Rehat Maryada rejects horoscopes and astrology, and any day is religiously acceptable. Weekend slots still book out a year ahead at large gurdwaras for entirely practical reasons.",
+    "Langar is open to everyone present, including the regular congregation, and on a weekend your wedding shares the gurdwara with normal worship. Cater for more than your list, expect strangers at the meal, and take it as the point rather than a problem: equality at the shared meal is core to Sikhi.",
+    "The Rehat Maryada condemns dowry, and gurdwara committees take this seriously. Keep the family gift exchange as genuine gifts, agreed openly between the families, and be wary of any pressure dressed up as tradition.",
+    "Photographers and videographers must cover their heads, work shoeless, and never stand with their back to the Guru Granth Sahib or cross between the scripture and the sangat. Some gurdwaras restrict positions or numbers. Book people who have shot an Anand Karaj before, and have them agree positions with the granthi beforehand.",
+    "Some gurdwaras ask the groom to remove the sehra and kalgi, and to lift any face veil, before sitting in front of the Guru Granth Sahib. Ask yours rather than being surprised at the door.",
+    "Karah prashad is made with wheat flour and ghee. Guests with coeliac disease or dairy allergies should know before it is pressed warmly into their hands, because refusing it outright can feel awkward; a quiet word to the sevadar distributing it is fine.",
+    "The bride's outfit has to work for the ceremony, not just the photographs: the chunni stays pinned over her head throughout, she sits on the floor for around an hour, and she walks four slow rounds carrying heavy fabric. Rehearse sitting, standing and walking in the full outfit.",
+    "Decide the alcohol question at the reception early and together. Open-bar Punjabi receptions and fully dry receptions are both completely normal; what causes trouble is two families assuming different answers. Amritdhari (initiated) relatives will not drink and may prefer not to sit beside the bar.",
+    "The milni list is family politics. Agree the pairs with both sides well in advance, keep the gifts even-handed, and give the list to the granthi or master of ceremonies, because a senior uncle left out of the milni will remember it for years.",
+    "The chooda is traditionally bought and given by the bride's maternal uncle. If he lives abroad or the family is scattered, coordinate early so the bangles exist, fit and arrive; couriering a chooda across a border the week of the wedding is a known emergency.",
+    "Guest numbers behave differently per event: the gurdwara and langar are effectively open, the reception is seated and fixed. Number the reception invitations by seats per household, or the caterer's count and the door count will not match.",
+    "If you are having a separate civil ceremony, decide the order deliberately. Many UK couples register earlier the same week quietly; if the register office date lands after the Anand Karaj, some families care about which day counts as the anniversary and which certificate the visa office will want."
+  ],
+  "sources": [
+    "https://old.sgpc.net/sikhism/anand-sanskar.asp",
+    "https://www.gurunanakdarbar.net/sikhrehatmaryada.pdf",
+    "https://gurdwarasahibwoolwich.org.uk/legacy-site/gurmat-maryada-of-anand-karaj.html",
+    "https://www.sna.org.uk/guidelines-for-sikh-marriages-in-gurdwaras/",
+    "https://guruharrai.org/guidelines-for-sikh-marriages-in-gurdwaras/",
+    "https://sikhcouncil.co.uk/marriage-and-anand-karaj-ceremony/",
+    "https://sikhcouncil.co.uk/respectanandkaraj/",
+    "https://www.sikh24.com/2014/10/25/sikh-council-uk-develops-guidelines-of-approach-to-inter-faith-marriages-in-gurdwaras/",
+    "https://tampagurdwara.com/anand-karaj/",
+    "https://lawandreligionuk.com/2013/07/29/sikh-council-caution-on-ending-civil-marriage-ceremonies/",
+    "https://www.gov.uk/marriages-civil-partnerships",
+    "https://en.wikipedia.org/wiki/Anand_Marriage_Act,_1909",
+    "https://en.wikipedia.org/wiki/Punjabi_wedding_traditions",
+    "https://en.wikipedia.org/wiki/Mayian"
+  ]
+}

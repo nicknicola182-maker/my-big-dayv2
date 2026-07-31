@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wedding App — Flow Review</title>
+<style>
+  :root{
+    --blush:#F6DDE2; --blush-deep:#E8B4C0; --ink:#2B2B33; --muted:#6E6E78;
+    --paper:#FBF9F7; --card:#FFFFFF; --line:#E7E2DD; --gold:#B08D57;
+    --free:#3E7C5B; --free-bg:#E8F3ED; --paid:#8A5A9E; --paid-bg:#F2EAF7;
+    --warn-bg:#FDF3E3; --warn:#9A6B1F;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;padding:0 0 80px}
+  .wrap{max-width:880px;margin:0 auto;padding:0 28px}
+  header{background:linear-gradient(135deg,var(--blush) 0%,#FBEFF2 100%);padding:44px 0 36px;border-bottom:1px solid var(--line);margin-bottom:40px}
+  header .wrap{max-width:880px}
+  h1{font-size:26px;font-weight:650;letter-spacing:-.3px}
+  .sub{color:var(--muted);margin-top:6px;font-size:15px}
+  h2{font-size:19px;font-weight:650;margin:48px 0 6px;letter-spacing:-.2px}
+  h2 .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;font-size:13px;margin-right:10px;vertical-align:2px}
+  .lede{color:var(--muted);font-size:14.5px;margin-bottom:18px}
+  /* flow diagram */
+  .flow{display:flex;flex-direction:column;gap:0;margin:22px 0 8px}
+  .fnode{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  .fnode b{display:block;font-size:14.5px}
+  .fnode span{font-size:13px;color:var(--muted)}
+  .farrow{width:2px;height:22px;background:var(--blush-deep);margin:0 auto;position:relative}
+  .farrow:after{content:'';position:absolute;bottom:-1px;left:-4px;border:5px solid transparent;border-top-color:var(--blush-deep)}
+  .fnode.hl{border-left:4px solid var(--blush-deep)}
+  .fnode.pay{border-left:4px solid var(--paid)}
+  /* tables */
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13.5px;margin:16px 0}
+  th{background:#F4F0EC;text-align:left;padding:10px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+  td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+  td.qn{white-space:nowrap;font-weight:650;color:var(--gold)}
+  .qtext{font-weight:600}
+  .qsub{color:var(--muted);font-size:12.5px;display:block;margin-top:2px}
+  /* badges */
+  .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;padding:2px 9px;border-radius:20px;text-transform:uppercase}
+  .b-free{background:var(--free-bg);color:var(--free)}
+  .b-paid{background:var(--paid-bg);color:var(--paid)}
+  .b-auto{background:#EAF1F8;color:#3A6B9E}
+  /* screen cards */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .card h3{font-size:14.5px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+  .card p{font-size:13px;color:var(--muted)}
+  .callout{background:var(--warn-bg);border:1px solid #EBD9B4;border-radius:12px;padding:14px 18px;font-size:13.5px;margin:16px 0}
+  .callout b{color:var(--warn)}
+  .decision{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:14px 18px;margin:12px 0}
+  .decision b{font-size:14px}
+  .decision p{font-size:13.5px;color:var(--muted);margin-top:4px}
+  .kv{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+  .kv div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:13px}
+  .kv b{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Wedding App — the flow, for your review</h1>
+    <div class="sub">First open → onboarding → populated plan → daily use. Nothing here is built yet; mark up anything you'd change.</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<h2><span class="num">1</span>The journey at a glance</h2>
+<p class="lede">What a brand-new couple experiences, from tapping the icon to a plan that already looks like <em>their</em> wedding.</p>
+
+<div class="flow">
+  <div class="fnode"><b>Open the app for the first time</b><span>Warm welcome screen. One line on what the app does. No account demanded yet — "Get started" or "I already have a plan" (restore/sign in).</span></div>
+  <div class="farrow"></div>
+  <div class="fnode hl"><b>Onboarding — 14 questions, one per screen</b><span>Big touch targets, progress bar, back button, skippable where safe. Geo pre-fills suggestions; the couple always confirms. Under 3 minutes.</span></div>
+  <div class="farrow"></div>
+  <div class="fnode hl"><b>The engine builds the plan</b><span>Answers + culture pack + country pricing → budget, events, checklist, paperwork, customs, and the app's own vocabulary. A short "building your plan" moment — then the reveal.</span></div>
+  <div class="farrow"></div>
+  <div class="fnode"><b>The reveal</b><span>"Here's your wedding so far" — their tradition, their events, a budget allocated across their sections, a checklist anchored to their date. This is the moment that sells the app.</span></div>
+  <div class="farrow"></div>
+  <div class="fnode"><b>Create account (soft ask)</b><span>Offered after the reveal, not before: "Save your plan + plan together with your partner." Email or Apple/Google sign-in. Can be skipped; nagged gently later.</span></div>
+  <div class="farrow"></div>
+  <div class="fnode"><b>Daily use — the five tabs</b><span>Home · Budget · Checklist · Guests · More. The couple lives here for the next 12–18 months.</span></div>
+  <div class="farrow"></div>
+  <div class="fnode pay"><b>The unlock — £14.99, one-off</b><span>Met naturally when they tap Suppliers, Export, partner invite, or hit the custom-item cap. Never a pop-up ambush.</span></div>
+</div>
+
+<h2><span class="num">2</span>First open — the 14 questions</h2>
+<p class="lede">Each question exists to drive something. If it doesn't change the plan, it isn't asked.</p>
+
+<table>
+  <tr><th style="width:34px">#</th><th>Question</th><th style="width:170px">Answer type</th><th>What it drives</th></tr>
+  <tr><td class="qn">Q1</td><td><span class="qtext">Your names</span><span class="qsub">"Who's getting married?" — two names, and which of you is filling this in.</span></td><td>Free text × 2</td><td>Personalisation everywhere — "Andreas &amp; Paulina's wedding", partner invite later.</td></tr>
+  <tr><td class="qn">Q2</td><td><span class="qtext">Your tradition</span><span class="qsub">Religion / tradition first. Geo suggests the likely one — the couple confirms or changes it. "We're mixing two traditions" is an option.</span></td><td>Picker (8 packs + mixed)</td><td><b>Selects the culture pack.</b> The single most important answer.</td></tr>
+  <tr><td class="qn">Q3</td><td><span class="qtext">Within that tradition…</span><span class="qsub">Only shown where it matters: Orthodox → Greek/Russian/other · Jewish → Orthodox/Masorti/Reform/secular · Muslim → cultural background · Hindu → region · Protestant → denomination.</span></td><td>Picker, conditional</td><td>Tunes terminology, customs shown, and which hedged notes surface.</td></tr>
+  <tr><td class="qn">Q4</td><td><span class="qtext">Where's the wedding?</span><span class="qsub">Country, then region/city. Geo pre-fills; fully overridable — a Greek Orthodox wedding in Melbourne stays Greek Orthodox.</span></td><td>Country + city picker</td><td>Country cost multipliers, currency, supplier directory region, venue-law gotchas.</td></tr>
+  <tr><td class="qn">Q5</td><td><span class="qtext">Where do you live?</span><span class="qsub">Only if different from the wedding country.</span></td><td>Country picker, conditional</td><td>Paperwork: notice of marriage, residency rules, recognising a foreign marriage.</td></tr>
+  <tr><td class="qn">Q6</td><td><span class="qtext">When's the big day?</span><span class="qsub">Exact date, rough month/season, or "no idea yet". Pack date-warnings fire here — Lent, the Omer, muhurat, Ramadan.</span></td><td>Date / season / skip</td><td>Anchors every checklist task; flags dates the tradition can't use.</td></tr>
+  <tr><td class="qn">Q7</td><td><span class="qtext">How many guests?</span><span class="qsub">Bands scaled by the pack — Greek Orthodox offers "open invitation (500+)"; Civil offers "just us (2–20)".</span></td><td>Pack-scaled bands</td><td>Per-guest budget lines, venue size guidance, catering scale.</td></tr>
+  <tr><td class="qn">Q8</td><td><span class="qtext">What's the budget?</span><span class="qsub">A band in their currency, or "help me work it out" (short guided estimate), or skip.</span></td><td>Band / guided / skip</td><td>Multiplied through every item's share of budget. Skipping shows proportions instead of figures.</td></tr>
+  <tr><td class="qn">Q9</td><td><span class="qtext">Ceremony setting</span><span class="qsub">Pack-aware: church + which one · gurdwara · register office · licensed venue · outdoor celebrant…</span></td><td>Picker, pack-aware</td><td>Ceremony budget lines, legal two-step warnings, officiant tasks.</td></tr>
+  <tr><td class="qn">Q10</td><td><span class="qtext">Reception setting</span><span class="qsub">Hotel · banqueting hall · marquee · restaurant · at home · none/small meal.</span></td><td>Picker</td><td>Reception lines on/off, marquee extras, venue-hire vs package logic.</td></tr>
+  <tr><td class="qn">Q11</td><td><span class="qtext">Which events are you having?</span><span class="qsub">The pack's events, pre-ticked to its defaults — mehndi, sangeet, rehearsal dinner, walima… toggle off anything not wanted.</span></td><td>Multi-toggle from pack</td><td>Whole event groups and their budget lines, timeline and day-plan.</td></tr>
+  <tr><td class="qn">Q12</td><td><span class="qtext">What matters most?</span><span class="qsub">Pick up to three: food, photography, music, flowers, attire, venue…</span></td><td>Pick 3</td><td>Nudges budget allocation up on priorities, down elsewhere; orders supplier suggestions.</td></tr>
+  <tr><td class="qn">Q13</td><td><span class="qtext">Style</span><span class="qsub">Traditional · modern · relaxed · formal · rustic · glamorous.</span></td><td>Picker</td><td>Tone of suggestions and imagery. Deliberately light-touch — no budget effect.</td></tr>
+  <tr><td class="qn">Q14</td><td><span class="qtext">Planning together?</span><span class="qsub">"Would you like to invite your partner to plan with you?" — now, or later.</span></td><td>Invite / later</td><td>Sets up partner sync (paid feature — a taste is shown, unlock prompted at invite).</td></tr>
+</table>
+
+<div class="callout"><b>Design rule:</b> geo only ever <em>suggests</em> — tradition and country are always confirmed by the couple. Getting someone's tradition wrong on question two is unrecoverable; letting them confirm it costs one tap.</div>
+
+<h2><span class="num">3</span>What the engine does with the answers</h2>
+<p class="lede">The ten seconds between the last question and the reveal.</p>
+
+<div class="kv">
+  <div><b>Pack</b>Q2/Q3 select and tune one of the 8 packs</div>
+  <div><b>Money</b>Q4 country multiplier × Q8 budget × each item's share</div>
+  <div><b>Scale</b>Q7 guests applied to per-guest / per-table lines</div>
+  <div><b>Scope</b>Q9–Q11 switch events and their budget lines on/off</div>
+  <div><b>Time</b>Q6 date anchors the checklist; tradition date-warnings applied</div>
+  <div><b>Law</b>Q4+Q5 select the paperwork list and legal gotchas</div>
+  <div><b>Voice</b>Pack terms swap the UI's vocabulary — priest/rabbi/imam/registrar</div>
+  <div><b>Priorities</b>Q12 rebalances allocation within the total</div>
+</div>
+
+<h2><span class="num">4</span>The main app — five tabs</h2>
+<p class="lede">Everything from the current v20 app survives; it's re-plumbed to sit on the engine instead of hard-coded Greek Cypriot content.</p>
+
+<div class="grid">
+  <div class="card"><h3>Home <span class="badge b-free">Free</span></h3><p>Countdown, budget health at a glance, next 3 checklist tasks, date warnings. The screen they open every time.</p></div>
+  <div class="card"><h3>Budget <span class="badge b-free">Free</span></h3><p>Sections and items from the pack, figures from the engine. Track estimated vs agreed vs paid, per item — the heart of the current app, kept.</p></div>
+  <div class="card"><h3>Checklist <span class="badge b-free">Free</span></h3><p>Timeline tasks counted back from the date, critical ones flagged. Paperwork lives here as its own filter — the legal must-dos.</p></div>
+  <div class="card"><h3>Guests <span class="badge b-free">Free</span></h3><p>Count, sides, RSVPs. Feeds per-guest budget lines live — change the number, watch catering move.</p></div>
+  <div class="card"><h3>More — Traditions &amp; customs <span class="badge b-free">Free</span></h3><p>The pack's customs and gotchas as a warm reference: what each tradition means, what catches couples out.</p></div>
+  <div class="card"><h3>More — Suppliers &amp; enquiries <span class="badge b-paid">£14.99</span></h3><p>Directory filtered to their country and categories, plus the enquiry sender. Browsing shows a teaser; contacting needs the unlock.</p></div>
+  <div class="card"><h3>More — Partner sync <span class="badge b-paid">£14.99</span></h3><p>Both phones, one plan, live. Prompted at Q14 and from Home. Rides on the cloud account.</p></div>
+  <div class="card"><h3>More — Export <span class="badge b-paid">£14.99</span></h3><p>PDF summary and Excel budget — for parents, planners and venues.</p></div>
+</div>
+
+<h2><span class="num">5</span>Where the paywall appears</h2>
+<p class="lede">One purchase, £14.99, owned forever. Free is a complete planner, not a crippled demo — that's what earns the review score.</p>
+
+<table>
+  <tr><th>Moment</th><th>What they see</th></tr>
+  <tr><td>Tap a supplier's "Send enquiry"</td><td>Unlock sheet: everything included, one price, restore-purchase link.</td></tr>
+  <tr><td>Invite partner (Q14 or later)</td><td>Same sheet — "plan together on both phones".</td></tr>
+  <tr><td>Tap Export</td><td>Same sheet.</td></tr>
+  <tr><td>Add an 11th custom budget item or photo</td><td>Gentle cap notice with the same sheet. Everything already added stays.</td></tr>
+</table>
+
+<h2><span class="num">6</span>Returning users, accounts and sync</h2>
+<table>
+  <tr><th>Situation</th><th>What happens</th></tr>
+  <tr><td>Normal return</td><td>Straight to Home. No splash, no sign-in friction.</td></tr>
+  <tr><td>New phone / reinstall</td><td>"I already have a plan" on the welcome screen → sign in → plan restored from cloud.</td></tr>
+  <tr><td>No account yet</td><td>Plan lives on-device; a gentle prompt to back it up appears after real data exists (guests added, budget edited).</td></tr>
+  <tr><td>Partner joins</td><td>Invite link → partner installs → signs in → same plan on both phones, edits sync live.</td></tr>
+  <tr><td>Account deletion</td><td>In Settings, self-serve — required by Apple. Deletes cloud data, offers a final export first.</td></tr>
+</table>
+
+<h2><span class="num">7</span>Open decisions — your call before I build</h2>
+
+<div class="decision"><b>D1 — Mixed-tradition couples</b><p>Q2 offers "we're mixing two traditions". Simplest honest version for launch: pick a primary pack (drives budget and timeline), and the second tradition's customs and key events are available to toggle on. A full two-pack merge is a later release. Agree?</p></div>
+<div class="decision"><b>D2 — Skippable budget (Q8)</b><p>If they skip the budget, the app shows proportions ("Reception ~45%") instead of figures until they set one. Keeps the reveal working without forcing a number on day one. Agree?</p></div>
+<div class="decision"><b>D3 — Custom item cap for free tier</b><p>Proposed: 10 custom budget items and 10 photos free, unlimited with the unlock. Say the word if you want a different number.</p></div>
+<div class="decision"><b>D4 — Account timing</b><p>Account is offered after the reveal and skippable, so the first-run magic is never blocked by a sign-up form. Cloud sync then rides on the account whenever they create it. Agree?</p></div>
+<div class="decision"><b>D5 — The reveal screen</b><p>One screen or a short guided tour (3 swipes: your budget → your checklist → your traditions)? I lean one strong screen with the tabs doing the touring. Your preference?</p></div>
+
+</div>
+</body>
+</html>

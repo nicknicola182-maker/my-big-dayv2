@@ -1,0 +1,1010 @@
+{
+  "id": "hindu",
+  "name": "Hindu / South Asian",
+  "shortName": "Hindu",
+  "faithGroup": "Hindu",
+  "blurb": "Several days of haldi, mehndi and sangeet building to the vivaah under the mandap: the baraat, the sacred fire, the seven steps, the mangalsutra and sindoor, at a muhurat chosen with your pandit.",
+  "commonCountries": [
+    "IN",
+    "NP",
+    "LK",
+    "GB",
+    "US",
+    "CA",
+    "AU",
+    "ZA",
+    "MU",
+    "FJ",
+    "TT",
+    "GY",
+    "SG",
+    "MY"
+  ],
+  "typicalGuests": {
+    "low": 150,
+    "typical": 300,
+    "high": 1000
+  },
+  "typicalDays": 4,
+  "terms": {
+    "officiant": "pandit",
+    "ceremonyVenue": "mandap",
+    "ceremony": "the vivaah",
+    "bestMan": "best man",
+    "maidOfHonour": "maid of honour",
+    "reception": "reception",
+    "firstDance": "first dance",
+    "witnesses": "witnesses"
+  },
+  "events": [
+    {
+      "id": "roka",
+      "name": "Roka and engagement (sagai / nischitartham)",
+      "when": "Three to eighteen months before",
+      "optional": true,
+      "default": true,
+      "description": "The formal agreement between the two families, and often the first party of the wedding. In North India the roka 'stops' the match and is followed by a ring ceremony (sagai or mangni); in the south the equivalent is the nischitartham or nichayathartham, often with an exchange of trays of gifts and the formal fixing of the wedding date. Some families hold one small gathering, others two distinct events months apart.",
+      "hosts": "Traditionally the bride's family, increasingly shared"
+    },
+    {
+      "id": "ganesh-puja",
+      "name": "Ganesh puja and opening rituals",
+      "when": "One to seven days before",
+      "optional": true,
+      "default": true,
+      "description": "Most families open the wedding period with a puja to Ganesha, the remover of obstacles, held at home with close family. Regional forms sit alongside it: the graha shanti in Marathi and Gujarati families, the mandap or mandvo ceremony raising the wedding canopy, and in Bengali families the ashirbad blessing and the aiburo bhat, the last meal as an unmarried person.",
+      "hosts": "Each family at its own home"
+    },
+    {
+      "id": "haldi",
+      "name": "Haldi (pithi / gaye holud)",
+      "when": "One or two days before, or the wedding morning",
+      "optional": true,
+      "default": true,
+      "description": "Family and friends apply a paste of turmeric, oil and water to the bride's and groom's skin to bless them and ward off ill fortune. Called pithi in Gujarati families and gaye holud in Bengali ones, it is playful and messy: everyone wears clothes that can be stained yellow, and the couple traditionally do not meet between the haldi and the ceremony. Usually held separately at each family's home, sometimes now combined.",
+      "hosts": "Each family for its own side, sometimes combined"
+    },
+    {
+      "id": "mehndi",
+      "name": "Mehndi",
+      "when": "One or two days before",
+      "optional": true,
+      "default": true,
+      "description": "Henna is applied to the bride's hands and feet in intricate designs, with the groom's name or initials often hidden in the pattern for him to find later. Female relatives and friends have simpler designs done at the same time, with music and food, so it doubles as a party. The bridal application alone takes several hours, so the day needs little else in it.",
+      "hosts": "Traditionally the bride's family"
+    },
+    {
+      "id": "sangeet",
+      "name": "Sangeet",
+      "when": "One or two nights before",
+      "optional": true,
+      "default": true,
+      "description": "A night of music and dancing, with choreographed performances by cousins and friends alongside open dancing. Originally a North Indian and Punjabi ladies' singing night, it has become a pan-Indian and diaspora fixture and is often the biggest pre-wedding event, sometimes merged with the mehndi. Families with South Indian roots may not have grown up with it and may keep it small or skip it.",
+      "hosts": "Both families together, or the bride's family"
+    },
+    {
+      "id": "baraat",
+      "name": "Baraat, milni and welcome",
+      "when": "Wedding day, before the ceremony",
+      "optional": true,
+      "default": true,
+      "description": "The groom arrives in procession with his family and friends dancing around him, traditionally on a white horse and led by dhol drummers. At the entrance the milni greets the two families pair by pair, and the bride's mother welcomes the groom with an aarti; in Gujarati families she also playfully tugs his nose (ponkhvu). The baraat is a North Indian tradition adopted widely in the diaspora; most South Indian weddings begin instead with a quieter formal welcome of the groom.",
+      "hosts": "The groom's side arrives; the bride's family receives"
+    },
+    {
+      "id": "ceremony",
+      "name": "The wedding ceremony (vivaah)",
+      "when": "Wedding day, at the muhurat",
+      "optional": false,
+      "default": true,
+      "description": "Held under the mandap and centred on the sacred fire, with the pandit chanting in Sanskrit. Core elements shared across most regions: the varmala exchange of garlands, kanyadaan, the fire offering (vivaha homa), the joining of hands, the circuits of the fire, the saptapadi or seven steps, and the mangalsutra and sindoor that mark the bride as married. Most ceremonies run ninety minutes to three hours, with the key moment fixed at the muhurat, the auspicious time set with the pandit.",
+      "hosts": "Traditionally the bride's family"
+    },
+    {
+      "id": "vidaai",
+      "name": "Vidaai (farewell)",
+      "when": "Straight after the ceremony or end of the day",
+      "optional": true,
+      "default": true,
+      "description": "The bride's formal farewell to her family as she leaves with the groom. In many North Indian families she throws handfuls of rice back over her head towards her parents' home as thanks for raising her. It is short and openly emotional, and photographers plan for it. Couples who already live together often keep a symbolic version.",
+      "hosts": "The bride's family"
+    },
+    {
+      "id": "reception",
+      "name": "Reception",
+      "when": "Wedding evening or the day after",
+      "optional": true,
+      "default": true,
+      "description": "The large party: entrances, speeches, dinner and dancing. Traditionally hosted by the groom's family to introduce the bride to their community, and sometimes held in a different city for that reason, though many couples now hold a single combined reception. Guest lists often exceed the ceremony list, since some guests are invited to the reception only.",
+      "hosts": "Traditionally the groom's family, now often shared"
+    },
+    {
+      "id": "griha-pravesh",
+      "name": "Griha pravesh (welcoming home)",
+      "when": "After the wedding",
+      "optional": true,
+      "default": false,
+      "description": "The bride is welcomed into the groom's family home for the first time as a wife, classically tipping over a vessel of rice at the threshold with her right foot and entering right foot first. A small family ritual rather than a hosted event, often followed within days by a first puja or a satyanarayan katha at home.",
+      "hosts": "The groom's family"
+    },
+    {
+      "id": "civil-marriage",
+      "name": "Civil marriage or registrar attendance",
+      "when": "Before or after the religious ceremony, where required",
+      "optional": true,
+      "default": false,
+      "description": "Whether the religious ceremony is legally recognised depends on the country. In India the Hindu ceremony itself creates the marriage, which is then registered. In England and Wales the venue must be registered for marriages with an authorised person or registrar present, so many couples complete a short civil ceremony separately. In the United States, Canada and Australia the pandit can usually solemnise legally if the licence or notice paperwork is done.",
+      "hosts": "The couple"
+    }
+  ],
+  "items": [
+    {
+      "id": "pandit-fee",
+      "name": "Pandit's fee (dakshina)",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "The offering to the priest for conducting the ceremony, usually discussed openly in advance and handed over as dakshina on the day. Many families also book the same pandit for the Ganesh puja and other rituals across the week, and cover travel if he comes to you. In the diaspora, pandits who explain the rituals in English as they go are in high demand.",
+      "essential": true,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Pandit",
+      "religiousRequirement": true
+    },
+    {
+      "id": "muhurat-consultation",
+      "name": "Muhurat and horoscope consultation",
+      "section": "Ceremony",
+      "event": "",
+      "note": "The sitting with a pandit or astrologer to fix the muhurat, the auspicious date and exact time for the ceremony, worked out from the panchang (Hindu almanac) and often from the couple's birth details. Many families also have the horoscopes matched (kundali or gun milan) at the engagement stage. Small cost, outsized scheduling consequences: do it before you book anything.",
+      "essential": true,
+      "shareOfBudget": 0.002,
+      "unit": "fixed",
+      "supplierCategory": "Pandit",
+      "religiousRequirement": false
+    },
+    {
+      "id": "ceremony-venue",
+      "name": "Ceremony venue hire",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "A temple hall, banquet hall, marriage hall (kalyana mandapam in the south) or outdoor space that can hold the mandap and the guest count. Two things rule venues out fast: whether they permit an open flame indoors for the havan, and whether they will open at the hour your muhurat demands. Temple venues usually include the mandap and priest but enforce vegetarian-only, alcohol-free premises.",
+      "essential": true,
+      "shareOfBudget": 0.055,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "mandap",
+      "name": "Mandap hire and decoration",
+      "section": "Flowers & Styling",
+      "event": "ceremony",
+      "note": "The four-pillared canopy under which the ceremony happens, its pillars often read as the four parents or the four aims of life. Usually hired as a decorated structure with seating for the couple, both sets of parents and the pandit, plus the fire vessel. Specialist mandap companies handle the fire-safety side with venues; florals and fabric drive the price more than the frame does.",
+      "essential": true,
+      "shareOfBudget": 0.045,
+      "unit": "fixed",
+      "supplierCategory": "Mandap and decor",
+      "religiousRequirement": true
+    },
+    {
+      "id": "havan-samagri",
+      "name": "Puja items and havan samagri",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "Everything the rituals consume: the samagri (herbs and woods) and ghee for the fire, coconuts, rice, kumkum, turmeric, betel leaves, the kalash, flowers and the parched rice for the offerings. Your pandit will give you a list, which varies by region and by how full a ceremony you are having. Some pandits and temples supply it all for a set charge.",
+      "essential": true,
+      "shareOfBudget": 0.005,
+      "unit": "fixed",
+      "supplierCategory": "Pandit",
+      "religiousRequirement": true
+    },
+    {
+      "id": "varmala-garlands",
+      "name": "Varmala garlands",
+      "section": "Flowers & Styling",
+      "event": "ceremony",
+      "note": "The two fresh flower garlands the couple exchange at the start of the ceremony. They are handled, lifted and photographed constantly, so they are made heavier and fresher than ordinary garlands; in the south, garlands for the muhurtham can be substantial. Order alongside the mandap florals so they match.",
+      "essential": true,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": true
+    },
+    {
+      "id": "civil-registration",
+      "name": "Civil registration and licence fees",
+      "section": "Ceremony",
+      "event": "civil-marriage",
+      "note": "Varies entirely by country: the marriage licence in the United States and Canada, notice of marriage for each of you in England and Wales plus any registrar attendance fee, the Notice of Intended Marriage in Australia, and the registration fee with the state registrar in India. Small money, strict deadlines.",
+      "essential": true,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": false
+    },
+    {
+      "id": "reception-venue",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Needs genuine capacity for a large seated dinner plus a stage and dance floor, and ideally tolerance for a late finish. If the ceremony and reception are in one venue, check the turnaround time to strike the mandap and reset the room. Some families still hold the reception in the groom's family's city, which effectively means planning two venues in two places.",
+      "essential": true,
+      "shareOfBudget": 0.07,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "catering-wedding-day",
+      "name": "Wedding day catering",
+      "section": "Reception",
+      "event": "reception",
+      "note": "The biggest line in the budget. Menus are regional: North Indian, Gujarati thali service, South Indian meals traditionally served on banana leaves, Indo-Caribbean, or a mix when the families differ. Beef is never served, the ceremony meal is usually fully vegetarian, and many families keep every event vegetarian, so a caterer who cooks Indian vegetarian food properly matters more than almost any other booking. Ask about Jain (no onion, garlic or root vegetables) and vegan guests, and whether eggs count as vegetarian for your families.",
+      "essential": true,
+      "shareOfBudget": 0.22,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "catering-pre-events",
+      "name": "Catering for haldi, mehndi and sangeet",
+      "section": "Reception",
+      "event": "",
+      "note": "The pre-wedding events all feed people too, and across three or four gatherings this quietly becomes one of the larger lines. Home-cooked food and chaat stations are common for haldi and mehndi; the sangeet often gets full catering. Count each event's guest list separately, because they are rarely the same.",
+      "essential": true,
+      "shareOfBudget": 0.05,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Practice varies more here than anywhere else. Alcohol is never served at the ceremony, temple venues ban it from the premises entirely, and some families are dry throughout; others run a full bar at the sangeet and reception. Agree the approach between both families early, and budget generously for soft drinks either way: fresh juice, lassi and chai service are expected.",
+      "essential": true,
+      "shareOfBudget": 0.028,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "service-staffing",
+      "name": "Service charge and staffing",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Waiting and bar staff, buffet and live-station staffing, and cleanup, often quoted separately from the per-head food price. Live counters (dosa, chaat, tandoor) each carry their own staffing cost.",
+      "essential": true,
+      "shareOfBudget": 0.01,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "wedding-cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Not a Hindu tradition, but a common diaspora addition for the reception. If your families are strictly vegetarian, order an eggless cake; most Indian bakers do this as standard.",
+      "essential": false,
+      "shareOfBudget": 0.005,
+      "unit": "fixed",
+      "supplierCategory": "Cake maker",
+      "religiousRequirement": false
+    },
+    {
+      "id": "mithai-favours",
+      "name": "Mithai and favours",
+      "section": "Stationery",
+      "event": "",
+      "note": "Boxes of Indian sweets given to guests, and larger trays exchanged between the families across the week. Many families also send sweets out with the invitations to close relatives. Order per household rather than per person and the numbers stay manageable.",
+      "essential": true,
+      "shareOfBudget": 0.01,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bridal-outfit",
+      "name": "Bridal lehenga or sari",
+      "section": "Attire",
+      "event": "ceremony",
+      "note": "Red and deep jewel tones are traditional for the ceremony in much of India, though regional dress differs beautifully: a lehenga or red sari in the north, a Kanjeevaram silk sari in Tamil families, a red Banarasi sari worn with white shakha bangles in Bengali families, cream and gold kasavu in Kerala. Modern brides often choose pastels. Heavily embroidered outfits are heavy in the literal sense; sit in it, walk in it and plan for hours of wear.",
+      "essential": true,
+      "shareOfBudget": 0.045,
+      "unit": "fixed",
+      "supplierCategory": "Bridal wear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bridal-additional-outfits",
+      "name": "Bride's outfits for the other events",
+      "section": "Attire",
+      "event": "",
+      "note": "A separate look for the mehndi, sangeet and reception is now standard: typically lighter lehengas or suits for the pre-events and a gown or second lehenga for the reception. This multiplies quickly, and it is where rental and borrowing from family are most common.",
+      "essential": false,
+      "shareOfBudget": 0.02,
+      "unit": "fixed",
+      "supplierCategory": "Bridal wear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "groom-sherwani",
+      "name": "Groom's sherwani or ceremony outfit",
+      "section": "Attire",
+      "event": "ceremony",
+      "note": "A sherwani with a safa (turban) and often a kalgi brooch in the north; a kurta with dhoti, or a veshti with angavastram, in southern and eastern traditions where the groom may also be bare-chested with a sacred thread for the rituals. Some grooms change between a traditional ceremony outfit and a suit for the reception.",
+      "essential": true,
+      "shareOfBudget": 0.015,
+      "unit": "fixed",
+      "supplierCategory": "Menswear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "groom-additional-outfits",
+      "name": "Groom's outfits for the other events",
+      "section": "Attire",
+      "event": "",
+      "note": "Kurtas for the haldi and mehndi, something sharper for the sangeet, a suit or second sherwani for the reception. Simpler and cheaper than the bride's set, but still several outfits.",
+      "essential": false,
+      "shareOfBudget": 0.007,
+      "unit": "fixed",
+      "supplierCategory": "Menswear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "family-outfits",
+      "name": "Outfits for parents and close family",
+      "section": "Attire",
+      "event": "",
+      "note": "Both sets of parents and siblings are on show all week and in every photograph, and in many families the couple or parents fund matched outfits for the immediate family, particularly for the wedding day. Agree early who is paying for whom.",
+      "essential": false,
+      "shareOfBudget": 0.012,
+      "unit": "perPerson",
+      "supplierCategory": "Bridal wear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "safa-turbans",
+      "name": "Safas for the baraat",
+      "section": "Attire",
+      "event": "baraat",
+      "note": "In many North Indian and Rajasthani-style weddings, male guests on the groom's side wear matching turbans for the baraat, hired in bulk with a tier ready to tie them on the day.",
+      "essential": false,
+      "shareOfBudget": 0.003,
+      "unit": "perPerson",
+      "supplierCategory": "Menswear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "mangalsutra",
+      "name": "Mangalsutra or thali",
+      "section": "Rings & Gifts",
+      "event": "ceremony",
+      "note": "The necklace the groom ties or fastens on the bride at the heart of the ceremony: black beads and gold in most of India, the thali or mangalyam on a turmeric-rubbed thread tied with three knots in Tamil and Telugu weddings, with pendant designs specific to each community. Traditionally chosen and brought by the groom's family. Bengali weddings historically mark marriage with sindoor and shakha-pola bangles instead.",
+      "essential": true,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": true
+    },
+    {
+      "id": "gold-jewellery",
+      "name": "Bridal gold and jewellery",
+      "section": "Rings & Gifts",
+      "event": "",
+      "note": "Usually the second-largest line after catering. The bridal set for the ceremony, pieces for the other events, and gold given by both families, traditionally regarded as the bride's own property (stridhan). Families often buy over months to spread the cost and to catch favourable gold prices, and many time purchases to auspicious days. Costume and gold-plated jewellery for the pre-events is normal and sensible.",
+      "essential": true,
+      "shareOfBudget": 0.08,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "rings",
+      "name": "Engagement and wedding rings",
+      "section": "Rings & Gifts",
+      "event": "roka",
+      "note": "Ring exchange belongs to the engagement (sagai) rather than the wedding ceremony itself, which centres on the mangalsutra instead. Many couples add a Western-style ring exchange at the ceremony or reception anyway.",
+      "essential": true,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "family-gifts",
+      "name": "Gifts between the families (shagun)",
+      "section": "Rings & Gifts",
+      "event": "",
+      "note": "Trays of saris, suit lengths, dried fruit, sweets and shagun envelopes flow between the two families at the roka, the wedding and after. The scale varies enormously by family and region; what matters is that both sides agree expectations early so nobody is surprised. Note that demanding dowry is illegal in India and this modern gift exchange is voluntary and two-way.",
+      "essential": false,
+      "shareOfBudget": 0.015,
+      "unit": "fixed",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "sangeet-entertainment",
+      "name": "Sangeet DJ, sound and staging",
+      "section": "Music & Entertainment",
+      "event": "sangeet",
+      "note": "The sangeet needs a proper sound system, microphones for performances, a stage or clear floor and someone to run the playlist between acts. A DJ who knows Bollywood, bhangra and your regional music without being told is worth finding.",
+      "essential": true,
+      "shareOfBudget": 0.015,
+      "unit": "fixed",
+      "supplierCategory": "DJ",
+      "religiousRequirement": false
+    },
+    {
+      "id": "choreographer",
+      "name": "Sangeet choreographer",
+      "section": "Music & Entertainment",
+      "event": "sangeet",
+      "note": "Hired to drill the family dance performances in the weeks before. Common wherever the sangeet is a big production; rehearsals over video call with relatives abroad are now routine.",
+      "essential": false,
+      "shareOfBudget": 0.004,
+      "unit": "fixed",
+      "supplierCategory": "Entertainment",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dhol-baraat",
+      "name": "Dhol players for the baraat",
+      "section": "Music & Entertainment",
+      "event": "baraat",
+      "note": "Live dhol drummers lead the baraat and set its energy; a brass band (baaja) is the fuller traditional form in India. Book for a set duration and agree the route, because a baraat with good dhol players moves slowly on purpose.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Band",
+      "religiousRequirement": false
+    },
+    {
+      "id": "ceremony-musicians",
+      "name": "Ceremony musicians (shehnai or nadaswaram)",
+      "section": "Music & Entertainment",
+      "event": "ceremony",
+      "note": "The shehnai is the classic auspicious sound of a North Indian wedding; in Tamil and Telugu weddings the nadaswaram and thavil drums are close to essential, with the getti melam crescendo masking any ill omen at the exact moment the thali is tied. Recorded music substitutes where players are scarce.",
+      "essential": false,
+      "shareOfBudget": 0.004,
+      "unit": "fixed",
+      "supplierCategory": "Band",
+      "religiousRequirement": false
+    },
+    {
+      "id": "reception-music",
+      "name": "Reception DJ or band",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "Usually a DJ with an emcee who can manage entrances, speeches and an open floor across generations and possibly languages. Live Bollywood bands and fusion acts are popular where budgets allow.",
+      "essential": true,
+      "shareOfBudget": 0.02,
+      "unit": "fixed",
+      "supplierCategory": "DJ",
+      "religiousRequirement": false
+    },
+    {
+      "id": "av-lighting",
+      "name": "Lighting, sound and staging",
+      "section": "Music & Entertainment",
+      "event": "",
+      "note": "Uplighting, stage wash for the mandap and sangeet performances, projection for photo montages, and a PA that reaches the back of a big room. Often spread across several events, so price it as a package.",
+      "essential": false,
+      "shareOfBudget": 0.012,
+      "unit": "fixed",
+      "supplierCategory": "AV hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "A multi-day booking covering haldi, mehndi, sangeet, the ceremony and reception, usually with a second shooter so the bride's and groom's preparations are both covered. Choose someone who knows Hindu ceremonies: the decisive moments, the mangalsutra, sindoor and saptapadi, happen quickly, at floor level, surrounded by family under the mandap.",
+      "essential": true,
+      "shareOfBudget": 0.05,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Same multi-day scope as the photographer, and same need for ceremony experience. Highlight films and same-day edits shown at the reception are popular; livestreaming for relatives abroad has become a standard request and needs venue wifi checked in advance.",
+      "essential": true,
+      "shareOfBudget": 0.035,
+      "unit": "fixed",
+      "supplierCategory": "Videographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "album",
+      "name": "Albums and parents' copies",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Both sets of parents will expect an album. Ordered after the wedding and routinely underestimated.",
+      "essential": false,
+      "shareOfBudget": 0.005,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bridal-hmua",
+      "name": "Bridal hair and make-up",
+      "section": "Beauty",
+      "event": "",
+      "note": "A multi-event booking: distinct looks for mehndi, sangeet, the ceremony and reception, with the wedding-day look built around the outfit, jewellery and possibly a dupatta set over the hair. If the muhurat is early morning, the artist may need to start before dawn; confirm they will.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "fixed",
+      "supplierCategory": "Hair and make-up",
+      "religiousRequirement": false
+    },
+    {
+      "id": "mehndi-artist",
+      "name": "Mehndi artist",
+      "section": "Beauty",
+      "event": "mehndi",
+      "note": "Bridal mehndi covering hands to forearms and feet takes three to eight hours, so it happens a day or two before the wedding and the artist is booked for the full session. Additional artists are usually hired for guests at the mehndi party, priced per hand or per hour.",
+      "essential": true,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Mehndi artist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "family-beauty",
+      "name": "Hair and make-up for mothers and close family",
+      "section": "Beauty",
+      "event": "",
+      "note": "Both mothers, sisters and often grandmothers book professional hair and make-up for the wedding day and reception, plus sari draping, which is a genuine skill worth paying for. It needs a team, not one artist.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "perPerson",
+      "supplierCategory": "Hair and make-up",
+      "religiousRequirement": false
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations",
+      "section": "Stationery",
+      "event": "",
+      "note": "Traditionally opened with an invocation to Ganesha and naming both sets of parents and grandparents as hosts, with separate inserts per event since the guest lists differ. Elders often hand-deliver the first invitations to close family, sometimes with sweets. Digital invitations now carry much of the volume, with printed cards kept for elders.",
+      "essential": true,
+      "shareOfBudget": 0.008,
+      "unit": "perGuest",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "baraat-transport",
+      "name": "Baraat horse or car",
+      "section": "Transport",
+      "event": "baraat",
+      "note": "The decorated white horse (ghodi) is traditional in the north; a vintage or luxury car is the common substitute, and some grooms arrive by other means entirely. Horse hire comes with handler, welfare and insurance requirements, and some venues and councils restrict animals, so confirm before promising the photograph.",
+      "essential": false,
+      "shareOfBudget": 0.005,
+      "unit": "fixed",
+      "supplierCategory": "Car hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "guest-transport",
+      "name": "Wedding cars and guest transport",
+      "section": "Transport",
+      "event": "",
+      "note": "The couple's cars across multiple days and venues, plus coaches for guests where the ceremony and reception are apart. The vidaai car is decorated for the couple's departure. With events across several days and sometimes two cities, transport planning deserves a spreadsheet of its own.",
+      "essential": true,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Car hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "florals-styling",
+      "name": "Florals and venue styling",
+      "section": "Flowers & Styling",
+      "event": "",
+      "note": "Beyond the mandap: entrance and stage decor, table centrepieces, marigold garlands and strings which are the signature flower of Indian weddings, and themed decor for the mehndi and sangeet. Across four or five events this line grows fast; reusing the sangeet decor for the reception is the classic saving.",
+      "essential": true,
+      "shareOfBudget": 0.03,
+      "unit": "perTable",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "planner",
+      "name": "Wedding planner or coordinator",
+      "section": "Extras",
+      "event": "",
+      "note": "Coordinating five events, two families, a pandit, a muhurat-fixed timeline and several hundred guests is a serious logistics job. A planner who has run Hindu weddings, and ideally your region's style of Hindu wedding, earns their fee on the wedding day alone; at minimum, appoint a day coordinator so no family member spends the ceremony managing vendors.",
+      "essential": false,
+      "shareOfBudget": 0.025,
+      "unit": "fixed",
+      "supplierCategory": "Planner",
+      "religiousRequirement": false
+    },
+    {
+      "id": "guest-accommodation",
+      "name": "Accommodation for out-of-town family",
+      "section": "Extras",
+      "event": "",
+      "note": "Hindu weddings pull family across countries, and hosts traditionally help house close relatives for the whole event span, not one night. Negotiate a hotel block early and decide which rooms the families are covering versus guests paying their own.",
+      "essential": false,
+      "shareOfBudget": 0.02,
+      "unit": "perPerson",
+      "supplierCategory": "Hotel",
+      "religiousRequirement": false
+    }
+  ],
+  "timeline": [
+    {
+      "monthsBefore": 14,
+      "task": "Sit down with your pandit or astrologer and fix the muhurat before you book anything else, since the auspicious date and time anchor every other booking",
+      "critical": true
+    },
+    {
+      "monthsBefore": 14,
+      "task": "Ask which periods are closed for weddings in your community's calendar, such as Chaturmas, adhik maas and periods when Venus or Jupiter is combust, so you know which months are simply unavailable",
+      "critical": true
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Agree between the two families who is hosting and paying for what, event by event, before the big bookings are made",
+      "critical": true
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Book the ceremony and reception venues, confirming in writing that they allow an open flame for the havan and can open at the hour your muhurat requires",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the pandit for the wedding date and the supporting pujas, since good pandits are booked out on the same auspicious dates as the venues",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Draw up guest lists per event with both families, since the ceremony, sangeet and reception lists usually differ",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Book the photographer and videographer for the full multi-day span, not just the wedding day",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book a caterer experienced in Indian and fully vegetarian cooking, and agree the approach to eggs, Jain and vegan requirements and alcohol with both families",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the mandap and decor company and connect them directly with the venue about the fire",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Start outfit shopping for the couple, allowing for a buying trip to India or long lead times on made-to-order lehengas and sherwanis",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Begin jewellery purchases, spreading the gold buying over the months rather than one late purchase",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Book the sangeet DJ, dhol players, ceremony musicians and, if you want one, the choreographer",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Book the mehndi artist and the hair and make-up artist for all events, confirming they can start before dawn if the muhurat is early",
+      "critical": false
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Reserve hotel blocks for out-of-town family across the full event span",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Order invitations with separate event inserts, and send save-the-dates to overseas guests who need visas and flights",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Fix the schedule of pre-wedding events with both families, including who hosts the haldi, mehndi and sangeet and where",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Check the legal position where you are marrying: whether the pandit can solemnise legally, whether the venue is registered, and whether you need a separate civil ceremony",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Walk through the ceremony with your pandit: which rituals are included, how long it will run, who performs the kanyadaan and the other family roles, and whether he will explain the rituals in English as he goes",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Collect the samagri list from the pandit and agree who is sourcing the puja items",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Give legal notice where required: notice of marriage in the United Kingdom, the Notice of Intended Marriage in Australia, the marriage licence application window in the United States or Canada",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Plan the baraat route with the venue and check whether a street procession or horse needs council or police permission",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Hold the menu tasting and fix the final menus per event",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Confirm the exact muhurat timing with the pandit and build the wedding day run sheet backwards from it",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Start sangeet rehearsals and confirm the performance running order",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Chase RSVPs per event, set the seating plan and order the mithai boxes per household",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Confirm every vendor against the run sheet, and order the fresh garlands and florals for delivery on the day",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Write a short ceremony program explaining the rituals for guests who have not attended a Hindu wedding before",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "Hold the Ganesh puja, haldi, mehndi and sangeet on the planned days, keeping the bridal mehndi session clear of other commitments",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "After the wedding, register the marriage and obtain the certificate: with the state registrar in India, or confirm the licence or schedule has been returned where the pandit solemnised legally",
+      "critical": true
+    }
+  ],
+  "paperwork": [
+    {
+      "item": "Civil marriage licence or notice of marriage",
+      "who": "Both",
+      "note": "Varies by country. United States and Canada: a licence from the county or province, which the pandit signs if authorised. Australia: a Notice of Intended Marriage at least one calendar month before. England and Wales: notice at the register office at least 29 days before, and the marriage itself must happen in a registered venue with an authorised person or registrar present."
+    },
+    {
+      "item": "Confirmation the pandit can legally solemnise",
+      "who": "The couple",
+      "note": "In the United States, Canada and Australia many pandits are authorised or registered officiants, but not all are, and some cities require officiant registration. If yours is not, plan a short civil ceremony and let the religious ceremony stand on its own."
+    },
+    {
+      "item": "Separate civil ceremony where the religious one has no legal effect",
+      "who": "Both",
+      "note": "In England and Wales a Hindu ceremony in an unregistered venue, including most hotels and marquees, has no legal effect on its own. Many couples marry at a register office before the wedding week, or book a registrar into a registered venue. Without this the marriage is not legally recognised, which matters for property, inheritance and immigration."
+    },
+    {
+      "item": "Marriage registration in India",
+      "who": "Both, if marrying in India",
+      "note": "The ceremony itself creates the marriage under the Hindu Marriage Act, but the Supreme Court has directed that marriages be registered, state rules set the procedure, and the certificate is what banks, passport offices and visa authorities ask for. Registrars typically want the invitation card, photographs of the ceremony and witnesses."
+    },
+    {
+      "item": "Proof of age and identity",
+      "who": "Both",
+      "note": "Birth certificate or passport. In India the legal minimum ages are 21 for the groom and 18 for the bride under the Hindu Marriage Act."
+    },
+    {
+      "item": "Divorce decree absolute",
+      "who": "Either party previously married",
+      "note": "The final decree, for both the civil authorities and the pandit, who will usually ask."
+    },
+    {
+      "item": "Death certificate of a former spouse",
+      "who": "Either party widowed",
+      "note": ""
+    },
+    {
+      "item": "Special Marriage Act route for interfaith couples in India",
+      "who": "Couples where one partner is not Hindu, Sikh, Jain or Buddhist",
+      "note": "The Hindu Marriage Act covers marriages where both partners are Hindu, Sikh, Jain or Buddhist. An interfaith couple in India marries under the Special Marriage Act instead, which requires 30 days' public notice at the marriage office. A religious ceremony can still be held alongside."
+    },
+    {
+      "item": "Temple booking and religious requirements",
+      "who": "Both, if marrying at a temple",
+      "note": "Temples have their own forms and rules: advance booking, sometimes proof or declaration that both partners are Hindu or of dharmic faiths, and strict premises rules on food and alcohol. Ask early rather than assuming."
+    },
+    {
+      "item": "The pandit's samagri list",
+      "who": "The couple and both families",
+      "note": "Not legal paperwork, but treat it like it: the itemised list of puja materials the ceremony needs, issued by the pandit. Losing track of it, or of who is bringing what, is a classic wedding-morning scramble."
+    },
+    {
+      "item": "Apostilles and certified translations",
+      "who": "Either party with foreign documents",
+      "note": "Needed when documents cross borders: a couple marrying in India with foreign birth or divorce certificates, or a couple abroad registering an Indian marriage certificate for immigration. Allow weeks, not days."
+    },
+    {
+      "item": "Marriage certificate for immigration",
+      "who": "Couples living across borders",
+      "note": "Spousal visa applications scrutinise the marriage certificate and evidence of the ceremony. If your wedding is in India and your life is elsewhere, register promptly and keep photographs, the invitation and the certificate together."
+    }
+  ],
+  "customs": [
+    {
+      "name": "The muhurat",
+      "description": "The auspicious date and exact time for the ceremony, calculated by a pandit or astrologer from the panchang, the Hindu almanac, using the lunar day, the nakshatra and the ascendant, and often the couple's birth charts. The key ritual moment is timed to it precisely, whatever hour it falls at. It is the single biggest difference between planning a Hindu wedding and a Western one: the date chooses you as much as you choose it.",
+      "optional": false
+    },
+    {
+      "name": "Kundali matching",
+      "description": "In many families the couple's birth charts are compared (gun milan) before the engagement is fixed, scoring compatibility across a set of factors. How seriously it is taken varies from decisive to ceremonial; remedies exist within the tradition for almost every flagged mismatch, which tells you how negotiable it has always been.",
+      "optional": true
+    },
+    {
+      "name": "The mandap",
+      "description": "The four-pillared canopy the ceremony happens under, a temporary sacred space built wherever the wedding is. The four pillars are widely read as the four parents whose care brought the couple to this day, or the four aims of life. The couple, their parents and the pandit sit within it around the fire.",
+      "optional": false
+    },
+    {
+      "name": "Agni, the sacred fire",
+      "description": "The fire at the centre of the ceremony is the divine witness to the marriage. Offerings of ghee and herbs are made into it through the vivaha homa, and the vows and circuits all happen before it. This is why a Hindu ceremony cannot simply relocate into any venue: the fire, even a modest contained one, is not optional.",
+      "optional": false
+    },
+    {
+      "name": "The baraat and milni",
+      "description": "The groom's noisy, joyful procession to the venue, traditionally on a white horse with dhol drummers, family dancing around him. At the door the milni introduces the two families pair by pair with garlands and embraces. Strongest in North Indian and diaspora practice; most South Indian weddings welcome the groom more quietly.",
+      "optional": true
+    },
+    {
+      "name": "Varmala (jaimala)",
+      "description": "The couple exchange fresh flower garlands as first acceptance of each other, usually to loud cheering, with each side sometimes lifting their candidate to make the other's reach comically difficult. In Bengali weddings this is mala badal, done after the subho drishti, the bride and groom's ritual first look, with the bride traditionally carried in on a wooden seat.",
+      "optional": false
+    },
+    {
+      "name": "Kanyadaan",
+      "description": "The bride's parents formally give their daughter's hand into the groom's, among the most emotional moments of the ceremony and traditionally counted a great act of merit for the parents. Some modern couples rework or soften it, preferring language of blessing over giving; pandits differ on how flexible they are, so discuss it early if it matters to you.",
+      "optional": false
+    },
+    {
+      "name": "Panigrahana and gathbandhan",
+      "description": "The groom takes the bride's hand before the fire, accepting responsibility for the life they will build, and their garments are knotted together, the gathbandhan, so they move as one for the rituals that follow. In Gujarati and Punjabi families the joining of hands is called hast milap.",
+      "optional": false
+    },
+    {
+      "name": "Mangal pheras",
+      "description": "The couple walk in circuits around the sacred fire, garments tied, while mantras are chanted. Most North Indian traditions take seven circuits; Gujarati weddings take four, standing for dharma, artha, kama and moksha, the four aims of life. Who leads which circuits, and whether the bride's brother places puffed rice in her hands for the laaja homam offering, varies by community.",
+      "optional": false
+    },
+    {
+      "name": "Saptapadi, the seven steps",
+      "description": "The couple take seven steps together before the fire, each step a stated vow: nourishment, strength, prosperity, happiness, children, the seasons of life, and lifelong friendship, with wording varying by tradition. In several communities this, not the pheras, is the decisive act; Indian law agrees, providing that where the rites include saptapadi the marriage is complete and binding on the seventh step.",
+      "optional": false
+    },
+    {
+      "name": "Mangalsutra and thali",
+      "description": "The groom fastens the marriage necklace on the bride at the ritual high point: black beads and gold in most of India, guarding the marriage against ill fortune; in Tamil and Telugu weddings the thali or mangalyam is tied with three knots to a crescendo of drumming, with the third knot often tied by the groom's sister. Designs are specific to community and family, and many brides wear it daily for life.",
+      "optional": false
+    },
+    {
+      "name": "Sindoor",
+      "description": "The groom applies vermilion powder into the parting of the bride's hair, the visible mark of a married woman in much of India. In Bengali weddings the sindoor daan is the emotional peak of the ceremony, with the bride's face traditionally shielded by a new sari held over her head as it is applied.",
+      "optional": false
+    },
+    {
+      "name": "Regional ceremony forms",
+      "description": "The core is shared; the staging differs. Tamil weddings hold the muhurtham in the morning with the oonjal swing ceremony and, in Brahmin families, the kashi yatra, where the groom feigns leaving for a life of study until the bride's father wins him back. Telugu weddings paste cumin and jaggery (jeelakarra bellam) on the couple's heads at the exact muhurtam and end in the playful talambralu rice shower. Marathi weddings hold an antarpat cloth between the couple, dropped as the mangalashtaka verses end. Bengali weddings run saat paak, subho drishti and sindoor daan. Kerala weddings are often short, centred on the thalikettu, in some communities without the fire rituals at all.",
+      "optional": false
+    },
+    {
+      "name": "Haldi",
+      "description": "Turmeric paste applied to the couple by relatives in turn, for glow, blessing and protection before the wedding. Known as pithi in Gujarati families, gaye holud in Bengali ones where the turmeric touched to the groom is carried to the bride, and paired in the south with the mangala snanam purifying bath on the wedding morning.",
+      "optional": true
+    },
+    {
+      "name": "Mehndi",
+      "description": "The bride's hands and feet are covered in henna, with the groom's name or initials hidden in the design. Folklore says the darker the stain, the deeper the love, or the better the mother-in-law. The lawn of aunties having their own hands done is as much the point as the bridal application.",
+      "optional": true
+    },
+    {
+      "name": "Sangeet",
+      "description": "The night of performances: choreographed dances by cousins and friends, songs teasing both families, and open dancing after. It grew from the North Indian ladies' sangeet of folk songs at home into the biggest production of many modern weddings, and it is where the two families genuinely mix before the formality of the wedding day.",
+      "optional": true
+    },
+    {
+      "name": "Joota chupai",
+      "description": "The bride's sisters and cousins steal the groom's shoes when he removes them to enter the mandap, and ransom them back with theatrical negotiation as the ceremony ends. A beloved North Indian and Punjabi game; the groom's side is honour-bound to attempt rescue, and the price is agreed with much performance.",
+      "optional": true
+    },
+    {
+      "name": "Vidaai",
+      "description": "The bride's farewell to her family, leaving as part of a new household. In many North Indian families she throws handfuls of rice back over her head towards her parents' home in thanks for all they gave her, and there is rarely a dry eye. Modern couples who go home together that night still often keep the moment.",
+      "optional": true
+    },
+    {
+      "name": "Griha pravesh",
+      "description": "The bride's welcome into the groom's family home: an aarti at the door, then she tips a vessel of rice over the threshold with her right foot, abundance entering with her, and steps in right foot first. In some families she presses her hands in kumkum or steps in a red solution to leave footprints on the way in.",
+      "optional": true
+    },
+    {
+      "name": "Aashirvad, the blessings of elders",
+      "description": "Throughout the wedding the couple touch the feet of parents, grandparents and elder relatives, who bless them in return. It punctuates every event, and elders expect it; a couple who move through the room touching feet after the ceremony are doing the rounds every Hindu wedding requires.",
+      "optional": false
+    },
+    {
+      "name": "Gold as blessing",
+      "description": "Gold given at a wedding is blessing, security and inheritance at once, and bridal gold is traditionally regarded as the bride's own property, her stridhan. Families often buy pieces over years for a child's wedding, and time purchases to auspicious days. The weight of gold at South Indian weddings in particular is a language of its own.",
+      "optional": true
+    },
+    {
+      "name": "The vegetarian feast",
+      "description": "Food at the ceremony is normally fully vegetarian, cooked without beef ever and often without eggs, onion or garlic depending on the community, and many families keep the entire wedding vegetarian. This is a religious matter of purity around a sacred rite, not a menu preference, and guests broadly expect it. The feast itself is generous by design: feeding guests well is part of the merit of the day.",
+      "optional": false
+    }
+  ],
+  "gotchas": [
+    "Set the muhurat before you book anything. The auspicious time can land at dawn, late evening or in the middle of the night, and the ceremony's key moment must hit it, so venue access hours, the hair and make-up start time and the whole run sheet hang off a time you do not control.",
+    "Muhurat dates cluster. The panchang gives everyone the same auspicious dates, so in India venues, pandits, photographers and even flight prices spike on them, and diaspora vendors serving the community feel the same crunch. Book earlier than a Western wedding of the same size would.",
+    "Whole stretches of the calendar have no wedding dates at all: Chaturmas in many communities, adhik maas, and periods when Venus or Jupiter is combust. If your dream month falls in one, no pandit will move it, so check the year's calendar with your pandit before falling in love with a season.",
+    "The havan means a real fire indoors. Many Western venues refuse open flames or handle them badly; you need written permission, a fire-safe mandap setup, and smoke detectors that will not empty the building mid-ceremony. Experienced mandap companies manage this with the venue, which is a reason to hire one.",
+    "A Hindu ceremony in England and Wales usually has no legal effect on its own, because most hotels and marquees are not registered for marriage. Couples who skip the civil step are legally unmarried, which surfaces years later in property, inheritance and visa problems. Decide the civil plan at the start, not the end.",
+    "In India, registration alone does not make a marriage: courts have held that a registered marriage without the actual ceremonies is not valid, and equally that the certificate, not the wedding album, is what officials accept as proof. You need both the rites and the registration.",
+    "The ceremony runs ninety minutes to three hours and guests treat it accordingly: coming and going, chatting at the back, watching the key moments. Guests from other backgrounds will not know this is normal. A printed program, or a pandit or emcee who explains as it goes, transforms their experience.",
+    "Vegetarian catering is a competence, not a menu toggle. A venue's in-house caterer who 'can do Indian' is the most common catering disappointment; most families bring in an Indian caterer or choose venues that allow one. Check whether eggs count as vegetarian for your families, and cater properly for Jain and vegan guests.",
+    "If any event is at a temple, the premises rules are absolute: vegetarian only, no alcohol, often including the car park, and modest dress. Do not plan a champagne toast anywhere near the temple hall.",
+    "Alcohol expectations differ between families more than almost anything else. One side may assume an open bar at the sangeet, the other may be dry on religious grounds. Settle it between the parents early, event by event, before contracts are signed.",
+    "The baraat always runs late. Dhol players, dancing relatives and a horse do not move to schedule, so build thirty to sixty minutes of slack between the baraat's start and the muhurat, and tell the photographer where it will pause. Street processions and horses may also need council or police permission, and some venues ban animals.",
+    "Guest counts behave differently: parents hold real invitation power, invitations go to households not individuals, and the reception list often exceeds the ceremony list. Expect the list to grow after you 'finalise' it, and cater with a buffer rather than an exact count.",
+    "Outfit lead times are long. Made-to-order lehengas and sherwanis from India need months, plus shipping, customs and alteration rounds, and a buying trip to India is itself a scheduling event. Order early and plan fittings close to the wedding, since heavy outfits need final adjustment.",
+    "Bridal mehndi takes three to eight hours and the stain needs a day to deepen, which locks the bride's diary a day or two before the wedding. Nothing else that needs her hands, including final errands, can share that day.",
+    "Gold prices move. Families budgeting jewellery as one late purchase get caught by a rising market; buying over months spreads the risk. Insure the jewellery for the events themselves, when large amounts are worn, carried and set down in busy venues.",
+    "Traditionally the bride's family hosted the wedding and the groom's the reception, but modern couples split costs every possible way. The split is the single most common source of inter-family friction, so agree it explicitly, event by event, at the start.",
+    "Pandits get booked like venues, on the same clustered dates. In the diaspora especially, book the pandit when you book the venue, confirm the language mix, whether he will explain rituals in English, and exactly which rituals your ceremony will include, since a full ceremony and a ninety-minute one are both authentic choices.",
+    "The decisive ritual moments, the mangalsutra, the sindoor, the seventh step, each last seconds and happen low to the ground surrounded by seated family. A photographer who has never shot a Hindu wedding will miss them. Ask to see full Hindu wedding galleries, not portfolio highlights."
+  ],
+  "sources": [
+    "https://www.hinduamerican.org/hindu-wedding-primer/",
+    "https://iskconeducationalservices.org/HoH/practice/rites-of-passage/vivaha-marriage/",
+    "https://hindupriestketuljoshi.co.uk/saptpadi-and-seven-vows-of-hindu-wedding/",
+    "https://en.wikipedia.org/wiki/Hindu_wedding",
+    "https://en.wikipedia.org/wiki/Baraat",
+    "https://en.wikipedia.org/wiki/Wedding_mandapa",
+    "https://indiankanoon.org/doc/358783/",
+    "https://lawbhoomi.com/section-7-of-hindu-marriage-act/",
+    "https://www.legalbites.in/landmark-judgements/case-analysis-seema-v-ashwani-kumar-2006-registration-of-marriage-1049456",
+    "https://www.apnilaw.com/news/family/marriage-and-divorce/registered-hindu-marriage-is-void-without-essential-ceremonies-like-saptapadi-says-gujarat-high-court/",
+    "https://www.rightsofwomen.org.uk/get-advice/family-law-information/a-guide-to-marriage/",
+    "https://www.drikpanchang.com/shubh-dates/shubh-marriage-dates-with-muhurat.html",
+    "https://www.hindusamajmandir.org/event-services",
+    "https://weddingsutra.com/planning/wedding-tradition-series-explore-the-myriad-rituals-aspects-of-tamil-weddings/",
+    "https://www.culturalindia.net/weddings/regional-weddings/tamil-wedding.html",
+    "https://www.culturalindia.net/weddings/regional-weddings/bengali-wedding.html",
+    "https://www.learnreligions.com/bengali-wedding-rituals-1770468",
+    "https://www.knotsbyamp.com/blog/traditional-telugu-wedding-rituals",
+    "https://www.knotsbyamp.com/blog/traditional-north-indian-wedding-rituals-and-their-significance",
+    "https://www.culturalindia.net/weddings/wedding-rituals/engagement-ceremony.html",
+    "https://weddingsutra.com/planning/wedding-tradition-series-dive-into-the-dazzle-drama-of-bengali-weddings/"
+  ]
+}
