@@ -77,8 +77,24 @@ for (const w of WORLDS) {
   await page.screenshot({ path: path.join(out, `${w}-sheet.png`) });
   await page.evaluate(() => closeSheet());
 
-  console.log(`✓ ${w}: home · budget · list · guests · question · sheet`);
+  /* The paywall and partner sync. Bespoke since Phase 6b, and the two screens
+     where a layout mistake costs money rather than polish. */
+  await page.evaluate(() => { S.unlocked = false; save(); render(); openPaywall('Partner sync'); });
+  await page.waitForTimeout(350);
+  await page.screenshot({ path: path.join(out, `${w}-paywall.png`), fullPage: true });
+  await page.evaluate(() => closeSheet());
+
+  await page.evaluate(() => {
+    S.unlocked = true;
+    S.cloud = { id: 'demo', token: 'demo', pair: '55Z6UW', rev: 0 };
+    save(); render(); openPartner();
+  });
+  await page.waitForTimeout(350);
+  await page.screenshot({ path: path.join(out, `${w}-sync.png`), fullPage: true });
+  await page.evaluate(() => { closeSheet(); S.cloud = null; save(); });
+
+  console.log(`✓ ${w}: home · budget · list · guests · question · sheet · paywall · sync`);
 }
 
 await browser.close();
-console.log(`\n${WORLDS.length * 4 + 1} shots → tests/shots/worlds/`);
+console.log(`\n${WORLDS.length * 8 + 1} shots → tests/shots/worlds/`);

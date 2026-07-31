@@ -517,6 +517,9 @@ header.app .sub{font-size:12.5px;color:var(--muted)}
 .card{border-radius:var(--w-radius);box-shadow:var(--w-shadow);margin-left:var(--w-gutter);margin-right:var(--w-gutter)}
 [data-world="dressing"] .card,[data-world="linen"] .card{border:var(--w-edge)}
 .btn{border-radius:var(--w-btn-radius);letter-spacing:var(--w-btn-track)}
+/* The secondary button hardcoded #fff, which on Ziggy's dark home put white
+   text on a white ground. Tokens make it follow whatever surface it sits on. */
+.btn.sec{background:var(--card);color:var(--ink);border-color:var(--line)}
 .opt{border-radius:var(--w-radius-sm)}
 .chip{border-radius:var(--w-radius-sm)}
 input,select,textarea{border-radius:var(--w-radius-sm)}
@@ -674,7 +677,17 @@ h2,#ob .qtitle,header.app .names,.land-title,.big{
   font-family:var(--w-hand);text-transform:var(--w-hand-case);letter-spacing:var(--w-hand-track);
   color:var(--rose);font-size:16px;text-align:right}
 [data-world="monograph"] .sheetsign{font-size:11px;font-weight:700}
-.sheet{background:var(--card);border-radius:var(--w-radius) var(--w-radius) 0 0;color:var(--ink)}
+/* --paper, never --card. On Ziggy's dark home --card is rgba(255,255,255,.06),
+   which made the whole sheet see-through and the pairing code unreadable over
+   the content behind it. --paper is opaque in every world and surface. */
+.sheet{background:var(--paper);border-radius:var(--w-radius) var(--w-radius) 0 0;color:var(--ink)}
+[data-world="linen"] .sheet{background:var(--card)}
+/* The "sync is on" panel is a fixed light green, which is invisible against
+   light ink. Ziggy's dark home needs its own. */
+[data-world="dressing"][data-surface="home"] .syncon{
+  background:rgba(62,124,91,.22);border:1px solid rgba(155,192,166,.5);
+}
+[data-world="dressing"][data-surface="home"] .syncon h3{color:#B6E0C4}
 /* Anneke and Perdita: not a bottom sheet at all — a full-height page. A ledger
    and a magazine do not slide up from the bottom of a phone. */
 [data-world="order"] .sheetwrap,[data-world="monograph"] .sheetwrap{align-items:stretch}
@@ -693,6 +706,53 @@ h2,#ob .qtitle,header.app .names,.land-title,.big{
 }
 /* Ziggy: gold-ruled, lifted off the dark ground. */
 [data-world="dressing"] .sheet{box-shadow:0 -8px 40px rgba(0,0,0,.4), 0 0 0 1.5px rgba(232,190,110,.5)}
+
+/* ═══ paywall & partner sync ═════════════════════════════════════════════
+   These two were shared by policy until now. They are bespoke, with one line
+   held constant: the price, the nine features and the pairing instruction are
+   identical in all four worlds. Only the setting of them varies. */
+.price{font-family:var(--w-display);text-transform:var(--w-display-case);letter-spacing:var(--w-display-track)}
+.payhint{font-size:12.5px;color:var(--rose);margin-top:6px;
+  font-family:var(--w-hand);text-transform:var(--w-hand-case);letter-spacing:var(--w-hand-track)}
+[data-world="monograph"] .payhint{font-size:10.5px;font-weight:700}
+.paircode{letter-spacing:.2em}
+.syncon{background:var(--green-bg)}
+
+/* Anneke — the unlock as a schedule of additions, roman-numbered, ruled. */
+[data-world="order"] .paylist div{
+  border-bottom:1px solid var(--line);padding:9px 0;align-items:baseline;
+}
+[data-world="order"] .paylist .pi{
+  color:var(--metal);font-size:11px;letter-spacing:.1em;min-width:34px;font-weight:400;
+}
+[data-world="order"] .price{border-top:3px double var(--line);padding-top:10px}
+[data-world="order"] .syncon{background:transparent;border:1px solid var(--metal)}
+
+/* Perdita — a contents page. Issue numbers, hairlines, no ticks. */
+[data-world="monograph"] .paylist div{
+  border-top:1px solid var(--line);padding:10px 0;align-items:baseline;
+}
+[data-world="monograph"] .paylist .pi{
+  color:var(--rose);font-size:10px;letter-spacing:.16em;min-width:44px;font-weight:700;
+}
+[data-world="monograph"] .price{border-top:2px solid var(--ink);padding-top:10px}
+[data-world="monograph"] .syncon{background:transparent;border:1px solid var(--ink);border-left:3px solid var(--rose)}
+
+/* Rosie — a note left on the table, so the list is close-set and warm. */
+[data-world="linen"] .paylist{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--w-radius);
+  padding:12px 15px;box-shadow:var(--w-shadow);transform:rotate(var(--w-rotate));
+}
+[data-world="linen"] .paylist .pi{color:#3E7C5B}
+[data-world="linen"] .syncon{background:#EAF2EC;border:1px solid #C6DACB}
+
+/* Ziggy — gold foil, because his whole world is the lit mirror. */
+[data-world="dressing"] .paylist{
+  background:linear-gradient(160deg,rgba(232,190,110,.13),rgba(232,190,110,.04));
+  border:1.5px solid rgba(232,190,110,.55);border-radius:var(--w-radius);padding:12px 16px;
+}
+[data-world="dressing"] .paylist .pi{color:#D9A855}
+[data-world="dressing"] .price{color:var(--rose)}
 
 /* ═══ the persona gate ═══════════════════════════════════════════════════
    Deliberately world-blind: it is the screen you pick a world on. */
@@ -3107,11 +3167,11 @@ const PERSONAS = [
 /* Structural signatures. Purely the facts a render function has to branch on —
    anything expressible in CSS lives in worlds.css instead. */
 const WORLD_SHAPE = {
-  dressing:  { nav: "composer",  progress: "bulbs",    ordinal: "plain", darkHome: true  },
-  order:     { nav: "tabs-text", progress: "roman",    ordinal: "roman", darkHome: false },
-  linen:     { nav: "objects",   progress: "stitches", ordinal: "plain", darkHome: false },
-  monograph: { nav: "tabs-rule", progress: "numero",   ordinal: "numero", darkHome: false },
-  house:     { nav: "tabs-icon", progress: "bar",      ordinal: "plain", darkHome: false },
+  dressing:  { nav: "composer",  progress: "bulbs",    ordinal: "plain",  payMarker: "tick",     darkHome: true  },
+  order:     { nav: "tabs-text", progress: "roman",    ordinal: "roman",  payMarker: "roman",    darkHome: false },
+  linen:     { nav: "objects",   progress: "stitches", ordinal: "plain",  payMarker: "tick",     darkHome: false },
+  monograph: { nav: "tabs-rule", progress: "numero",   ordinal: "numero", payMarker: "numbered", darkHome: false },
+  house:     { nav: "tabs-icon", progress: "bar",      ordinal: "plain",  payMarker: "tick",     darkHome: false },
 };
 
 function personaOf(id) { return PERSONAS.find(p => p.id === id) || null; }
@@ -3181,6 +3241,71 @@ const VOICE = {
   /* Ziggy's composer is the only world whose nav model writes data, so it is
      the only one that needs an acknowledgement. The others inherit house. */
   composerAck: v("noted, babe.", "Noted.", "got it, love.", "NOTED.", "Added to your list"),
+
+  /* The paywall and partner sync. Only the framing varies — see SHARED below
+     for the parts that deliberately do not, and why. */
+  payTitle: v(
+    "The full fantasy",
+    "The unlock",
+    "One payment and I'll stop mentioning it",
+    "THE FULL EDITION",
+    "Unlock everything"),
+  payLead: v(
+    "everything below, forever, for less than a bottle of the cheap stuff.",
+    "What the unlock adds, itemised. Nothing is removed from the free plan.",
+    "I hate asking, so I'll only ask once. Then it's done and we can get back to it.",
+    "Nine features. One payment. No renewal, no tier above this one.",
+    "Everything below, yours forever."),
+  payCta: v("Go on then", "Unlock", "Go on, treat yourselves", "TAKE IT", "Unlock everything"),
+  payLater: v("not tonight", "Not now", "another time, love", "NOT NOW", "Not now"),
+  payHint: v("and yes, that's included.", "That is included.", "that's in there, don't worry.",
+             "INCLUDED.", "That's included."),
+
+  syncTitle: v("Get them on this", "Partner sync", "Both your phones", "TWO EDITIONS", "Partner sync"),
+  syncLead: v(
+    "one plan, both phones. no more \"did you book it or did I\".",
+    "One plan on two phones. Every change appears on both, and it is backed up while we are at it.",
+    "So neither of you has to remember what the other one did. I've seen that go wrong.",
+    "One plan, two devices, no divergence. Backed up as a by-product.",
+    "One plan, both phones, every change everywhere."),
+  syncEnableCta: v("Switch it on", "Turn on cloud sync", "Let's get you both on it", "ENABLE", "Turn on cloud sync"),
+  syncJoinCta: v("Join them", "Join", "Join the plan", "JOIN", "Join our plan"),
+  syncOnLabel: v("you're both on it", "Cloud sync is on", "you're both on it now, good",
+                 "SYNC ACTIVE", "Cloud sync is on"),
+  payAck: v("unlocked. obsessed.", "Unlocked.", "there — all yours now, love.",
+            "UNLOCKED.", "Everything unlocked"),
+};
+
+/* ── deliberately NOT persona-varied ──────────────────────────────────────
+ * These are commercial and operative facts, and varying them by planner would
+ * be a real problem rather than a flourish:
+ *
+ *   PAY_FEATURES / PAY_TERMS — what the couple is buying. Four versions is four
+ *     things to keep in step with the store listing, and a discrepancy between
+ *     any of them and the listing is a review rejection.
+ *   PAIR_INSTRUCTION / PAIR_BUTTON — the instruction names the button by its
+ *     label. If either is varied without the other they stop matching and the
+ *     couple is told to tap something that isn't there — while standing next to
+ *     each other trying to make it work.
+ *
+ * The price itself lives in PRICE_LABEL (app1.js) and is already single-source.
+ * tests/worlds.mjs asserts none of these ever grow per-world variants. */
+const SHARED = {
+  PAY_FEATURES: [
+    "“Find me a…” supplier matching & enquiries",
+    "Scan quotes & invoices straight into the plan",
+    "Deposits, due dates & payment reminders",
+    "Run sheet editing & printing",
+    "Unlimited seating tables",
+    "Guest QR photo uploads & unlimited photos",
+    "PDF & print export",
+    "Partner sync — both phones, one plan",
+    "Unlimited custom budget items",
+  ],
+  PAY_TERMS: "One payment. No subscription. Yours forever.",
+  PAY_RESTORE: "Restore purchase",
+  PAIR_BUTTON: "I have a code",
+  PAIR_INSTRUCTION: "Your pairing code — your partner taps “I have a code” on their phone and types it in:",
 };
 
 /* Tab labels are their own table, not the long titles above — a tab bar has
@@ -4964,17 +5089,29 @@ function openExport(){
   <button class="btn" onclick="window.print()">Print / save as PDF</button></div>`);
 }
 /* openPartner is defined in the CLOUD section below */
+/* The paywall, in each planner's framing.
+ *
+ * What varies: the headline, the lead, the button labels, and how the feature
+ * list is set (a ledger schedule, a magazine contents page, a taped note, a
+ * gold-foil list).
+ *
+ * What does NOT vary, and must not: the price, the nine features, and the
+ * commercial terms. Those are what the couple is buying and what the store
+ * listing has to match — see SHARED in worlds.js. */
 function openPaywall(hint){
-  sheet(`<h2>The full fantasy — once, ${PRICE_LABEL}</h2>
-  ${hint? `<p class="small" style="margin-top:4px">You tapped: <b>${esc(hint)}</b> — it's included, darling.</p>`:""}
+  const marker = shape().payMarker;
+  sheet(`<div class="paywall"><h2>${esc(say("payTitle"))} — once, ${PRICE_LABEL}</h2>
+  <p class="small" style="margin-top:4px">${esc(say("payLead"))}</p>
+  ${hint? `<p class="payhint">You tapped <b>${esc(hint)}</b> — ${esc(say("payHint"))}</p>`:""}
   <div class="paylist">
-    ${["“Find me a…” supplier matching & enquiries","Scan quotes & invoices straight into the plan","Deposits, due dates & payment reminders","Run sheet editing & printing","Unlimited seating tables","Guest QR photo uploads & unlimited photos","PDF & print export","Partner sync — both phones, one plan","Unlimited custom budget items"].map(f=>`<div><span class="pi">✓</span><span>${f}</span></div>`).join("")}
+    ${SHARED.PAY_FEATURES.map((f,ix)=>`<div><span class="pi">${marker==="numbered"? ordinal(ix+1,"numero") : marker==="roman"? ordinal(ix+1,"roman") : "✓"}</span><span>${f}</span></div>`).join("")}
   </div>
   <div class="price">${PRICE_LABEL}</div>
-  <div class="small center" style="margin-bottom:14px">One payment. No subscription. Yours forever.</div>
-  <button class="btn rose" onclick="S.unlocked=true;save();closeSheet();render();toast('Everything unlocked — enjoy, darlings')">Unlock (simulated in this prototype)</button>
-  <button class="btn sec" style="margin-top:8px" onclick="closeSheet()">Not now</button>
-  <div class="small center" style="margin-top:10px"><u>Restore purchase</u></div>`);
+  <div class="small center" style="margin-bottom:14px">${esc(SHARED.PAY_TERMS)}</div>
+  <button class="btn rose" onclick="S.unlocked=true;save();closeSheet();render();toast(say('payAck'))">${esc(say("payCta"))}</button>
+  <div class="small center" style="margin-top:6px;opacity:.7">Simulated in this prototype — no payment is taken.</div>
+  <button class="btn sec" style="margin-top:8px" onclick="closeSheet()">${esc(say("payLater"))}</button>
+  <div class="small center" style="margin-top:10px"><u>${esc(SHARED.PAY_RESTORE)}</u></div></div>`);
 }
 
 /* ---------- CLOUD (Cloudflare Worker backend) ---------- */
@@ -5100,21 +5237,28 @@ async function cloudPullOnBoot(){
   render();
   if(S._dirty) schedulePush(500);                        // anything queued offline goes now
 }
+/* Partner sync, in each planner's framing.
+ *
+ * The pairing instruction and the button it names are shared on purpose. This
+ * screen gets used by two people standing next to each other trying to make it
+ * work, often after something has already gone wrong — so the operative words
+ * stay identical in all four worlds, and the instruction names the button by
+ * exactly the label the button carries. */
 function openPartner(){
   if(!S.unlocked){ openPaywall("Partner sync"); return; }
   const status = S.cloud
-    ? `<div class="card" style="margin:14px 0;background:var(--green-bg)"><h3>✓ Cloud sync is on</h3>
-       <div class="small" style="margin-top:4px">Your pairing code — your partner taps “I have a code” on their phone and types it in:</div>
-       <div class="price" style="letter-spacing:.2em">${esc(S.cloud.pair||"—")}</div></div>`
-    : `<button class="btn rose" style="margin:14px 0" onclick="enableCloud().then(ok=>{if(ok){openPartner();toast('Cloud sync on — plan safely backed up')}})">Turn on cloud sync & get our code</button>`;
-  sheet(`<div class="addsheet"><h2>Partner sync</h2>
-  <p class="small" style="margin-top:4px">One plan, both phones, every change everywhere. Backed up in the cloud while we're at it.</p>
+    ? `<div class="card syncon" style="margin:14px 0"><h3>✓ ${esc(say("syncOnLabel"))}</h3>
+       <div class="small" style="margin-top:4px">${SHARED.PAIR_INSTRUCTION}</div>
+       <div class="price paircode">${esc(S.cloud.pair||"—")}</div></div>`
+    : `<button class="btn rose" style="margin:14px 0" onclick="enableCloud().then(ok=>{if(ok){openPartner();toast('Cloud sync on — plan safely backed up')}})">${esc(say("syncEnableCta"))}</button>`;
+  sheet(`<div class="addsheet partnersync"><h2>${esc(say("syncTitle"))}</h2>
+  <p class="small" style="margin-top:4px">${esc(say("syncLead"))}</p>
   ${status}
-  <div class="flab">I have a code</div>
+  <div class="flab">${esc(SHARED.PAIR_BUTTON)}</div>
   <input id="pairIn" placeholder="e.g. 55Z6UW" style="text-transform:uppercase">
   <div class="addrow">
     <button class="btn sec" onclick="closeSheet()">Close</button>
-    <button class="btn go" onclick="joinWithCode(document.getElementById('pairIn').value)">Join our plan</button>
+    <button class="btn go" onclick="joinWithCode(document.getElementById('pairIn').value)">${esc(say("syncJoinCta"))}</button>
   </div></div>`);
 }
 async function aiScan(itemId, base64, mediaType){

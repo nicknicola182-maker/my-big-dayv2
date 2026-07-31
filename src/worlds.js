@@ -56,11 +56,11 @@ const PERSONAS = [
 /* Structural signatures. Purely the facts a render function has to branch on —
    anything expressible in CSS lives in worlds.css instead. */
 const WORLD_SHAPE = {
-  dressing:  { nav: "composer",  progress: "bulbs",    ordinal: "plain", darkHome: true  },
-  order:     { nav: "tabs-text", progress: "roman",    ordinal: "roman", darkHome: false },
-  linen:     { nav: "objects",   progress: "stitches", ordinal: "plain", darkHome: false },
-  monograph: { nav: "tabs-rule", progress: "numero",   ordinal: "numero", darkHome: false },
-  house:     { nav: "tabs-icon", progress: "bar",      ordinal: "plain", darkHome: false },
+  dressing:  { nav: "composer",  progress: "bulbs",    ordinal: "plain",  payMarker: "tick",     darkHome: true  },
+  order:     { nav: "tabs-text", progress: "roman",    ordinal: "roman",  payMarker: "roman",    darkHome: false },
+  linen:     { nav: "objects",   progress: "stitches", ordinal: "plain",  payMarker: "tick",     darkHome: false },
+  monograph: { nav: "tabs-rule", progress: "numero",   ordinal: "numero", payMarker: "numbered", darkHome: false },
+  house:     { nav: "tabs-icon", progress: "bar",      ordinal: "plain",  payMarker: "tick",     darkHome: false },
 };
 
 function personaOf(id) { return PERSONAS.find(p => p.id === id) || null; }
@@ -130,6 +130,71 @@ const VOICE = {
   /* Ziggy's composer is the only world whose nav model writes data, so it is
      the only one that needs an acknowledgement. The others inherit house. */
   composerAck: v("noted, babe.", "Noted.", "got it, love.", "NOTED.", "Added to your list"),
+
+  /* The paywall and partner sync. Only the framing varies — see SHARED below
+     for the parts that deliberately do not, and why. */
+  payTitle: v(
+    "The full fantasy",
+    "The unlock",
+    "One payment and I'll stop mentioning it",
+    "THE FULL EDITION",
+    "Unlock everything"),
+  payLead: v(
+    "everything below, forever, for less than a bottle of the cheap stuff.",
+    "What the unlock adds, itemised. Nothing is removed from the free plan.",
+    "I hate asking, so I'll only ask once. Then it's done and we can get back to it.",
+    "Nine features. One payment. No renewal, no tier above this one.",
+    "Everything below, yours forever."),
+  payCta: v("Go on then", "Unlock", "Go on, treat yourselves", "TAKE IT", "Unlock everything"),
+  payLater: v("not tonight", "Not now", "another time, love", "NOT NOW", "Not now"),
+  payHint: v("and yes, that's included.", "That is included.", "that's in there, don't worry.",
+             "INCLUDED.", "That's included."),
+
+  syncTitle: v("Get them on this", "Partner sync", "Both your phones", "TWO EDITIONS", "Partner sync"),
+  syncLead: v(
+    "one plan, both phones. no more \"did you book it or did I\".",
+    "One plan on two phones. Every change appears on both, and it is backed up while we are at it.",
+    "So neither of you has to remember what the other one did. I've seen that go wrong.",
+    "One plan, two devices, no divergence. Backed up as a by-product.",
+    "One plan, both phones, every change everywhere."),
+  syncEnableCta: v("Switch it on", "Turn on cloud sync", "Let's get you both on it", "ENABLE", "Turn on cloud sync"),
+  syncJoinCta: v("Join them", "Join", "Join the plan", "JOIN", "Join our plan"),
+  syncOnLabel: v("you're both on it", "Cloud sync is on", "you're both on it now, good",
+                 "SYNC ACTIVE", "Cloud sync is on"),
+  payAck: v("unlocked. obsessed.", "Unlocked.", "there — all yours now, love.",
+            "UNLOCKED.", "Everything unlocked"),
+};
+
+/* ── deliberately NOT persona-varied ──────────────────────────────────────
+ * These are commercial and operative facts, and varying them by planner would
+ * be a real problem rather than a flourish:
+ *
+ *   PAY_FEATURES / PAY_TERMS — what the couple is buying. Four versions is four
+ *     things to keep in step with the store listing, and a discrepancy between
+ *     any of them and the listing is a review rejection.
+ *   PAIR_INSTRUCTION / PAIR_BUTTON — the instruction names the button by its
+ *     label. If either is varied without the other they stop matching and the
+ *     couple is told to tap something that isn't there — while standing next to
+ *     each other trying to make it work.
+ *
+ * The price itself lives in PRICE_LABEL (app1.js) and is already single-source.
+ * tests/worlds.mjs asserts none of these ever grow per-world variants. */
+const SHARED = {
+  PAY_FEATURES: [
+    "“Find me a…” supplier matching & enquiries",
+    "Scan quotes & invoices straight into the plan",
+    "Deposits, due dates & payment reminders",
+    "Run sheet editing & printing",
+    "Unlimited seating tables",
+    "Guest QR photo uploads & unlimited photos",
+    "PDF & print export",
+    "Partner sync — both phones, one plan",
+    "Unlimited custom budget items",
+  ],
+  PAY_TERMS: "One payment. No subscription. Yours forever.",
+  PAY_RESTORE: "Restore purchase",
+  PAIR_BUTTON: "I have a code",
+  PAIR_INSTRUCTION: "Your pairing code — your partner taps “I have a code” on their phone and types it in:",
 };
 
 /* Tab labels are their own table, not the long titles above — a tab bar has

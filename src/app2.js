@@ -806,17 +806,29 @@ function openExport(){
   <button class="btn" onclick="window.print()">Print / save as PDF</button></div>`);
 }
 /* openPartner is defined in the CLOUD section below */
+/* The paywall, in each planner's framing.
+ *
+ * What varies: the headline, the lead, the button labels, and how the feature
+ * list is set (a ledger schedule, a magazine contents page, a taped note, a
+ * gold-foil list).
+ *
+ * What does NOT vary, and must not: the price, the nine features, and the
+ * commercial terms. Those are what the couple is buying and what the store
+ * listing has to match — see SHARED in worlds.js. */
 function openPaywall(hint){
-  sheet(`<h2>The full fantasy — once, ${PRICE_LABEL}</h2>
-  ${hint? `<p class="small" style="margin-top:4px">You tapped: <b>${esc(hint)}</b> — it's included, darling.</p>`:""}
+  const marker = shape().payMarker;
+  sheet(`<div class="paywall"><h2>${esc(say("payTitle"))} — once, ${PRICE_LABEL}</h2>
+  <p class="small" style="margin-top:4px">${esc(say("payLead"))}</p>
+  ${hint? `<p class="payhint">You tapped <b>${esc(hint)}</b> — ${esc(say("payHint"))}</p>`:""}
   <div class="paylist">
-    ${["“Find me a…” supplier matching & enquiries","Scan quotes & invoices straight into the plan","Deposits, due dates & payment reminders","Run sheet editing & printing","Unlimited seating tables","Guest QR photo uploads & unlimited photos","PDF & print export","Partner sync — both phones, one plan","Unlimited custom budget items"].map(f=>`<div><span class="pi">✓</span><span>${f}</span></div>`).join("")}
+    ${SHARED.PAY_FEATURES.map((f,ix)=>`<div><span class="pi">${marker==="numbered"? ordinal(ix+1,"numero") : marker==="roman"? ordinal(ix+1,"roman") : "✓"}</span><span>${f}</span></div>`).join("")}
   </div>
   <div class="price">${PRICE_LABEL}</div>
-  <div class="small center" style="margin-bottom:14px">One payment. No subscription. Yours forever.</div>
-  <button class="btn rose" onclick="S.unlocked=true;save();closeSheet();render();toast('Everything unlocked — enjoy, darlings')">Unlock (simulated in this prototype)</button>
-  <button class="btn sec" style="margin-top:8px" onclick="closeSheet()">Not now</button>
-  <div class="small center" style="margin-top:10px"><u>Restore purchase</u></div>`);
+  <div class="small center" style="margin-bottom:14px">${esc(SHARED.PAY_TERMS)}</div>
+  <button class="btn rose" onclick="S.unlocked=true;save();closeSheet();render();toast(say('payAck'))">${esc(say("payCta"))}</button>
+  <div class="small center" style="margin-top:6px;opacity:.7">Simulated in this prototype — no payment is taken.</div>
+  <button class="btn sec" style="margin-top:8px" onclick="closeSheet()">${esc(say("payLater"))}</button>
+  <div class="small center" style="margin-top:10px"><u>${esc(SHARED.PAY_RESTORE)}</u></div></div>`);
 }
 
 /* ---------- CLOUD (Cloudflare Worker backend) ---------- */
@@ -942,21 +954,28 @@ async function cloudPullOnBoot(){
   render();
   if(S._dirty) schedulePush(500);                        // anything queued offline goes now
 }
+/* Partner sync, in each planner's framing.
+ *
+ * The pairing instruction and the button it names are shared on purpose. This
+ * screen gets used by two people standing next to each other trying to make it
+ * work, often after something has already gone wrong — so the operative words
+ * stay identical in all four worlds, and the instruction names the button by
+ * exactly the label the button carries. */
 function openPartner(){
   if(!S.unlocked){ openPaywall("Partner sync"); return; }
   const status = S.cloud
-    ? `<div class="card" style="margin:14px 0;background:var(--green-bg)"><h3>✓ Cloud sync is on</h3>
-       <div class="small" style="margin-top:4px">Your pairing code — your partner taps “I have a code” on their phone and types it in:</div>
-       <div class="price" style="letter-spacing:.2em">${esc(S.cloud.pair||"—")}</div></div>`
-    : `<button class="btn rose" style="margin:14px 0" onclick="enableCloud().then(ok=>{if(ok){openPartner();toast('Cloud sync on — plan safely backed up')}})">Turn on cloud sync & get our code</button>`;
-  sheet(`<div class="addsheet"><h2>Partner sync</h2>
-  <p class="small" style="margin-top:4px">One plan, both phones, every change everywhere. Backed up in the cloud while we're at it.</p>
+    ? `<div class="card syncon" style="margin:14px 0"><h3>✓ ${esc(say("syncOnLabel"))}</h3>
+       <div class="small" style="margin-top:4px">${SHARED.PAIR_INSTRUCTION}</div>
+       <div class="price paircode">${esc(S.cloud.pair||"—")}</div></div>`
+    : `<button class="btn rose" style="margin:14px 0" onclick="enableCloud().then(ok=>{if(ok){openPartner();toast('Cloud sync on — plan safely backed up')}})">${esc(say("syncEnableCta"))}</button>`;
+  sheet(`<div class="addsheet partnersync"><h2>${esc(say("syncTitle"))}</h2>
+  <p class="small" style="margin-top:4px">${esc(say("syncLead"))}</p>
   ${status}
-  <div class="flab">I have a code</div>
+  <div class="flab">${esc(SHARED.PAIR_BUTTON)}</div>
   <input id="pairIn" placeholder="e.g. 55Z6UW" style="text-transform:uppercase">
   <div class="addrow">
     <button class="btn sec" onclick="closeSheet()">Close</button>
-    <button class="btn go" onclick="joinWithCode(document.getElementById('pairIn').value)">Join our plan</button>
+    <button class="btn go" onclick="joinWithCode(document.getElementById('pairIn').value)">${esc(say("syncJoinCta"))}</button>
   </div></div>`);
 }
 async function aiScan(itemId, base64, mediaType){

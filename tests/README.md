@@ -150,12 +150,37 @@ persona would be 1,376 rewrites and a factual-accuracy disaster — jurisdiction
 -specific legal guidance delivered in a jokey register. No key in `VOICE` is
 allowed to name pack content.
 
+### The paywall and partner sync
+
+These two were world-blind by policy and are now bespoke. That is only safe
+because the parts that must not vary are held in `SHARED` (`src/worlds.js`) and
+asserted:
+
+- **the price, the nine features, the commercial terms.** Four versions is four
+  things to keep in step with the store listing, and any discrepancy between one
+  of them and the listing is a review rejection.
+- **the pairing instruction and the button it names.** The instruction says
+  *tap "I have a code"* and the button is labelled *I have a code*. Vary either
+  without the other and the couple is told to tap something that isn't there —
+  while standing next to each other trying to make it work.
+- **no world may contradict the terms.** The terms say *No subscription*;
+  Perdita's headline was `THE SUBSCRIPTION`, two lines above it. A store
+  reviewer reads the purchase screen as one page, and so does the couple. The
+  suite now rejects any commerce string that promises a subscription, a trial,
+  or recurring billing. It checks affirmative claims only — "Nothing is removed
+  from the free plan" and "No renewal" are consistent and must keep passing.
+
 `npm run shots:worlds` renders the matrix — 4 worlds × (home, budget, list,
-question) plus the gate. **Run it after touching `worlds.css`.** A world can pass
+question, sheet, paywall, sync) plus the gate. **Run it after touching
+`worlds.css`.** A world can pass
 every assertion above and still render wrong if a selector doesn't match; only a
-picture catches that. It caught three real ones: Ziggy's names rendering
-dark-on-dark, the step count printing twice for Perdita, and a rose glow leaking
-under Anneke's button.
+picture catches that. It has caught six real ones so far: Ziggy's names
+rendering dark-on-dark, the step count printing twice for Perdita, a rose glow
+leaking under Anneke's button, Ziggy's composer showing the page through its own
+input, his sheets rendering **fully transparent** (`.sheet` inherited `--card`,
+which is `rgba(255,255,255,.06)` on his dark home — the pairing code was
+unreadable over the content behind it), and white-on-white on his secondary
+buttons.
 
 ## Branches (`tests/branches.mjs`)
 

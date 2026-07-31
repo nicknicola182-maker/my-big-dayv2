@@ -166,6 +166,9 @@
 .card{border-radius:var(--w-radius);box-shadow:var(--w-shadow);margin-left:var(--w-gutter);margin-right:var(--w-gutter)}
 [data-world="dressing"] .card,[data-world="linen"] .card{border:var(--w-edge)}
 .btn{border-radius:var(--w-btn-radius);letter-spacing:var(--w-btn-track)}
+/* The secondary button hardcoded #fff, which on Ziggy's dark home put white
+   text on a white ground. Tokens make it follow whatever surface it sits on. */
+.btn.sec{background:var(--card);color:var(--ink);border-color:var(--line)}
 .opt{border-radius:var(--w-radius-sm)}
 .chip{border-radius:var(--w-radius-sm)}
 input,select,textarea{border-radius:var(--w-radius-sm)}
@@ -323,7 +326,17 @@ h2,#ob .qtitle,header.app .names,.land-title,.big{
   font-family:var(--w-hand);text-transform:var(--w-hand-case);letter-spacing:var(--w-hand-track);
   color:var(--rose);font-size:16px;text-align:right}
 [data-world="monograph"] .sheetsign{font-size:11px;font-weight:700}
-.sheet{background:var(--card);border-radius:var(--w-radius) var(--w-radius) 0 0;color:var(--ink)}
+/* --paper, never --card. On Ziggy's dark home --card is rgba(255,255,255,.06),
+   which made the whole sheet see-through and the pairing code unreadable over
+   the content behind it. --paper is opaque in every world and surface. */
+.sheet{background:var(--paper);border-radius:var(--w-radius) var(--w-radius) 0 0;color:var(--ink)}
+[data-world="linen"] .sheet{background:var(--card)}
+/* The "sync is on" panel is a fixed light green, which is invisible against
+   light ink. Ziggy's dark home needs its own. */
+[data-world="dressing"][data-surface="home"] .syncon{
+  background:rgba(62,124,91,.22);border:1px solid rgba(155,192,166,.5);
+}
+[data-world="dressing"][data-surface="home"] .syncon h3{color:#B6E0C4}
 /* Anneke and Perdita: not a bottom sheet at all — a full-height page. A ledger
    and a magazine do not slide up from the bottom of a phone. */
 [data-world="order"] .sheetwrap,[data-world="monograph"] .sheetwrap{align-items:stretch}
@@ -342,6 +355,53 @@ h2,#ob .qtitle,header.app .names,.land-title,.big{
 }
 /* Ziggy: gold-ruled, lifted off the dark ground. */
 [data-world="dressing"] .sheet{box-shadow:0 -8px 40px rgba(0,0,0,.4), 0 0 0 1.5px rgba(232,190,110,.5)}
+
+/* ═══ paywall & partner sync ═════════════════════════════════════════════
+   These two were shared by policy until now. They are bespoke, with one line
+   held constant: the price, the nine features and the pairing instruction are
+   identical in all four worlds. Only the setting of them varies. */
+.price{font-family:var(--w-display);text-transform:var(--w-display-case);letter-spacing:var(--w-display-track)}
+.payhint{font-size:12.5px;color:var(--rose);margin-top:6px;
+  font-family:var(--w-hand);text-transform:var(--w-hand-case);letter-spacing:var(--w-hand-track)}
+[data-world="monograph"] .payhint{font-size:10.5px;font-weight:700}
+.paircode{letter-spacing:.2em}
+.syncon{background:var(--green-bg)}
+
+/* Anneke — the unlock as a schedule of additions, roman-numbered, ruled. */
+[data-world="order"] .paylist div{
+  border-bottom:1px solid var(--line);padding:9px 0;align-items:baseline;
+}
+[data-world="order"] .paylist .pi{
+  color:var(--metal);font-size:11px;letter-spacing:.1em;min-width:34px;font-weight:400;
+}
+[data-world="order"] .price{border-top:3px double var(--line);padding-top:10px}
+[data-world="order"] .syncon{background:transparent;border:1px solid var(--metal)}
+
+/* Perdita — a contents page. Issue numbers, hairlines, no ticks. */
+[data-world="monograph"] .paylist div{
+  border-top:1px solid var(--line);padding:10px 0;align-items:baseline;
+}
+[data-world="monograph"] .paylist .pi{
+  color:var(--rose);font-size:10px;letter-spacing:.16em;min-width:44px;font-weight:700;
+}
+[data-world="monograph"] .price{border-top:2px solid var(--ink);padding-top:10px}
+[data-world="monograph"] .syncon{background:transparent;border:1px solid var(--ink);border-left:3px solid var(--rose)}
+
+/* Rosie — a note left on the table, so the list is close-set and warm. */
+[data-world="linen"] .paylist{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--w-radius);
+  padding:12px 15px;box-shadow:var(--w-shadow);transform:rotate(var(--w-rotate));
+}
+[data-world="linen"] .paylist .pi{color:#3E7C5B}
+[data-world="linen"] .syncon{background:#EAF2EC;border:1px solid #C6DACB}
+
+/* Ziggy — gold foil, because his whole world is the lit mirror. */
+[data-world="dressing"] .paylist{
+  background:linear-gradient(160deg,rgba(232,190,110,.13),rgba(232,190,110,.04));
+  border:1.5px solid rgba(232,190,110,.55);border-radius:var(--w-radius);padding:12px 16px;
+}
+[data-world="dressing"] .paylist .pi{color:#D9A855}
+[data-world="dressing"] .price{color:var(--rose)}
 
 /* ═══ the persona gate ═══════════════════════════════════════════════════
    Deliberately world-blind: it is the screen you pick a world on. */
