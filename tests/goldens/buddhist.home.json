@@ -1,0 +1,486 @@
+{
+  "packId": "buddhist",
+  "currency": "GBP",
+  "budgetTotal": 30000,
+  "counts": {
+    "events": 6,
+    "items": 25,
+    "itemsOn": 9,
+    "timeline": 24,
+    "paperwork": 8,
+    "runsheet": 6
+  },
+  "allocatedTotal": 30000,
+  "sections": {
+    "Attire": 5633,
+    "Ceremony": 4053,
+    "Photos & Film": 4297,
+    "Reception": 14888,
+    "Stationery": 1129
+  },
+  "events": [
+    {
+      "id": "nekath",
+      "name": "Setting the auspicious time"
+    },
+    {
+      "id": "dana",
+      "name": "Almsgiving to the monks"
+    },
+    {
+      "id": "blessing",
+      "name": "The blessing ceremony"
+    },
+    {
+      "id": "civil",
+      "name": "The civil marriage"
+    },
+    {
+      "id": "reception",
+      "name": "The reception"
+    },
+    {
+      "id": "water",
+      "name": "The water-pouring"
+    }
+  ],
+  "items": [
+    {
+      "id": "temple",
+      "name": "Temple or vihara donation",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0242,
+      "alloc": 1353
+    },
+    {
+      "id": "monk-transport",
+      "name": "Transport and hospitality for the monks",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0161,
+      "alloc": 900
+    },
+    {
+      "id": "dana-food",
+      "name": "Almsgiving food offering",
+      "section": "Ceremony",
+      "on": false,
+      "religious": true,
+      "share": 0.0242,
+      "alloc": 0
+    },
+    {
+      "id": "astrologer",
+      "name": "Astrologer's fee for the nekath",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.0097,
+      "alloc": 0
+    },
+    {
+      "id": "thread",
+      "name": "Sacred thread, water vessel and conch",
+      "section": "Ceremony",
+      "on": false,
+      "religious": true,
+      "share": 0.0081,
+      "alloc": 0
+    },
+    {
+      "id": "shrine",
+      "name": "Shrine, Buddha image and offerings",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0161,
+      "alloc": 900
+    },
+    {
+      "id": "civil-fees",
+      "name": "Civil notice, registrar and certificates",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0161,
+      "alloc": 900
+    },
+    {
+      "id": "registrar-attend",
+      "name": "Registrar attendance at a venue",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.0161,
+      "alloc": 0
+    },
+    {
+      "id": "venue",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0726,
+      "alloc": 0
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.2096,
+      "alloc": 14888
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0444,
+      "alloc": 0
+    },
+    {
+      "id": "cake",
+      "name": "Cake",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0121,
+      "alloc": 0
+    },
+    {
+      "id": "attire1",
+      "name": "Wedding outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.0605,
+      "alloc": 3381
+    },
+    {
+      "id": "attire2",
+      "name": "Second outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.0403,
+      "alloc": 2252
+    },
+    {
+      "id": "jewellery",
+      "name": "Jewellery",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.0363,
+      "alloc": 0
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.0323,
+      "alloc": 0
+    },
+    {
+      "id": "photo",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.0605,
+      "alloc": 4297
+    },
+    {
+      "id": "video",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.0282,
+      "alloc": 0
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.0323,
+      "alloc": 0
+    },
+    {
+      "id": "music",
+      "name": "Musicians or DJ",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.0444,
+      "alloc": 0
+    },
+    {
+      "id": "stationery",
+      "name": "Invitations",
+      "section": "Stationery",
+      "on": true,
+      "religious": true,
+      "share": 0.0202,
+      "alloc": 1129
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.0161,
+      "alloc": 0
+    },
+    {
+      "id": "beauty",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.0282,
+      "alloc": 0
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts and favours",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.0161,
+      "alloc": 0
+    },
+    {
+      "id": "contingency",
+      "name": "Contingency",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.0226,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 14,
+      "critical": true,
+      "when": "Apr 2026",
+      "task": "Ask the temple what it will and will not do, and whether the monks travel — some communities will only bless at the temple"
+    },
+    {
+      "id": "t1",
+      "mb": 13,
+      "critical": true,
+      "when": "May 2026",
+      "task": "Decide the civil plan first: in England and Wales a Buddhist blessing has no legal effect on its own and most viharas are not registered for marriage"
+    },
+    {
+      "id": "t2",
+      "mb": 12,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "If your families set auspicious times, consult the astrologer before booking anything, because the whole day hangs off the times given"
+    },
+    {
+      "id": "t3",
+      "mb": 12,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "Book the temple and the monks — a monastic community's calendar is not a commercial diary and cannot be moved"
+    },
+    {
+      "id": "t4",
+      "mb": 11,
+      "critical": true,
+      "when": "Jul 2026",
+      "task": "Check whether the wedding falls in Vassa, the rains retreat, when many communities avoid weddings"
+    },
+    {
+      "id": "t5",
+      "mb": 10,
+      "critical": true,
+      "when": "Aug 2026",
+      "task": "Book the venue for the legal ceremony and, if it is approved premises, the registrar"
+    },
+    {
+      "id": "t6",
+      "mb": 10,
+      "critical": false,
+      "when": "Aug 2026",
+      "task": "Agree the sinsod or equivalent between the families if your tradition includes one, and get the figure settled early"
+    },
+    {
+      "id": "t7",
+      "mb": 9,
+      "critical": false,
+      "when": "Sept 2026",
+      "task": "Book the reception venue, checking noise conditions if there will be a drumming procession"
+    },
+    {
+      "id": "t8",
+      "mb": 8,
+      "critical": true,
+      "when": "Oct 2026",
+      "task": "Book the caterer and confirm the vegetarian provision properly rather than as an afterthought"
+    },
+    {
+      "id": "t9",
+      "mb": 8,
+      "critical": true,
+      "when": "Oct 2026",
+      "task": "Confirm the monks' meal must be served before midday, and build the morning around that"
+    },
+    {
+      "id": "t10",
+      "mb": 7,
+      "critical": true,
+      "when": "Nov 2026",
+      "task": "Order outfits — traditional dress from Thailand, Sri Lanka or Vietnam has long lead times and needs fittings"
+    },
+    {
+      "id": "t11",
+      "mb": 6,
+      "critical": false,
+      "when": "Dec 2026",
+      "task": "Arrange the poruwa or shrine setup with whoever builds it"
+    },
+    {
+      "id": "t12",
+      "mb": 6,
+      "critical": false,
+      "when": "Dec 2026",
+      "task": "Confirm who provides the sacred thread, conch and water vessel"
+    },
+    {
+      "id": "t13",
+      "mb": 5,
+      "critical": false,
+      "when": "Jan 2027",
+      "task": "Brief the photographer on the chanting, the thread-tying and the water-pouring"
+    },
+    {
+      "id": "t14",
+      "mb": 5,
+      "critical": true,
+      "when": "Jan 2027",
+      "task": "Send invitations, making clear which ceremony each guest is invited to"
+    },
+    {
+      "id": "t15",
+      "mb": 4,
+      "critical": false,
+      "when": "Feb 2027",
+      "task": "Agree the alcohol question between both families before ordering drinks"
+    },
+    {
+      "id": "t16",
+      "mb": 4,
+      "critical": false,
+      "when": "Feb 2027",
+      "task": "Plan the water-pouring queue: with three hundred guests it takes far longer than anyone expects"
+    },
+    {
+      "id": "t17",
+      "mb": 3,
+      "critical": true,
+      "when": "Mar 2027",
+      "task": "Give civil notice at the register office"
+    },
+    {
+      "id": "t18",
+      "mb": 3,
+      "critical": true,
+      "when": "Mar 2027",
+      "task": "Confirm transport and hospitality arrangements for the monks"
+    },
+    {
+      "id": "t19",
+      "mb": 2,
+      "critical": true,
+      "when": "Apr 2027",
+      "task": "Walk the run of the day against the auspicious times with someone who knows them"
+    },
+    {
+      "id": "t20",
+      "mb": 2,
+      "critical": false,
+      "when": "Apr 2027",
+      "task": "Confirm final numbers with the caterer"
+    },
+    {
+      "id": "t21",
+      "mb": 1,
+      "critical": false,
+      "when": "May 2027",
+      "task": "Confirm the dressing schedule against the auspicious dressing time"
+    },
+    {
+      "id": "t22",
+      "mb": 1,
+      "critical": false,
+      "when": "May 2027",
+      "task": "Prepare the almsgiving offering"
+    },
+    {
+      "id": "t23",
+      "mb": 0,
+      "critical": true,
+      "when": "Jun 2027",
+      "task": "Register the civil marriage and collect the certificate"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both",
+      "item": "Civil notice of marriage"
+    },
+    {
+      "id": "p1",
+      "who": "Both",
+      "item": "Passports or birth certificates and proof of address"
+    },
+    {
+      "id": "p2",
+      "who": "Either, if applicable",
+      "item": "Evidence of the ending of any previous marriage"
+    },
+    {
+      "id": "p3",
+      "who": "The couple",
+      "item": "Check whether the vihara or temple is registered for marriage"
+    },
+    {
+      "id": "p4",
+      "who": "The couple",
+      "item": "Registrar booking for approved premises"
+    },
+    {
+      "id": "p5",
+      "who": "Both",
+      "item": "Registration of the marriage afterwards"
+    },
+    {
+      "id": "p6",
+      "who": "Both, if marrying in Thailand or Sri Lanka",
+      "item": "Marriage abroad: check recognition at home"
+    },
+    {
+      "id": "p7",
+      "who": "The couple",
+      "item": "Permission for an open flame or incense indoors"
+    }
+  ]
+}

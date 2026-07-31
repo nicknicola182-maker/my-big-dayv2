@@ -38,8 +38,33 @@ function dateInWords(){
 }
 function planned(){ return S.plan.items.filter(i=>i.on).reduce((s,i)=>s+(i.agreed??i.alloc??0),0); }
 
+/* Any throw in here used to leave #app blank with no route back. */
 function render(){
+  try{ renderApp(); }
+  catch(e){ renderCrash(e); }
+}
+
+function renderCrash(err){
+  console.error("render failed", err);
+  const app = document.getElementById("app");
+  if(!app) return;
+  let href = "";
+  try{ href = "data:application/json;charset=utf-8,"+encodeURIComponent(localStorage.getItem(STORE_KEY)||"{}"); }catch(e){}
+  app.innerHTML = `
+    <div id="phone"><div class="body" style="padding:34px 22px">
+      <h2 style="font-family:Gloock,serif;font-size:26px;margin:0 0 10px">Something went wrong.</h2>
+      <p style="color:var(--muted);line-height:1.6;margin:0">Your plan is safe — it's saved on this phone, not lost.
+      Take a copy if you'd like one, then reload.</p>
+      ${href? `<a href="${href}" download="my-big-day-plan.json" class="btn" style="display:block;text-align:center;margin-top:20px;text-decoration:none">Download my plan</a>`:""}
+      <button class="btn" style="margin-top:10px;background:#fff;color:var(--ink);border:1.5px solid var(--line)" onclick="location.reload()">Reload the app</button>
+      <p class="small" style="margin-top:20px;color:var(--muted)">If it keeps happening, send us that file and we'll put it right.</p>
+      <pre class="small" style="white-space:pre-wrap;opacity:.5;margin-top:12px">${esc(String((err&&err.message)||err))}</pre>
+    </div></div>`;
+}
+
+function renderApp(){
   if(!S.onboarded){ renderOB(); return; }
+  if(!S.revealSeen){ renderReveal(); return; }   // survives a reload mid-reveal
   if(!S.plan) buildPlan();
   const t = S.tab;
   const nm = [S.ans.n1,S.ans.n2].filter(Boolean).join(" & ") || "Our wedding";
@@ -152,7 +177,7 @@ function askBudget(){
   if(v===null) return; const n = parseInt(String(v).replace(/[^\d]/g,""),10);
   if(n>0){ S.budgetTotal = n; S.budgetEstimated = false; reallocate(); render(); toast("Budget set — "+fmt(n)); }
 }
-function tickTask(id){ const t = S.plan.timeline.find(x=>x.id===id); if(t){ t.done=!t.done; save(); render(); } }
+function tickTask(id){ const t = S.plan.timeline.find(x=>x.id===id); if(t){ t.done=!t.done; touch(t); save(); render(); } }
 
 /* ----- BUDGET ----- */
 function savebar(){
@@ -211,14 +236,14 @@ function v20item(i,deep){
   </div>`;
 }
 function article(cat){ const c = cat.toLowerCase(); return (/^[aeiou]/.test(c)? "an ":"a ")+c; }
-function toggleItem(id){ const i = S.plan.items.find(x=>x.id===id); i.on=!i.on; reallocate(); render();
+function toggleItem(id){ const i = S.plan.items.find(x=>x.id===id); i.on=!i.on; touch(i); reallocate(); render();
   toast(i.on? "Back in — "+i.name : "Taken out — "+i.name); }
 function setItem(id,k,v){ const i = S.plan.items.find(x=>x.id===id);
   i[k] = (k==="balDue")? v : (v===""? null : Math.max(0,parseInt(v,10)||0)); save(); render(); }
-function setDep(id,k,v){ const i = S.plan.items.find(x=>x.id===id); i.dep = i.dep||{};
+function setDep(id,k,v){ const i = S.plan.items.find(x=>x.id===id); i.dep = i.dep||{}; touch(i);
   i.dep[k] = (k==="due")? v : (v===""? null : Math.max(0,parseInt(v,10)||0)); save(); render(); }
 function setDepPaid(id){ const i = S.plan.items.find(x=>x.id===id); i.dep.paid=!i.dep.paid;
-  if(i.dep.paid) i.paid = (i.paid||0) + (i.dep.amt||0); save(); render(); }
+  if(i.dep.paid) i.paid = (i.paid||0) + (i.dep.amt||0); touch(i); save(); render(); }
 function deleteCustom(id){ const i = S.plan.items.find(x=>x.id===id); if(!i||!i.custom) return;
   S.plan.items = S.plan.items.filter(x=>x.id!==id); save(); render(); toast("Removed — "+i.name); }
 
@@ -268,8 +293,8 @@ function doAdd(){
     if(!nm){ toast("Give it a name first"); return; }
     S.customTodos = S.customTodos||[];
     if(S.customTodos.some(c=>c.name===nm)){ toast("That's already on the list"); return; }
-    S.customTodos.push({id:uid(), name:nm, desc:(document.getElementById("tdDesc").value||"").trim(),
-      who:(document.getElementById("tdWho")||{}).value||"Us", done:false});
+    S.customTodos.push(touch({id:uid(), name:nm, desc:(document.getElementById("tdDesc").value||"").trim(),
+      who:(document.getElementById("tdWho")||{}).value||"Us", done:false}));
     closeSheet(); save(); toast("Added to the list");
     S.tab="list"; render();
     return;
@@ -321,7 +346,7 @@ VIEWS.guests = function(){
 };
 function addGuest(){
   const name = prompt("Guest name:"); if(!name) return;
-  S.guests.push({id:uid(), name:name.trim(), side:0, rsvp:"pending", diet:"", plus:0});
+  S.guests.push(touch({id:uid(), name:name.trim(), side:0, rsvp:"pending", diet:"", plus:0}));
   save(); render(); toast("Added — "+name.trim());
 }
 function editGuest(id){
@@ -330,10 +355,10 @@ function editGuest(id){
   const plus = prompt("Plus-ones with "+x.name+"? (0-5):", x.plus||0);
   const side = prompt("Whose side? 1 = "+(S.ans.n1||"partner 1")+", 2 = "+(S.ans.n2||"partner 2")+", 0 = shared:", x.side);
   x.diet = diet.trim(); x.plus = Math.min(5,Math.max(0,parseInt(plus,10)||0)); x.side = [0,1,2].includes(parseInt(side,10))? parseInt(side,10):0;
-  save(); render();
+  touch(x); save(); render();
 }
 function cycleRSVP(id){ const x = S.guests.find(g=>g.id===id);
-  x.rsvp = x.rsvp==="pending"?"yes":x.rsvp==="yes"?"no":"pending"; save(); render(); }
+  x.rsvp = x.rsvp==="pending"?"yes":x.rsvp==="yes"?"no":"pending"; touch(x); save(); render(); }
 function openImport(){
   sheet(`<div class="addsheet"><h2>Paste your guest list</h2>
   <p class="small" style="margin:6px 0 10px">One guest per line. Add a comma and any dietary need — e.g. <i>Maria Georgiou, vegetarian</i></p>
@@ -346,7 +371,7 @@ function doImport(){
   let n=0;
   raw.split(/\n/).forEach(line=>{
     const [name, diet] = line.split(",").map(s=>s&&s.trim());
-    if(name){ S.guests.push({id:uid(), name, side:0, rsvp:"pending", diet:diet||"", plus:0}); n++; }
+    if(name){ S.guests.push(touch({id:uid(), name, side:0, rsvp:"pending", diet:diet||"", plus:0})); n++; }
   });
   closeSheet(); save(); render(); if(n) toast(n+" guests added");
 }
@@ -376,8 +401,8 @@ VIEWS.list = function(){
     <div class="card">${pw.map(p=>`<div class="task ${p.done?"done":""}" onclick="tickPaper('${p.id}')"><div class="tick">${p.done?"✓":""}</div>
       <div><div class="tx">${esc(p.item)}</div><div class="meta">${esc(p.who)}${p.note? " · "+esc(p.note):""}</div></div></div>`).join("")}</div>`:""}`;
 };
-function tickPaper(id){ const p = S.plan.paperwork.find(x=>x.id===id); if(p){ p.done=!p.done; save(); render(); } }
-function tickCustom(id){ const c = (S.customTodos||[]).find(x=>x.id===id); if(c){ c.done=!c.done; save(); render(); } }
+function tickPaper(id){ const p = S.plan.paperwork.find(x=>x.id===id); if(p){ p.done=!p.done; touch(p); save(); render(); } }
+function tickCustom(id){ const c = (S.customTodos||[]).find(x=>x.id===id); if(c){ c.done=!c.done; touch(c); save(); render(); } }
 
 /* ----- MORE ----- */
 VIEWS.more = function(){
@@ -392,7 +417,7 @@ VIEWS.more = function(){
   <div class="sect"><h3>Suppliers & sharing</h3></div>
   <div class="card" onclick="openSuppliers()" style="cursor:pointer"><h3>🔎 Supplier directory${lockBadge}</h3><div class="small">Find and enquire in your area, matched to your tradition.</div></div>
   <div class="card" onclick="openExport()" style="cursor:pointer"><h3>📄 Export${lockBadge}</h3><div class="small">Budget and plan as a printable summary for parents and planners.</div></div>
-  <div class="card" onclick="openPartner()" style="cursor:pointer"><h3>💞 Partner sync${lockBadge}</h3><div class="small">Both phones, one plan.</div></div>
+  <div class="card" onclick="openPartner()" style="cursor:pointer"><h3>💞 Partner sync${lockBadge}</h3><div class="small">Both phones, one plan.</div><div class="small" id="syncline" style="margin-top:4px;opacity:.75">${esc(syncStatus())}</div></div>
   <div class="sect"><h3>App</h3></div>
   ${S.unlocked? `<div class="card"><h3>✓ Everything unlocked</h3><div class="small">Thanks for supporting the app, darling.</div></div>`
     : `<div class="card" onclick="openPaywall()" style="cursor:pointer;background:linear-gradient(140deg,#F2EAF7,#fff)"><h3>Unlock everything — ${PRICE_LABEL}, once</h3><div class="small">No subscription. Yours forever.</div></div>`}
@@ -562,7 +587,7 @@ function addQuote(id){
 }
 function useQuote(id,qid){
   const i = S.plan.items.find(x=>x.id===id);
-  (i.quotes||[]).forEach(q=>{ q.chosen = q.id===qid; if(q.chosen){ i.agreed = q.amt; } });
+  (i.quotes||[]).forEach(q=>{ q.chosen = q.id===qid; if(q.chosen){ i.agreed = q.amt; } }); touch(i);
   save(); openQuotes(id); toast("Agreed price set — "+fmt(i.agreed));
 }
 function delQuote(id,qid){
@@ -639,6 +664,7 @@ function saveScan(id){
   if(type==="dep"){ i.dep = {amt:amt||null, due:due||null, paid:false}; }
   if(type==="bal"){ if(amt) i.agreed = amt; if(due) i.balDue = due; }
   if(type==="rec" && amt){ i.paid = (i.paid||0) + amt; }
+  touch(i);
   if(rem && due){ S.customTodos = S.customTodos||[];
     S.customTodos.push({id:uid(), name:"Pay "+who+(amt?" — "+fmt(amt):""), who:"Us", desc:"due "+due+" · "+i.name, done:false}); }
   _scanTmp = null;
@@ -714,7 +740,7 @@ function openPaywall(hint){
 
 /* ---------- CLOUD (Cloudflare Worker backend) ---------- */
 const API_BASE = (function(){ try{ return localStorage.getItem("weddingapi") || "https://wedding-app-api.nicknicola182.workers.dev"; }catch(e){ return "https://wedding-app-api.nicknicola182.workers.dev"; } })();
-let _pushTimer = null, _lastPush = 0;
+let _pushTimer = null, _lastPush = 0, _pushing = false, _backoff = 0;
 async function api(path, opts={}){
   const headers = Object.assign({"Content-Type":"application/json"}, opts.headers||{});
   if(S.cloud) headers["Authorization"] = "Bearer "+S.cloud.id+":"+S.cloud.token;
@@ -726,14 +752,80 @@ async function api(path, opts={}){
   }catch(e){ clearTimeout(t); return {ok:false, status:0, body:null}; }
 }
 function cloudPayload(){ const c = Object.assign({}, S); delete c.photos; return c; }
-function schedulePush(){
+/* Every local change marks the plan dirty. It stays dirty until the server has
+   actually taken it — so a change made on the train is still there at the station. */
+function schedulePush(delay){
   if(!S.cloud) return;
+  S._dirty = true;
   clearTimeout(_pushTimer);
-  _pushTimer = setTimeout(async ()=>{
+  _pushTimer = setTimeout(pushNow, delay==null? 1500 : delay);
+}
+
+async function pushNow(){
+  if(!S.cloud || _pushing) return;
+  _pushing = true;
+  try{
     S._pushedAt = Date.now();
-    const r = await api("/api/plan", {method:"PUT", body: JSON.stringify({data: cloudPayload(), device: navigator.platform||"web"})});
-    if(r.ok) _lastPush = Date.now();
-  }, 1500);
+    const r = await api("/api/plan", {
+      method:"PUT",
+      headers: S.cloud.rev!=null ? {"If-Match": String(S.cloud.rev)} : {},
+      body: JSON.stringify({data: cloudPayload(), baseRev: S.cloud.rev??null, device: navigator.platform||"web"})
+    });
+
+    if(r.status === 409 && r.body && r.body.data){
+      /* The other phone wrote first. Merge rather than clobber, then send the
+         combined plan back with their revision as the base. */
+      const {state, clashes} = mergeState(S, r.body.data);
+      const cloud = S.cloud;
+      S = state; S.cloud = cloud; S.cloud.rev = r.body.rev;
+      _save0();
+      if(clashes.length){
+        const c = clashes[0];
+        toast("You both changed "+c.label+" — keeping yours for now.");
+      }
+      render();
+      _pushing = false;
+      return schedulePush(200);                 // retry once against the new rev
+    }
+
+    if(r.ok){
+      if(r.body && r.body.rev!=null) S.cloud.rev = r.body.rev;
+      S._dirty = false; _backoff = 0; _lastPush = Date.now();
+      _save0();
+      syncBadge();
+      _pushing = false;
+      return;
+    }
+
+    /* Offline, or the server is unhappy. Keep it queued and back off:
+       3s, 6s, 12s … capped at 2 minutes. */
+    _backoff = Math.min(_backoff? _backoff*2 : 3000, 120000);
+    syncBadge();
+    _pushing = false;
+    clearTimeout(_pushTimer);
+    _pushTimer = setTimeout(pushNow, _backoff);
+  }catch(e){
+    _pushing = false;
+    _backoff = Math.min(_backoff? _backoff*2 : 3000, 120000);
+    clearTimeout(_pushTimer);
+    _pushTimer = setTimeout(pushNow, _backoff);
+  }
+}
+
+/* Back online — stop waiting out the backoff and go now. */
+if(typeof window !== "undefined" && window.addEventListener){
+  window.addEventListener("online", ()=>{ if(S && S.cloud && S._dirty){ _backoff = 0; schedulePush(300); } });
+}
+
+/* A quiet line in More, so "is it saved?" has an answer. */
+function syncStatus(){
+  if(!S.cloud) return "Not syncing — this plan lives on this phone only";
+  if(S._dirty) return "Changes waiting to sync — they're safe on this phone meanwhile";
+  return "Everything's synced";
+}
+function syncBadge(){
+  const el = document.getElementById("syncline");
+  if(el) el.textContent = syncStatus();
 }
 const _save0 = save;
 save = function(){ _save0(); schedulePush(); };
@@ -741,7 +833,7 @@ async function enableCloud(){
   const names = [S.ans.n1,S.ans.n2].filter(Boolean).join(" & ");
   const r = await api("/api/couple", {method:"POST", body: JSON.stringify({names})});
   if(!r.ok || !r.body || !r.body.id){ toast("Can't reach the cloud right now — try again in a moment"); return false; }
-  S.cloud = {id:r.body.id, token:r.body.token, pair:r.body.pairCode};
+  S.cloud = {id:r.body.id, token:r.body.token, pair:r.body.pairCode, rev:0};
   _save0(); schedulePush(); return true;
 }
 async function joinWithCode(code){
@@ -750,23 +842,24 @@ async function joinWithCode(code){
   S.cloud = {id:r.body.id, token:r.body.token, pair:String(code).toUpperCase().trim()};
   const plan = await api("/api/plan");
   if(plan.ok && plan.body && plan.body.data){
-    const keepPhotos = S.photos||[];
-    S = Object.assign(plan.body.data, {photos:keepPhotos});
-    S.cloud = {id:r.body.id, token:r.body.token, pair:String(code).toUpperCase().trim()};
+    const cloud = {id:r.body.id, token:r.body.token, pair:String(code).toUpperCase().trim(), rev: plan.body.rev ?? null};
+    S = mergeState(S, plan.body.data).state;
+    S.cloud = cloud;
   }
   _save0(); closeSheet(); render(); toast("You're in — one plan, both phones 💞");
 }
 async function cloudPullOnBoot(){
   if(!S.cloud) return;
   const r = await api("/api/plan", {timeout:5000});
-  if(r.ok && r.body && r.body.data && r.body.updatedAt){
-    const remote = r.body.data;
-    if((remote._pushedAt||0) > (S._pushedAt||0)){
-      const keepPhotos = S.photos||[], cloud = S.cloud;
-      S = Object.assign(remote, {photos:keepPhotos, cloud});
-      _save0(); render();
-    }
-  }
+  if(!(r.ok && r.body && r.body.data)){ if(S._dirty) schedulePush(500); return; }
+
+  const cloud = S.cloud;
+  const {state, clashes} = mergeState(S, r.body.data);   // merge, never replace
+  S = state; S.cloud = cloud; S.cloud.rev = r.body.rev ?? null;
+  _save0();
+  if(clashes.length) toast("You both changed "+clashes[0].label+" — keeping yours for now.");
+  render();
+  if(S._dirty) schedulePush(500);                        // anything queued offline goes now
 }
 function openPartner(){
   if(!S.unlocked){ openPaywall("Partner sync"); return; }

@@ -1,1 +1,5 @@
 node_modules/
+tests/shots/
+prototype/node_modules/
+prototype/dist/
+prototype/.parcel-cache/

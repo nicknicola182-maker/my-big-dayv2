@@ -1,0 +1,765 @@
+{
+  "packId": "roman-catholic",
+  "currency": "GBP",
+  "budgetTotal": 30000,
+  "counts": {
+    "events": 7,
+    "items": 43,
+    "itemsOn": 23,
+    "timeline": 33,
+    "paperwork": 17,
+    "runsheet": 7
+  },
+  "allocatedTotal": 29998,
+  "sections": {
+    "Attire": 2461,
+    "Beauty": 388,
+    "Ceremony": 1423,
+    "Flowers & Styling": 2169,
+    "Music & Entertainment": 1780,
+    "Photos & Film": 2674,
+    "Reception": 17032,
+    "Rings & Gifts": 1036,
+    "Stationery": 647,
+    "Transport": 388
+  },
+  "events": [
+    {
+      "id": "marriage-prep",
+      "name": "Marriage preparation"
+    },
+    {
+      "id": "hen-stag",
+      "name": "Hen and stag celebrations"
+    },
+    {
+      "id": "rehearsal",
+      "name": "Rehearsal and rehearsal dinner"
+    },
+    {
+      "id": "ceremony",
+      "name": "The wedding liturgy"
+    },
+    {
+      "id": "photographs",
+      "name": "Photographs and receiving line"
+    },
+    {
+      "id": "drinks-reception",
+      "name": "Drinks reception"
+    },
+    {
+      "id": "reception",
+      "name": "Wedding reception"
+    }
+  ],
+  "items": [
+    {
+      "id": "church-fee",
+      "name": "Church offering",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.012,
+      "alloc": 388
+    },
+    {
+      "id": "priest-offering",
+      "name": "Offering to the priest or deacon",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 194
+    },
+    {
+      "id": "altar-servers",
+      "name": "Altar servers and sacristan",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.002,
+      "alloc": 0
+    },
+    {
+      "id": "marriage-prep-course",
+      "name": "Marriage preparation course",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.006,
+      "alloc": 194
+    },
+    {
+      "id": "nfp-instruction",
+      "name": "Natural family planning session",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.002,
+      "alloc": 0
+    },
+    {
+      "id": "certificates-documents",
+      "name": "Certificates and document fees",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.002,
+      "alloc": 65
+    },
+    {
+      "id": "dispensation-paperwork",
+      "name": "Diocesan permission or dispensation",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.001,
+      "alloc": 0
+    },
+    {
+      "id": "civil-registration",
+      "name": "Civil licence or registration",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 129
+    },
+    {
+      "id": "parish-coordinator",
+      "name": "Parish wedding coordinator",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    },
+    {
+      "id": "church-musicians",
+      "name": "Church organist, cantor and musicians",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.014,
+      "alloc": 453
+    },
+    {
+      "id": "church-flowers",
+      "name": "Church flowers",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 583
+    },
+    {
+      "id": "marian-flowers",
+      "name": "Flowers for Our Lady",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.001,
+      "alloc": 0
+    },
+    {
+      "id": "ceremony-symbols",
+      "name": "Arras, lazo, veil and candles",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    },
+    {
+      "id": "reception-venue",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.08,
+      "alloc": 3291
+    },
+    {
+      "id": "catering",
+      "name": "Wedding meal",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.23,
+      "alloc": 9462
+    },
+    {
+      "id": "drinks",
+      "name": "Bar and wine",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.09,
+      "alloc": 3703
+    },
+    {
+      "id": "drinks-reception-food",
+      "name": "Drinks reception and canapés",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.025,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.014,
+      "alloc": 576
+    },
+    {
+      "id": "rehearsal-dinner",
+      "name": "Rehearsal dinner",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.024,
+      "alloc": 0
+    },
+    {
+      "id": "bridal-gown",
+      "name": "Wedding dress and alterations",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.05,
+      "alloc": 1619
+    },
+    {
+      "id": "veil-accessories",
+      "name": "Veil, shoes and accessories",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 259
+    },
+    {
+      "id": "groom-attire",
+      "name": "Groom's outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 583
+    },
+    {
+      "id": "attendants-attire",
+      "name": "Wedding party outfits",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "bridal-beauty",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 388
+    },
+    {
+      "id": "party-beauty",
+      "name": "Wedding party hair and make-up",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "bouquets-buttonholes",
+      "name": "Bouquets and buttonholes",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.016,
+      "alloc": 518
+    },
+    {
+      "id": "reception-flowers",
+      "name": "Reception flowers and styling",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.033,
+      "alloc": 1068
+    },
+    {
+      "id": "lighting-draping",
+      "name": "Lighting and draping",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.065,
+      "alloc": 2674
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.035,
+      "alloc": 0
+    },
+    {
+      "id": "reception-band",
+      "name": "Band or main entertainment",
+      "section": "Music & Entertainment",
+      "on": true,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 1780
+    },
+    {
+      "id": "late-dj",
+      "name": "Late-night DJ",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.014,
+      "alloc": 0
+    },
+    {
+      "id": "cultural-music",
+      "name": "Traditional musicians",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations and save the dates",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 388
+    },
+    {
+      "id": "mass-booklets",
+      "name": "Mass booklets",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 259
+    },
+    {
+      "id": "on-the-day-stationery",
+      "name": "On-the-day stationery",
+      "section": "Stationery",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-cars",
+      "name": "Wedding cars",
+      "section": "Transport",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 388
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest transport",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": true,
+      "share": 0.032,
+      "alloc": 1036
+    },
+    {
+      "id": "gifts-sponsors-parents",
+      "name": "Gifts for the wedding party and sponsors",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "favours",
+      "name": "Favours",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-night-accommodation",
+      "name": "Wedding night accommodation",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-insurance",
+      "name": "Wedding insurance",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 14,
+      "critical": true,
+      "when": "Apr 2026",
+      "task": "Speak to your parish priest before you fix a date with anyone else"
+    },
+    {
+      "id": "t1",
+      "mb": 13,
+      "critical": true,
+      "when": "May 2026",
+      "task": "Ask which dates are unavailable: Good Friday and Holy Saturday are excluded outright, and Sundays, solemnities and the seasons of Advent, Lent and Easter carry restrictions"
+    },
+    {
+      "id": "t2",
+      "mb": 12,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "Book the church and get the date written into the parish diary"
+    },
+    {
+      "id": "t3",
+      "mb": 12,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "Decide with the priest whether it will be a nuptial Mass or the ceremony without Mass"
+    },
+    {
+      "id": "t4",
+      "mb": 12,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "Book the reception venue"
+    },
+    {
+      "id": "t5",
+      "mb": 11,
+      "critical": false,
+      "when": "Jul 2026",
+      "task": "Draft the guest list and agree with both families who is hosting and paying for what"
+    },
+    {
+      "id": "t6",
+      "mb": 10,
+      "critical": false,
+      "when": "Aug 2026",
+      "task": "Book the photographer and videographer, and ask the parish for its written photography policy"
+    },
+    {
+      "id": "t7",
+      "mb": 10,
+      "critical": false,
+      "when": "Aug 2026",
+      "task": "Book the band or main entertainment"
+    },
+    {
+      "id": "t8",
+      "mb": 9,
+      "critical": true,
+      "when": "Sept 2026",
+      "task": "Find out which parish holds each of your baptismal records, especially if you were baptised abroad"
+    },
+    {
+      "id": "t9",
+      "mb": 9,
+      "critical": true,
+      "when": "Sept 2026",
+      "task": "Enrol in the marriage preparation course, since diocesan places fill up well ahead"
+    },
+    {
+      "id": "t10",
+      "mb": 9,
+      "critical": false,
+      "when": "Sept 2026",
+      "task": "Start shopping for the dress, allowing for a long lead time plus alterations"
+    },
+    {
+      "id": "t32",
+      "mb": 9,
+      "critical": true,
+      "when": "Sept 2026",
+      "task": "If either of you was married before, or you are already married civilly, tell the priest at the first meeting — annulment and convalidation both take far longer than the rest of the planning"
+    },
+    {
+      "id": "t11",
+      "mb": 8,
+      "critical": true,
+      "when": "Oct 2026",
+      "task": "If either of you is not Catholic, or was married before, ask the priest to begin the permission, dispensation or nullity process now"
+    },
+    {
+      "id": "t12",
+      "mb": 8,
+      "critical": false,
+      "when": "Oct 2026",
+      "task": "Send save the dates, particularly if guests are travelling internationally"
+    },
+    {
+      "id": "t13",
+      "mb": 7,
+      "critical": false,
+      "when": "Nov 2026",
+      "task": "Book the florist and confirm what the church allows in your wedding's liturgical season"
+    },
+    {
+      "id": "t14",
+      "mb": 6,
+      "critical": true,
+      "when": "Dec 2026",
+      "task": "Complete the marriage preparation course and keep the certificate"
+    },
+    {
+      "id": "t15",
+      "mb": 6,
+      "critical": true,
+      "when": "Dec 2026",
+      "task": "Complete the pre-nuptial enquiry with your priest, interviewed separately"
+    },
+    {
+      "id": "t16",
+      "mb": 6,
+      "critical": true,
+      "when": "Dec 2026",
+      "task": "Request letters of freedom from every parish where you have lived six months or more since turning eighteen"
+    },
+    {
+      "id": "t17",
+      "mb": 6,
+      "critical": false,
+      "when": "Dec 2026",
+      "task": "Choose your readings from the Lectionary options and agree them with the priest"
+    },
+    {
+      "id": "t18",
+      "mb": 6,
+      "critical": true,
+      "when": "Dec 2026",
+      "task": "Meet the parish music director and agree every piece, including processional and recessional"
+    },
+    {
+      "id": "t19",
+      "mb": 5,
+      "critical": true,
+      "when": "Jan 2027",
+      "task": "Request newly issued baptismal and confirmation certificates, dated within six months of the wedding"
+    },
+    {
+      "id": "t20",
+      "mb": 5,
+      "critical": false,
+      "when": "Jan 2027",
+      "task": "Order invitations"
+    },
+    {
+      "id": "t21",
+      "mb": 4,
+      "critical": false,
+      "when": "Feb 2027",
+      "task": "Send invitations"
+    },
+    {
+      "id": "t22",
+      "mb": 4,
+      "critical": false,
+      "when": "Feb 2027",
+      "task": "Confirm which optional ritual elements you want, such as the arras, lazo, veil or candles, and who will bring and place them"
+    },
+    {
+      "id": "t23",
+      "mb": 3,
+      "critical": true,
+      "when": "Mar 2027",
+      "task": "Give civil notice: the registrar in Ireland or the UK, the town hall in Italy, or check the licence window in your US state"
+    },
+    {
+      "id": "t24",
+      "mb": 3,
+      "critical": false,
+      "when": "Mar 2027",
+      "task": "Ask your readers, gift bearers and witnesses, and confirm your sponsors or padrinos"
+    },
+    {
+      "id": "t25",
+      "mb": 3,
+      "critical": false,
+      "when": "Mar 2027",
+      "task": "Attend the natural family planning session if your diocese requires it"
+    },
+    {
+      "id": "t26",
+      "mb": 2,
+      "critical": false,
+      "when": "Apr 2027",
+      "task": "Send the Mass booklet text to the priest for approval before printing"
+    },
+    {
+      "id": "t27",
+      "mb": 2,
+      "critical": false,
+      "when": "Apr 2027",
+      "task": "Send the parish photography and music rules to your suppliers in writing"
+    },
+    {
+      "id": "t28",
+      "mb": 1,
+      "critical": true,
+      "when": "May 2027",
+      "task": "Final meeting with the priest to walk through the order of the liturgy and hand over outstanding paperwork"
+    },
+    {
+      "id": "t29",
+      "mb": 1,
+      "critical": true,
+      "when": "May 2027",
+      "task": "Collect the civil marriage licence, watching the expiry window in the US and the one-month return deadline in Ireland"
+    },
+    {
+      "id": "t30",
+      "mb": 0.5,
+      "critical": true,
+      "when": "May 2027",
+      "task": "Rehearsal, and hand over the offerings and the civil paperwork"
+    },
+    {
+      "id": "t31",
+      "mb": 0.25,
+      "critical": false,
+      "when": "May 2027",
+      "task": "Go to confession before the wedding, as most couples are encouraged to do"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both, if baptised Catholic",
+      "item": "Newly issued baptismal certificate, dated within six months of the wedding"
+    },
+    {
+      "id": "p1",
+      "who": "Both, if Catholic",
+      "item": "Confirmation certificate"
+    },
+    {
+      "id": "p2",
+      "who": "Both",
+      "item": "Pre-nuptial enquiry, also called the prenuptial questionnaire or investigation"
+    },
+    {
+      "id": "p3",
+      "who": "Both",
+      "item": "Letters or affidavits of freedom to marry"
+    },
+    {
+      "id": "p4",
+      "who": "Both",
+      "item": "Certificate of completion of the marriage preparation course"
+    },
+    {
+      "id": "p5",
+      "who": "The Catholic party",
+      "item": "Permission for a mixed marriage"
+    },
+    {
+      "id": "p6",
+      "who": "The Catholic party",
+      "item": "Dispensation from disparity of cult"
+    },
+    {
+      "id": "p7",
+      "who": "The Catholic party",
+      "item": "Promise concerning the baptism and Catholic upbringing of children"
+    },
+    {
+      "id": "p8",
+      "who": "The Catholic party",
+      "item": "Dispensation from canonical form"
+    },
+    {
+      "id": "p9",
+      "who": "Either party previously married",
+      "item": "Declaration of nullity, dissolution, or a death certificate"
+    },
+    {
+      "id": "p10",
+      "who": "The parish",
+      "item": "Delegation for a visiting priest or deacon"
+    },
+    {
+      "id": "p11",
+      "who": "Both, if marrying outside your home diocese",
+      "item": "Testimonial letters or nihil obstat between dioceses"
+    },
+    {
+      "id": "p12",
+      "who": "Both",
+      "item": "Banns or publications"
+    },
+    {
+      "id": "p13",
+      "who": "Both",
+      "item": "Civil marriage licence or notification"
+    },
+    {
+      "id": "p14",
+      "who": "Both",
+      "item": "Passport or photo identification and birth certificates"
+    },
+    {
+      "id": "p15",
+      "who": "Foreign nationals marrying in Italy",
+      "item": "Nulla osta from your embassy"
+    },
+    {
+      "id": "p16",
+      "who": "Both",
+      "item": "Civil marriage certificate, if you are convalidating"
+    }
+  ]
+}

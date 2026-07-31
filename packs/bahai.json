@@ -1,0 +1,645 @@
+{
+  "id": "bahai",
+  "name": "Bahá'í",
+  "shortName": "Bahá'í",
+  "faithGroup": "Other",
+  "blurb": "One sentence, said by each of you in front of two witnesses — and before that, the consent of every living parent on both sides, whatever their own faith.",
+  "commonCountries": [
+    "GB",
+    "US",
+    "CA",
+    "AU",
+    "IN",
+    "IR",
+    "BR",
+    "KE",
+    "NZ",
+    "DE"
+  ],
+  "typicalGuests": {
+    "low": 40,
+    "typical": 120,
+    "high": 400
+  },
+  "typicalDays": 1,
+  "terms": {
+    "officiant": "the Local Spiritual Assembly (the couple marry themselves)",
+    "ceremonyVenue": "Bahá'í centre, home or hired venue",
+    "ceremony": "the Bahá'í marriage",
+    "bestMan": "supporting friend",
+    "maidOfHonour": "supporting friend",
+    "reception": "the reception",
+    "firstDance": "first dance",
+    "witnesses": "the two designated witnesses"
+  },
+  "events": [
+    {
+      "id": "consent",
+      "name": "Seeking the consent of all living parents",
+      "when": "Before anything is fixed",
+      "optional": false,
+      "default": true,
+      "description": "Both parties must obtain the consent of all their living biological parents, whether or not those parents are Bahá'í and whether or not they are still together. There is no majority and no override: one parent withholding consent stops the marriage. This is the single most important step in a Bahá'í wedding and the one that most often takes longest.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "assembly",
+      "name": "Application to the Local Spiritual Assembly",
+      "when": "Three to six months before",
+      "optional": false,
+      "default": true,
+      "description": "The Assembly confirms consents have been given, appoints or approves the witnesses and oversees the marriage. It is an administrative and pastoral body rather than clergy — there is no priesthood in the Bahá'í Faith.",
+      "hosts": "The couple and the Assembly"
+    },
+    {
+      "id": "engagement",
+      "name": "The engagement period",
+      "when": "After consent is given",
+      "optional": true,
+      "default": true,
+      "description": "Bahá'u'lláh set a maximum of ninety-five days between consent being obtained and the wedding. In practice this limit is applied to believers of Persian background; elsewhere the guidance is generally that engagements should be short. Ask your Assembly what applies to you rather than assuming.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "notice",
+      "name": "Civil notice and registration",
+      "when": "At least 29 days before",
+      "optional": false,
+      "default": true,
+      "description": "In many countries the Bahá'í ceremony alone is not legally binding, so a civil marriage runs alongside it. In England and Wales some Bahá'í centres are registered for marriage; most are not.",
+      "hosts": "The couple"
+    },
+    {
+      "id": "ceremony",
+      "name": "The Bahá'í marriage",
+      "when": "Wedding day",
+      "optional": false,
+      "default": true,
+      "description": "Simple and short. In the presence of the two witnesses each party says the prescribed verse: 'We will all, verily, abide by the Will of God.' Around it you may place any readings, prayers and music you like — there is no set liturgy at all.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "reception",
+      "name": "The reception",
+      "when": "Wedding day",
+      "optional": true,
+      "default": true,
+      "description": "Entirely yours in style. The one firm constraint is that alcohol is not served, because Bahá'ís do not drink.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "unity-feast",
+      "name": "A prayer gathering or unity feast",
+      "when": "Around the wedding",
+      "optional": true,
+      "default": false,
+      "description": "Many couples add a devotional gathering with prayers and readings from several faiths, which suits a community that is usually made up of converts from everywhere.",
+      "hosts": "Both families"
+    }
+  ],
+  "items": [
+    {
+      "id": "centre",
+      "name": "Bahá'í centre or venue hire",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "Bahá'í centres are usually modest and inexpensive; a hired hall or hotel is equally acceptable. There is no consecrated building requirement.",
+      "essential": true,
+      "shareOfBudget": 0.0465,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": true
+    },
+    {
+      "id": "assembly-admin",
+      "name": "Assembly administration",
+      "section": "Ceremony",
+      "event": "assembly",
+      "note": "Assemblies do not charge fees. Budget nothing here, but a donation to the Bahá'í Fund is customary and is only accepted from Bahá'ís.",
+      "essential": false,
+      "shareOfBudget": 0.0068,
+      "unit": "fixed",
+      "supplierCategory": "",
+      "religiousRequirement": true
+    },
+    {
+      "id": "civil-fees",
+      "name": "Civil notice, registrar and certificates",
+      "section": "Ceremony",
+      "event": "notice",
+      "note": "Statutory fees. If the venue is not registered for marriage you will pay separately for a register office ceremony as well.",
+      "essential": true,
+      "shareOfBudget": 0.0169,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": true
+    },
+    {
+      "id": "registrar-attend",
+      "name": "Registrar attendance at the venue",
+      "section": "Ceremony",
+      "event": "notice",
+      "note": "Where the venue is approved premises, the registrar attends for a fee. Book the registrar before the venue — registrars run out before venues do.",
+      "essential": false,
+      "shareOfBudget": 0.0169,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": false
+    },
+    {
+      "id": "prayers",
+      "name": "Printed prayer booklet",
+      "section": "Stationery",
+      "event": "ceremony",
+      "note": "Bahá'í weddings draw readings from the Bahá'í writings and often from other faiths too. A printed booklet lets a religiously mixed room follow along.",
+      "essential": true,
+      "shareOfBudget": 0.0169,
+      "unit": "fixed",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": true
+    },
+    {
+      "id": "calligraphy",
+      "name": "Calligraphed marriage certificate",
+      "section": "Stationery",
+      "event": "ceremony",
+      "note": "Frequently commissioned, often in Arabic or Persian calligraphy alongside English.",
+      "essential": false,
+      "shareOfBudget": 0.0169,
+      "unit": "fixed",
+      "supplierCategory": "Calligrapher",
+      "religiousRequirement": false
+    },
+    {
+      "id": "venue-rec",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Anything from a community hall to a hotel. The only real constraint is that the venue must be comfortable running a full event with no bar.",
+      "essential": false,
+      "shareOfBudget": 0.0761,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "event": "reception",
+      "note": "The main line. Bahá'í communities are unusually mixed, so cater for halal, kosher, vegetarian and Persian tastes at the same table more often than not.",
+      "essential": true,
+      "shareOfBudget": 0.2281,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "softdrinks",
+      "name": "Soft drinks, tea and coffee",
+      "section": "Reception",
+      "event": "reception",
+      "note": "No alcohol is served at a Bahá'í wedding. Budget properly for interesting non-alcoholic drinks rather than jugs of squash — this is the line couples under-spend and regret.",
+      "essential": true,
+      "shareOfBudget": 0.0423,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": true
+    },
+    {
+      "id": "persian-sofreh",
+      "name": "Sofreh-ye Aghd table, if you are marking Persian heritage",
+      "section": "Flowers & Styling",
+      "event": "ceremony",
+      "note": "Many Bahá'í families are of Iranian origin and set the traditional spread — mirror, candles, honey, herbs, sweets. It is cultural rather than religious, and entirely optional.",
+      "essential": false,
+      "shareOfBudget": 0.0296,
+      "unit": "fixed",
+      "supplierCategory": "Decorator",
+      "religiousRequirement": false
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers",
+      "section": "Flowers & Styling",
+      "event": "ceremony",
+      "note": "No religious requirement or restriction. Persian families often lean generous; others keep it plain.",
+      "essential": false,
+      "shareOfBudget": 0.038,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "styling",
+      "name": "Venue styling",
+      "section": "Flowers & Styling",
+      "event": "reception",
+      "note": "Bahá'í weddings frequently mix visual traditions on purpose — the décor is often where the two families' heritages meet.",
+      "essential": false,
+      "shareOfBudget": 0.0296,
+      "unit": "fixed",
+      "supplierCategory": "Decorator",
+      "religiousRequirement": false
+    },
+    {
+      "id": "attire1",
+      "name": "Wedding outfit",
+      "section": "Attire",
+      "event": "ceremony",
+      "note": "No prescribed dress. Persian, South Asian, African and Western dress all appear, often at the same wedding.",
+      "essential": true,
+      "shareOfBudget": 0.0634,
+      "unit": "fixed",
+      "supplierCategory": "Bridal boutique",
+      "religiousRequirement": false
+    },
+    {
+      "id": "attire2",
+      "name": "Second outfit",
+      "section": "Attire",
+      "event": "ceremony",
+      "note": "The second outfit, on the same principle. Many couples change between the civil and Bahá'í ceremonies.",
+      "essential": true,
+      "shareOfBudget": 0.0423,
+      "unit": "fixed",
+      "supplierCategory": "Tailor",
+      "religiousRequirement": false
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "section": "Rings & Gifts",
+      "event": "ceremony",
+      "note": "Optional. Where a ring is used, the Bahá'í ringstone symbol is a common engraving.",
+      "essential": false,
+      "shareOfBudget": 0.0423,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "photo",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "event": "ceremony",
+      "note": "The ceremony is very short — sometimes under a minute for the vow itself. Tell the photographer exactly when the verse is said or they will miss the wedding.",
+      "essential": true,
+      "shareOfBudget": 0.0634,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "video",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "event": "ceremony",
+      "note": "Worth it precisely because the vow is so brief — a video is often the only record of the words themselves.",
+      "essential": false,
+      "shareOfBudget": 0.0338,
+      "unit": "fixed",
+      "supplierCategory": "Videographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "music",
+      "name": "Musicians or DJ",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "Music is warmly encouraged. Persian, African and Western music at one reception is normal.",
+      "essential": false,
+      "shareOfBudget": 0.0507,
+      "unit": "fixed",
+      "supplierCategory": "DJ",
+      "religiousRequirement": false
+    },
+    {
+      "id": "choir",
+      "name": "Singers for the devotional readings",
+      "section": "Music & Entertainment",
+      "event": "ceremony",
+      "note": "Bahá'í writings are often chanted or sung rather than read.",
+      "essential": false,
+      "shareOfBudget": 0.0169,
+      "unit": "fixed",
+      "supplierCategory": "Musicians",
+      "religiousRequirement": false
+    },
+    {
+      "id": "stationery",
+      "name": "Invitations",
+      "section": "Stationery",
+      "event": "reception",
+      "note": "Say plainly on the invitation that the event is alcohol-free, so nobody arrives expecting a bar.",
+      "essential": true,
+      "shareOfBudget": 0.0211,
+      "unit": "fixed",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "section": "Transport",
+      "event": "ceremony",
+      "note": "If the civil ceremony and the Bahá'í ceremony are in different places on the same day, transport becomes a scheduling problem rather than a nicety.",
+      "essential": false,
+      "shareOfBudget": 0.0169,
+      "unit": "fixed",
+      "supplierCategory": "Transport",
+      "religiousRequirement": false
+    },
+    {
+      "id": "beauty",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "event": "ceremony",
+      "note": "Hair and make-up if you want them.",
+      "essential": false,
+      "shareOfBudget": 0.0296,
+      "unit": "fixed",
+      "supplierCategory": "Beauty",
+      "religiousRequirement": false
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts for the witnesses and helpers",
+      "section": "Rings & Gifts",
+      "event": "reception",
+      "note": "The two witnesses take on a real role and are usually thanked properly.",
+      "essential": false,
+      "shareOfBudget": 0.0169,
+      "unit": "fixed",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "translation",
+      "name": "Interpretation or translation",
+      "section": "Extras",
+      "event": "ceremony",
+      "note": "Bahá'í families are frequently multilingual and multi-generational. Persian and English side by side is common.",
+      "essential": false,
+      "shareOfBudget": 0.0127,
+      "unit": "fixed",
+      "supplierCategory": "Event services",
+      "religiousRequirement": false
+    },
+    {
+      "id": "contingency",
+      "name": "Contingency",
+      "section": "Extras",
+      "event": "",
+      "note": "Hold some back. The consent process can move a date, and moved dates cost money.",
+      "essential": false,
+      "shareOfBudget": 0.0254,
+      "unit": "fixed",
+      "supplierCategory": "",
+      "religiousRequirement": false
+    }
+  ],
+  "timeline": [
+    {
+      "monthsBefore": 14,
+      "task": "Before anything else, establish that the consent of every living biological parent on both sides can be obtained — this is the requirement most likely to stop or delay the wedding",
+      "critical": true
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Approach parents who are not Bahá'í carefully and in person; their consent is required exactly as much as a Bahá'í parent's",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "If a parent is estranged, untraceable or refusing, take it to your Local Spiritual Assembly early — there is a process, and it is not quick",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Ask the Assembly which engagement-length guidance applies to you, since the ninety-five day limit is applied to Persian believers and practice varies elsewhere",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Apply to the Local Spiritual Assembly with the consents recorded",
+      "critical": true
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Agree the two witnesses with the Assembly",
+      "critical": true
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Decide the civil plan now, not later — in most countries the Bahá'í ceremony alone has no legal effect",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Check whether your Bahá'í centre is registered for marriage; most are not, which means a separate civil ceremony",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Book the venue and, if it is approved premises, the registrar",
+      "critical": false
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Book the caterer and brief them that the event is alcohol-free throughout",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Choose the readings and prayers, and decide which will be chanted",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Book the photographer and tell them the vow itself lasts seconds",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Order outfits",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Send invitations stating clearly that no alcohol will be served",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Commission the certificate or calligraphy if you want one",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Give civil notice at the register office",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Confirm the running order with the Assembly's representative",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Confirm final numbers and the dietary spread with the caterer",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Arrange interpretation if guests will need it",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Walk both witnesses through exactly what they are witnessing and where they stand",
+      "critical": true
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Confirm transport and timings between the civil and Bahá'í ceremonies if they are in different places",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0,
+      "task": "Register the civil marriage and collect the certificate",
+      "critical": true
+    }
+  ],
+  "paperwork": [
+    {
+      "item": "Written consent of all living biological parents",
+      "who": "Both parties",
+      "note": "Required from every living natural parent of both parties, regardless of the parents' own religion, whether they are divorced, or whether they are involved in the couple's life. There is no majority vote and no waiver for inconvenience. The Local Spiritual Assembly records the consents."
+    },
+    {
+      "item": "Application to the Local Spiritual Assembly",
+      "who": "Both",
+      "note": "The Assembly confirms the consents, approves the arrangements and appoints or accepts the two witnesses."
+    },
+    {
+      "item": "Designation of two witnesses",
+      "who": "Both",
+      "note": "Two witnesses acceptable to the Assembly must be present to hear the verse said by each party."
+    },
+    {
+      "item": "Civil notice of marriage",
+      "who": "Both",
+      "note": "In England and Wales, at least 29 clear days before, in your district of residence. The Bahá'í ceremony alone is usually not legally binding, so this is what makes you married in law."
+    },
+    {
+      "item": "Passports or birth certificates and proof of address",
+      "who": "Both",
+      "note": ""
+    },
+    {
+      "item": "Evidence of the ending of any previous marriage",
+      "who": "Either, if applicable",
+      "note": "Decree absolute or death certificate. Bahá'í law also requires that any previous Bahá'í marriage has been properly ended, which is a separate matter from the civil divorce."
+    },
+    {
+      "item": "Bahá'í marriage certificate",
+      "who": "Both",
+      "note": "Issued by the Local Spiritual Assembly. It records the Bahá'í marriage; it is not the civil register entry."
+    },
+    {
+      "item": "Registration of the civil marriage",
+      "who": "Both",
+      "note": "Collect the certified copy afterwards. Couples who treat the Bahá'í ceremony as sufficient are legally unmarried, which surfaces years later in property, inheritance and immigration."
+    }
+  ],
+  "customs": [
+    {
+      "name": "The vow",
+      "description": "Each party says, in the presence of the two witnesses, 'We will all, verily, abide by the Will of God.' That single sentence, said by both, is the marriage. Everything else in the ceremony is chosen by the couple.",
+      "optional": false
+    },
+    {
+      "name": "Consent of all living parents",
+      "description": "Distinctive and absolute. The purpose is unity between two families rather than control over the couple, and it applies to non-Bahá'í parents equally. It is asked for after the couple have chosen each other, not before.",
+      "optional": false
+    },
+    {
+      "name": "There is no clergy",
+      "description": "The Bahá'í Faith has no priesthood. The couple marry themselves; the Local Spiritual Assembly administers and witnesses. Guests from other traditions often look for the officiant and find there isn't one.",
+      "optional": false
+    },
+    {
+      "name": "No alcohol",
+      "description": "Bahá'ís do not drink, and Bahá'í weddings are alcohol-free throughout. Say so on the invitation and spend the money on good soft drinks instead.",
+      "optional": false
+    },
+    {
+      "name": "A very short ceremony",
+      "description": "The essential act takes moments. Couples build around it with prayers, readings, music and silence — often drawing on several faiths, which reflects a community largely made up of converts.",
+      "optional": false
+    },
+    {
+      "name": "The nineteen-day feast and the Bahá'í calendar",
+      "description": "The Bahá'í year has nineteen months of nineteen days and its own holy days. Some are work-suspending, and the Fast falls in the nineteen days before Naw-Rúz in March.",
+      "optional": true
+    },
+    {
+      "name": "Unity as the theme",
+      "description": "Readings and prayers commonly emphasise the oneness of humanity, and interfaith and intercultural marriages are the norm rather than the exception.",
+      "optional": true
+    },
+    {
+      "name": "Sofreh-ye Aghd",
+      "description": "Where a family is of Iranian background, the traditional Persian wedding spread often appears — mirror, candles, honey, wild rue. It is cultural heritage, not Bahá'í law.",
+      "optional": true
+    },
+    {
+      "name": "The ringstone symbol",
+      "description": "Often engraved on rings or shown in the décor. A ring is not required by Bahá'í law.",
+      "optional": true
+    }
+  ],
+  "gotchas": [
+    "The consent of all living biological parents is the requirement that stops weddings. It includes a parent who left decades ago, a parent who is not Bahá'í and a parent who disapproves. Establish that it is achievable before you book anything.",
+    "One parent withholding consent is enough to prevent the marriage. There is no majority and no appeal to inconvenience. If a parent is untraceable or incapacitated, the Assembly has a process — start it very early.",
+    "The ninety-five day limit between consent and ceremony is applied to believers of Persian background, and guidance elsewhere varies. Ask your own Assembly rather than reading a number off the internet and planning to it.",
+    "The Bahá'í ceremony is usually not legally binding on its own. Most Bahá'í centres in England and Wales are not registered for marriage, so you need a civil ceremony as well or you are not legally married.",
+    "Guests expect a bar. Unless the invitation says the day is alcohol-free, people arrive assuming there will be wine at dinner and are visibly disappointed. Say it early and warmly.",
+    "The vow lasts seconds. Photographers, videographers and late-arriving relatives all miss it routinely. Announce it, and make sure the room is settled first.",
+    "Bahá'í holy days and the Fast are easy to plan into by accident. Nine holy days suspend work, and the Fast runs through the nineteen days before Naw-Rúz in March.",
+    "Assemblies do not charge for the marriage, and contributions to the Bahá'í Fund are accepted only from Bahá'ís. A non-Bahá'í parent offering to pay the Assembly will be politely refused, which surprises people.",
+    "Where families come from several countries, catering is a real design problem rather than a menu choice: halal, kosher, vegetarian and Persian expectations often sit at the same table.",
+    "A previous Bahá'í marriage must be properly ended under Bahá'í law as well as civil law, and the two processes are separate and differently timed."
+  ],
+  "branches": {
+    "Persian heritage": {
+      "label": "Persian heritage",
+      "addGotchas": [
+        "The ninety-five day limit between consent and ceremony is applied to believers of Persian background. Confirm with your Assembly."
+      ]
+    },
+    "South Asian heritage": {
+      "label": "South Asian heritage"
+    },
+    "African heritage": {
+      "label": "African heritage"
+    },
+    "Western": {
+      "label": "Western"
+    },
+    "Other": {
+      "label": "Other"
+    }
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bah%C3%A1%CA%BC%C3%AD_marriage",
+    "https://bahaipedia.org/Marriage",
+    "https://bahaipedia.org/Parental_consent",
+    "https://www.bahai.org/beliefs/life-spirit/character-conduct/articles-resources/compilation-family-life-marriage",
+    "https://bahai.works/Lights_of_Guidance/Laws_of_Marriage",
+    "https://www.bahaiblog.net/articles/bahai-life/9-unique-aspects-bahai-marriage/",
+    "https://www.gov.uk/marriages-civil-partnerships",
+    "https://www.bahaiquotes.com/subject/consent-marriage"
+  ]
+}

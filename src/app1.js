@@ -46,7 +46,13 @@ const PACK_TAGS = {
  "muslim":"the nikah at the heart of it all",
  "hindu":"days of colour building to the fire",
  "sikh":"the Anand Karaj, done properly",
- "civil":"your rules, your words, your day"
+ "civil":"your rules, your words, your day",
+ "buddhist":"monks bless, and the day is yours to build",
+ "jain":"ahimsa in the vows and on every plate",
+ "bahai":"one sentence, two witnesses, every parent's blessing",
+ "quaker":"a room full of silence until someone is moved",
+ "zoroastrian":"the cloth drops and the rice flies",
+ "pagan":"a circle cast, hands bound, the broom jumped"
 };
 const VARIANTS = {
  "greek-orthodox":["Greek / Cypriot","Russian","Serbian","Romanian","Other Orthodox"],
@@ -56,7 +62,13 @@ const VARIANTS = {
  "muslim":["South Asian","Arab","Turkish, Balkan & Central Asian","Southeast Asian","African","Other / mixed"],
  "hindu":["North Indian","South Indian","Gujarati","Bengali","Punjabi Hindu","Other / diaspora"],
  "sikh":null,
- "civil":["Register office","Licensed venue","Celebrant-led","Humanist","Other"]
+ "civil":["Register office","Licensed venue","Celebrant-led","Humanist","Other"],
+ "buddhist":["Thai","Sri Lankan","Vietnamese","Chinese","Tibetan","Japanese","Western convert","Other"],
+ "jain":["Svetambara","Digambara","Gujarati Jain","Marwari Jain","Other"],
+ "bahai":["Persian heritage","South Asian heritage","African heritage","Western","Other"],
+ "quaker":null,
+ "zoroastrian":["Parsi (India)","Iranian Zoroastrian","Diaspora","Other"],
+ "pagan":["Wiccan","Druid","Heathen","Eclectic / non-aligned","Other"]
 };
 ["greek-orthodox","roman-catholic","protestant","muslim","hindu"].forEach(k=>{
   if(VARIANTS[k] && !VARIANTS[k].some(v=>/^Other/.test(v))) VARIANTS[k].push("Other");
@@ -68,7 +80,12 @@ const VTITLES = {
  "jewish":["Which movement are you part of?","It shapes the ceremony, the dates and the details."],
  "muslim":["Which cultural background shapes your day?","The nikah is constant — the celebrations around it are wonderfully yours."],
  "hindu":["Which region's customs are yours?","Every region does it differently, and every one is spectacular."],
- "civil":["What style of ceremony?","Your day, your rules — just point me in the right direction."]
+ "civil":["What style of ceremony?","Your day, your rules — just point me in the right direction."],
+ "buddhist":["Which Buddhist tradition is yours?","Thai, Sri Lankan, Tibetan — they share almost nothing at a wedding, so I'd rather use yours."],
+ "jain":["Which Jain tradition?","Svetambara and Digambara share the principles and differ in the practice."],
+ "bahai":["Which heritage shapes the day?","The ceremony is the same everywhere. What surrounds it usually isn't."],
+ "zoroastrian":["Which community is yours?","Parsi and Iranian Zoroastrian practice diverged over a thousand years ago."],
+ "pagan":["Which path is yours?","Wiccan, Druid, Heathen — the shape of the rite differs, and so does who may lead it."]
 };
 const VDESCS = {
  "muslim":{
@@ -93,7 +110,13 @@ const CEREMONY_OPTS = {
  muslim:["Mosque","At home","Banqueting venue","Not sure yet"],
  hindu:["Temple","Banqueting venue with mandap","Outdoor mandap","Not sure yet"],
  sikh:["Gurdwara","Not sure yet"],
- civil:["Register office","Licensed venue","Outdoor ceremony","Not sure yet"]
+ civil:["Register office","Licensed venue","Outdoor ceremony","Not sure yet"],
+ buddhist:["Temple or vihara","Banqueting venue","At home","Not sure yet"],
+ jain:["Derasar","Banqueting venue with mandap","Outdoor mandap","Not sure yet"],
+ bahai:["Bahá'í centre","Hired venue","At home","Not sure yet"],
+ quaker:["Meeting house","Not sure yet"],
+ zoroastrian:["Agiary or baug","Hired venue","At home","Not sure yet"],
+ pagan:["Woodland or grove","Stone circle or ancient site","Beach or hilltop","Private land","Not sure yet"]
 };
 const RECEPTION_OPTS = ["Hotel","Banqueting hall","Marquee","Restaurant"];
 const RECEPTION_LEANS = ["Hotel","Banqueting hall","Marquee","Restaurant","Beach","Outdoor","Farm / barn","Other"];
@@ -139,24 +162,129 @@ const PRICE_LABEL = "£6.99";
 
 /* ---------- state ---------- */
 let S = null;
-const BLANK = () => ({v:2, unlocked:false, onboarded:false, seenLanding:false, ans:{}, plan:null,
-  guests:[], tables:[], runsheet:[], budgetTotal:0, cur:"GBP", tab:"home", accOpen:{}});
+const SCHEMA_V = 3;
+const STORE_KEY = "weddingapp";
 
-function save(){ try{ localStorage.setItem("weddingapp", JSON.stringify(S)); }catch(e){} }
-function load(){ try{ const r = localStorage.getItem("weddingapp"); if(r){ S = JSON.parse(r); if(S.v!==2){ S = BLANK(); } return; } }catch(e){}
-  S = BLANK(); }
+/* Every key the app will ever set is declared here. The ones that used to accrete at
+   runtime (photos, cloud, customTodos…) are declared too, so migrations can reason
+   about the shape instead of guessing. */
+const BLANK = () => ({
+  v: SCHEMA_V,
+  unlocked:false, onboarded:false, seenLanding:false, revealSeen:false,
+  ans:{}, plan:null, guests:[], tables:[], runsheet:[],
+  budgetTotal:0, budgetEstimated:false, cur:"GBP",
+  tab:"home", accOpen:{}, listFilter:"all", obIx:0,
+  customTodos:[], photos:[], albumCode:null, cloud:null, _pushedAt:0
+});
+
+/* Migrations run in order until the save is current. NEVER replace an unrecognised
+   save with a blank one — that is a couple's planning and they cannot get it back. */
+const MIGRATIONS = {
+  2: s => {
+    s.obIx = 0;                                   // onboarding position is persisted from v3 on
+    s.revealSeen = !!s.onboarded;                 // anyone already in the app has seen it
+    const d = BLANK();
+    for(const k of ["listFilter","customTodos","photos","albumCode","cloud","_pushedAt","budgetEstimated"]){
+      if(s[k] === undefined) s[k] = d[k];
+    }
+    s.v = 3;
+    return s;
+  }
+};
+
+function migrate(s){
+  while(s.v < SCHEMA_V){
+    const step = MIGRATIONS[s.v];
+    if(!step) return null;                        // no path forward — caller preserves it
+    const before = s.v;
+    s = step(s);
+    if(s.v === before) return null;               // buggy migration; don't spin
+  }
+  return s;
+}
+
+/* Park an unreadable save instead of discarding it. */
+function rescue(raw){
+  try{ localStorage.setItem(STORE_KEY+".rescued", raw); }catch(e){}
+}
+
+let saveBroken = false;
+function save(){
+  try{
+    localStorage.setItem(STORE_KEY, JSON.stringify(S));
+    if(saveBroken){ saveBroken = false; if(typeof toast === "function") toast("Saved — we're back in sync."); }
+  }catch(e){
+    if(saveBroken) return;                        // already said so; don't nag on every keystroke
+    saveBroken = true;
+    const full = e && (e.name === "QuotaExceededError" || e.name === "NS_ERROR_DOM_QUOTA_REACHED" || e.code === 22);
+    console.error("save failed", e);
+    if(typeof toast === "function") toast(full
+      ? "Your phone's storage is full, so I can't save changes. Remove a few album photos and I'll try again."
+      : "I couldn't save that change — don't close the app just yet.");
+  }
+}
+
+function load(){
+  let raw = null;
+  try{ raw = localStorage.getItem(STORE_KEY); }catch(e){}
+  if(!raw){ S = BLANK(); return; }
+
+  let parsed = null;
+  try{ parsed = JSON.parse(raw); }catch(e){}
+  if(!parsed || typeof parsed !== "object"){ rescue(raw); S = BLANK(); return; }
+
+  if(parsed.v > SCHEMA_V){ S = parsed; return; }   // written by a newer build — leave it alone
+  const migrated = migrate(parsed);
+  if(migrated){ S = migrated; save(); return; }
+
+  rescue(raw);                                     // keep it; recoverable by a human later
+  S = BLANK();
+}
 
 function fmt(n){ const s = CURSYM[S.cur]||"£"; if(n==null||isNaN(n)) return "—";
   return s + Math.round(n).toLocaleString("en-GB"); }
 function esc(t){ return String(t??"").replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 function uid(){ return Math.random().toString(36).slice(2,9); }
-function pack(){ return PACKS[S.ans.packId]; }
-function pack2(){ return S.ans.packId2 ? PACKS[S.ans.packId2] : null; }
+/* ---------- branch layer ----------
+   A branch (Russian Orthodox, Gujarati Hindu, Reform Jewish) is a delta over its
+   base pack: it renames and drops events, adds events, items, tasks, paperwork,
+   customs and gotchas, and overrides terms. Merged here so buildPlan and every
+   view see one resolved pack and know nothing about branches. */
+const _branchCache = {};
+function applyBranch(p, variant){
+  if(!p || !variant || !p.branches || !p.branches[variant]) return p;
+  const key = p.id + "|" + variant;
+  if(_branchCache[key]) return _branchCache[key];
+  const b = p.branches[variant];
+  const drop = new Set(b.dropEvents || []);
+  const rename = b.renameEvents || {};
+  const out = Object.assign({}, p);
+  out.terms = Object.assign({}, p.terms, b.terms || {});
+  out.events = p.events
+    .filter(e => !drop.has(e.id))
+    .map(e => rename[e.id] ? Object.assign({}, e, {name: rename[e.id]}) : e)
+    .concat(b.addEvents || []);
+  /* an item whose event this branch dropped goes with it */
+  const live = new Set(out.events.map(e => e.id));
+  out.items = p.items.filter(i => !i.event || live.has(i.event)).concat(b.addItems || []);
+  /* shares must still sum to ~1 after adding and removing lines */
+  const sum = out.items.reduce((n,i) => n + (i.shareOfBudget || 0), 0) || 1;
+  out.items = out.items.map(i => Object.assign({}, i, {shareOfBudget: Math.round(i.shareOfBudget/sum*1e4)/1e4}));
+  out.timeline  = p.timeline.concat(b.addTimeline || []).slice().sort((x,y)=>y.monthsBefore-x.monthsBefore);
+  out.paperwork = p.paperwork.concat(b.addPaperwork || []);
+  out.customs   = p.customs.concat(b.addCustoms || []);
+  out.gotchas   = p.gotchas.concat(b.addGotchas || []);
+  out.branchLabel = b.label || variant;
+  _branchCache[key] = out;
+  return out;
+}
+function pack(){ return applyBranch(PACKS[S.ans.packId], S.ans.variant); }
+function pack2(){ return S.ans.packId2 ? applyBranch(PACKS[S.ans.packId2], S.ans.variant2) : null; }
 function term(k){ const p = pack(); return (p && p.terms && p.terms[k]) || k; }
 function countryOf(code){ return COUNTRIES.find(c=>c[0]===code) || COUNTRIES[0]; }
 function dispName(){ const p = pack(); if(!p) return "";
+  if(p.branchLabel && p.branchLabel !== p.name) return p.branchLabel;
   if(p.id==="greek-orthodox"){ const v = S.ans.variant||"";
-    if(/Russian|Serbian|Romanian/.test(v)) return v.split(" ")[0]+" Orthodox";
     if(/Other/.test(v) || !v) return "Orthodox";
   }
   return p.name; }
@@ -360,6 +488,11 @@ function obSteps(){
         {v:"muslim", l:"Muslim", d:PACK_TAGS["muslim"]},
         {v:"hindu", l:"Hindu", d:PACK_TAGS["hindu"]},
         {v:"sikh", l:"Sikh", d:PACK_TAGS["sikh"]},
+        {v:"buddhist", l:"Buddhist", d:PACK_TAGS["buddhist"]},
+        {v:"jain", l:"Jain", d:PACK_TAGS["jain"]},
+        {v:"bahai", l:"Bahá'í", d:PACK_TAGS["bahai"]},
+        {v:"zoroastrian", l:"Zoroastrian / Parsi", d:PACK_TAGS["zoroastrian"]},
+        {v:"pagan", l:"Pagan / handfasting", d:PACK_TAGS["pagan"]},
         {v:"mixed", l:"We're blending two traditions", d:"double the love, and I'm here for it"},
         {v:"civil", l:"None of these, actually", d:"we'll do it beautifully your way"}],
       get:()=>a.religion, set:v=>{ a.religion=v; a.packChoice=v;
@@ -371,7 +504,8 @@ function obSteps(){
       opts:[
         {v:"greek-orthodox", l:"Orthodox", d:"Greek, Russian, Serbian — we'll get specific next"},
         {v:"roman-catholic", l:"Roman Catholic", d:PACK_TAGS["roman-catholic"]},
-        {v:"protestant", l:"Protestant / Anglican", d:PACK_TAGS["protestant"]}],
+        {v:"protestant", l:"Protestant / Anglican", d:PACK_TAGS["protestant"]},
+        {v:"quaker", l:"Quaker", d:PACK_TAGS["quaker"]}],
       get:()=>a.packId, set:v=>{ a.packId=v; a.packId2=null; }},
     {id:"mix", t:"Two traditions, one love story", s:"Tell me whose is whose — I'll weave them together.", type:"mix",
       show:()=>a.packChoice==="mixed"},
@@ -425,13 +559,13 @@ const VIGNETTES = {
  partner:  '<div class="vig vig-partner"><span class="e">📱</span><span class="lv">💌</span><span class="e">📱</span></div>'
 };
 
-let obIx = 0;
+/* onboarding position lives in S — a reload used to send the couple back to question one */
 function renderOB(){
   if(!S.seenLanding){ renderLanding(); return; }
   const steps = obSteps();
-  if(obIx >= steps.length){ finishOB(); return; }
-  const st = steps[obIx], a = S.ans;
-  const pct = Math.round((obIx)/steps.length*100);
+  if(S.obIx >= steps.length){ finishOB(); return; }
+  const st = steps[S.obIx], a = S.ans;
+  const pct = Math.round((S.obIx)/steps.length*100);
   let body = "";
   if(st.type==="names"){
     body = `<input id="n1" placeholder="Your name" value="${esc(a.n1||"")}" style="margin-bottom:10px">
@@ -516,8 +650,8 @@ function renderOB(){
     st.get()!==undefined && st.get()!==null;
   document.getElementById("app").innerHTML = `<div id="ob">
     <div style="padding:20px 20px 12px;display:flex;justify-content:space-between;align-items:center">
-      <button onclick="obBack()" style="font-size:15px;${obIx===0?"visibility:hidden":""}">‹ Back</button>
-      <span class="small">${obIx+1} of ${steps.length}</span>
+      <button onclick="obBack()" style="font-size:15px;${S.obIx===0?"visibility:hidden":""}">‹ Back</button>
+      <span class="small">${S.obIx+1} of ${steps.length}</span>
     </div>
     <div class="prog"><i style="width:${pct}%"></i></div>
     <div class="body">
@@ -550,8 +684,8 @@ function obAdvance(id){
   if(id==="country"){ S.cur = countryOf(a.country||"GB")[2]; }
   obNext();
 }
-function obNext(){ obIx++; save(); renderOB(); }
-function obBack(){ if(obIx>0){ obIx--; renderOB(); } }
+function obNext(){ S.obIx++; save(); renderOB(); }
+function obBack(){ if(S.obIx>0){ S.obIx--; save(); renderOB(); } }
 function obPick(stepId, v){
   const st = obSteps().find(s=>s.id===stepId);
   st.set(v); save(); renderOB();
@@ -583,7 +717,7 @@ function obMulti(stepId, o){
   st.set(cur); save(); renderOB();
 }
 function finishOB(){
-  if(!S.ans.packId){ obIx = 1; renderOB(); return; }
+  if(!S.ans.packId){ S.obIx = 1; save(); renderOB(); return; }
   if(S.ans.packId==="civil" && !S.ans.ceremony) S.ans.ceremony = S.ans.variant || "Civil ceremony";
   if(S.ans.budgetMode==="estimate" && !S.budgetTotal){
     S.budgetTotal = estimateBudget(); S.budgetEstimated = true;
@@ -591,7 +725,7 @@ function finishOB(){
   }
   buildPlan();
   seedCeremony();
-  S.onboarded = true; save();
+  S.onboarded = true; S.revealSeen = false; save();
   renderReveal();
 }
 function renderReveal(){
@@ -621,7 +755,7 @@ function renderReveal(){
         ${S.budgetEstimated? `<div class="small" style="margin-top:8px">You said you didn't know — so I built this from your ${g? g+" guests, ":""}your tradition and ${esc(countryOf(S.ans.country||"GB")[1])} pricing. React to it, don't obey it.</div>`:""}
       </div>`; })() : ""}
     <p style="font-size:14.5px;color:var(--muted);margin-bottom:26px">Look what we've made already — your traditions, your country, your numbers. Every figure is a starting point, and now we make it magnificent.</p>
-    <button class="btn glam" onclick="S.tab='home';save();render()">Show me my wedding</button>
+    <button class="btn glam" onclick="S.revealSeen=true;S.tab='home';save();render()">Show me my wedding</button>
     </div>
   </div></div>`;
 }

@@ -4,10 +4,28 @@
   "shortName": "Protestant",
   "faithGroup": "Christian",
   "blurb": "A marriage service in church with hymns, vows and the signing of the schedule, whether that is a Church of England parish wedding after banns or a Methodist, Baptist, Presbyterian or Lutheran service shaped by your own congregation.",
-  "commonCountries": ["GB", "US", "CA", "AU", "NZ", "IE", "DE", "SE", "NO", "DK", "FI", "ZA", "NG", "KR"],
-  "typicalGuests": { "low": 50, "typical": 100, "high": 200 },
+  "commonCountries": [
+    "GB",
+    "US",
+    "CA",
+    "AU",
+    "NZ",
+    "IE",
+    "DE",
+    "SE",
+    "NO",
+    "DK",
+    "FI",
+    "ZA",
+    "NG",
+    "KR"
+  ],
+  "typicalGuests": {
+    "low": 50,
+    "typical": 100,
+    "high": 200
+  },
   "typicalDays": 1,
-
   "terms": {
     "officiant": "vicar or minister",
     "ceremonyVenue": "church",
@@ -18,7 +36,6 @@
     "firstDance": "first dance",
     "witnesses": "witnesses"
   },
-
   "events": [
     {
       "id": "marriage-prep",
@@ -111,7 +128,6 @@
       "hosts": "Often the parents or the couple"
     }
   ],
-
   "items": [
     {
       "id": "church-wedding-fee",
@@ -240,7 +256,7 @@
       "event": "wedding-breakfast",
       "note": "Hotel, barn, hall or marquee. Because the church is fixed and the reception is not, factor in the journey between the two. Church halls can be good value but often carry conditions: Methodist premises are alcohol-free as a rule of the denomination, and many Baptist churches are similar, so check before you plan a bar.",
       "essential": true,
-      "shareOfBudget": 0.100,
+      "shareOfBudget": 0.1,
       "unit": "fixed",
       "supplierCategory": "Venue",
       "religiousRequirement": false
@@ -252,7 +268,7 @@
       "event": "wedding-breakfast",
       "note": "Usually the single largest line. Check whether the per-head price includes service, VAT or sales tax, corkage and cake cutting, and whether suppliers such as the photographer and band are fed. Nothing about the meal is religious, so let the venue and your budget lead.",
       "essential": true,
-      "shareOfBudget": 0.230,
+      "shareOfBudget": 0.23,
       "unit": "perGuest",
       "supplierCategory": "Catering",
       "religiousRequirement": false
@@ -264,7 +280,7 @@
       "event": "wedding-breakfast",
       "note": "Reception drinks, table wine and something for the toasts. Plan around your venue's rules: hotels usually insist on supplying drink themselves, halls may let you run your own bar, and church premises may not allow alcohol at all, in which case a good non-alcoholic toast is entirely normal in Methodist and Baptist circles.",
       "essential": true,
-      "shareOfBudget": 0.090,
+      "shareOfBudget": 0.09,
       "unit": "perGuest",
       "supplierCategory": "Catering",
       "religiousRequirement": false
@@ -300,7 +316,7 @@
       "event": "rehearsal",
       "note": "An American custom, traditionally hosted by the groom's family for the wedding party, immediate family and out-of-town guests. Rare in Britain, where the money more often goes into the evening reception instead. Turn it on only if your families expect it.",
       "essential": false,
-      "shareOfBudget": 0.020,
+      "shareOfBudget": 0.02,
       "unit": "perGuest",
       "supplierCategory": "Catering",
       "religiousRequirement": false
@@ -312,7 +328,7 @@
       "event": "day-after-brunch",
       "note": "A simple gathering the day after for family and travelling guests. Usually informal, often at home or in a pub or restaurant, and one of the easiest lines to trim.",
       "essential": false,
-      "shareOfBudget": 0.010,
+      "shareOfBudget": 0.01,
       "unit": "perGuest",
       "supplierCategory": "Catering",
       "religiousRequirement": false
@@ -588,7 +604,7 @@
       "event": "",
       "note": "Your own room, and often rooms held for parents and travelling family. If the church and reception are in a rural spot, block-booking nearby rooms early saves guests a scramble.",
       "essential": false,
-      "shareOfBudget": 0.010,
+      "shareOfBudget": 0.01,
       "unit": "fixed",
       "supplierCategory": "Accommodation",
       "religiousRequirement": false
@@ -606,78 +622,322 @@
       "religiousRequirement": false
     }
   ],
-
   "timeline": [
-    { "monthsBefore": 12, "task": "Contact the church before booking anything else, and ask about dates, fees and what the church expects of you", "critical": true },
-    { "monthsBefore": 12, "task": "Church of England: check you can marry there, either by living in the parish or through a qualifying connection such as baptism, past residence, six months on the worship register, or a parent or grandparent married in that church", "critical": true },
-    { "monthsBefore": 12, "task": "If either of you has been married before, raise it at the first conversation: remarriage is at the discretion of the individual vicar or minister in most Protestant churches", "critical": true },
-    { "monthsBefore": 12, "task": "Book the reception venue", "critical": true },
-    { "monthsBefore": 11, "task": "Draft the guest list, decide daytime versus evening guests, and agree with both families who is paying for what", "critical": false },
-    { "monthsBefore": 10, "task": "Book the photographer and videographer, and ask the vicar or minister what photography is allowed during the service", "critical": false },
-    { "monthsBefore": 10, "task": "Book the band or DJ for the evening", "critical": false },
-    { "monthsBefore": 9, "task": "Start dress shopping, allowing for order lead time plus alterations", "critical": false },
-    { "monthsBefore": 9, "task": "Book the florist, and ask whether the church has its own flower team and any seasonal restrictions", "critical": false },
-    { "monthsBefore": 8, "task": "Send save the dates, particularly if guests are travelling", "critical": false },
-    { "monthsBefore": 8, "task": "Begin marriage preparation or premarital counselling if your church runs or requires it, which most US pastors do", "critical": false },
-    { "monthsBefore": 6, "task": "Choose hymns, readings and the form of vows with the vicar or minister, and decide whether to include Holy Communion", "critical": false },
-    { "monthsBefore": 6, "task": "Book the organist, and the choir and bell ringers if you want them, telling them now if the service will be filmed", "critical": false },
-    { "monthsBefore": 6, "task": "Order invitations", "critical": false },
-    { "monthsBefore": 5, "task": "Confirm your legal route: banns for most Church of England weddings, a common or special licence where banns will not work, register office notice for other denominations in England and Wales, marriage notice in Scotland, or a state licence in the US", "critical": true },
-    { "monthsBefore": 5, "task": "If either of you is not a British or Irish citizen without settled status, tell the vicar now, because the wedding will need a superintendent registrar's schedule instead of banns and notice can take longer", "critical": true },
-    { "monthsBefore": 4, "task": "Church of England: arrange banns at the wedding church and at the parish church where each of you lives", "critical": true },
-    { "monthsBefore": 4, "task": "Other denominations in England and Wales: give notice at your local register office at least 29 days before the wedding; the notice names the building, so settle the venue first", "critical": true },
-    { "monthsBefore": 4, "task": "Send invitations", "critical": false },
-    { "monthsBefore": 3, "task": "Banns are read on three Sundays in each church; go along to hear them read if you can", "critical": true },
-    { "monthsBefore": 2, "task": "Scotland: submit marriage notice forms to the registrar, no later than 29 days and no earlier than three months before the wedding", "critical": true },
-    { "monthsBefore": 2, "task": "Collect the banns certificate from your home parish and deliver it to the wedding church, without which the wedding cannot go ahead", "critical": true },
-    { "monthsBefore": 2, "task": "Send the order of service to the vicar or minister for checking, then print", "critical": false },
-    { "monthsBefore": 1, "task": "US: check your state's licence rules, since many licences expire 30 to 90 days after issue and a few states have a short waiting period, and collect it in the right window", "critical": true },
-    { "monthsBefore": 1, "task": "Final meeting with the vicar or minister to walk through the service, confirm the music list and settle any outstanding fees", "critical": true },
-    { "monthsBefore": 0.5, "task": "Rehearsal at the church with the wedding party, readers and, if possible, the musicians", "critical": true },
-    { "monthsBefore": 0.25, "task": "Scotland: collect the marriage schedule in person from the registrar, no more than seven days before the wedding, and put someone reliable in charge of bringing it on the day", "critical": true }
+    {
+      "monthsBefore": 12,
+      "task": "Contact the church before booking anything else, and ask about dates, fees and what the church expects of you",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Church of England: check you can marry there, either by living in the parish or through a qualifying connection such as baptism, past residence, six months on the worship register, or a parent or grandparent married in that church",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "If either of you has been married before, raise it at the first conversation: remarriage is at the discretion of the individual vicar or minister in most Protestant churches",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the reception venue",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Draft the guest list, decide daytime versus evening guests, and agree with both families who is paying for what",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the photographer and videographer, and ask the vicar or minister what photography is allowed during the service",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the band or DJ for the evening",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Start dress shopping, allowing for order lead time plus alterations",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Book the florist, and ask whether the church has its own flower team and any seasonal restrictions",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Send save the dates, particularly if guests are travelling",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Begin marriage preparation or premarital counselling if your church runs or requires it, which most US pastors do",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Choose hymns, readings and the form of vows with the vicar or minister, and decide whether to include Holy Communion",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Book the organist, and the choir and bell ringers if you want them, telling them now if the service will be filmed",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Order invitations",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Confirm your legal route: banns for most Church of England weddings, a common or special licence where banns will not work, register office notice for other denominations in England and Wales, marriage notice in Scotland, or a state licence in the US",
+      "critical": true
+    },
+    {
+      "monthsBefore": 5,
+      "task": "If either of you is not a British or Irish citizen without settled status, tell the vicar now, because the wedding will need a superintendent registrar's schedule instead of banns and notice can take longer",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Church of England: arrange banns at the wedding church and at the parish church where each of you lives",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Other denominations in England and Wales: give notice at your local register office at least 29 days before the wedding; the notice names the building, so settle the venue first",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Send invitations",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Banns are read on three Sundays in each church; go along to hear them read if you can",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Scotland: submit marriage notice forms to the registrar, no later than 29 days and no earlier than three months before the wedding",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Collect the banns certificate from your home parish and deliver it to the wedding church, without which the wedding cannot go ahead",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Send the order of service to the vicar or minister for checking, then print",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "US: check your state's licence rules, since many licences expire 30 to 90 days after issue and a few states have a short waiting period, and collect it in the right window",
+      "critical": true
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Final meeting with the vicar or minister to walk through the service, confirm the music list and settle any outstanding fees",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0.5,
+      "task": "Rehearsal at the church with the wedding party, readers and, if possible, the musicians",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0.25,
+      "task": "Scotland: collect the marriage schedule in person from the registrar, no more than seven days before the wedding, and put someone reliable in charge of bringing it on the day",
+      "critical": true
+    }
   ],
-
   "paperwork": [
-    { "item": "Banns of marriage", "who": "Both", "note": "The standard preliminary for Church of England weddings in England and Wales. Your intention to marry is published on three Sundays, not necessarily consecutive, at the main service in the church where you will marry and in the parish where each of you lives. The wedding must then take place within three months of the last reading." },
-    { "item": "Banns certificate from your home parish", "who": "Each of you living outside the wedding parish", "note": "Proof that banns were read in your own parish, issued by that church and handed to the wedding church before the day. Easy to forget and impossible to do without." },
-    { "item": "Common licence", "who": "Both, if banns will not work", "note": "The Church of England alternative when there is not enough time for banns, when one of you lives outside England and Wales, or when an address will change during the banns period. Granted at the discretion of the diocesan legal official, it requires one of you to swear an oath in person, names a specific church, and is valid for three months." },
-    { "item": "Special licence", "who": "Both, in unusual circumstances", "note": "Granted by the Archbishop of Canterbury's Faculty Office for marriages that cannot happen under the normal rules, most often in a school or college chapel or a church where neither of you has a qualifying connection. Not quick and never automatic." },
-    { "item": "Superintendent registrar's marriage schedule", "who": "Both, in specific cases", "note": "Required instead of banns for a Church of England wedding when either of you is not a British or Irish citizen and lacks EU settled status. Notice is given at the register office and published for 28 days, which can be extended to 70 for immigration checks." },
-    { "item": "Notice of marriage at the register office", "who": "Both, for non-Anglican church weddings in England and Wales", "note": "Methodist, Baptist, Presbyterian, Lutheran and other chapels are registered buildings, so each of you gives notice in your registration district at least 29 days before the wedding. Notice is valid for twelve months and names the building, so a change of venue means giving notice again. The building normally needs to be in a district where one of you lives, unless it is your usual place of worship." },
-    { "item": "Authorised person or registrar booking", "who": "The church or the couple", "note": "A non-Anglican wedding in England and Wales needs either the building's authorised person, often the minister, or a registrar booked to attend. Confirm early which applies to your chapel; if a registrar is needed, their availability can constrain your date." },
-    { "item": "Evidence of qualifying connection", "who": "Both, Church of England only", "note": "If you are marrying in a parish where neither of you lives, bring evidence of the connection: old utility bills or the electoral roll for past residence, a baptism entry, the worship register, or a parent's or grandparent's marriage entry in that church." },
-    { "item": "Passport or photo identification and proof of address", "who": "Both", "note": "Needed for banns and licence applications, register office notice, and marriage licence applications in the US." },
-    { "item": "Decree absolute, or former spouse's death certificate", "who": "Either party previously married", "note": "The legal document is only the start in church terms. In the Church of England, marrying again while a former spouse is living has been possible since 2002 but rests with the individual vicar, who will want a frank conversation first; some clergy will instead offer a service of prayer and dedication after a register office wedding. Methodist, Church of Scotland, and most Presbyterian, Lutheran and Baptist ministers may remarry divorced people, but each minister decides, and conservative congregations may decline." },
-    { "item": "Marriage schedule or marriage document signed on the day", "who": "Both, plus two witnesses", "note": "In England and Wales couples no longer sign a register book in church; you, two witnesses and the officiant sign a schedule or marriage document during the service, the church or registrar returns it to the register office, and the marriage certificate is issued by the register office afterwards rather than handed over on the day. Order certified copies for name changes." },
-    { "item": "Marriage notice forms and schedule", "who": "Both, marrying in Scotland", "note": "Each of you lodges a marriage notice with the registrar for the district of the wedding, no later than 29 days and no earlier than three months before. The schedule is collected in person no more than seven days before the ceremony, signed on the day by you, two witnesses and the minister, and returned to the registrar within three days. Because Scots law authorises the celebrant rather than the building, a Church of Scotland minister can marry you anywhere in Scotland." },
-    { "item": "State marriage licence", "who": "Both, marrying in the US", "note": "Issued by the county clerk or equivalent, usually on proof of identity and payment of a fee. Validity commonly runs 30 to 90 days and a few states impose a short waiting period, so collect it in the window your state allows. The officiant completes and returns it after the ceremony." },
-    { "item": "Officiant authorisation", "who": "The minister, in the US", "note": "Ordained ministers of these denominations are recognised in every state, but a few places add local rules, such as New York City's requirement for officiants to register with the city clerk. A minister travelling from another state or country should check well ahead." },
-    { "item": "Church membership or faith expectations", "who": "Both, varies by church", "note": "The Church of England marries residents of the parish whether or not they attend church, and asks for no baptism certificate from the couple. Baptist and some other free churches, especially in the US, may expect one or both of you to be members, to be baptised believers, or to complete counselling before the pastor agrees. Ask at the first meeting rather than assuming." }
+    {
+      "item": "Banns of marriage",
+      "who": "Both",
+      "note": "The standard preliminary for Church of England weddings in England and Wales. Your intention to marry is published on three Sundays, not necessarily consecutive, at the main service in the church where you will marry and in the parish where each of you lives. The wedding must then take place within three months of the last reading."
+    },
+    {
+      "item": "Banns certificate from your home parish",
+      "who": "Each of you living outside the wedding parish",
+      "note": "Proof that banns were read in your own parish, issued by that church and handed to the wedding church before the day. Easy to forget and impossible to do without."
+    },
+    {
+      "item": "Common licence",
+      "who": "Both, if banns will not work",
+      "note": "The Church of England alternative when there is not enough time for banns, when one of you lives outside England and Wales, or when an address will change during the banns period. Granted at the discretion of the diocesan legal official, it requires one of you to swear an oath in person, names a specific church, and is valid for three months."
+    },
+    {
+      "item": "Special licence",
+      "who": "Both, in unusual circumstances",
+      "note": "Granted by the Archbishop of Canterbury's Faculty Office for marriages that cannot happen under the normal rules, most often in a school or college chapel or a church where neither of you has a qualifying connection. Not quick and never automatic."
+    },
+    {
+      "item": "Superintendent registrar's marriage schedule",
+      "who": "Both, in specific cases",
+      "note": "Required instead of banns for a Church of England wedding when either of you is not a British or Irish citizen and lacks EU settled status. Notice is given at the register office and published for 28 days, which can be extended to 70 for immigration checks."
+    },
+    {
+      "item": "Notice of marriage at the register office",
+      "who": "Both, for non-Anglican church weddings in England and Wales",
+      "note": "Methodist, Baptist, Presbyterian, Lutheran and other chapels are registered buildings, so each of you gives notice in your registration district at least 29 days before the wedding. Notice is valid for twelve months and names the building, so a change of venue means giving notice again. The building normally needs to be in a district where one of you lives, unless it is your usual place of worship."
+    },
+    {
+      "item": "Authorised person or registrar booking",
+      "who": "The church or the couple",
+      "note": "A non-Anglican wedding in England and Wales needs either the building's authorised person, often the minister, or a registrar booked to attend. Confirm early which applies to your chapel; if a registrar is needed, their availability can constrain your date."
+    },
+    {
+      "item": "Evidence of qualifying connection",
+      "who": "Both, Church of England only",
+      "note": "If you are marrying in a parish where neither of you lives, bring evidence of the connection: old utility bills or the electoral roll for past residence, a baptism entry, the worship register, or a parent's or grandparent's marriage entry in that church."
+    },
+    {
+      "item": "Passport or photo identification and proof of address",
+      "who": "Both",
+      "note": "Needed for banns and licence applications, register office notice, and marriage licence applications in the US."
+    },
+    {
+      "item": "Decree absolute, or former spouse's death certificate",
+      "who": "Either party previously married",
+      "note": "The legal document is only the start in church terms. In the Church of England, marrying again while a former spouse is living has been possible since 2002 but rests with the individual vicar, who will want a frank conversation first; some clergy will instead offer a service of prayer and dedication after a register office wedding. Methodist, Church of Scotland, and most Presbyterian, Lutheran and Baptist ministers may remarry divorced people, but each minister decides, and conservative congregations may decline."
+    },
+    {
+      "item": "Marriage schedule or marriage document signed on the day",
+      "who": "Both, plus two witnesses",
+      "note": "In England and Wales couples no longer sign a register book in church; you, two witnesses and the officiant sign a schedule or marriage document during the service, the church or registrar returns it to the register office, and the marriage certificate is issued by the register office afterwards rather than handed over on the day. Order certified copies for name changes."
+    },
+    {
+      "item": "Marriage notice forms and schedule",
+      "who": "Both, marrying in Scotland",
+      "note": "Each of you lodges a marriage notice with the registrar for the district of the wedding, no later than 29 days and no earlier than three months before. The schedule is collected in person no more than seven days before the ceremony, signed on the day by you, two witnesses and the minister, and returned to the registrar within three days. Because Scots law authorises the celebrant rather than the building, a Church of Scotland minister can marry you anywhere in Scotland."
+    },
+    {
+      "item": "State marriage licence",
+      "who": "Both, marrying in the US",
+      "note": "Issued by the county clerk or equivalent, usually on proof of identity and payment of a fee. Validity commonly runs 30 to 90 days and a few states impose a short waiting period, so collect it in the window your state allows. The officiant completes and returns it after the ceremony."
+    },
+    {
+      "item": "Officiant authorisation",
+      "who": "The minister, in the US",
+      "note": "Ordained ministers of these denominations are recognised in every state, but a few places add local rules, such as New York City's requirement for officiants to register with the city clerk. A minister travelling from another state or country should check well ahead."
+    },
+    {
+      "item": "Church membership or faith expectations",
+      "who": "Both, varies by church",
+      "note": "The Church of England marries residents of the parish whether or not they attend church, and asks for no baptism certificate from the couple. Baptist and some other free churches, especially in the US, may expect one or both of you to be members, to be baptised believers, or to complete counselling before the pastor agrees. Ask at the first meeting rather than assuming."
+    }
   ],
-
   "customs": [
-    { "name": "Hearing your banns read", "description": "Couples marrying in the Church of England often attend the Sunday services where their banns are read, are welcomed by name and prayed for by the congregation. A quiet, old custom that many couples find unexpectedly moving.", "optional": true },
-    { "name": "Something old, something new, something borrowed, something blue", "description": "The Victorian rhyme for what a bride carries on the day. Folk custom rather than anything the church asks for, and cheerfully optional.", "optional": true },
-    { "name": "Walking down the aisle", "description": "The bride traditionally enters last, on her father's arm, to a processional played on the organ. Modern services are flexible: entering with both parents, with children, alone, or together as a couple are all accepted, and the clergy will not blink.", "optional": true },
-    { "name": "Giving away", "description": "The moment the bride's father, or another family member, gives her hand to the groom. It is optional in modern Anglican and most Protestant services, and many couples replace it with a question to both families or drop it entirely.", "optional": true },
-    { "name": "Congregational hymns", "description": "Two or three hymns sung by everyone are the backbone of a Protestant wedding. Perennial choices in Britain include Love Divine, All Loves Excelling, Guide Me, O Thou Great Redeemer, Give Me Joy in My Heart and Jerusalem. Print the full words in the order of service and pick at least one tune people actually know.", "optional": true },
-    { "name": "Organ processional and recessional", "description": "Wagner's Bridal Chorus in and Mendelssohn's Wedding March out are the classic pairing, with Pachelbel's Canon and Widor's Toccata close behind. Most Protestant churches are relaxed about these and about other classical choices; discuss anything unusual with the organist.", "optional": true },
-    { "name": "The vows", "description": "The familiar English vows, for better, for worse, for richer, for poorer, in sickness and in health, till death us do part, descend from the Book of Common Prayer and are shared, with small variations, across the Protestant world. In the Church of England the couple choose between traditional and modern language, and the bride may choose whether or not to say obey. In many US churches, particularly Baptist, couples may also write personal vows alongside or around the traditional ones.", "optional": false },
-    { "name": "The declarations", "description": "Before the vows, each of you answers I will to the questions establishing that you come freely. In Methodist, Presbyterian and Lutheran services the families and congregation are often asked to promise their support out loud as well.", "optional": false },
-    { "name": "Exchange of rings", "description": "One ring or two, given with words of promise. The best man traditionally keeps the rings and produces them at the right moment.", "optional": false },
-    { "name": "Signing the schedule", "description": "The couple, two witnesses and the officiant sign the marriage schedule or licence during or immediately after the service, usually while the choir sings or the organist plays. Photographers are almost always allowed a posed shot of the signing.", "optional": false },
-    { "name": "Church bells", "description": "Where the tower has bells, a peal rung as the couple leave is one of the great sounds of an English parish wedding. Book the ringers early; a full band is not always available.", "optional": true },
-    { "name": "Confetti at the church door", "description": "Guests shower the couple as they leave the church. Most churches now ask for biodegradable petals or rice alternatives and some restrict where it can be thrown, so check and tell your guests.", "optional": true },
-    { "name": "The receiving line", "description": "The couple and both sets of parents greet every guest on arrival at the reception. Falling out of fashion because of the time it takes, but older relatives often expect it.", "optional": true },
-    { "name": "Wedding breakfast and speeches", "description": "The British order of speeches is father of the bride, then the groom, then the best man, each ending in a toast; the best man traditionally reads messages from absent friends. American receptions typically have shorter toasts from the best man and maid of honour instead.", "optional": true },
-    { "name": "Cutting the cake", "description": "The couple make the first cut together, traditionally as the first act of their marriage and now usually the signal that the dancing is about to start. The top tier of a fruit cake is traditionally kept for a christening or first anniversary.", "optional": true },
-    { "name": "First dance", "description": "The couple open the dancing, followed by the wedding party and guests. A reception custom with no religious content; couples who dread it can cut it without consequence.", "optional": true },
-    { "name": "Bouquet toss", "description": "The bride throws her bouquet over her shoulder to the unmarried guests; whoever catches it is said to marry next. Ask the florist for a small throwing copy if you want to keep the real one.", "optional": true },
-    { "name": "The unity candle", "description": "Two side candles lit by the mothers, from which the couple together light a central candle. A twentieth-century American custom, common at Methodist, Lutheran and Baptist weddings in the US, and rare in Britain. Where used it usually sits after the vows or rings; agree the placement with the minister.", "optional": true },
-    { "name": "Communion at the wedding", "description": "Anglican, Methodist and Lutheran services may include Holy Communion, turning the wedding into a full service of word and sacrament; Methodist practice invites the whole congregation to receive rather than the couple alone. Most couples keep the service without it, not least for length. Rare at Baptist weddings.", "optional": true },
-    { "name": "A piper at Scottish weddings", "description": "A bagpiper playing the couple out of the church and greeting guests at the reception is a fixture at many Scottish weddings, Church of Scotland included. Cultural rather than religious, and usually booked like any other musician.", "optional": true }
+    {
+      "name": "Hearing your banns read",
+      "description": "Couples marrying in the Church of England often attend the Sunday services where their banns are read, are welcomed by name and prayed for by the congregation. A quiet, old custom that many couples find unexpectedly moving.",
+      "optional": true
+    },
+    {
+      "name": "Something old, something new, something borrowed, something blue",
+      "description": "The Victorian rhyme for what a bride carries on the day. Folk custom rather than anything the church asks for, and cheerfully optional.",
+      "optional": true
+    },
+    {
+      "name": "Walking down the aisle",
+      "description": "The bride traditionally enters last, on her father's arm, to a processional played on the organ. Modern services are flexible: entering with both parents, with children, alone, or together as a couple are all accepted, and the clergy will not blink.",
+      "optional": true
+    },
+    {
+      "name": "Giving away",
+      "description": "The moment the bride's father, or another family member, gives her hand to the groom. It is optional in modern Anglican and most Protestant services, and many couples replace it with a question to both families or drop it entirely.",
+      "optional": true
+    },
+    {
+      "name": "Congregational hymns",
+      "description": "Two or three hymns sung by everyone are the backbone of a Protestant wedding. Perennial choices in Britain include Love Divine, All Loves Excelling, Guide Me, O Thou Great Redeemer, Give Me Joy in My Heart and Jerusalem. Print the full words in the order of service and pick at least one tune people actually know.",
+      "optional": true
+    },
+    {
+      "name": "Organ processional and recessional",
+      "description": "Wagner's Bridal Chorus in and Mendelssohn's Wedding March out are the classic pairing, with Pachelbel's Canon and Widor's Toccata close behind. Most Protestant churches are relaxed about these and about other classical choices; discuss anything unusual with the organist.",
+      "optional": true
+    },
+    {
+      "name": "The vows",
+      "description": "The familiar English vows, for better, for worse, for richer, for poorer, in sickness and in health, till death us do part, descend from the Book of Common Prayer and are shared, with small variations, across the Protestant world. In the Church of England the couple choose between traditional and modern language, and the bride may choose whether or not to say obey. In many US churches, particularly Baptist, couples may also write personal vows alongside or around the traditional ones.",
+      "optional": false
+    },
+    {
+      "name": "The declarations",
+      "description": "Before the vows, each of you answers I will to the questions establishing that you come freely. In Methodist, Presbyterian and Lutheran services the families and congregation are often asked to promise their support out loud as well.",
+      "optional": false
+    },
+    {
+      "name": "Exchange of rings",
+      "description": "One ring or two, given with words of promise. The best man traditionally keeps the rings and produces them at the right moment.",
+      "optional": false
+    },
+    {
+      "name": "Signing the schedule",
+      "description": "The couple, two witnesses and the officiant sign the marriage schedule or licence during or immediately after the service, usually while the choir sings or the organist plays. Photographers are almost always allowed a posed shot of the signing.",
+      "optional": false
+    },
+    {
+      "name": "Church bells",
+      "description": "Where the tower has bells, a peal rung as the couple leave is one of the great sounds of an English parish wedding. Book the ringers early; a full band is not always available.",
+      "optional": true
+    },
+    {
+      "name": "Confetti at the church door",
+      "description": "Guests shower the couple as they leave the church. Most churches now ask for biodegradable petals or rice alternatives and some restrict where it can be thrown, so check and tell your guests.",
+      "optional": true
+    },
+    {
+      "name": "The receiving line",
+      "description": "The couple and both sets of parents greet every guest on arrival at the reception. Falling out of fashion because of the time it takes, but older relatives often expect it.",
+      "optional": true
+    },
+    {
+      "name": "Wedding breakfast and speeches",
+      "description": "The British order of speeches is father of the bride, then the groom, then the best man, each ending in a toast; the best man traditionally reads messages from absent friends. American receptions typically have shorter toasts from the best man and maid of honour instead.",
+      "optional": true
+    },
+    {
+      "name": "Cutting the cake",
+      "description": "The couple make the first cut together, traditionally as the first act of their marriage and now usually the signal that the dancing is about to start. The top tier of a fruit cake is traditionally kept for a christening or first anniversary.",
+      "optional": true
+    },
+    {
+      "name": "First dance",
+      "description": "The couple open the dancing, followed by the wedding party and guests. A reception custom with no religious content; couples who dread it can cut it without consequence.",
+      "optional": true
+    },
+    {
+      "name": "Bouquet toss",
+      "description": "The bride throws her bouquet over her shoulder to the unmarried guests; whoever catches it is said to marry next. Ask the florist for a small throwing copy if you want to keep the real one.",
+      "optional": true
+    },
+    {
+      "name": "The unity candle",
+      "description": "Two side candles lit by the mothers, from which the couple together light a central candle. A twentieth-century American custom, common at Methodist, Lutheran and Baptist weddings in the US, and rare in Britain. Where used it usually sits after the vows or rings; agree the placement with the minister.",
+      "optional": true
+    },
+    {
+      "name": "Communion at the wedding",
+      "description": "Anglican, Methodist and Lutheran services may include Holy Communion, turning the wedding into a full service of word and sacrament; Methodist practice invites the whole congregation to receive rather than the couple alone. Most couples keep the service without it, not least for length. Rare at Baptist weddings.",
+      "optional": true
+    },
+    {
+      "name": "A piper at Scottish weddings",
+      "description": "A bagpiper playing the couple out of the church and greeting guests at the reception is a fixture at many Scottish weddings, Church of Scotland included. Cultural rather than religious, and usually booked like any other musician.",
+      "optional": true
+    }
   ],
-
   "gotchas": [
     "Talk to the church before you book anything else. The church's diary is set around Sunday services and other weddings, and in the Church of England the legal preliminaries hang off the church booking, not the other way round.",
     "In the Church of England you cannot simply pick a pretty church. You must live in the parish or have a qualifying connection, such as baptism there, six months' past residence, six months on the worship register, or a parent or grandparent married in that church. Evidence is required, so start gathering it early.",
@@ -698,7 +958,88 @@
     "Many US pastors will not book a wedding without premarital counselling, often several sessions across a few months. Treat it as part of the timeline, not an optional extra to squeeze in at the end.",
     "The church's optional extras are individually small and collectively real: organist, choir, bells, verger, heating, filming supplements and banns fees in a second parish. Ask for an itemised written quote at the start, which Church of England guidance itself recommends."
   ],
-
+  "branches": {
+    "Church of England / Anglican": {
+      "label": "Church of England / Anglican",
+      "addEvents": [
+        {
+          "id": "banns-reading",
+          "name": "Reading of the banns",
+          "when": "Three Sundays in the three months before",
+          "optional": false,
+          "default": true,
+          "description": "Your names are read aloud in both your parishes on three Sundays. You should attend at least one reading, and you must marry within three months of the last.",
+          "hosts": "The parish"
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 7,
+          "task": "Establish your qualifying connection to the parish if you do not live there — a family link, a former residence or six months of attendance at services",
+          "critical": true
+        },
+        {
+          "monthsBefore": 4,
+          "task": "Arrange banns in every parish either of you lives in, not just the one where you are marrying",
+          "critical": true
+        }
+      ],
+      "addPaperwork": [
+        {
+          "item": "Banns certificate from any other parish",
+          "who": "Either",
+          "note": "If one of you lives in a different parish, that parish must read the banns too and issue a certificate. Forgetting this invalidates the marriage's preliminaries."
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "The qualifying connection",
+          "description": "You have a legal right to marry in a parish you have a genuine connection to, not only where you live. The Church of England publishes the list of qualifying connections.",
+          "optional": false
+        }
+      ],
+      "addGotchas": [
+        "Banns expire after three months from the last reading. A postponed wedding usually means calling them again.",
+        "The Church of England is unusual in that its clergy register the marriage themselves — no separate registrar attends."
+      ]
+    },
+    "Methodist": {
+      "label": "Methodist",
+      "addGotchas": [
+        "Methodist churches are registered buildings, so either an authorised person or a registrar must be present. Confirm which, in writing, months ahead."
+      ]
+    },
+    "Baptist": {
+      "label": "Baptist",
+      "addGotchas": [
+        "Baptist churches are registered buildings and need an authorised person or a registrar present. Not every church has an authorised person of its own."
+      ]
+    },
+    "Presbyterian": {
+      "label": "Presbyterian",
+      "addGotchas": [
+        "In Scotland the minister is authorised and the rules differ from England and Wales entirely — a Scottish religious marriage can take place almost anywhere."
+      ]
+    },
+    "Lutheran": {
+      "label": "Lutheran",
+      "addGotchas": [
+        "Lutheran congregations in the UK are often small and may not be a registered building. Ask directly before assuming the wedding can be legal there."
+      ]
+    },
+    "Quaker": {
+      "label": "Quaker",
+      "addGotchas": [
+        "Quaker marriage has its own route in law and its own pack — choose Quaker at the previous question rather than Protestant."
+      ]
+    },
+    "Other": {
+      "label": "Other",
+      "addGotchas": [
+        "Pentecostal, independent and new-church congregations vary enormously on whether the building is registered for marriage. Ask before booking."
+      ]
+    }
+  },
   "sources": [
     "https://www.churchofengland.org/life-events/your-church-wedding",
     "https://www.churchofengland.org/life-events/your-church-wedding/just-engaged/legal-requirements",

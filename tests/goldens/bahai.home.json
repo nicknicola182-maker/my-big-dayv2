@@ -1,0 +1,472 @@
+{
+  "packId": "bahai",
+  "currency": "GBP",
+  "budgetTotal": 30000,
+  "counts": {
+    "events": 6,
+    "items": 25,
+    "itemsOn": 9,
+    "timeline": 22,
+    "paperwork": 8,
+    "runsheet": 6
+  },
+  "allocatedTotal": 30001,
+  "sections": {
+    "Attire": 5023,
+    "Ceremony": 3013,
+    "Photos & Film": 3829,
+    "Reception": 16330,
+    "Stationery": 1806
+  },
+  "events": [
+    {
+      "id": "consent",
+      "name": "Seeking the consent of all living parents"
+    },
+    {
+      "id": "assembly",
+      "name": "Application to the Local Spiritual Assembly"
+    },
+    {
+      "id": "engagement",
+      "name": "The engagement period"
+    },
+    {
+      "id": "notice",
+      "name": "Civil notice and registration"
+    },
+    {
+      "id": "ceremony",
+      "name": "The Bahá'í marriage"
+    },
+    {
+      "id": "reception",
+      "name": "The reception"
+    }
+  ],
+  "items": [
+    {
+      "id": "centre",
+      "name": "Bahá'í centre or venue hire",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0465,
+      "alloc": 2210
+    },
+    {
+      "id": "assembly-admin",
+      "name": "Assembly administration",
+      "section": "Ceremony",
+      "on": false,
+      "religious": true,
+      "share": 0.0068,
+      "alloc": 0
+    },
+    {
+      "id": "civil-fees",
+      "name": "Civil notice, registrar and certificates",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0169,
+      "alloc": 803
+    },
+    {
+      "id": "registrar-attend",
+      "name": "Registrar attendance at the venue",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.0169,
+      "alloc": 0
+    },
+    {
+      "id": "prayers",
+      "name": "Printed prayer booklet",
+      "section": "Stationery",
+      "on": true,
+      "religious": true,
+      "share": 0.0169,
+      "alloc": 803
+    },
+    {
+      "id": "calligraphy",
+      "name": "Calligraphed marriage certificate",
+      "section": "Stationery",
+      "on": false,
+      "religious": false,
+      "share": 0.0169,
+      "alloc": 0
+    },
+    {
+      "id": "venue-rec",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0761,
+      "alloc": 0
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.2281,
+      "alloc": 13775
+    },
+    {
+      "id": "softdrinks",
+      "name": "Soft drinks, tea and coffee",
+      "section": "Reception",
+      "on": true,
+      "religious": true,
+      "share": 0.0423,
+      "alloc": 2555
+    },
+    {
+      "id": "persian-sofreh",
+      "name": "Sofreh-ye Aghd table, if you are marking Persian heritage",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.0296,
+      "alloc": 0
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.038,
+      "alloc": 0
+    },
+    {
+      "id": "styling",
+      "name": "Venue styling",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.0296,
+      "alloc": 0
+    },
+    {
+      "id": "attire1",
+      "name": "Wedding outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.0634,
+      "alloc": 3013
+    },
+    {
+      "id": "attire2",
+      "name": "Second outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.0423,
+      "alloc": 2010
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.0423,
+      "alloc": 0
+    },
+    {
+      "id": "photo",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.0634,
+      "alloc": 3829
+    },
+    {
+      "id": "video",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.0338,
+      "alloc": 0
+    },
+    {
+      "id": "music",
+      "name": "Musicians or DJ",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.0507,
+      "alloc": 0
+    },
+    {
+      "id": "choir",
+      "name": "Singers for the devotional readings",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.0169,
+      "alloc": 0
+    },
+    {
+      "id": "stationery",
+      "name": "Invitations",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.0211,
+      "alloc": 1003
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.0169,
+      "alloc": 0
+    },
+    {
+      "id": "beauty",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.0296,
+      "alloc": 0
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts for the witnesses and helpers",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.0169,
+      "alloc": 0
+    },
+    {
+      "id": "translation",
+      "name": "Interpretation or translation",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.0127,
+      "alloc": 0
+    },
+    {
+      "id": "contingency",
+      "name": "Contingency",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.0254,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 14,
+      "critical": true,
+      "when": "Apr 2026",
+      "task": "Before anything else, establish that the consent of every living biological parent on both sides can be obtained — this is the requirement most likely to stop or delay the wedding"
+    },
+    {
+      "id": "t1",
+      "mb": 13,
+      "critical": true,
+      "when": "May 2026",
+      "task": "Approach parents who are not Bahá'í carefully and in person; their consent is required exactly as much as a Bahá'í parent's"
+    },
+    {
+      "id": "t2",
+      "mb": 12,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "If a parent is estranged, untraceable or refusing, take it to your Local Spiritual Assembly early — there is a process, and it is not quick"
+    },
+    {
+      "id": "t3",
+      "mb": 11,
+      "critical": true,
+      "when": "Jul 2026",
+      "task": "Ask the Assembly which engagement-length guidance applies to you, since the ninety-five day limit is applied to Persian believers and practice varies elsewhere"
+    },
+    {
+      "id": "t4",
+      "mb": 10,
+      "critical": true,
+      "when": "Aug 2026",
+      "task": "Apply to the Local Spiritual Assembly with the consents recorded"
+    },
+    {
+      "id": "t5",
+      "mb": 9,
+      "critical": true,
+      "when": "Sept 2026",
+      "task": "Agree the two witnesses with the Assembly"
+    },
+    {
+      "id": "t6",
+      "mb": 9,
+      "critical": true,
+      "when": "Sept 2026",
+      "task": "Decide the civil plan now, not later — in most countries the Bahá'í ceremony alone has no legal effect"
+    },
+    {
+      "id": "t7",
+      "mb": 8,
+      "critical": true,
+      "when": "Oct 2026",
+      "task": "Check whether your Bahá'í centre is registered for marriage; most are not, which means a separate civil ceremony"
+    },
+    {
+      "id": "t8",
+      "mb": 8,
+      "critical": false,
+      "when": "Oct 2026",
+      "task": "Book the venue and, if it is approved premises, the registrar"
+    },
+    {
+      "id": "t9",
+      "mb": 7,
+      "critical": true,
+      "when": "Nov 2026",
+      "task": "Book the caterer and brief them that the event is alcohol-free throughout"
+    },
+    {
+      "id": "t10",
+      "mb": 6,
+      "critical": false,
+      "when": "Dec 2026",
+      "task": "Choose the readings and prayers, and decide which will be chanted"
+    },
+    {
+      "id": "t11",
+      "mb": 6,
+      "critical": false,
+      "when": "Dec 2026",
+      "task": "Book the photographer and tell them the vow itself lasts seconds"
+    },
+    {
+      "id": "t12",
+      "mb": 5,
+      "critical": false,
+      "when": "Jan 2027",
+      "task": "Order outfits"
+    },
+    {
+      "id": "t13",
+      "mb": 5,
+      "critical": true,
+      "when": "Jan 2027",
+      "task": "Send invitations stating clearly that no alcohol will be served"
+    },
+    {
+      "id": "t14",
+      "mb": 4,
+      "critical": false,
+      "when": "Feb 2027",
+      "task": "Commission the certificate or calligraphy if you want one"
+    },
+    {
+      "id": "t15",
+      "mb": 3,
+      "critical": true,
+      "when": "Mar 2027",
+      "task": "Give civil notice at the register office"
+    },
+    {
+      "id": "t16",
+      "mb": 3,
+      "critical": false,
+      "when": "Mar 2027",
+      "task": "Confirm the running order with the Assembly's representative"
+    },
+    {
+      "id": "t17",
+      "mb": 2,
+      "critical": false,
+      "when": "Apr 2027",
+      "task": "Confirm final numbers and the dietary spread with the caterer"
+    },
+    {
+      "id": "t18",
+      "mb": 2,
+      "critical": false,
+      "when": "Apr 2027",
+      "task": "Arrange interpretation if guests will need it"
+    },
+    {
+      "id": "t19",
+      "mb": 1,
+      "critical": true,
+      "when": "May 2027",
+      "task": "Walk both witnesses through exactly what they are witnessing and where they stand"
+    },
+    {
+      "id": "t20",
+      "mb": 1,
+      "critical": true,
+      "when": "May 2027",
+      "task": "Confirm transport and timings between the civil and Bahá'í ceremonies if they are in different places"
+    },
+    {
+      "id": "t21",
+      "mb": 0,
+      "critical": true,
+      "when": "Jun 2027",
+      "task": "Register the civil marriage and collect the certificate"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both parties",
+      "item": "Written consent of all living biological parents"
+    },
+    {
+      "id": "p1",
+      "who": "Both",
+      "item": "Application to the Local Spiritual Assembly"
+    },
+    {
+      "id": "p2",
+      "who": "Both",
+      "item": "Designation of two witnesses"
+    },
+    {
+      "id": "p3",
+      "who": "Both",
+      "item": "Civil notice of marriage"
+    },
+    {
+      "id": "p4",
+      "who": "Both",
+      "item": "Passports or birth certificates and proof of address"
+    },
+    {
+      "id": "p5",
+      "who": "Either, if applicable",
+      "item": "Evidence of the ending of any previous marriage"
+    },
+    {
+      "id": "p6",
+      "who": "Both",
+      "item": "Bahá'í marriage certificate"
+    },
+    {
+      "id": "p7",
+      "who": "Both",
+      "item": "Registration of the civil marriage"
+    }
+  ]
+}

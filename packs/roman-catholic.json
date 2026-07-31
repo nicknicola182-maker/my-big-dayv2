@@ -4,10 +4,26 @@
   "shortName": "Catholic",
   "faithGroup": "Christian",
   "blurb": "A nuptial Mass or a marriage ceremony without Mass in a parish church, with the preparation course, certificates and family customs that come with it.",
-  "commonCountries": ["IT", "IE", "PL", "PH", "US", "GB", "ES", "MX", "BR", "FR", "CO", "AR"],
-  "typicalGuests": { "low": 80, "typical": 150, "high": 300 },
+  "commonCountries": [
+    "IT",
+    "IE",
+    "PL",
+    "PH",
+    "US",
+    "GB",
+    "ES",
+    "MX",
+    "BR",
+    "FR",
+    "CO",
+    "AR"
+  ],
+  "typicalGuests": {
+    "low": 80,
+    "typical": 150,
+    "high": 300
+  },
   "typicalDays": 1,
-
   "terms": {
     "officiant": "priest",
     "ceremonyVenue": "church",
@@ -18,7 +34,6 @@
     "firstDance": "first dance",
     "witnesses": "witnesses"
   },
-
   "events": [
     {
       "id": "engagement-blessing",
@@ -120,7 +135,6 @@
       "hosts": "Often the parents"
     }
   ],
-
   "items": [
     {
       "id": "church-fee",
@@ -285,7 +299,7 @@
       "event": "reception",
       "note": "Hotel function room, parish hall, restaurant or marquee. Parish halls are often the cheapest option and sometimes come with conditions on alcohol and finish times. In Ireland and Britain hotels frequently set a minimum number of paying guests for a Saturday; in Italy the villa or agriturismo fee is often quoted separately from catering.",
       "essential": true,
-      "shareOfBudget": 0.080,
+      "shareOfBudget": 0.08,
       "unit": "fixed",
       "supplierCategory": "Venue",
       "religiousRequirement": false
@@ -297,7 +311,7 @@
       "event": "reception",
       "note": "Usually the single largest line. Expect a longer meal than at a secular wedding in Italy, where five or more courses is normal, and a substantial one in Poland, where hot food continues through the night. Check whether service charge, corkage and cake-cutting fees are included in the per-head price.",
       "essential": true,
-      "shareOfBudget": 0.230,
+      "shareOfBudget": 0.23,
       "unit": "perGuest",
       "supplierCategory": "Catering",
       "religiousRequirement": false
@@ -309,7 +323,7 @@
       "event": "reception",
       "note": "Table wine, toast drink and whatever you cover at the bar. Polish receptions traditionally include vodka on the tables and a bread, salt and vodka welcome from the parents. If your reception is in a parish hall, check the alcohol policy before you plan anything.",
       "essential": true,
-      "shareOfBudget": 0.090,
+      "shareOfBudget": 0.09,
       "unit": "perGuest",
       "supplierCategory": "Catering",
       "religiousRequirement": false
@@ -357,7 +371,7 @@
       "event": "day-after",
       "note": "The Polish poprawiny is a genuine second party with food, drink and music, and should be budgeted as one. The Irish day-after and the Italian family lunch are usually simpler. Turn this on only if your families expect it, and if they do, expect a real cost rather than a token one.",
       "essential": false,
-      "shareOfBudget": 0.020,
+      "shareOfBudget": 0.02,
       "unit": "perGuest",
       "supplierCategory": "Catering",
       "religiousRequirement": false
@@ -369,7 +383,7 @@
       "event": "",
       "note": "Many parishes have no written dress code, but some do ask for shoulders covered in church, and a few cathedrals and shrine churches are stricter. If your dress is strapless and you would rather not be told on the morning, ask the parish directly and consider a bolero, wrap or mantilla for the liturgy.",
       "essential": true,
-      "shareOfBudget": 0.050,
+      "shareOfBudget": 0.05,
       "unit": "fixed",
       "supplierCategory": "Bridal",
       "religiousRequirement": false
@@ -405,7 +419,7 @@
       "event": "",
       "note": "Bridesmaids, groomsmen and children. Who pays varies enormously by country and family. Catholic weddings often have a larger wedding party than average, particularly Filipino weddings with six to eight secondary sponsors on top of the usual attendants, so decide early who is covering what.",
       "essential": false,
-      "shareOfBudget": 0.010,
+      "shareOfBudget": 0.01,
       "unit": "perPerson",
       "supplierCategory": "Bridal",
       "religiousRequirement": false
@@ -465,7 +479,7 @@
       "event": "reception",
       "note": "Uplighting, festoons, dance floor. More relevant for parish halls and marquees than for hotels, which usually come dressed.",
       "essential": false,
-      "shareOfBudget": 0.010,
+      "shareOfBudget": 0.01,
       "unit": "fixed",
       "supplierCategory": "Styling",
       "religiousRequirement": false
@@ -651,87 +665,382 @@
       "religiousRequirement": false
     }
   ],
-
   "timeline": [
-    { "monthsBefore": 14, "task": "Speak to your parish priest before you fix a date with anyone else", "critical": true },
-    { "monthsBefore": 13, "task": "Ask which dates are unavailable: Good Friday and Holy Saturday are excluded outright, and Sundays, solemnities and the seasons of Advent, Lent and Easter carry restrictions", "critical": true },
-    { "monthsBefore": 12, "task": "Book the church and get the date written into the parish diary", "critical": true },
-    { "monthsBefore": 12, "task": "Decide with the priest whether it will be a nuptial Mass or the ceremony without Mass", "critical": true },
-    { "monthsBefore": 12, "task": "Book the reception venue", "critical": true },
-    { "monthsBefore": 11, "task": "Draft the guest list and agree with both families who is hosting and paying for what", "critical": false },
-    { "monthsBefore": 10, "task": "Book the photographer and videographer, and ask the parish for its written photography policy", "critical": false },
-    { "monthsBefore": 10, "task": "Book the band or main entertainment", "critical": false },
-    { "monthsBefore": 9, "task": "Find out which parish holds each of your baptismal records, especially if you were baptised abroad", "critical": true },
-    { "monthsBefore": 9, "task": "Enrol in the marriage preparation course, since diocesan places fill up well ahead", "critical": true },
-    { "monthsBefore": 9, "task": "Start shopping for the dress, allowing for a long lead time plus alterations", "critical": false },
-    { "monthsBefore": 8, "task": "If either of you is not Catholic, or was married before, ask the priest to begin the permission, dispensation or nullity process now", "critical": true },
-    { "monthsBefore": 8, "task": "Send save the dates, particularly if guests are travelling internationally", "critical": false },
-    { "monthsBefore": 7, "task": "Book the florist and confirm what the church allows in your wedding's liturgical season", "critical": false },
-    { "monthsBefore": 6, "task": "Complete the marriage preparation course and keep the certificate", "critical": true },
-    { "monthsBefore": 6, "task": "Complete the pre-nuptial enquiry with your priest, interviewed separately", "critical": true },
-    { "monthsBefore": 6, "task": "Request letters of freedom from every parish where you have lived six months or more since turning eighteen", "critical": true },
-    { "monthsBefore": 6, "task": "Choose your readings from the Lectionary options and agree them with the priest", "critical": false },
-    { "monthsBefore": 6, "task": "Meet the parish music director and agree every piece, including processional and recessional", "critical": true },
-    { "monthsBefore": 5, "task": "Request newly issued baptismal and confirmation certificates, dated within six months of the wedding", "critical": true },
-    { "monthsBefore": 5, "task": "Order invitations", "critical": false },
-    { "monthsBefore": 4, "task": "Send invitations", "critical": false },
-    { "monthsBefore": 4, "task": "Confirm which optional ritual elements you want, such as the arras, lazo, veil or candles, and who will bring and place them", "critical": false },
-    { "monthsBefore": 3, "task": "Give civil notice: the registrar in Ireland or the UK, the town hall in Italy, or check the licence window in your US state", "critical": true },
-    { "monthsBefore": 3, "task": "Ask your readers, gift bearers and witnesses, and confirm your sponsors or padrinos", "critical": false },
-    { "monthsBefore": 3, "task": "Attend the natural family planning session if your diocese requires it", "critical": false },
-    { "monthsBefore": 2, "task": "Send the Mass booklet text to the priest for approval before printing", "critical": false },
-    { "monthsBefore": 2, "task": "Send the parish photography and music rules to your suppliers in writing", "critical": false },
-    { "monthsBefore": 1, "task": "Final meeting with the priest to walk through the order of the liturgy and hand over outstanding paperwork", "critical": true },
-    { "monthsBefore": 1, "task": "Collect the civil marriage licence, watching the expiry window in the US and the one-month return deadline in Ireland", "critical": true },
-    { "monthsBefore": 0.5, "task": "Rehearsal, and hand over the offerings and the civil paperwork", "critical": true },
-    { "monthsBefore": 0.25, "task": "Go to confession before the wedding, as most couples are encouraged to do", "critical": false }
+    {
+      "monthsBefore": 14,
+      "task": "Speak to your parish priest before you fix a date with anyone else",
+      "critical": true
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Ask which dates are unavailable: Good Friday and Holy Saturday are excluded outright, and Sundays, solemnities and the seasons of Advent, Lent and Easter carry restrictions",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the church and get the date written into the parish diary",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Decide with the priest whether it will be a nuptial Mass or the ceremony without Mass",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the reception venue",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Draft the guest list and agree with both families who is hosting and paying for what",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the photographer and videographer, and ask the parish for its written photography policy",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the band or main entertainment",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Find out which parish holds each of your baptismal records, especially if you were baptised abroad",
+      "critical": true
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Enrol in the marriage preparation course, since diocesan places fill up well ahead",
+      "critical": true
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Start shopping for the dress, allowing for a long lead time plus alterations",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "If either of you is not Catholic, or was married before, ask the priest to begin the permission, dispensation or nullity process now",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Send save the dates, particularly if guests are travelling internationally",
+      "critical": false
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Book the florist and confirm what the church allows in your wedding's liturgical season",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Complete the marriage preparation course and keep the certificate",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Complete the pre-nuptial enquiry with your priest, interviewed separately",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Request letters of freedom from every parish where you have lived six months or more since turning eighteen",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Choose your readings from the Lectionary options and agree them with the priest",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Meet the parish music director and agree every piece, including processional and recessional",
+      "critical": true
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Request newly issued baptismal and confirmation certificates, dated within six months of the wedding",
+      "critical": true
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Order invitations",
+      "critical": false
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Send invitations",
+      "critical": false
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Confirm which optional ritual elements you want, such as the arras, lazo, veil or candles, and who will bring and place them",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Give civil notice: the registrar in Ireland or the UK, the town hall in Italy, or check the licence window in your US state",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Ask your readers, gift bearers and witnesses, and confirm your sponsors or padrinos",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Attend the natural family planning session if your diocese requires it",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Send the Mass booklet text to the priest for approval before printing",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Send the parish photography and music rules to your suppliers in writing",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Final meeting with the priest to walk through the order of the liturgy and hand over outstanding paperwork",
+      "critical": true
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Collect the civil marriage licence, watching the expiry window in the US and the one-month return deadline in Ireland",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0.5,
+      "task": "Rehearsal, and hand over the offerings and the civil paperwork",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0.25,
+      "task": "Go to confession before the wedding, as most couples are encouraged to do",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "If either of you was married before, or you are already married civilly, tell the priest at the first meeting — annulment and convalidation both take far longer than the rest of the planning",
+      "critical": true
+    }
   ],
-
   "paperwork": [
-    { "item": "Newly issued baptismal certificate, dated within six months of the wedding", "who": "Both, if baptised Catholic", "note": "It must be a fresh copy rather than the one from your baptism day, because the parish adds notations for confirmation, ordination, religious vows and any previous marriage. Those notations are how the Church checks you are free to marry. Records held abroad can take months to obtain." },
-    { "item": "Confirmation certificate", "who": "Both, if Catholic", "note": "Canon 1065 asks Catholics who have not been confirmed to receive the sacrament before marriage where it can be done without serious inconvenience. Often the confirmation is noted on the baptismal certificate, which saves a second request." },
-    { "item": "Pre-nuptial enquiry, also called the prenuptial questionnaire or investigation", "who": "Both", "note": "A formal interview with the priest, taken separately, under oath. It establishes that you are both free to marry, marrying freely, and intend a permanent, faithful marriage open to children." },
-    { "item": "Letters or affidavits of freedom to marry", "who": "Both", "note": "Statements swearing you have never been married. In Ireland and Britain these usually come from the parish priest of each parish you have lived in for six months or more since turning eighteen. In the US they are more often sworn by your parents or by two people who have known you a long time." },
-    { "item": "Certificate of completion of the marriage preparation course", "who": "Both", "note": "" },
-    { "item": "Permission for a mixed marriage", "who": "The Catholic party", "note": "Needed when marrying a baptised non-Catholic Christian, under canon 1125. Requested by your priest from the bishop." },
-    { "item": "Dispensation from disparity of cult", "who": "The Catholic party", "note": "Needed when marrying someone who is not baptised, under canon 1086. A dispensation rather than a permission, so it takes a little longer." },
-    { "item": "Promise concerning the baptism and Catholic upbringing of children", "who": "The Catholic party", "note": "A sincere promise to do all in your power to have children baptised and raised Catholic. The other party is not asked to promise anything, only to be informed of the promise you have made." },
-    { "item": "Dispensation from canonical form", "who": "The Catholic party", "note": "Needed if you want to marry somewhere other than a Catholic church, for example in your non-Catholic partner's own church before their minister. Without it the marriage is not valid in the eyes of the Church." },
-    { "item": "Declaration of nullity, dissolution, or a death certificate", "who": "Either party previously married", "note": "This applies to a previous civil marriage too, not only a church one. Never set a date before the case is concluded; tribunals will not be rushed and a pending case is not a decision." },
-    { "item": "Delegation for a visiting priest or deacon", "who": "The parish", "note": "If a priest from outside the parish is to receive your consent, the parish priest must delegate him in writing. Without valid delegation the marriage is invalid, so confirm this in writing rather than assuming." },
-    { "item": "Testimonial letters or nihil obstat between dioceses", "who": "Both, if marrying outside your home diocese", "note": "Your home parish sends your completed file to the wedding parish, usually via both chanceries. Allow several weeks." },
-    { "item": "Banns or publications", "who": "Both", "note": "No longer universally required. Canon 1067 leaves it to each bishops' conference, so it varies: the Diocese of Rome still posts them, Canada and Scotland have made them optional, and in Italy the civil pubblicazioni are a separate town hall requirement from which non-residents are usually exempt." },
-    { "item": "Civil marriage licence or notification", "who": "Both", "note": "In the US, a county licence, typically valid 30 to 90 days with a waiting period of a few days in some states. In Ireland, three months notice to the HSE registrar and a Marriage Registration Form returned within one month of the wedding. In England and Wales, notice at your local register office, plus a registrar if your church has no authorised person. In Italy the church wedding carries civil effect under the concordat. In France and Mexico a separate civil ceremony must come first." },
-    { "item": "Passport or photo identification and birth certificates", "who": "Both", "note": "" },
-    { "item": "Nulla osta from your embassy", "who": "Foreign nationals marrying in Italy", "note": "A declaration of no impediment to marriage, obtained from your own country's consulate in Italy. Most Italian documents expire six months after issue, so time it carefully." }
+    {
+      "item": "Newly issued baptismal certificate, dated within six months of the wedding",
+      "who": "Both, if baptised Catholic",
+      "note": "It must be a fresh copy rather than the one from your baptism day, because the parish adds notations for confirmation, ordination, religious vows and any previous marriage. Those notations are how the Church checks you are free to marry. Records held abroad can take months to obtain."
+    },
+    {
+      "item": "Confirmation certificate",
+      "who": "Both, if Catholic",
+      "note": "Canon 1065 asks Catholics who have not been confirmed to receive the sacrament before marriage where it can be done without serious inconvenience. Often the confirmation is noted on the baptismal certificate, which saves a second request."
+    },
+    {
+      "item": "Pre-nuptial enquiry, also called the prenuptial questionnaire or investigation",
+      "who": "Both",
+      "note": "A formal interview with the priest, taken separately, under oath. It establishes that you are both free to marry, marrying freely, and intend a permanent, faithful marriage open to children."
+    },
+    {
+      "item": "Letters or affidavits of freedom to marry",
+      "who": "Both",
+      "note": "Statements swearing you have never been married. In Ireland and Britain these usually come from the parish priest of each parish you have lived in for six months or more since turning eighteen. In the US they are more often sworn by your parents or by two people who have known you a long time."
+    },
+    {
+      "item": "Certificate of completion of the marriage preparation course",
+      "who": "Both",
+      "note": ""
+    },
+    {
+      "item": "Permission for a mixed marriage",
+      "who": "The Catholic party",
+      "note": "Needed when marrying a baptised non-Catholic Christian, under canon 1125. Requested by your priest from the bishop."
+    },
+    {
+      "item": "Dispensation from disparity of cult",
+      "who": "The Catholic party",
+      "note": "Needed when marrying someone who is not baptised, under canon 1086. A dispensation rather than a permission, so it takes a little longer."
+    },
+    {
+      "item": "Promise concerning the baptism and Catholic upbringing of children",
+      "who": "The Catholic party",
+      "note": "A sincere promise to do all in your power to have children baptised and raised Catholic. The other party is not asked to promise anything, only to be informed of the promise you have made."
+    },
+    {
+      "item": "Dispensation from canonical form",
+      "who": "The Catholic party",
+      "note": "Needed if you want to marry somewhere other than a Catholic church, for example in your non-Catholic partner's own church before their minister. Without it the marriage is not valid in the eyes of the Church."
+    },
+    {
+      "item": "Declaration of nullity, dissolution, or a death certificate",
+      "who": "Either party previously married",
+      "note": "This applies to a previous civil marriage too, not only a church one. Never set a date before the case is concluded; tribunals will not be rushed and a pending case is not a decision."
+    },
+    {
+      "item": "Delegation for a visiting priest or deacon",
+      "who": "The parish",
+      "note": "If a priest from outside the parish is to receive your consent, the parish priest must delegate him in writing. Without valid delegation the marriage is invalid, so confirm this in writing rather than assuming."
+    },
+    {
+      "item": "Testimonial letters or nihil obstat between dioceses",
+      "who": "Both, if marrying outside your home diocese",
+      "note": "Your home parish sends your completed file to the wedding parish, usually via both chanceries. Allow several weeks."
+    },
+    {
+      "item": "Banns or publications",
+      "who": "Both",
+      "note": "No longer universally required. Canon 1067 leaves it to each bishops' conference, so it varies: the Diocese of Rome still posts them, Canada and Scotland have made them optional, and in Italy the civil pubblicazioni are a separate town hall requirement from which non-residents are usually exempt."
+    },
+    {
+      "item": "Civil marriage licence or notification",
+      "who": "Both",
+      "note": "In the US, a county licence, typically valid 30 to 90 days with a waiting period of a few days in some states. In Ireland, three months notice to the HSE registrar and a Marriage Registration Form returned within one month of the wedding. In England and Wales, notice at your local register office, plus a registrar if your church has no authorised person. In Italy the church wedding carries civil effect under the concordat. In France and Mexico a separate civil ceremony must come first."
+    },
+    {
+      "item": "Passport or photo identification and birth certificates",
+      "who": "Both",
+      "note": ""
+    },
+    {
+      "item": "Nulla osta from your embassy",
+      "who": "Foreign nationals marrying in Italy",
+      "note": "A declaration of no impediment to marriage, obtained from your own country's consulate in Italy. Most Italian documents expire six months after issue, so time it carefully."
+    },
+    {
+      "item": "Civil marriage certificate, if you are convalidating",
+      "who": "Both",
+      "note": "A couple already married civilly needs the certificate on the prenuptial file. The parish treats the wedding as a convalidation rather than a blessing, so allow the same lead time as a first marriage."
+    }
   ],
-
   "customs": [
-    { "name": "The arras", "description": "Thirteen coins, blessed and given by the groom to the bride and often passed back, symbolising everything they own being shared from now on. Usually explained as Christ and the twelve apostles. Standard in Spain, Latin America and the Philippines, and an approved option in the second edition of the Order of Celebrating Matrimony in the US. Almost never seen at Irish, Polish or Italian weddings.", "optional": true },
-    { "name": "El lazo or yugal", "description": "A cord, ribbon or oversized rosary laid over the couple's shoulders in a figure of eight, marking them as bound together. It goes on around the Lord's Prayer and nuptial blessing and is removed at the end. Mexican, wider Hispanic and Filipino practice; in Latin American weddings the padrinos de lazo place it, and in Filipino weddings two secondary sponsors do.", "optional": true },
-    { "name": "The veil ceremony", "description": "A veil pinned over the bride's head and the groom's shoulder, joining them under one cloth. Read as shelter, protection and shouldering burdens together. Filipino and Mexican practice, placed just before the nuptial blessing.", "optional": true },
-    { "name": "The candle ceremony", "description": "In Filipino weddings, sponsors light a candle on either side and the couple together light a third, for Christ as the light of the home. Note that this is not the same as the American unity candle, though they look alike.", "optional": true },
-    { "name": "Principal and secondary sponsors", "description": "In the Philippines the ninong and ninang are honoured guests and mentors, often several couples, named in the programme and standing with the couple. Six to eight secondary sponsors then handle the veil, cord, candle and coins. This is a formal role, not decoration.", "optional": true },
-    { "name": "Padrinos and madrinas", "description": "In Latin American practice, sponsoring couples who take on both a spiritual role and a specific expense: the lazo, the arras, the rings, the Bible and rosary, the kneeling cushions, the cake, the flowers. There may be a dozen or more pairs. It spreads the cost across the community rather than loading it on two families.", "optional": true },
-    { "name": "The Bible and rosary", "description": "Presented to the couple by their padrinos de biblia y rosario as a sign that the household will pray together. Latin American, occasionally Filipino.", "optional": true },
-    { "name": "The unity candle", "description": "Two candles lit from a central flame, or a single candle lit from two. Popular at American weddings and not part of the Catholic rite. Many dioceses discourage it inside the liturgy because it duplicates and distracts from the exchange of consent, and suggest placing it after the Prayer after Communion or moving it to the reception. Ask before printing it in the booklet.", "optional": true },
-    { "name": "Flowers to Our Lady", "description": "The couple lay flowers at a statue or shrine of the Blessed Virgin Mary and pray briefly, often while a Marian hymn is sung. Widespread and welcomed as devotion, but several dioceses ask that it be genuine prayer rather than a photograph, and that it come near the end of the liturgy.", "optional": true },
-    { "name": "The mantilla", "description": "A lace veil worn over a high comb rather than a tulle veil, sometimes black in older Spanish practice. Spanish and Latin American, and increasingly chosen elsewhere by brides who want their shoulders covered in church.", "optional": true },
-    { "name": "Parental blessing before leaving for church", "description": "Parents trace a cross on the couple's foreheads and bless them at home before they set out. Strong in Poland, where the couple traditionally kneel, and also found in Filipino and Latin American families.", "optional": true },
-    { "name": "Bread, salt and vodka", "description": "In Poland, the parents meet the couple at the reception door with bread, salt and a glass of vodka: bread so they never go hungry, salt for the hard times, vodka for the good ones. The glasses are then thrown and broken for luck.", "optional": true },
-    { "name": "Oczepiny", "description": "The Polish unveiling, around midnight. The bride's veil is removed to mark the passage into married life and thrown to the unmarried women, with the groom's tie thrown to the unmarried men. Usually run by the band leader and followed by games.", "optional": true },
-    { "name": "Poprawiny", "description": "A second, smaller Polish party the day after the wedding for close family and friends, with more food, more music and a finish in the afternoon or early evening. It is expected rather than a bonus.", "optional": true },
-    { "name": "La serenata", "description": "The Italian serenade under the bride's window the night before, with musicians and friends, followed by an impromptu party. Mainly central and southern Italy.", "optional": true },
-    { "name": "Confetti and bomboniere", "description": "Italian confetti are sugared almonds, never paper. They are given in odd numbers, five being usual, inside a bomboniera keepsake handed to each family as they leave. The tradition continues at anniversaries, silver at twenty-five years and gold at fifty.", "optional": true },
-    { "name": "Rice at the church door", "description": "Guests throw rice over the couple as they leave the church, for fertility and prosperity. Common in Italy and beyond, but check with the parish first: many churches now prohibit rice, confetti, petals and birdseed both inside and outside the building.", "optional": true },
-    { "name": "Taglio della cravatta", "description": "In parts of northern Italy the groom's tie is cut up by his friends and the pieces auctioned to guests, with the money going to the couple. Regional and light-hearted.", "optional": true },
-    { "name": "La busta", "description": "In Italy the usual wedding gift is cash in an envelope, given at the reception rather than sent in advance, and the amount is loosely expected to cover the cost of your seat. A gift list is far less common than in Ireland, Britain or the US.", "optional": true },
-    { "name": "The money dance", "description": "Guests pin banknotes to the couple, or pay for a short dance with them. Standard at Filipino receptions and common at Polish ones. Read as helping the new household start out, not as showing off.", "optional": true },
-    { "name": "The Claddagh ring", "description": "An Irish ring of two hands holding a crowned heart, for love, loyalty and friendship. Sometimes used as a wedding band, sometimes given as a gift, often handed down.", "optional": true },
-    { "name": "The afters", "description": "In Ireland, a second and larger evening guest list invited after the meal for the band, bar and finger food. It lets couples include a wide circle without a seated dinner for three hundred people.", "optional": true },
-    { "name": "Confession before the wedding", "description": "Many couples go to confession in the days before, sometimes with the wedding party. Not required for validity, but it is the usual pastoral advice and most parishes will arrange a time.", "optional": true }
+    {
+      "name": "The arras",
+      "description": "Thirteen coins, blessed and given by the groom to the bride and often passed back, symbolising everything they own being shared from now on. Usually explained as Christ and the twelve apostles. Standard in Spain, Latin America and the Philippines, and an approved option in the second edition of the Order of Celebrating Matrimony in the US. Almost never seen at Irish, Polish or Italian weddings.",
+      "optional": true
+    },
+    {
+      "name": "El lazo or yugal",
+      "description": "A cord, ribbon or oversized rosary laid over the couple's shoulders in a figure of eight, marking them as bound together. It goes on around the Lord's Prayer and nuptial blessing and is removed at the end. Mexican, wider Hispanic and Filipino practice; in Latin American weddings the padrinos de lazo place it, and in Filipino weddings two secondary sponsors do.",
+      "optional": true
+    },
+    {
+      "name": "The veil ceremony",
+      "description": "A veil pinned over the bride's head and the groom's shoulder, joining them under one cloth. Read as shelter, protection and shouldering burdens together. Filipino and Mexican practice, placed just before the nuptial blessing.",
+      "optional": true
+    },
+    {
+      "name": "The candle ceremony",
+      "description": "In Filipino weddings, sponsors light a candle on either side and the couple together light a third, for Christ as the light of the home. Note that this is not the same as the American unity candle, though they look alike.",
+      "optional": true
+    },
+    {
+      "name": "Principal and secondary sponsors",
+      "description": "In the Philippines the ninong and ninang are honoured guests and mentors, often several couples, named in the programme and standing with the couple. Six to eight secondary sponsors then handle the veil, cord, candle and coins. This is a formal role, not decoration.",
+      "optional": true
+    },
+    {
+      "name": "Padrinos and madrinas",
+      "description": "In Latin American practice, sponsoring couples who take on both a spiritual role and a specific expense: the lazo, the arras, the rings, the Bible and rosary, the kneeling cushions, the cake, the flowers. There may be a dozen or more pairs. It spreads the cost across the community rather than loading it on two families.",
+      "optional": true
+    },
+    {
+      "name": "The Bible and rosary",
+      "description": "Presented to the couple by their padrinos de biblia y rosario as a sign that the household will pray together. Latin American, occasionally Filipino.",
+      "optional": true
+    },
+    {
+      "name": "The unity candle",
+      "description": "Two candles lit from a central flame, or a single candle lit from two. Popular at American weddings and not part of the Catholic rite. Many dioceses discourage it inside the liturgy because it duplicates and distracts from the exchange of consent, and suggest placing it after the Prayer after Communion or moving it to the reception. Ask before printing it in the booklet.",
+      "optional": true
+    },
+    {
+      "name": "Flowers to Our Lady",
+      "description": "The couple lay flowers at a statue or shrine of the Blessed Virgin Mary and pray briefly, often while a Marian hymn is sung. Widespread and welcomed as devotion, but several dioceses ask that it be genuine prayer rather than a photograph, and that it come near the end of the liturgy.",
+      "optional": true
+    },
+    {
+      "name": "The mantilla",
+      "description": "A lace veil worn over a high comb rather than a tulle veil, sometimes black in older Spanish practice. Spanish and Latin American, and increasingly chosen elsewhere by brides who want their shoulders covered in church.",
+      "optional": true
+    },
+    {
+      "name": "Parental blessing before leaving for church",
+      "description": "Parents trace a cross on the couple's foreheads and bless them at home before they set out. Strong in Poland, where the couple traditionally kneel, and also found in Filipino and Latin American families.",
+      "optional": true
+    },
+    {
+      "name": "Bread, salt and vodka",
+      "description": "In Poland, the parents meet the couple at the reception door with bread, salt and a glass of vodka: bread so they never go hungry, salt for the hard times, vodka for the good ones. The glasses are then thrown and broken for luck.",
+      "optional": true
+    },
+    {
+      "name": "Oczepiny",
+      "description": "The Polish unveiling, around midnight. The bride's veil is removed to mark the passage into married life and thrown to the unmarried women, with the groom's tie thrown to the unmarried men. Usually run by the band leader and followed by games.",
+      "optional": true
+    },
+    {
+      "name": "Poprawiny",
+      "description": "A second, smaller Polish party the day after the wedding for close family and friends, with more food, more music and a finish in the afternoon or early evening. It is expected rather than a bonus.",
+      "optional": true
+    },
+    {
+      "name": "La serenata",
+      "description": "The Italian serenade under the bride's window the night before, with musicians and friends, followed by an impromptu party. Mainly central and southern Italy.",
+      "optional": true
+    },
+    {
+      "name": "Confetti and bomboniere",
+      "description": "Italian confetti are sugared almonds, never paper. They are given in odd numbers, five being usual, inside a bomboniera keepsake handed to each family as they leave. The tradition continues at anniversaries, silver at twenty-five years and gold at fifty.",
+      "optional": true
+    },
+    {
+      "name": "Rice at the church door",
+      "description": "Guests throw rice over the couple as they leave the church, for fertility and prosperity. Common in Italy and beyond, but check with the parish first: many churches now prohibit rice, confetti, petals and birdseed both inside and outside the building.",
+      "optional": true
+    },
+    {
+      "name": "Taglio della cravatta",
+      "description": "In parts of northern Italy the groom's tie is cut up by his friends and the pieces auctioned to guests, with the money going to the couple. Regional and light-hearted.",
+      "optional": true
+    },
+    {
+      "name": "La busta",
+      "description": "In Italy the usual wedding gift is cash in an envelope, given at the reception rather than sent in advance, and the amount is loosely expected to cover the cost of your seat. A gift list is far less common than in Ireland, Britain or the US.",
+      "optional": true
+    },
+    {
+      "name": "The money dance",
+      "description": "Guests pin banknotes to the couple, or pay for a short dance with them. Standard at Filipino receptions and common at Polish ones. Read as helping the new household start out, not as showing off.",
+      "optional": true
+    },
+    {
+      "name": "The Claddagh ring",
+      "description": "An Irish ring of two hands holding a crowned heart, for love, loyalty and friendship. Sometimes used as a wedding band, sometimes given as a gift, often handed down.",
+      "optional": true
+    },
+    {
+      "name": "The afters",
+      "description": "In Ireland, a second and larger evening guest list invited after the meal for the band, bar and finger food. It lets couples include a wide circle without a seated dinner for three hundred people.",
+      "optional": true
+    },
+    {
+      "name": "Confession before the wedding",
+      "description": "Many couples go to confession in the days before, sometimes with the wedding party. Not required for validity, but it is the usual pastoral advice and most parishes will arrange a time.",
+      "optional": true
+    },
+    {
+      "name": "Convalidation",
+      "description": "If you have already married civilly, the Church does not simply bless that marriage: it asks you to give consent again in a new act, because for Catholics the consent itself is the sacrament. A convalidation is a full wedding, usually small, and needs the same freedom-to-marry paperwork and preparation as any other. Couples are often surprised that a blessing of the civil marriage is a different thing and, in most dioceses, not the usual route.",
+      "optional": true
+    }
   ],
-
   "gotchas": [
     "Talk to the parish before you book anything else. Most dioceses want at least six months notice and some ask for a full year, and popular churches book Saturdays a year or more ahead.",
     "Marriage may not be celebrated at all on Good Friday or Holy Saturday. Lent and Advent are not closed seasons, but the Ritual Mass for Matrimony cannot be used on Sundays of Advent, Lent and Easter, on solemnities, or during Holy Week and the Easter octave. You can still marry on those days, but the prayers and readings come from the Mass of the day rather than from the marriage rite.",
@@ -751,7 +1060,197 @@
     "Costs land in places couples do not plan for: the parish offering, a separate offering to the priest, the course fee, the inventory scoring fee, certificate and courier costs, and the parish coordinator. None is large on its own; together they are a real line.",
     "If your families are from different Catholic cultures, agree early which customs are in. A Filipino family may expect eight named sponsors and a Polish family may expect a full second party the next day, and neither will read as optional to the people who expect it."
   ],
-
+  "branches": {
+    "Irish": {
+      "label": "Irish",
+      "addItems": [
+        {
+          "id": "handfast",
+          "name": "Handfasting ribbon",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "An Irish addition inside the Catholic rite, binding the couple's hands with a ribbon or cloth.",
+          "essential": false,
+          "shareOfBudget": 0.004,
+          "unit": "fixed",
+          "supplierCategory": "Church supplies",
+          "religiousRequirement": false
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "The Claddagh ring",
+          "description": "Often used as the wedding ring or given alongside it.",
+          "optional": true
+        },
+        {
+          "name": "Magic hankie",
+          "description": "A lace handkerchief carried by the bride, later made into a christening bonnet.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "In Ireland you must give three months' notice to the HSE registrar as well as completing the church paperwork, and the two run on separate clocks."
+      ]
+    },
+    "Polish": {
+      "label": "Polish",
+      "addEvents": [
+        {
+          "id": "blogoslawienstwo",
+          "name": "The parents' blessing",
+          "when": "Wedding morning",
+          "optional": false,
+          "default": true,
+          "description": "Both sets of parents bless the couple at home before they leave for the church. Quiet, brief and often the moment parents remember.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "oczepiny",
+          "name": "Oczepiny",
+          "when": "Midnight",
+          "optional": true,
+          "default": true,
+          "description": "The unveiling at midnight, followed by games and the passing of the veil to the next unmarried woman.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "poprawiny",
+          "name": "Poprawiny",
+          "when": "The day after",
+          "optional": true,
+          "default": true,
+          "description": "The second day of the wedding, held for the same guests, with more food and less formality.",
+          "hosts": "Both families"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "bread-salt",
+          "name": "Bread and salt greeting",
+          "section": "Reception",
+          "event": "reception",
+          "note": "The parents greet the couple with bread, salt and vodka at the reception door.",
+          "essential": true,
+          "shareOfBudget": 0.004,
+          "unit": "fixed",
+          "supplierCategory": "",
+          "religiousRequirement": false
+        },
+        {
+          "id": "poprawiny-cater",
+          "name": "Poprawiny catering",
+          "section": "Reception",
+          "event": "poprawiny",
+          "note": "A second day of feeding the same guests. Polish weddings are routinely two days, and budgets that assume one are half right.",
+          "essential": true,
+          "shareOfBudget": 0.07,
+          "unit": "perGuest",
+          "supplierCategory": "Caterer",
+          "religiousRequirement": false
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 8,
+          "task": "Decide whether you are having poprawiny, because it doubles the catering and the accommodation",
+          "critical": true
+        }
+      ],
+      "addGotchas": [
+        "A Polish wedding is commonly two days. Guests expect the poprawiny and will have booked accommodation accordingly.",
+        "Vodka is served at the table by the bottle rather than from a bar. Budget accordingly and tell a non-Polish venue what is coming."
+      ]
+    },
+    "Italian": {
+      "label": "Italian",
+      "addCustoms": [
+        {
+          "name": "La busta",
+          "description": "Guests give money in envelopes at the reception rather than gifts from a list.",
+          "optional": true
+        },
+        {
+          "name": "Confetti and bomboniere",
+          "description": "Sugared almonds in odd numbers, presented in favours given to every guest.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Italian receptions run long and food-led — five or more courses is normal, and a three-hour venue hire will not work."
+      ]
+    },
+    "Filipino": {
+      "label": "Filipino",
+      "addItems": [
+        {
+          "id": "cord-veil",
+          "name": "Cord, veil and arras",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "The veil, cord and thirteen coins, with sponsors appointed to place each. Central to a Filipino Catholic wedding.",
+          "essential": true,
+          "shareOfBudget": 0.012,
+          "unit": "fixed",
+          "supplierCategory": "Church supplies",
+          "religiousRequirement": true
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Ninong and ninang",
+          "description": "Principal sponsors, often many of them, who are named in the invitation and take a real role in the ceremony and its costs.",
+          "optional": false
+        },
+        {
+          "name": "The money dance",
+          "description": "Guests pin notes to the couple during a dedicated dance.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Filipino weddings can have a dozen or more principal sponsors, each named and each with a role. Agree the list early — it affects the seating, the programme and the invitations."
+      ]
+    },
+    "Latin American": {
+      "label": "Latin American",
+      "addItems": [
+        {
+          "id": "arras-la",
+          "name": "Las arras and el lazo",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "Thirteen coins and the lazo cord placed by padrinos during the mass.",
+          "essential": true,
+          "shareOfBudget": 0.012,
+          "unit": "fixed",
+          "supplierCategory": "Church supplies",
+          "religiousRequirement": true
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Padrinos",
+          "description": "Sponsor couples who fund specific elements — the cake, the flowers, the lazo — and are honoured in the programme.",
+          "optional": false
+        },
+        {
+          "name": "La hora loca",
+          "description": "The 'crazy hour' late in the reception: masks, props, horns and a change of tempo.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Padrinos traditionally fund named elements. Agreeing who sponsors what early avoids two families both buying the cake, or neither."
+      ]
+    },
+    "Other": {
+      "label": "Other",
+      "addGotchas": [
+        "Diocesan requirements for paperwork and preparation courses vary more than couples expect, even between neighbouring dioceses."
+      ]
+    }
+  },
   "sources": [
     "https://www.foryourmarriage.org/rite-for-celebrating-marriage-within-mass/",
     "https://www.foryourmarriage.org/rite-for-celebrating-marriage-outside-of-mass/",

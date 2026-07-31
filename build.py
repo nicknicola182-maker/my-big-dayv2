@@ -1,6 +1,40 @@
 #!/usr/bin/env python3
-import json, glob, os, base64
+"""Build dist/index.html — one self-contained offline file.
+
+  python3 build.py            build
+  python3 build.py --check    verify every input exists, then stop (exit 1 if not)
+
+Script order in the output is load-bearing: fflate must exist before the PACKS
+decoder runs, and app1's globals before app2 patches save() and calls render().
+"""
+import json, glob, os, base64, sys
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+SOURCES = [
+    "src/app.css", "src/app1.js", "src/sync.js", "src/app2.js",
+    "fonts/Gloock-Regular.woff2", "fonts/Outfit-Regular.woff2",
+    "fonts/Outfit-Bold.woff2", "fonts/NothingYouCouldDo-Regular.woff2",
+    "node_modules/qrcode-generator/dist/qrcode.js",
+    "node_modules/fflate/umd/index.js",
+]
+
+def check():
+    missing = [p for p in SOURCES if not os.path.exists(p)]
+    if not glob.glob("packs/*.json"):
+        missing.append("packs/*.json")
+    for p in missing:
+        hint = "  → run: npm install" if p.startswith("node_modules/") else ""
+        print(f"missing: {p}{hint}", file=sys.stderr)
+    if missing:
+        print(f"build --check FAILED — {len(missing)} missing input(s)", file=sys.stderr)
+        return 1
+    print(f"build --check ok — {len(SOURCES)} sources + {len(glob.glob('packs/*.json'))} packs")
+    return 0
+
+if "--check" in sys.argv:
+    sys.exit(check())
+if check():
+    sys.exit(1)
 
 packs = {}
 for f in sorted(glob.glob("packs/*.json")):
@@ -10,7 +44,9 @@ for f in sorted(glob.glob("packs/*.json")):
     packs[d["id"]] = d
 import gzip as _gz
 _packs_raw = json.dumps(packs, separators=(",",":")).encode()
-_packs_gz = _gz.compress(_packs_raw, 9)
+# mtime=0 keeps the build reproducible — otherwise the gzip header timestamp
+# changes on every run and dirties the committed dist/index.html for no reason.
+_packs_gz = _gz.compress(_packs_raw, 9, mtime=0)
 packs_js = ('const PACKS_Z="' + base64.b64encode(_packs_gz).decode() + '";\n'
   'const PACKS = JSON.parse(fflate.strFromU8(fflate.gunzipSync(Uint8Array.from(atob(PACKS_Z),c=>c.charCodeAt(0)))));')
 
@@ -24,6 +60,7 @@ css = css.replace("%%F_SCRIPT%%", b64("fonts/NothingYouCouldDo-Regular.woff2"))
 qr = open("node_modules/qrcode-generator/dist/qrcode.js").read()
 fflate = open("node_modules/fflate/umd/index.js").read()
 app1 = open("src/app1.js").read()
+sync = open("src/sync.js").read()
 app2 = open("src/app2.js").read()
 
 html = f"""<!DOCTYPE html>
@@ -42,6 +79,7 @@ html = f"""<!DOCTYPE html>
 <script>{qr}</script>
 <script>{packs_js}</script>
 <script>{app1}</script>
+<script>{sync}</script>
 <script>{app2}</script>
 </body>
 </html>"""

@@ -804,6 +804,11 @@
       "monthsBefore": 0,
       "task": "Afterwards, collect the nikah certificate, register the marriage with the civil authority where that is a separate step, and hold the walima",
       "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Let the families complete istikhara and any formal agreement between them before you book anything — deposits paid before that point are the ones most often lost",
+      "critical": false
     }
   ],
   "paperwork": [
@@ -998,6 +1003,11 @@
       "name": "The Fatiha and the lefe",
       "description": "In Hausa and much of northern Nigerian tradition the marriage is solemnised at the Fatiha, agreed between the families at the mosque, after which come days of cultural celebration: the lefe — suitcases of clothes, jewellery and perfume sent by the groom to the bride — the kamu, where the groom's side playfully pays to unveil the bride, and the budan kai unveiling. The religious core and the cultural festival are understood by everyone as distinct layers.",
       "optional": true
+    },
+    {
+      "name": "Salat al-Istikhara",
+      "description": "A prayer for guidance, offered by one or both parties before committing to the match. There is no sign to wait for and no dream to interpret; the tradition is that you pray, then act on your settled inclination. It matters to the planning because it usually happens before any date is fixed, and families may not move on venues or invitations until it is done.",
+      "optional": true
     }
   ],
   "gotchas": [
@@ -1019,6 +1029,212 @@
     "Guest lists at Muslim weddings inflate structurally: invitations go per family, the walima is traditionally open-handed, and in many communities not inviting someone is a slight their whole household remembers. Budget per guest from the start and decide early which events are whole-community and which are close-family.",
     "Multi-day weddings multiply everything — outfits, decor, catering, photography — and the mehndi in particular quietly grows into a second wedding. Deciding which single event carries the spectacle, and keeping the others deliberately simple, is the highest-leverage budget decision in this tradition."
   ],
+  "branches": {
+    "South Asian": {
+      "label": "South Asian",
+      "addItems": [
+        {
+          "id": "walima-venue",
+          "name": "Walima venue and catering",
+          "section": "Reception",
+          "event": "walima",
+          "note": "The walima is hosted by the groom's family and is frequently the larger of the two events. Budget it as a second wedding, not a follow-up.",
+          "essential": true,
+          "shareOfBudget": 0.1,
+          "unit": "perGuest",
+          "supplierCategory": "Caterer",
+          "religiousRequirement": true
+        },
+        {
+          "id": "dhol-m",
+          "name": "Dhol players",
+          "section": "Music & Entertainment",
+          "event": "baraat",
+          "note": "Dhol players for the baraat. The procession always runs late, and the drummers are why.",
+          "essential": false,
+          "shareOfBudget": 0.015,
+          "unit": "fixed",
+          "supplierCategory": "Musicians",
+          "religiousRequirement": false
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 10,
+          "task": "Agree which family hosts which event, since the nikah and the walima are traditionally hosted by different sides and paid for separately",
+          "critical": true
+        },
+        {
+          "monthsBefore": 6,
+          "task": "Settle the segregated-seating question between both families before the floor plan is drawn",
+          "critical": true
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Rukhsati",
+          "description": "The bride's departure with her husband's family. The most emotional moment of a South Asian Muslim wedding, and often the point at which the two events divide.",
+          "optional": false
+        },
+        {
+          "name": "Doodh pilai",
+          "description": "The bride's sisters bring milk to the groom and are given money in return.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "The nikah and the walima are two events on two days hosted by two families, and both need budgeting. Couples who plan one wedding are surprised twice."
+      ]
+    },
+    "Arab": {
+      "label": "Arab",
+      "terms": {
+        "ceremony": "the katb el-kitab"
+      },
+      "addEvents": [
+        {
+          "id": "zaffe",
+          "name": "The zaffe",
+          "when": "Wedding evening",
+          "optional": true,
+          "default": true,
+          "description": "The drummed and piped entrance procession that brings the couple into the hall. Loud, professional and usually the single most expensive fifteen minutes of the night.",
+          "hosts": "Both families"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "zaffe-troupe",
+          "name": "Zaffe troupe",
+          "section": "Music & Entertainment",
+          "event": "zaffe",
+          "note": "Drummers, pipers and dancers. Priced per performance and worth booking a named troupe rather than a general band.",
+          "essential": true,
+          "shareOfBudget": 0.04,
+          "unit": "fixed",
+          "supplierCategory": "Musicians",
+          "religiousRequirement": false
+        },
+        {
+          "id": "mahr-gold",
+          "name": "Mahr in gold",
+          "section": "Rings & Gifts",
+          "event": "nikah",
+          "note": "In many Arab families the mahr is substantial gold, presented publicly and recorded in the contract.",
+          "essential": true,
+          "shareOfBudget": 0.05,
+          "unit": "fixed",
+          "supplierCategory": "Jeweller",
+          "religiousRequirement": true
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 8,
+          "task": "Book the zaffe troupe and check the venue's decibel limits and whether they permit open flame or sparklers in the procession",
+          "critical": false
+        },
+        {
+          "monthsBefore": 7,
+          "task": "Agree the mahr between the families and have it written into the contract precisely, not approximately",
+          "critical": true
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Katb el-kitab",
+          "description": "The signing of the contract, which may happen weeks or months before the celebration. Legally and religiously you are married from that point, which surprises guests.",
+          "optional": false
+        }
+      ],
+      "addGotchas": [
+        "The katb el-kitab can precede the party by months. Be clear with guests and suppliers which event they are attending.",
+        "Zaffe troupes bring sparklers and drums that many Western venues prohibit. Confirm in writing."
+      ]
+    },
+    "Turkish, Balkan & Central Asian": {
+      "label": "Turkish, Balkan & Central Asian",
+      "addEvents": [
+        {
+          "id": "kina",
+          "name": "Kına gecesi — the henna night",
+          "when": "The night before",
+          "optional": true,
+          "default": true,
+          "description": "The bride's henna night. She is veiled in red, henna is placed in her palm and a coin closed into it, and the songs are deliberately designed to make her cry.",
+          "hosts": "Both families"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "takı",
+          "name": "Takı — the gold pinning",
+          "section": "Rings & Gifts",
+          "event": "dugun",
+          "note": "Guests pin gold coins and notes to the couple during a dedicated part of the evening. It is a major source of the wedding's funding and needs someone managing it.",
+          "essential": true,
+          "shareOfBudget": 0.03,
+          "unit": "fixed",
+          "supplierCategory": "",
+          "religiousRequirement": false
+        },
+        {
+          "id": "davul",
+          "name": "Davul and zurna players",
+          "section": "Music & Entertainment",
+          "event": "kina",
+          "note": "Davul and zurna — drum and shawm — at the henna night and at the door on the day. Loud by design; check the venue's limits.",
+          "essential": false,
+          "shareOfBudget": 0.02,
+          "unit": "fixed",
+          "supplierCategory": "Musicians",
+          "religiousRequirement": false
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 3,
+          "task": "Name someone trusted to manage and secure the takı on the night",
+          "critical": true
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Takı töreni",
+          "description": "The gold-pinning ceremony, announced guest by guest. In many families the amounts are effectively public.",
+          "optional": false
+        }
+      ],
+      "addGotchas": [
+        "The takı arrives at the end of the night while suppliers want paying earlier. Plan the cash flow, not just the total."
+      ]
+    },
+    "Southeast Asian": {
+      "label": "Southeast Asian",
+      "addGotchas": [
+        "Malay and Indonesian practice includes the bersanding and the akad nikah as distinct events, often on different days."
+      ]
+    },
+    "African": {
+      "label": "African",
+      "addCustoms": [
+        {
+          "name": "Seventh-day gathering",
+          "description": "In Somali practice a further gathering is often held around a week after the nikah.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Somali, West African and East African Muslim practice differ substantially from each other and from South Asian norms. Ask both families rather than assuming a shared template."
+      ]
+    },
+    "Other / mixed": {
+      "label": "Other / mixed",
+      "addGotchas": [
+        "Sunni and Shia practice differ on aspects of the contract, the witnesses and the permissibility of certain celebrations. Where the two families differ, settle it with both imams early."
+      ]
+    }
+  },
   "sources": [
     "https://www.binai.org.au/blog/what-is-nikah",
     "https://en.wikipedia.org/wiki/Islamic_marriage_contract",

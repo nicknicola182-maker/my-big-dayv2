@@ -49,3 +49,18 @@ npx wrangler secret put GOOGLE_PLACES_API_KEY  # in-app supplier results (consol
 | POST | /api/scan | Bearer | AI document extraction (needs ANTHROPIC_API_KEY) |
 | GET | /api/suppliers?q=&where= | – | Places results (needs GOOGLE_PLACES_API_KEY) |
 | POST | /api/enquiry | Bearer | store enquiry |
+
+## If you have already deployed once (you haven't yet, but for later)
+
+Plan sync now uses optimistic concurrency: the client sends the revision it last saw,
+and a stale write gets a 409 with the current plan so the client can merge instead of
+overwriting. Fresh deployments get the column from `schema.sql`. An existing database
+needs it added once:
+
+```
+npx wrangler d1 execute wedding-app --remote \
+  --command "ALTER TABLE plans ADD COLUMN rev INTEGER NOT NULL DEFAULT 0;"
+```
+
+Without the column the worker will error on every plan write, so run it before deploying
+the new code.

@@ -1,0 +1,580 @@
+{
+  "id": "quaker",
+  "name": "Quaker (Religious Society of Friends)",
+  "shortName": "Quaker",
+  "faithGroup": "Christian",
+  "blurb": "A wedding in the manner of Friends: no officiant, no set words beyond the promises, and a meeting house full of people sitting in silence until someone is moved to speak.",
+  "commonCountries": [
+    "GB",
+    "IE",
+    "US",
+    "CA",
+    "AU",
+    "NZ",
+    "KE"
+  ],
+  "typicalGuests": {
+    "low": 30,
+    "typical": 70,
+    "high": 150
+  },
+  "typicalDays": 1,
+  "terms": {
+    "officiant": "the meeting (there is no officiant)",
+    "ceremonyVenue": "meeting house",
+    "ceremony": "the meeting for worship for solemnisation of marriage",
+    "bestMan": "supporting friend",
+    "maidOfHonour": "supporting friend",
+    "reception": "the shared meal",
+    "firstDance": "first dance",
+    "witnesses": "all present sign as witnesses"
+  },
+  "events": [
+    {
+      "id": "application",
+      "name": "Application to the area meeting",
+      "when": "Four to six months before",
+      "optional": false,
+      "default": true,
+      "description": "You write to the area meeting asking to marry under the care of the meeting. Two Friends are appointed to meet you, and the meeting minutes its agreement. This is not a formality — it is the mechanism by which a Quaker marriage becomes possible at all, and it cannot be hurried.",
+      "hosts": "The couple and the area meeting"
+    },
+    {
+      "id": "clearness",
+      "name": "Meeting for clearness",
+      "when": "Three to five months before",
+      "optional": true,
+      "default": true,
+      "description": "An unhurried, confidential conversation with two or three Friends about your readiness to marry. It is supportive rather than examining, but it is taken seriously and people often find it the most useful hour of their engagement.",
+      "hosts": "Appointed Friends"
+    },
+    {
+      "id": "notice",
+      "name": "Giving notice to the superintendent registrar",
+      "when": "At least 29 days before",
+      "optional": false,
+      "default": true,
+      "description": "The civil notice, exactly as for any other marriage. A Quaker marriage is legally recognised in England and Wales, but the state still requires notice at the register office first.",
+      "hosts": "The couple"
+    },
+    {
+      "id": "ceremony",
+      "name": "The meeting for worship for solemnisation",
+      "when": "Wedding day",
+      "optional": false,
+      "default": true,
+      "description": "Everyone settles into silence. When the couple are ready they stand, take hands and make their declarations. The silence resumes, and Friends speak as they feel moved. The registering officer reads the certificate aloud, and it is signed. There is no processional, no giving away and no pronouncement.",
+      "hosts": "The meeting"
+    },
+    {
+      "id": "signing",
+      "name": "Signing the certificate",
+      "when": "Immediately after the declarations",
+      "optional": false,
+      "default": true,
+      "description": "The Quaker marriage certificate is signed by the couple and two witnesses, then read aloud. At the close of the meeting everyone present is invited to sign it — often a hundred signatures, and the reason Quaker certificates end up framed.",
+      "hosts": "All present"
+    },
+    {
+      "id": "meal",
+      "name": "The shared meal",
+      "when": "Wedding day",
+      "optional": true,
+      "default": true,
+      "description": "Usually simple and often self-catered in the meeting house, though there is nothing preventing anything grander. Alcohol is a question to ask the meeting about rather than assume.",
+      "hosts": "Both families"
+    }
+  ],
+  "items": [
+    {
+      "id": "mh-hire",
+      "name": "Meeting house hire",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "Meetings usually ask a modest contribution rather than a commercial fee, and some ask nothing from members. Offer generously — the building is maintained by the meeting.",
+      "essential": true,
+      "shareOfBudget": 0.0268,
+      "unit": "fixed",
+      "supplierCategory": "Meeting house",
+      "religiousRequirement": true
+    },
+    {
+      "id": "mh-donation",
+      "name": "Donation to the meeting",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "A separate voluntary gift, distinct from any room charge. Customary and quietly expected.",
+      "essential": false,
+      "shareOfBudget": 0.0134,
+      "unit": "fixed",
+      "supplierCategory": "Meeting house",
+      "religiousRequirement": false
+    },
+    {
+      "id": "certificate",
+      "name": "The Quaker marriage certificate",
+      "section": "Stationery",
+      "event": "signing",
+      "note": "A large calligraphed sheet everyone present signs. Many couples commission a calligrapher; it is the document that hangs on the wall for fifty years, so it is worth doing properly.",
+      "essential": true,
+      "shareOfBudget": 0.0268,
+      "unit": "fixed",
+      "supplierCategory": "Calligrapher",
+      "religiousRequirement": true
+    },
+    {
+      "id": "reg-fees",
+      "name": "Notice fees and certified copies",
+      "section": "Ceremony",
+      "event": "notice",
+      "note": "Statutory fees paid at the register office for giving notice, plus copies of the entry afterwards.",
+      "essential": true,
+      "shareOfBudget": 0.0107,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": true
+    },
+    {
+      "id": "seating",
+      "name": "Extra seating and layout",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "Meeting houses seat in a circle or square facing inward, not in rows. If you are expecting more than the room holds, the layout needs planning rather than just adding chairs.",
+      "essential": false,
+      "shareOfBudget": 0.0179,
+      "unit": "fixed",
+      "supplierCategory": "Hire company",
+      "religiousRequirement": false
+    },
+    {
+      "id": "hearing",
+      "name": "Hearing loop or amplification",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "Ministry comes from anywhere in the room and is often quiet. Without amplification, older guests miss most of the spoken content of the wedding.",
+      "essential": false,
+      "shareOfBudget": 0.0161,
+      "unit": "fixed",
+      "supplierCategory": "AV supplier",
+      "religiousRequirement": false
+    },
+    {
+      "id": "venue",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "event": "meal",
+      "note": "Many couples simply use the meeting house and its garden. If you hire elsewhere, remember the ceremony has no fixed end time.",
+      "essential": false,
+      "shareOfBudget": 0.0804,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "event": "meal",
+      "note": "Frequently a shared lunch brought by the meeting, which costs almost nothing and means a great deal. Caterers are entirely acceptable — ask the meeting about alcohol on the premises first.",
+      "essential": true,
+      "shareOfBudget": 0.2677,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "section": "Reception",
+      "event": "meal",
+      "note": "Some meetings are dry and some are relaxed about it. This is a question for the meeting, not an assumption.",
+      "essential": false,
+      "shareOfBudget": 0.0536,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "cake",
+      "name": "Cake",
+      "section": "Reception",
+      "event": "meal",
+      "note": "Often made by a family member or the meeting. There is no cutting ceremony unless you want one.",
+      "essential": false,
+      "shareOfBudget": 0.0179,
+      "unit": "fixed",
+      "supplierCategory": "Baker",
+      "religiousRequirement": false
+    },
+    {
+      "id": "hire-crockery",
+      "name": "Crockery, glassware and linen hire",
+      "section": "Reception",
+      "event": "meal",
+      "note": "Meeting houses rarely hold enough for a hundred people.",
+      "essential": false,
+      "shareOfBudget": 0.0179,
+      "unit": "fixed",
+      "supplierCategory": "Hire company",
+      "religiousRequirement": false
+    },
+    {
+      "id": "attire1",
+      "name": "Wedding outfit",
+      "section": "Attire",
+      "event": "ceremony",
+      "note": "Quaker weddings run plainer than most, but there is no rule and no expectation. Wear what you would be comfortable sitting in silence in for an hour.",
+      "essential": true,
+      "shareOfBudget": 0.0625,
+      "unit": "fixed",
+      "supplierCategory": "Bridal boutique",
+      "religiousRequirement": false
+    },
+    {
+      "id": "attire2",
+      "name": "Second outfit",
+      "section": "Attire",
+      "event": "ceremony",
+      "note": "The second outfit, on the same principle — comfortable, unshowy, and fine to be an existing suit or dress.",
+      "essential": true,
+      "shareOfBudget": 0.0446,
+      "unit": "fixed",
+      "supplierCategory": "Tailor",
+      "religiousRequirement": false
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "section": "Rings & Gifts",
+      "event": "ceremony",
+      "note": "Rings are usual but not required, and there is no blessing of them — you simply exchange them during the declarations if you wish.",
+      "essential": false,
+      "shareOfBudget": 0.0446,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "photo",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "event": "ceremony",
+      "note": "Brief the photographer carefully: no flash, no moving about during worship, and the key moment is unannounced. Many meetings ask for no photography at all during the meeting itself.",
+      "essential": true,
+      "shareOfBudget": 0.0714,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "video",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "event": "ceremony",
+      "note": "Often declined. Ask the meeting.",
+      "essential": false,
+      "shareOfBudget": 0.0312,
+      "unit": "fixed",
+      "supplierCategory": "Videographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers",
+      "section": "Flowers & Styling",
+      "event": "ceremony",
+      "note": "Restrained by convention — often a single arrangement on the central table. Elaborate florals sit oddly in a meeting house.",
+      "essential": false,
+      "shareOfBudget": 0.0312,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "stationery",
+      "name": "Invitations and order of the day",
+      "section": "Stationery",
+      "event": "ceremony",
+      "note": "Worth printing a short explanation of what will happen. Most guests have never sat in Quaker worship and will be anxious about the silence unless you tell them what it is.",
+      "essential": true,
+      "shareOfBudget": 0.0223,
+      "unit": "fixed",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": true
+    },
+    {
+      "id": "travel",
+      "name": "Transport",
+      "section": "Transport",
+      "event": "ceremony",
+      "note": "Meeting houses are usually in towns with poor parking. Tell guests where to park before the day, not on it.",
+      "essential": false,
+      "shareOfBudget": 0.0179,
+      "unit": "fixed",
+      "supplierCategory": "Transport",
+      "religiousRequirement": false
+    },
+    {
+      "id": "music",
+      "name": "Musicians for the meal",
+      "section": "Music & Entertainment",
+      "event": "meal",
+      "note": "There is no music during the meeting itself unless someone is moved to sing.",
+      "essential": false,
+      "shareOfBudget": 0.0402,
+      "unit": "fixed",
+      "supplierCategory": "Musicians",
+      "religiousRequirement": false
+    },
+    {
+      "id": "beauty",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "event": "ceremony",
+      "note": "Hair and make-up if you want them. Many Quaker couples skip this line entirely.",
+      "essential": false,
+      "shareOfBudget": 0.0268,
+      "unit": "fixed",
+      "supplierCategory": "Beauty",
+      "religiousRequirement": false
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts for those who helped",
+      "section": "Rings & Gifts",
+      "event": "meal",
+      "note": "There are no paid attendants, so the people who make a Quaker wedding work are all volunteers.",
+      "essential": false,
+      "shareOfBudget": 0.0179,
+      "unit": "fixed",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "childcare",
+      "name": "Children's room during worship",
+      "section": "Extras",
+      "event": "ceremony",
+      "note": "An hour of silence is a great deal to ask of a four-year-old. Most meetings will help arrange this.",
+      "essential": false,
+      "shareOfBudget": 0.0134,
+      "unit": "fixed",
+      "supplierCategory": "Event services",
+      "religiousRequirement": false
+    },
+    {
+      "id": "contingency",
+      "name": "Contingency",
+      "section": "Extras",
+      "event": "",
+      "note": "Hold something back. Quaker weddings run cheap, but meeting houses throw up surprises — a broken boiler in November, a hearing loop that needs hiring.",
+      "essential": false,
+      "shareOfBudget": 0.0268,
+      "unit": "fixed",
+      "supplierCategory": "",
+      "religiousRequirement": false
+    }
+  ],
+  "timeline": [
+    {
+      "monthsBefore": 13,
+      "task": "Talk to the clerk of your area meeting before fixing anything — the meeting's agreement is the gate everything else passes through",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Write formally to the area meeting asking to marry under its care",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "If neither of you is a member, ask about attender status and what the meeting requires — a registering officer's certificate is needed at the register office if either of you is not a member",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Agree a date with the meeting, remembering that regular meetings for worship have first claim on the building",
+      "critical": true
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Attend your meeting for clearness with the appointed Friends",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Ask the meeting directly about photography, video, flowers, alcohol and confetti rather than assuming any of them",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Check the meeting house capacity, access and hearing loop",
+      "critical": false
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Commission the marriage certificate — calligraphers book up and the sheet must be ready to sign on the day",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Appoint the two witnesses who will sign, and confirm who is acting as registering officer",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Book catering, or arrange the shared meal with the meeting",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Send invitations with a plain explanation of Quaker worship — most guests will not know what to expect",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Book the photographer and brief them on when they may and may not move",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Give notice of marriage at the register office; you must have lived in the district seven days first",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "If either of you is not a member, get the registering officer's certificate to the superintendent registrar when you give notice",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Confirm the room layout and seating with the meeting",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Arrange care for young children during the hour of worship",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Walk through the day with the registering officer — who speaks, when the certificate is read, how the meeting closes",
+      "critical": true
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Confirm the shared meal, crockery and who is clearing up",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "Bring the certificate, the register documents and pens that will not smudge for a hundred signatures",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0,
+      "task": "After the wedding, the registering officer registers the marriage — collect your certified copy",
+      "critical": true
+    }
+  ],
+  "paperwork": [
+    {
+      "item": "Application to the area meeting for marriage under its care",
+      "who": "Both",
+      "note": "This is the substantive permission. Without the meeting's minuted agreement there is no Quaker wedding, and the process takes months rather than weeks."
+    },
+    {
+      "item": "Registering officer's certificate, if either of you is not a member",
+      "who": "The non-member",
+      "note": "Produced to the superintendent registrar when you give notice. It confirms you are authorised to marry according to Quaker usage."
+    },
+    {
+      "item": "Notice of marriage at the register office",
+      "who": "Both",
+      "note": "At least 29 clear days before, in the district where you have lived for the previous seven days. Quaker marriages are legally recognised in England and Wales, but notice is still a civil requirement."
+    },
+    {
+      "item": "Passports or birth certificates and proof of address",
+      "who": "Both",
+      "note": "Taken to the notice appointment."
+    },
+    {
+      "item": "Evidence of the ending of any previous marriage",
+      "who": "Either, if applicable",
+      "note": "Decree absolute or death certificate."
+    },
+    {
+      "item": "The Quaker marriage certificate",
+      "who": "Both",
+      "note": "Signed by the couple and two witnesses during the meeting, read aloud, then signed by everyone present. It is a Quaker document, distinct from the civil register entry."
+    },
+    {
+      "item": "Registration of the marriage by the registering officer",
+      "who": "Both",
+      "note": "Quakers appoint their own registering officers under the Marriage Act 1949, so no civil registrar attends. Your certified copy comes from the registering officer, not the register office."
+    }
+  ],
+  "customs": [
+    {
+      "name": "There is no officiant",
+      "description": "Nobody marries you. In Quaker understanding the couple marry each other in the presence of God and the gathered meeting, so there is no minister, no pronouncement and no giving away. The registering officer has a legal and administrative role, not a priestly one.",
+      "optional": false
+    },
+    {
+      "name": "The declarations",
+      "description": "The only prescribed words. Each takes the other by the hand and says, in the traditional form, 'Friends, I take this my friend to be my husband or wife, promising through divine assistance to be unto him or her a loving and faithful husband or wife, so long as we both on earth shall live.' Meetings will discuss variations with you.",
+      "optional": false
+    },
+    {
+      "name": "The silence",
+      "description": "The meeting begins and ends in silence, and silence fills most of the middle. Guests who have never experienced it find it either profoundly moving or extremely long — a printed explanation beforehand changes which.",
+      "optional": false
+    },
+    {
+      "name": "Spoken ministry",
+      "description": "Anyone present may stand and speak if moved to. You cannot know in advance who will, or whether anyone will. Family members sometimes speak who have never spoken in worship before.",
+      "optional": false
+    },
+    {
+      "name": "Everyone signs the certificate",
+      "description": "At the close, all present are invited to sign — children included. It becomes a record of exactly who was in the room, which is why so many Quaker households have one framed in the hall.",
+      "optional": false
+    },
+    {
+      "name": "Plainness",
+      "description": "Not a rule, but a strong convention. Quaker weddings tend to be simpler than the surrounding culture's, and money not spent is often given away instead.",
+      "optional": true
+    },
+    {
+      "name": "No processional or recessional",
+      "description": "People are seated when the couple arrive, or the couple are already seated among them. There is no aisle walk unless the meeting is content with one.",
+      "optional": true
+    },
+    {
+      "name": "Marriage under the care of the meeting",
+      "description": "The phrase matters: the meeting takes on a continuing responsibility for the marriage, not just the wedding. Some meetings appoint Friends to stay in touch with the couple afterwards.",
+      "optional": false
+    }
+  ],
+  "gotchas": [
+    "The meeting's agreement is not a booking. It is a discernment process that takes months, and it can conclude that the meeting is not ready to take the marriage under its care. Do not book a reception venue before it is minuted.",
+    "If neither of you is a member, some area meetings will still proceed and some will not. Ask early and ask directly, because the answer determines whether a Quaker wedding is possible at all.",
+    "You still have to give civil notice at the register office. Couples occasionally assume that because Quakers register their own marriages, the state is not involved at all.",
+    "The ceremony has no fixed length. Worship ends when the elders close it, which makes a tight reception schedule and a photographer on an hourly rate both awkward.",
+    "Photography during worship is restricted or forbidden in many meetings. Agree it in writing with the meeting and brief the photographer, or you will get a beautiful album with no ceremony in it.",
+    "Alcohol on meeting house premises is a matter for each meeting. Some are entirely relaxed, some do not permit it. Ask before you order.",
+    "There is no rehearsal in the usual sense. Walk through the practicalities with the registering officer instead.",
+    "Guests will not know what to do. Without a printed note explaining the silence, people whisper, check phones and leave during ministry.",
+    "Scotland and Northern Ireland have their own arrangements. If you are marrying outside England and Wales, check with the meeting there rather than assuming the same process.",
+    "The certificate needs a surface, good pens and a steward. A hundred people signing one sheet unmanaged becomes a queue and a smudge."
+  ],
+  "sources": [
+    "https://www.quaker.org.uk/communities/quaker-worship/registering-officers",
+    "https://www.quaker.org.uk/documents/2024-june-edition-registering-officer-handbook",
+    "https://www.quaker.org.uk/documents/quaker-marriage-form-package-2024",
+    "https://qfp.quaker.org.uk/passage/16-51/",
+    "https://www.legislation.gov.uk/ukpga/Geo6/12-13-14/76/part/III/crossheading/marriages-according-to-usages-of-society-of-friends",
+    "https://www.gov.uk/marriages-civil-partnerships",
+    "https://www.gov.uk/government/consultations/tying-the-knot-reforming-weddings-law-in-england-and-wales"
+  ]
+}

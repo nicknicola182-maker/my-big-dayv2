@@ -4,10 +4,24 @@
   "shortName": "Civil",
   "faithGroup": "None",
   "blurb": "A wedding shaped entirely by you: a registrar or celebrant, your own vows, readings and music, and no religious framework unless you choose to borrow from one.",
-  "commonCountries": ["GB", "IE", "US", "AU", "NZ", "CA", "FR", "DE", "NL", "SE"],
-  "typicalGuests": { "low": 20, "typical": 90, "high": 180 },
+  "commonCountries": [
+    "GB",
+    "IE",
+    "US",
+    "AU",
+    "NZ",
+    "CA",
+    "FR",
+    "DE",
+    "NL",
+    "SE"
+  ],
+  "typicalGuests": {
+    "low": 20,
+    "typical": 90,
+    "high": 180
+  },
   "typicalDays": 1,
-
   "terms": {
     "officiant": "registrar or celebrant",
     "ceremonyVenue": "ceremony room",
@@ -18,7 +32,6 @@
     "firstDance": "first dance",
     "witnesses": "witnesses"
   },
-
   "events": [
     {
       "id": "engagement-party",
@@ -111,7 +124,6 @@
       "hosts": "Often the couple or parents"
     }
   ],
-
   "items": [
     {
       "id": "notice-fees",
@@ -240,7 +252,7 @@
       "event": "reception",
       "note": "Usually the single largest line. Check what the per-head price actually includes: staffing, linen, cake cutting, corkage and service charge are the usual quiet extras. Dietary requirements are simpler to handle at a civil wedding than couples fear; caterers deal with them daily.",
       "essential": true,
-      "shareOfBudget": 0.230,
+      "shareOfBudget": 0.23,
       "unit": "perGuest",
       "supplierCategory": "Catering",
       "religiousRequirement": false
@@ -264,7 +276,7 @@
       "event": "evening-reception",
       "note": "The late spread for dancers and evening guests: bacon rolls, pizza, a cheese table, a food truck. If you invite a separate evening guest list, budget this per evening head, not per daytime head.",
       "essential": false,
-      "shareOfBudget": 0.020,
+      "shareOfBudget": 0.02,
       "unit": "perGuest",
       "supplierCategory": "Catering",
       "religiousRequirement": false
@@ -300,7 +312,7 @@
       "event": "",
       "note": "No dress code comes with a civil wedding: full gown, jumpsuit, suit or something entirely your own all work. Made-to-order dresses need six months or more plus alterations; off-the-peg and second-hand are increasingly normal and free up budget elsewhere.",
       "essential": true,
-      "shareOfBudget": 0.050,
+      "shareOfBudget": 0.05,
       "unit": "fixed",
       "supplierCategory": "Bridal",
       "religiousRequirement": false
@@ -336,7 +348,7 @@
       "event": "",
       "note": "Bridesmaids, groomsmen, flower girls and page boys, if you have them; a civil wedding can just as easily have no wedding party at all. Who pays varies by family. Mismatched-but-coordinating outfits have made this line cheaper for many couples.",
       "essential": false,
-      "shareOfBudget": 0.010,
+      "shareOfBudget": 0.01,
       "unit": "perPerson",
       "supplierCategory": "Bridal",
       "religiousRequirement": false
@@ -396,7 +408,7 @@
       "event": "reception",
       "note": "Centrepieces, top table flowers and general styling. Because a civil wedding usually happens in one venue, one coherent look carries the whole day, which is simpler and often cheaper than dressing two locations.",
       "essential": true,
-      "shareOfBudget": 0.030,
+      "shareOfBudget": 0.03,
       "unit": "fixed",
       "supplierCategory": "Florist",
       "religiousRequirement": false
@@ -408,7 +420,7 @@
       "event": "evening-reception",
       "note": "Festoon lights, uplighting or a hired dance floor. Most relevant for marquees, barns and dry-hire spaces; hotels usually come dressed.",
       "essential": false,
-      "shareOfBudget": 0.010,
+      "shareOfBudget": 0.01,
       "unit": "fixed",
       "supplierCategory": "Styling",
       "religiousRequirement": false
@@ -528,7 +540,7 @@
       "event": "",
       "note": "Transport to the ceremony, and between venues if you have two. At a single-venue wedding many couples skip cars entirely or hire one for the arrival photographs only.",
       "essential": false,
-      "shareOfBudget": 0.010,
+      "shareOfBudget": 0.01,
       "unit": "fixed",
       "supplierCategory": "Transport",
       "religiousRequirement": false
@@ -552,7 +564,7 @@
       "event": "ceremony",
       "note": "Exchanged during the ceremony by long custom, though no law in the UK requires rings at all: the marriage is made by the declarations and the signatures. One ring, two rings or none are all fine, and your celebrant or registrar will shape the wording to match.",
       "essential": true,
-      "shareOfBudget": 0.030,
+      "shareOfBudget": 0.03,
       "unit": "fixed",
       "supplierCategory": "Jewellery",
       "religiousRequirement": false
@@ -612,7 +624,7 @@
       "event": "",
       "note": "A full planner suits complicated or long-distance weddings; an on-the-day coordinator suits couples who have planned everything and want to hand over the running of it. Dry-hire venues without in-house staff are where a coordinator earns their fee most obviously.",
       "essential": false,
-      "shareOfBudget": 0.020,
+      "shareOfBudget": 0.02,
       "unit": "fixed",
       "supplierCategory": "Planning",
       "religiousRequirement": false
@@ -630,78 +642,337 @@
       "religiousRequirement": false
     }
   ],
-
   "timeline": [
-    { "monthsBefore": 14, "task": "Decide the shape of the day: register office, an approved venue with a registrar, or a celebrant-led ceremony with a separate statutory marriage (England and Wales) or a legally authorised celebrant (Scotland and Northern Ireland)", "critical": true },
-    { "monthsBefore": 14, "task": "Agree the overall budget and rough guest numbers with everyone contributing", "critical": false },
-    { "monthsBefore": 13, "task": "In England and Wales, check the registration service's availability for your date before you confirm the venue: the registrar and the venue are separate bookings and both must line up", "critical": true },
-    { "monthsBefore": 12, "task": "Book the venue, checking it is on the council's approved premises list if a registrar is marrying you there in England or Wales", "critical": true },
-    { "monthsBefore": 12, "task": "Book the registrars' attendance with the council, or book your celebrant", "critical": true },
-    { "monthsBefore": 12, "task": "Take out wedding insurance as soon as the first deposits are paid", "critical": false },
-    { "monthsBefore": 11, "task": "Book the photographer and videographer", "critical": false },
-    { "monthsBefore": 10, "task": "Book the band or DJ, checking the venue's sound limiter and finish time first", "critical": false },
-    { "monthsBefore": 10, "task": "Start outfit shopping; made-to-order dresses need six months or more plus alterations", "critical": false },
-    { "monthsBefore": 9, "task": "Send save the dates, especially if guests are travelling", "critical": false },
-    { "monthsBefore": 8, "task": "Book the florist, and the caterer if your venue is dry hire", "critical": false },
-    { "monthsBefore": 8, "task": "If marrying abroad, research that country's legal requirements, residency rules and paperwork now, and decide whether to do the legal marriage at home instead", "critical": true },
-    { "monthsBefore": 7, "task": "Start shaping the ceremony: choose readings, music and any symbolic elements, and begin the script with your celebrant if you have one", "critical": false },
-    { "monthsBefore": 6, "task": "In England and Wales, send your proposed music and readings to the registration service for approval, since religious content is not allowed and decisions vary between districts", "critical": false },
-    { "monthsBefore": 5, "task": "Order invitations", "critical": false },
-    { "monthsBefore": 4, "task": "Send invitations, making the daytime and evening guest distinction unmissable if you have one", "critical": false },
-    { "monthsBefore": 4, "task": "Give notice: in England and Wales at your local register office at least 29 days before the ceremony (valid 12 months); in Scotland submit M10 forms no later than 29 days and no earlier than 3 months before; in Northern Ireland at least 28 days before", "critical": true },
-    { "monthsBefore": 3, "task": "Buy the wedding rings, or decide you are not having them", "critical": false },
-    { "monthsBefore": 3, "task": "Hair and make-up trial, timed near a dress fitting", "critical": false },
-    { "monthsBefore": 3, "task": "Choose your two witnesses and tell them what the role involves", "critical": false },
-    { "monthsBefore": 2, "task": "Write your personal vows and share them with your celebrant, or check what additions your registrar allows", "critical": false },
-    { "monthsBefore": 2, "task": "Confirm final numbers with the caterer and the running order with the venue", "critical": true },
-    { "monthsBefore": 1, "task": "Final venue meeting: confirm registrar or celebrant arrival time, the pre-ceremony interview, and where the signing table goes", "critical": false },
-    { "monthsBefore": 1, "task": "If your main ceremony is celebrant-led in England or Wales, confirm the statutory register office booking and the witnesses attending it", "critical": true },
-    { "monthsBefore": 0.5, "task": "In Scotland, collect the marriage schedule in person from the register office in the seven days before the wedding; in Northern Ireland collect it no more than 14 days before", "critical": true },
-    { "monthsBefore": 0.25, "task": "Walk through the ceremony space, or hold a short rehearsal if your celebrant offers one", "critical": false }
+    {
+      "monthsBefore": 14,
+      "task": "Decide the shape of the day: register office, an approved venue with a registrar, or a celebrant-led ceremony with a separate statutory marriage (England and Wales) or a legally authorised celebrant (Scotland and Northern Ireland)",
+      "critical": true
+    },
+    {
+      "monthsBefore": 14,
+      "task": "Agree the overall budget and rough guest numbers with everyone contributing",
+      "critical": false
+    },
+    {
+      "monthsBefore": 13,
+      "task": "In England and Wales, check the registration service's availability for your date before you confirm the venue: the registrar and the venue are separate bookings and both must line up",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the venue, checking it is on the council's approved premises list if a registrar is marrying you there in England or Wales",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the registrars' attendance with the council, or book your celebrant",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Take out wedding insurance as soon as the first deposits are paid",
+      "critical": false
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Book the photographer and videographer",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the band or DJ, checking the venue's sound limiter and finish time first",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Start outfit shopping; made-to-order dresses need six months or more plus alterations",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Send save the dates, especially if guests are travelling",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Book the florist, and the caterer if your venue is dry hire",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "If marrying abroad, research that country's legal requirements, residency rules and paperwork now, and decide whether to do the legal marriage at home instead",
+      "critical": true
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Start shaping the ceremony: choose readings, music and any symbolic elements, and begin the script with your celebrant if you have one",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "In England and Wales, send your proposed music and readings to the registration service for approval, since religious content is not allowed and decisions vary between districts",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Order invitations",
+      "critical": false
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Send invitations, making the daytime and evening guest distinction unmissable if you have one",
+      "critical": false
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Give notice: in England and Wales at your local register office at least 29 days before the ceremony (valid 12 months); in Scotland submit M10 forms no later than 29 days and no earlier than 3 months before; in Northern Ireland at least 28 days before",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Buy the wedding rings, or decide you are not having them",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Hair and make-up trial, timed near a dress fitting",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Choose your two witnesses and tell them what the role involves",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Write your personal vows and share them with your celebrant, or check what additions your registrar allows",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Confirm final numbers with the caterer and the running order with the venue",
+      "critical": true
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Final venue meeting: confirm registrar or celebrant arrival time, the pre-ceremony interview, and where the signing table goes",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "If your main ceremony is celebrant-led in England or Wales, confirm the statutory register office booking and the witnesses attending it",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0.5,
+      "task": "In Scotland, collect the marriage schedule in person from the register office in the seven days before the wedding; in Northern Ireland collect it no more than 14 days before",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0.25,
+      "task": "Walk through the ceremony space, or hold a short rehearsal if your celebrant offers one",
+      "critical": false
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Confirm in writing that your venue holds current approved-premises status and which room the approval covers, before you pay a deposit",
+      "critical": true
+    }
   ],
-
   "paperwork": [
-    { "item": "Notice of marriage (England and Wales)", "who": "Both", "note": "Given in person at a register office in the district where you live, after living there for at least the past 7 days. It must be given at least 29 days before the ceremony, the notice is publicly displayed at the register office, and the ceremony must happen within 12 months. If you live in different districts you each give notice in your own." },
-    { "item": "Documents for giving notice", "who": "Both", "note": "A valid passport or UK birth certificate, plus proof of address such as a driving licence, utility bill, bank statement or tenancy agreement. If you were born after 1 January 1983 and use a UK birth certificate, you may also need evidence of a parent's nationality." },
-    { "item": "Evidence a previous marriage or civil partnership has ended", "who": "Either party previously married", "note": "A decree absolute or final order, or the former partner's death certificate. Divorces granted outside the UK have to be checked by the registration service, which carries a fee and can add time, so raise it at the start rather than at the notice appointment." },
-    { "item": "Evidence of any name change", "who": "Either, if applicable", "note": "A deed poll or equivalent, so the names on your documents line up." },
-    { "item": "Immigration documents and joint notice", "who": "Any partner who is not a British or Irish citizen without settled or pre-settled status", "note": "You must give notice together at a designated register office, bring passport photos and evidence of immigration status, and translations of any documents not in English. The standard waiting period can be extended from 29 to 70 days if the Home Office decides to investigate, so build slack into the timeline." },
-    { "item": "Marriage schedule (England and Wales)", "who": "Both", "note": "Since May 2021 you sign a marriage schedule at the ceremony rather than a register book. The registrar takes it away, the marriage is entered in an electronic register, and up to four parents' names (mothers included) can appear on the record." },
-    { "item": "Marriage certificates", "who": "Both", "note": "No longer handed over on the day in England and Wales; they are posted after the marriage is registered. Order extra certified copies for passports, banks and name changes." },
-    { "item": "M10 marriage notice forms (Scotland)", "who": "Both", "note": "Each of you submits an M10 to the registrar for the district where the ceremony will be held, no later than 29 days and no earlier than 3 months before. There is no residency requirement in Scotland; couples from anywhere may marry there." },
-    { "item": "Marriage schedule (Scotland)", "who": "Both", "note": "One of you must collect it in person from the register office in the seven days before the wedding; nobody can collect it for you. It is signed after the ceremony by you both, the celebrant and two witnesses aged 16 or over, and must be returned to the register office within three days." },
-    { "item": "Marriage notice forms (Northern Ireland)", "who": "Both", "note": "Submitted to the registrar for the district where the ceremony takes place, at least 28 days before and no more than a year ahead; registration offices recommend around 12 to 14 weeks. The schedule is collected in person no more than 14 days before the ceremony and returned within three working days after it." },
-    { "item": "Three months notification (Republic of Ireland)", "who": "Both", "note": "You must notify a civil registrar (HSE) at least three months before the wedding, usually in person, and you receive a Marriage Registration Form that the solemniser needs on the day. Humanist Association of Ireland celebrants have been legal solemnisers since 2012." },
-    { "item": "Statutory ceremony booking (England and Wales two-step)", "who": "Both, if your main ceremony is celebrant-led", "note": "The short register office ceremony that makes the marriage legal. Councils run them on limited days with only your two witnesses attending, so book it when you book the celebrant, not as an afterthought." },
-    { "item": "Certificate of no impediment", "who": "Both, if marrying abroad and the country requires one", "note": "Issued after you give notice at your local register office; only British nationals can get one this way, and other nationals should ask their embassy. Check with the country's authorities how long it stays valid, as this varies." },
-    { "item": "Legalisation and translations for marrying abroad", "who": "Both, if marrying abroad", "note": "Many countries require your documents to be legalised with an apostille and translated by a certified translator. Allow weeks rather than days, and check whether the translations themselves need legalising." },
-    { "item": "Foreign marriage certificate", "who": "Both, if you married abroad", "note": "A marriage legally performed abroad is recognised in the UK provided it followed local law and you were both free to marry; there is no requirement, and no facility, to register it in the UK afterwards. Keep the original certificate and a certified translation safe, and buy spare certified copies before you leave the country." }
+    {
+      "item": "Notice of marriage (England and Wales)",
+      "who": "Both",
+      "note": "Given in person at a register office in the district where you live, after living there for at least the past 7 days. It must be given at least 29 days before the ceremony, the notice is publicly displayed at the register office, and the ceremony must happen within 12 months. If you live in different districts you each give notice in your own."
+    },
+    {
+      "item": "Documents for giving notice",
+      "who": "Both",
+      "note": "A valid passport or UK birth certificate, plus proof of address such as a driving licence, utility bill, bank statement or tenancy agreement. If you were born after 1 January 1983 and use a UK birth certificate, you may also need evidence of a parent's nationality."
+    },
+    {
+      "item": "Evidence a previous marriage or civil partnership has ended",
+      "who": "Either party previously married",
+      "note": "A decree absolute or final order, or the former partner's death certificate. Divorces granted outside the UK have to be checked by the registration service, which carries a fee and can add time, so raise it at the start rather than at the notice appointment."
+    },
+    {
+      "item": "Evidence of any name change",
+      "who": "Either, if applicable",
+      "note": "A deed poll or equivalent, so the names on your documents line up."
+    },
+    {
+      "item": "Immigration documents and joint notice",
+      "who": "Any partner who is not a British or Irish citizen without settled or pre-settled status",
+      "note": "You must give notice together at a designated register office, bring passport photos and evidence of immigration status, and translations of any documents not in English. The standard waiting period can be extended from 29 to 70 days if the Home Office decides to investigate, so build slack into the timeline."
+    },
+    {
+      "item": "Marriage schedule (England and Wales)",
+      "who": "Both",
+      "note": "Since May 2021 you sign a marriage schedule at the ceremony rather than a register book. The registrar takes it away, the marriage is entered in an electronic register, and up to four parents' names (mothers included) can appear on the record."
+    },
+    {
+      "item": "Marriage certificates",
+      "who": "Both",
+      "note": "No longer handed over on the day in England and Wales; they are posted after the marriage is registered. Order extra certified copies for passports, banks and name changes."
+    },
+    {
+      "item": "M10 marriage notice forms (Scotland)",
+      "who": "Both",
+      "note": "Each of you submits an M10 to the registrar for the district where the ceremony will be held, no later than 29 days and no earlier than 3 months before. There is no residency requirement in Scotland; couples from anywhere may marry there."
+    },
+    {
+      "item": "Marriage schedule (Scotland)",
+      "who": "Both",
+      "note": "One of you must collect it in person from the register office in the seven days before the wedding; nobody can collect it for you. It is signed after the ceremony by you both, the celebrant and two witnesses aged 16 or over, and must be returned to the register office within three days."
+    },
+    {
+      "item": "Marriage notice forms (Northern Ireland)",
+      "who": "Both",
+      "note": "Submitted to the registrar for the district where the ceremony takes place, at least 28 days before and no more than a year ahead; registration offices recommend around 12 to 14 weeks. The schedule is collected in person no more than 14 days before the ceremony and returned within three working days after it."
+    },
+    {
+      "item": "Three months notification (Republic of Ireland)",
+      "who": "Both",
+      "note": "You must notify a civil registrar (HSE) at least three months before the wedding, usually in person, and you receive a Marriage Registration Form that the solemniser needs on the day. Humanist Association of Ireland celebrants have been legal solemnisers since 2012."
+    },
+    {
+      "item": "Statutory ceremony booking (England and Wales two-step)",
+      "who": "Both, if your main ceremony is celebrant-led",
+      "note": "The short register office ceremony that makes the marriage legal. Councils run them on limited days with only your two witnesses attending, so book it when you book the celebrant, not as an afterthought."
+    },
+    {
+      "item": "Certificate of no impediment",
+      "who": "Both, if marrying abroad and the country requires one",
+      "note": "Issued after you give notice at your local register office; only British nationals can get one this way, and other nationals should ask their embassy. Check with the country's authorities how long it stays valid, as this varies."
+    },
+    {
+      "item": "Legalisation and translations for marrying abroad",
+      "who": "Both, if marrying abroad",
+      "note": "Many countries require your documents to be legalised with an apostille and translated by a certified translator. Allow weeks rather than days, and check whether the translations themselves need legalising."
+    },
+    {
+      "item": "Foreign marriage certificate",
+      "who": "Both, if you married abroad",
+      "note": "A marriage legally performed abroad is recognised in the UK provided it followed local law and you were both free to marry; there is no requirement, and no facility, to register it in the UK afterwards. Keep the original certificate and a certified translation safe, and buy spare certified copies before you leave the country."
+    },
+    {
+      "item": "Check the venue is approved premises, or book the register office",
+      "who": "The couple",
+      "note": "In England and Wales a civil marriage is only legal at a register office or at premises approved for civil marriage. A beautiful barn is not automatically approved, approval covers named rooms rather than the whole site, and it can lapse — ask for the approval in writing and check which room it covers."
+    }
   ],
-
   "customs": [
-    { "name": "Personal vows", "description": "Promises you write yourselves, spoken alongside the required legal declarations rather than instead of them. Registrars allow non-religious additions to the set wording; celebrants build the whole ceremony around them. Keep a printed copy each; almost nobody trusts memory on the day.", "optional": true },
-    { "name": "The celebrant tells your story", "description": "The heart of most celebrant-led and humanist ceremonies: the celebrant recounts how you met and who you are as a couple, gathered from meetings and questionnaires beforehand. It is the part guests most often say they remember.", "optional": true },
-    { "name": "First look", "description": "Seeing each other privately before the ceremony, usually photographed. A deliberate modern swap for the aisle reveal, chosen for calm nerves and better use of the day; couples who prefer the traditional moment simply skip it.", "optional": true },
-    { "name": "Walking in together", "description": "Many couples now enter side by side, or each walk in with a parent, or with both parents, rather than one waiting at the front. There is no rule; a civil ceremony lets you stage the entrance any way that feels honest.", "optional": true },
-    { "name": "Handfasting", "description": "The couple's hands are loosely bound with cords or ribbons while promises are made, a practice with Celtic roots and the likely origin of 'tying the knot'. Used in entirely secular form at many humanist and celebrant ceremonies, sometimes with family members each laying a ribbon.", "optional": true },
-    { "name": "Sand blending", "description": "Each of you pours coloured sand into one vessel, the layers standing for two lives combined; children from either side are often given their own colour so the whole new family pours together. A modern, secular unity ritual.", "optional": true },
-    { "name": "Unity candle", "description": "Two side candles used to light one central candle. It has church origins in some countries but is used in a fully secular form at civil and celebrant ceremonies; outdoor couples learn quickly that wind is its natural enemy.", "optional": true },
-    { "name": "Ring warming", "description": "The rings are passed among guests, or hung where guests can hold them, so everyone briefly holds them and wishes you well before the exchange. Works best at smaller ceremonies where the rings can genuinely travel the room and return in time.", "optional": true },
-    { "name": "Wine box or letter ceremony", "description": "You seal a bottle and letters to each other in a box during the ceremony, to be opened on a future anniversary. A celebrant-era invention with no religious content, and a favourite for couples who want a ritual object to keep.", "optional": true },
-    { "name": "Tree planting", "description": "You pot or plant a tree together, sometimes with soil from each family's home. Suits outdoor and garden weddings, and leaves you with something that grows; check the logistics of moving it afterwards.", "optional": true },
-    { "name": "The quaich", "description": "A two-handled Scottish cup shared as a first drink together, each holding one handle, as a sign of trust. Traditional at Scottish weddings and borrowed well beyond them.", "optional": true },
-    { "name": "Readings by guests", "description": "Friends and family read poems, prose or song lyrics during the ceremony. At a registrar-led ceremony in England and Wales the readings must be non-religious; celebrant ceremonies have no restrictions at all.", "optional": true },
-    { "name": "Confetti exit", "description": "Guests shower you with petals or paper shapes as you leave the ceremony or the venue. Most venues now require biodegradable confetti or dried petals, so supply it in cones and tell the photographer where the throw will happen.", "optional": true },
-    { "name": "Receiving line", "description": "The couple, and traditionally both sets of parents, greet every guest in turn before the meal. Falling out of fashion because it is slow at large weddings; many couples replace it by visiting tables during the meal.", "optional": true },
-    { "name": "Speeches", "description": "The traditional British order is father of the bride, groom, best man, ending with toasts. Civil weddings rearrange freely: both partners speak, a maid of honour speaks, parents share a toast, or speeches are dropped entirely. Tell speakers a time limit and mean it.", "optional": true },
-    { "name": "First dance", "description": "The couple open the dancing to a chosen song, often followed by parent dances in families that keep that custom. Couples who dread it choose a short song, invite everyone onto the floor after the first minute, or skip it without ceremony.", "optional": true },
-    { "name": "Cutting the cake", "description": "The couple make the first cut together, usually photographed, often just before the first dance so the evening moments run in sequence. The old custom of saving a tier has faded along with fruit cake, but nothing stops you.", "optional": true },
-    { "name": "Unplugged ceremony", "description": "Guests are asked to put phones and cameras away for the ceremony so the photographer's shots are clear of screens and everyone is actually watching. Announced by a sign, the celebrant or the registrar's introduction.", "optional": true },
-    { "name": "Something old, something new", "description": "The rhyme continues 'something borrowed, something blue', each item worn or carried for luck. A folk custom with no religious content, kept alive because it gives mothers, grandmothers and friends a way into the wedding morning.", "optional": true },
-    { "name": "The night before apart", "description": "Spending the last night in separate places and not seeing each other until the ceremony. Pure superstition and widely ignored by couples who would rather wake up together; the first look exists partly because this custom loosened.", "optional": true },
-    { "name": "Gift lists and honeymoon funds", "description": "Couples who already share a home increasingly ask for contributions to the honeymoon or a house fund instead of a traditional gift list, usually via a line on the invitation or wedding website. Cash in cards remains completely normal in many families.", "optional": true }
+    {
+      "name": "Personal vows",
+      "description": "Promises you write yourselves, spoken alongside the required legal declarations rather than instead of them. Registrars allow non-religious additions to the set wording; celebrants build the whole ceremony around them. Keep a printed copy each; almost nobody trusts memory on the day.",
+      "optional": true
+    },
+    {
+      "name": "The celebrant tells your story",
+      "description": "The heart of most celebrant-led and humanist ceremonies: the celebrant recounts how you met and who you are as a couple, gathered from meetings and questionnaires beforehand. It is the part guests most often say they remember.",
+      "optional": true
+    },
+    {
+      "name": "First look",
+      "description": "Seeing each other privately before the ceremony, usually photographed. A deliberate modern swap for the aisle reveal, chosen for calm nerves and better use of the day; couples who prefer the traditional moment simply skip it.",
+      "optional": true
+    },
+    {
+      "name": "Walking in together",
+      "description": "Many couples now enter side by side, or each walk in with a parent, or with both parents, rather than one waiting at the front. There is no rule; a civil ceremony lets you stage the entrance any way that feels honest.",
+      "optional": true
+    },
+    {
+      "name": "Handfasting",
+      "description": "The couple's hands are loosely bound with cords or ribbons while promises are made, a practice with Celtic roots and the likely origin of 'tying the knot'. Used in entirely secular form at many humanist and celebrant ceremonies, sometimes with family members each laying a ribbon.",
+      "optional": true
+    },
+    {
+      "name": "Sand blending",
+      "description": "Each of you pours coloured sand into one vessel, the layers standing for two lives combined; children from either side are often given their own colour so the whole new family pours together. A modern, secular unity ritual.",
+      "optional": true
+    },
+    {
+      "name": "Unity candle",
+      "description": "Two side candles used to light one central candle. It has church origins in some countries but is used in a fully secular form at civil and celebrant ceremonies; outdoor couples learn quickly that wind is its natural enemy.",
+      "optional": true
+    },
+    {
+      "name": "Ring warming",
+      "description": "The rings are passed among guests, or hung where guests can hold them, so everyone briefly holds them and wishes you well before the exchange. Works best at smaller ceremonies where the rings can genuinely travel the room and return in time.",
+      "optional": true
+    },
+    {
+      "name": "Wine box or letter ceremony",
+      "description": "You seal a bottle and letters to each other in a box during the ceremony, to be opened on a future anniversary. A celebrant-era invention with no religious content, and a favourite for couples who want a ritual object to keep.",
+      "optional": true
+    },
+    {
+      "name": "Tree planting",
+      "description": "You pot or plant a tree together, sometimes with soil from each family's home. Suits outdoor and garden weddings, and leaves you with something that grows; check the logistics of moving it afterwards.",
+      "optional": true
+    },
+    {
+      "name": "The quaich",
+      "description": "A two-handled Scottish cup shared as a first drink together, each holding one handle, as a sign of trust. Traditional at Scottish weddings and borrowed well beyond them.",
+      "optional": true
+    },
+    {
+      "name": "Readings by guests",
+      "description": "Friends and family read poems, prose or song lyrics during the ceremony. At a registrar-led ceremony in England and Wales the readings must be non-religious; celebrant ceremonies have no restrictions at all.",
+      "optional": true
+    },
+    {
+      "name": "Confetti exit",
+      "description": "Guests shower you with petals or paper shapes as you leave the ceremony or the venue. Most venues now require biodegradable confetti or dried petals, so supply it in cones and tell the photographer where the throw will happen.",
+      "optional": true
+    },
+    {
+      "name": "Receiving line",
+      "description": "The couple, and traditionally both sets of parents, greet every guest in turn before the meal. Falling out of fashion because it is slow at large weddings; many couples replace it by visiting tables during the meal.",
+      "optional": true
+    },
+    {
+      "name": "Speeches",
+      "description": "The traditional British order is father of the bride, groom, best man, ending with toasts. Civil weddings rearrange freely: both partners speak, a maid of honour speaks, parents share a toast, or speeches are dropped entirely. Tell speakers a time limit and mean it.",
+      "optional": true
+    },
+    {
+      "name": "First dance",
+      "description": "The couple open the dancing to a chosen song, often followed by parent dances in families that keep that custom. Couples who dread it choose a short song, invite everyone onto the floor after the first minute, or skip it without ceremony.",
+      "optional": true
+    },
+    {
+      "name": "Cutting the cake",
+      "description": "The couple make the first cut together, usually photographed, often just before the first dance so the evening moments run in sequence. The old custom of saving a tier has faded along with fruit cake, but nothing stops you.",
+      "optional": true
+    },
+    {
+      "name": "Unplugged ceremony",
+      "description": "Guests are asked to put phones and cameras away for the ceremony so the photographer's shots are clear of screens and everyone is actually watching. Announced by a sign, the celebrant or the registrar's introduction.",
+      "optional": true
+    },
+    {
+      "name": "Something old, something new",
+      "description": "The rhyme continues 'something borrowed, something blue', each item worn or carried for luck. A folk custom with no religious content, kept alive because it gives mothers, grandmothers and friends a way into the wedding morning.",
+      "optional": true
+    },
+    {
+      "name": "The night before apart",
+      "description": "Spending the last night in separate places and not seeing each other until the ceremony. Pure superstition and widely ignored by couples who would rather wake up together; the first look exists partly because this custom loosened.",
+      "optional": true
+    },
+    {
+      "name": "Gift lists and honeymoon funds",
+      "description": "Couples who already share a home increasingly ask for contributions to the honeymoon or a house fund instead of a traditional gift list, usually via a line on the invitation or wedding website. Cash in cards remains completely normal in many families.",
+      "optional": true
+    },
+    {
+      "name": "The prescribed words",
+      "description": "Every legal marriage in England and Wales contains two fixed statements you must both say aloud: a declaratory statement that you know of no lawful impediment, and the contracting words in which you take each other as husband or wife. The Marriage Ceremony (Prescribed Words) Act 1996 allows a choice of shortened wordings, but you cannot replace them with your own. Everything else in a civil ceremony — readings, promises, music — is yours, and no part of it may be religious.",
+      "optional": false
+    }
   ],
-
   "gotchas": [
     "In England and Wales a celebrant-led or humanist ceremony is not legally binding on its own. You also need a legal marriage before a registrar, usually a short statutory ceremony at the register office. Budget for both and put both in the diary.",
     "The UK Government announced in October 2025 that it intends to give humanist marriages legal recognition in England and Wales, but with further consultation planned the law has not yet changed. Plan on the two-step unless your registration service confirms otherwise.",
@@ -722,7 +993,50 @@
     "Humanist celebrants and independent celebrants are not the same thing: humanist celebrants conduct non-religious ceremonies only, while independent celebrants will include religious or spiritual content if you ask. In Scotland and Northern Ireland, also check your celebrant is legally authorised to marry you, since only authorised celebrants can.",
     "Registrar fees differ by day of the week and by setting: a weekend ceremony at an approved venue costs several times a weekday register office slot. If the budget is tight, a weekday or an off-season date moves this line and usually the venue price too."
   ],
-
+  "branches": {
+    "Register office": {
+      "label": "Register office",
+      "addGotchas": [
+        "Register office ceremonies are short, often 15–20 minutes, with a fixed guest capacity that is smaller than couples expect."
+      ]
+    },
+    "Licensed venue": {
+      "label": "Licensed venue",
+      "addTimeline": [
+        {
+          "monthsBefore": 13,
+          "task": "Book the registrar before the venue — registrars run out long before venues do, and the venue cannot marry you without one",
+          "critical": true
+        }
+      ],
+      "addGotchas": [
+        "Approval covers named rooms, not the whole property, and it can lapse. Ask for the approval in writing and check which room."
+      ]
+    },
+    "Celebrant-led": {
+      "label": "Celebrant-led",
+      "addTimeline": [
+        {
+          "monthsBefore": 12,
+          "task": "Book the separate legal ceremony first, then the celebrant-led one — the celebrant ceremony has no legal effect in England and Wales",
+          "critical": true
+        }
+      ],
+      "addGotchas": [
+        "A celebrant-led ceremony is not legally binding in England and Wales. You need a register office appointment as well, usually a day or two before.",
+        "In Scotland, by contrast, Humanist and some Pagan celebrants can solemnise a legal marriage anywhere."
+      ]
+    },
+    "Humanist": {
+      "label": "Humanist",
+      "addGotchas": [
+        "Humanist marriages are legal in Scotland, Northern Ireland, Jersey and Guernsey, but not in England and Wales, where a separate civil ceremony is required."
+      ]
+    },
+    "Other": {
+      "label": "Other"
+    }
+  },
   "sources": [
     "https://www.gov.uk/marriages-civil-partnerships",
     "https://www.gov.uk/marriages-civil-partnerships/give-notice",

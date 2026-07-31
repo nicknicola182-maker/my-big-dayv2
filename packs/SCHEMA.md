@@ -90,6 +90,28 @@ Write your pack as **valid JSON** to `/home/claude/packs/<id>.json`.
     "Some dioceses will not permit a wedding during Lent — check early."
   ],
 
+  // Branch deltas. A branch is a named sub-tradition — Russian Orthodox, Gujarati
+  // Hindu, Reform Jewish — that shares the base pack but genuinely differs. Branches
+  // are deltas, never whole packs: they add, remove, rename and override, and the
+  // engine merges them onto the base before building the plan.
+  //
+  // Only put something in a branch if it is actually different. A branch that just
+  // restates the base is noise, and a branch that contradicts the base is a bug.
+  "branches": {
+    "Russian": {
+      "label": "Russian Orthodox",              // shown instead of the raw key
+      "terms":     { "bestMan": "svidetel" },   // overrides base terms
+      "renameEvents": { "ceremony": "The Betrothal and the Crowning (venchanie)" },
+      "dropEvents":   ["resi"],                 // events this branch does not have
+      "addEvents":    [ /* same shape as events[] */ ],
+      "addItems":     [ /* same shape as items[], shares are re-normalised */ ],
+      "addTimeline":  [ /* same shape as timeline[] */ ],
+      "addPaperwork": [ /* same shape as paperwork[] */ ],
+      "addCustoms":   [ /* same shape as customs[] */ ],
+      "addGotchas":   [ "Plain strings, as in gotchas[]." ]
+    }
+  },
+
   "sources": ["https://...", "https://..."]   // where the tradition detail came from
 }
 ```
@@ -106,3 +128,7 @@ Write your pack as **valid JSON** to `/home/claude/packs/<id>.json`.
    note rather than picking one and presenting it as universal.
 5. Aim for **25–45 budget items**, **6–15 events**, **20–30 timeline tasks**.
 6. Cite your sources.
+7. **Branches carry difference, not repetition.** If a Serbian Orthodox wedding does
+   something a Greek one does not, it belongs in the branch. If both do it, it belongs
+   in the base pack. Never duplicate a base entry into a branch to make the branch
+   look fuller.

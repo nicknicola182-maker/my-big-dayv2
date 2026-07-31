@@ -1,6 +1,20 @@
 {
+  "name": "my-big-day",
+  "private": true,
+  "scripts": {
+    "build": "python3 build.py",
+    "check": "python3 build.py --check",
+    "test": "node tests/run.mjs",
+    "test:packs": "node tests/run.mjs packs",
+    "test:engine": "node tests/run.mjs engine",
+    "golden": "node tests/golden.mjs",
+    "golden:write": "TZ=UTC node tests/golden.mjs --write"
+  },
   "dependencies": {
     "fflate": "^0.8.3",
     "qrcode-generator": "^2.0.4"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
   }
 }

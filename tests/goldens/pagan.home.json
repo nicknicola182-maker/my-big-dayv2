@@ -1,0 +1,451 @@
+{
+  "packId": "pagan",
+  "currency": "GBP",
+  "budgetTotal": 30000,
+  "counts": {
+    "events": 4,
+    "items": 25,
+    "itemsOn": 13,
+    "timeline": 20,
+    "paperwork": 8,
+    "runsheet": 4
+  },
+  "allocatedTotal": 29999,
+  "sections": {
+    "Attire": 3484,
+    "Ceremony": 10128,
+    "Extras": 732,
+    "Photos & Film": 3265,
+    "Reception": 11658,
+    "Stationery": 732
+  },
+  "events": [
+    {
+      "id": "planning",
+      "name": "Meeting the celebrant"
+    },
+    {
+      "id": "legal",
+      "name": "The legal marriage"
+    },
+    {
+      "id": "handfasting",
+      "name": "The handfasting"
+    },
+    {
+      "id": "feast",
+      "name": "The feast"
+    }
+  ],
+  "items": [
+    {
+      "id": "celebrant",
+      "name": "Celebrant's fee",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0556,
+      "alloc": 2201
+    },
+    {
+      "id": "registrar",
+      "name": "Register office ceremony and certificates",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0278,
+      "alloc": 1101
+    },
+    {
+      "id": "site",
+      "name": "Outdoor site hire or permission",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.0649,
+      "alloc": 2570
+    },
+    {
+      "id": "cords",
+      "name": "Handfasting cords",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0074,
+      "alloc": 293
+    },
+    {
+      "id": "altar",
+      "name": "Altar, quarter candles and tools",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0167,
+      "alloc": 661
+    },
+    {
+      "id": "broom",
+      "name": "The besom",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.0056,
+      "alloc": 0
+    },
+    {
+      "id": "shelter",
+      "name": "Weather cover",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.0834,
+      "alloc": 3302
+    },
+    {
+      "id": "power",
+      "name": "Generators and lighting",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0278,
+      "alloc": 0
+    },
+    {
+      "id": "loos",
+      "name": "Toilet hire",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0278,
+      "alloc": 0
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.1854,
+      "alloc": 9328
+    },
+    {
+      "id": "mead",
+      "name": "Mead, cider and drinks",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.0463,
+      "alloc": 2330
+    },
+    {
+      "id": "cake",
+      "name": "Cake",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0139,
+      "alloc": 0
+    },
+    {
+      "id": "attire1",
+      "name": "Wedding outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.0556,
+      "alloc": 2201
+    },
+    {
+      "id": "attire2",
+      "name": "Second outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.0324,
+      "alloc": 1283
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers and greenery",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.0371,
+      "alloc": 0
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.0417,
+      "alloc": 0
+    },
+    {
+      "id": "photo",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.0649,
+      "alloc": 3265
+    },
+    {
+      "id": "video",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.0278,
+      "alloc": 0
+    },
+    {
+      "id": "music",
+      "name": "Musicians",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.0463,
+      "alloc": 0
+    },
+    {
+      "id": "fire",
+      "name": "Fire pit and wood",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.0139,
+      "alloc": 0
+    },
+    {
+      "id": "stationery",
+      "name": "Invitations",
+      "section": "Stationery",
+      "on": true,
+      "religious": true,
+      "share": 0.0185,
+      "alloc": 732
+    },
+    {
+      "id": "transport",
+      "name": "Transport and parking",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.0278,
+      "alloc": 0
+    },
+    {
+      "id": "insurance",
+      "name": "Event insurance and site permissions",
+      "section": "Extras",
+      "on": true,
+      "religious": false,
+      "share": 0.0185,
+      "alloc": 732
+    },
+    {
+      "id": "beauty",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.0232,
+      "alloc": 0
+    },
+    {
+      "id": "contingency",
+      "name": "Contingency",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.0297,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 14,
+      "critical": true,
+      "when": "Apr 2026",
+      "task": "Establish the legal position first: in Scotland a registered Pagan celebrant can marry you anywhere; in England and Wales they cannot and you need a separate register office ceremony"
+    },
+    {
+      "id": "t1",
+      "mb": 13,
+      "critical": true,
+      "when": "May 2026",
+      "task": "Find a celebrant whose tradition sits comfortably with both of yours, and meet them before booking anything"
+    },
+    {
+      "id": "t2",
+      "mb": 12,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "Choose the site and get the landowner's permission in writing — walk it for vehicle access, ground conditions and a wet-weather position"
+    },
+    {
+      "id": "t3",
+      "mb": 11,
+      "critical": false,
+      "when": "Jul 2026",
+      "task": "If you want a date on the wheel of the year, remember Beltane and the solstices are the busiest days in the Pagan calendar"
+    },
+    {
+      "id": "t4",
+      "mb": 10,
+      "critical": true,
+      "when": "Aug 2026",
+      "task": "Decide whether the handfasting is for life or for a stated term, and agree how you will explain it to family"
+    },
+    {
+      "id": "t5",
+      "mb": 9,
+      "critical": true,
+      "when": "Sept 2026",
+      "task": "Book the shelter — a yurt, tipi or marquee is a plan; an optimistic forecast is not"
+    },
+    {
+      "id": "t6",
+      "mb": 8,
+      "critical": true,
+      "when": "Oct 2026",
+      "task": "Book generators, toilets and lighting for a site that has none of them"
+    },
+    {
+      "id": "t7",
+      "mb": 7,
+      "critical": true,
+      "when": "Nov 2026",
+      "task": "Arrange event insurance and any licence for alcohol or amplified music"
+    },
+    {
+      "id": "t8",
+      "mb": 6,
+      "critical": true,
+      "when": "Dec 2026",
+      "task": "Confirm fire permissions in writing, including what may be burned and how late"
+    },
+    {
+      "id": "t9",
+      "mb": 6,
+      "critical": false,
+      "when": "Dec 2026",
+      "task": "Book the caterer and confirm proper vegan provision rather than one dish"
+    },
+    {
+      "id": "t10",
+      "mb": 5,
+      "critical": false,
+      "when": "Jan 2027",
+      "task": "Make or commission the cords, and choose the colours together"
+    },
+    {
+      "id": "t11",
+      "mb": 4,
+      "critical": false,
+      "when": "Feb 2027",
+      "task": "Book a photographer who works outdoors in bad light and knows not to cross a cast circle"
+    },
+    {
+      "id": "t12",
+      "mb": 4,
+      "critical": true,
+      "when": "Feb 2027",
+      "task": "Book the register office appointment for the legal marriage, if you are in England or Wales"
+    },
+    {
+      "id": "t13",
+      "mb": 3,
+      "critical": true,
+      "when": "Mar 2027",
+      "task": "Send invitations explaining the format, the ground underfoot and what to wear"
+    },
+    {
+      "id": "t14",
+      "mb": 3,
+      "critical": true,
+      "when": "Mar 2027",
+      "task": "Write the rite with your celebrant — vows, quarter calls, who speaks and when"
+    },
+    {
+      "id": "t15",
+      "mb": 2,
+      "critical": true,
+      "when": "Apr 2027",
+      "task": "Plan the wet-weather version of every part of the day, and tell suppliers what it is"
+    },
+    {
+      "id": "t16",
+      "mb": 2,
+      "critical": false,
+      "when": "Apr 2027",
+      "task": "Confirm parking, shuttles and where cars go if the field is soft"
+    },
+    {
+      "id": "t17",
+      "mb": 1,
+      "critical": false,
+      "when": "May 2027",
+      "task": "Walk the site again with the celebrant and mark the circle"
+    },
+    {
+      "id": "t18",
+      "mb": 1,
+      "critical": false,
+      "when": "May 2027",
+      "task": "Confirm final numbers and the mead"
+    },
+    {
+      "id": "t19",
+      "mb": 0,
+      "critical": true,
+      "when": "Jun 2027",
+      "task": "Register the legal marriage and collect the certificate"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both, in England and Wales",
+      "item": "Civil notice of marriage"
+    },
+    {
+      "id": "p1",
+      "who": "Both, in Scotland",
+      "item": "Registered celebrant confirmation"
+    },
+    {
+      "id": "p2",
+      "who": "The couple",
+      "item": "Landowner's written permission"
+    },
+    {
+      "id": "p3",
+      "who": "The couple",
+      "item": "Public liability insurance"
+    },
+    {
+      "id": "p4",
+      "who": "The couple",
+      "item": "Licence for alcohol or amplified music"
+    },
+    {
+      "id": "p5",
+      "who": "The couple",
+      "item": "Fire permission"
+    },
+    {
+      "id": "p6",
+      "who": "Either, if applicable",
+      "item": "Evidence of the ending of any previous marriage"
+    },
+    {
+      "id": "p7",
+      "who": "Both",
+      "item": "Registration of the legal marriage"
+    }
+  ]
+}

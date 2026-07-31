@@ -1,0 +1,684 @@
+{
+  "packId": "jewish",
+  "currency": "GBP",
+  "budgetTotal": 24000,
+  "counts": {
+    "events": 7,
+    "items": 41,
+    "itemsOn": 22,
+    "timeline": 27,
+    "paperwork": 13,
+    "runsheet": 7
+  },
+  "allocatedTotal": 24002,
+  "sections": {
+    "Attire": 2463,
+    "Beauty": 475,
+    "Ceremony": 1157,
+    "Flowers & Styling": 2047,
+    "Music & Entertainment": 1632,
+    "Photos & Film": 1632,
+    "Reception": 13409,
+    "Rings & Gifts": 742,
+    "Stationery": 445
+  },
+  "events": [
+    {
+      "id": "aufruf",
+      "name": "Aufruf and Shabbat kallah"
+    },
+    {
+      "id": "mikveh",
+      "name": "Mikveh immersion"
+    },
+    {
+      "id": "tisch",
+      "name": "Kabbalat panim and the tisch"
+    },
+    {
+      "id": "ceremony",
+      "name": "The chuppah"
+    },
+    {
+      "id": "yichud",
+      "name": "Yichud"
+    },
+    {
+      "id": "reception",
+      "name": "The reception (seudat mitzvah)"
+    },
+    {
+      "id": "badeken",
+      "name": "Badeken — the veiling"
+    }
+  ],
+  "items": [
+    {
+      "id": "rabbi-fee",
+      "name": "Rabbi's fee",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.015,
+      "alloc": 445
+    },
+    {
+      "id": "cantor-fee",
+      "name": "Cantor (chazan)",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "synagogue-fee",
+      "name": "Synagogue or ceremony venue fee",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 356
+    },
+    {
+      "id": "marriage-authorisation",
+      "name": "Religious marriage authorisation fees",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.003,
+      "alloc": 89
+    },
+    {
+      "id": "ketubah",
+      "name": "Ketubah",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.007,
+      "alloc": 208
+    },
+    {
+      "id": "ceremony-wine-glass",
+      "name": "Kiddush cups, wine and the glass to break",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.002,
+      "alloc": 59
+    },
+    {
+      "id": "kippot",
+      "name": "Kippot for guests",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 0
+    },
+    {
+      "id": "mikveh-fee",
+      "name": "Mikveh fees",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.001,
+      "alloc": 0
+    },
+    {
+      "id": "aufruf-kiddush",
+      "name": "Aufruf kiddush",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "chuppah-hire",
+      "name": "Chuppah hire or build",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": true,
+      "share": 0.014,
+      "alloc": 415
+    },
+    {
+      "id": "chuppah-flowers",
+      "name": "Chuppah and ceremony flowers",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 534
+    },
+    {
+      "id": "reception-styling",
+      "name": "Table centrepieces and reception styling",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.03,
+      "alloc": 890
+    },
+    {
+      "id": "bouquets",
+      "name": "Bouquets and buttonholes",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.007,
+      "alloc": 208
+    },
+    {
+      "id": "venue-hire",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.105,
+      "alloc": 3115
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.26,
+      "alloc": 7713
+    },
+    {
+      "id": "kashrut-supervision",
+      "name": "Kashrut supervision (mashgiach)",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks and kosher wine",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.06,
+      "alloc": 1780
+    },
+    {
+      "id": "cake",
+      "name": "Wedding cake and desserts",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 445
+    },
+    {
+      "id": "service-staffing",
+      "name": "Service charge and staffing",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 356
+    },
+    {
+      "id": "band",
+      "name": "Live band",
+      "section": "Music & Entertainment",
+      "on": true,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 1632
+    },
+    {
+      "id": "dj",
+      "name": "DJ",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.016,
+      "alloc": 0
+    },
+    {
+      "id": "ceremony-music",
+      "name": "Ceremony musicians",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "shtick",
+      "name": "Shtick and dancing props",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 1632
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.035,
+      "alloc": 0
+    },
+    {
+      "id": "album",
+      "name": "Album and prints",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.007,
+      "alloc": 0
+    },
+    {
+      "id": "gown",
+      "name": "Wedding dress",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 1632
+    },
+    {
+      "id": "bridal-accessories",
+      "name": "Veil, shoes and accessories",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 297
+    },
+    {
+      "id": "groom-outfit",
+      "name": "Groom's outfit and kittel",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 534
+    },
+    {
+      "id": "party-attire",
+      "name": "Wedding party outfits",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "hair-makeup",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": true,
+      "religious": false,
+      "share": 0.016,
+      "alloc": 475
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 445
+    },
+    {
+      "id": "benchers-programs",
+      "name": "Benchers and order of service",
+      "section": "Stationery",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "favours",
+      "name": "Favours",
+      "section": "Stationery",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-cars",
+      "name": "Wedding cars",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest transport",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": true,
+      "share": 0.025,
+      "alloc": 742
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts for parents, honourees and each other",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "planner",
+      "name": "Wedding planner or coordinator",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.025,
+      "alloc": 0
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "tzedakah",
+      "name": "Tzedakah (charitable giving)",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Check dates against the Jewish calendar before booking anything: no weddings on Shabbat or festivals, and most of the Omer and the Three Weeks are closed in traditional practice — ask your rabbi exactly which days your community permits"
+    },
+    {
+      "id": "t1",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Choose your officiant and stream early — Orthodox, Conservative/Masorti, Reform/Liberal or a secular celebrant — because it determines the paperwork, the ketubah text, the venue options and, for mixed-faith couples, who will marry you at all"
+    },
+    {
+      "id": "t2",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Book the rabbi and the ceremony venue together, and confirm the date is in the synagogue diary"
+    },
+    {
+      "id": "t3",
+      "mb": 11,
+      "critical": true,
+      "when": "11 months before",
+      "task": "If either of you was previously married in a Jewish ceremony, start the get (religious divorce) now — Orthodox and Conservative rabbis cannot marry you without it, and it takes months"
+    },
+    {
+      "id": "t4",
+      "mb": 11,
+      "critical": true,
+      "when": "11 months before",
+      "task": "Gather proof of Jewish status for an Orthodox marriage: parents' ketubah, a letter from a recognised rabbi, or conversion certificates — records held abroad can take a long time to obtain"
+    },
+    {
+      "id": "t5",
+      "mb": 11,
+      "critical": true,
+      "when": "11 months before",
+      "task": "Book the reception venue, checking kosher catering arrangements, dance floor size for the hora, and a private room for yichud"
+    },
+    {
+      "id": "t6",
+      "mb": 10,
+      "critical": true,
+      "when": "10 months before",
+      "task": "Book the kosher caterer, or agree with the venue how the kitchen will be supervised or koshered — the approved-caterer list for your kashrut authority narrows the field, so move early"
+    },
+    {
+      "id": "t7",
+      "mb": 10,
+      "critical": false,
+      "when": "10 months before",
+      "task": "Book the band, photographer and videographer, briefing them on the tisch, bedeken, chuppah and hora running order"
+    },
+    {
+      "id": "t8",
+      "mb": 9,
+      "critical": true,
+      "when": "9 months before",
+      "task": "Apply for religious marriage authorisation: through the Office of the Chief Rabbi in the United Kingdom, your movement's equivalent elsewhere, or by planning the Rabbinate marriage file if marrying in Israel"
+    },
+    {
+      "id": "t9",
+      "mb": 8,
+      "critical": true,
+      "when": "8 months before",
+      "task": "Order the ketubah, agreeing the exact text with your rabbi before the artist starts — commissioned pieces take weeks to months"
+    },
+    {
+      "id": "t10",
+      "mb": 7,
+      "critical": false,
+      "when": "7 months before",
+      "task": "Arrange the chuppah: hire one, ask the synagogue about theirs, or plan to use a family tallit on poles held by friends"
+    },
+    {
+      "id": "t11",
+      "mb": 7,
+      "critical": true,
+      "when": "7 months before",
+      "task": "Begin marriage preparation with your rabbi — most movements expect a few meetings, and Orthodox communities run chatan and kallah classes"
+    },
+    {
+      "id": "t12",
+      "mb": 6,
+      "critical": true,
+      "when": "6 months before",
+      "task": "Choose the two witnesses (eidim) with your rabbi's guidance — in Orthodox practice they must be religiously observant Jewish men unrelated to either of you or to each other, so do not assume close family can do it"
+    },
+    {
+      "id": "t13",
+      "mb": 6,
+      "critical": false,
+      "when": "6 months before",
+      "task": "Order invitations with the Hebrew date, and confirm the Hebrew spelling of both your names and your parents' Hebrew names — the same details go on the ketubah"
+    },
+    {
+      "id": "t14",
+      "mb": 5,
+      "critical": false,
+      "when": "5 months before",
+      "task": "Decide who receives honours: sheva brachot reciters, chuppah pole holders, ketubah reader — traditional weddings have many honours to give, which is a gift to both families"
+    },
+    {
+      "id": "t15",
+      "mb": 4,
+      "critical": false,
+      "when": "4 months before",
+      "task": "Order kippot and benchers printed with your names and the date"
+    },
+    {
+      "id": "t16",
+      "mb": 4,
+      "critical": false,
+      "when": "4 months before",
+      "task": "Buy the wedding band — a plain metal ring with no stones for the ceremony, owned by the giver — and a second one if you are doing a double-ring exchange"
+    },
+    {
+      "id": "t17",
+      "mb": 3,
+      "critical": true,
+      "when": "3 months before",
+      "task": "Complete civil preliminaries: give notice at the register office in England and Wales, lodge the Notice of Intended Marriage in Australia, or diarise the marriage licence window in the United States and Canada"
+    },
+    {
+      "id": "t18",
+      "mb": 3,
+      "critical": false,
+      "when": "3 months before",
+      "task": "Arrange the aufruf with your synagogue and book the kiddush"
+    },
+    {
+      "id": "t19",
+      "mb": 2,
+      "critical": false,
+      "when": "2 months before",
+      "task": "Book the mikveh appointment for the days before the wedding, and a men's session for the groom if he is immersing"
+    },
+    {
+      "id": "t20",
+      "mb": 2,
+      "critical": false,
+      "when": "2 months before",
+      "task": "Finalise the menu with the caterer and kashrut supervisor, remembering a meat meal means a parev dessert and cake"
+    },
+    {
+      "id": "t21",
+      "mb": 2,
+      "critical": false,
+      "when": "2 months before",
+      "task": "If keeping the week of sheva brachot, line up hosts for each night and warn them about the panim chadashot — each meal needs a guest who was not at the wedding"
+    },
+    {
+      "id": "t22",
+      "mb": 1,
+      "critical": true,
+      "when": "1 months before",
+      "task": "Walk through the ceremony with your rabbi: the ketubah signing, the bedeken, who walks with whom, circling, the ring declaration and the glass"
+    },
+    {
+      "id": "t23",
+      "mb": 1,
+      "critical": true,
+      "when": "1 months before",
+      "task": "Confirm timings for a Shabbat-adjacent date: a Saturday night wedding cannot start until Shabbat ends, which in summer is very late — check havdalah time, supplier overtime and venue closing"
+    },
+    {
+      "id": "t24",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Arrange the yichud room with the venue, including food and drink to break the wedding-day fast if you are fasting"
+    },
+    {
+      "id": "t25",
+      "mb": 0,
+      "critical": true,
+      "when": "0 months before",
+      "task": "Bring the ketubah, the ring, the wrapped glass, the kiddush cups and wine, and the kittel if wearing one — give one person the job of having them all at the venue"
+    },
+    {
+      "id": "t26",
+      "mb": 0,
+      "critical": true,
+      "when": "0 months before",
+      "task": "After the wedding, make sure the marriage is civilly registered: the synagogue's secretary for marriages files it in England and Wales, the officiant returns the licence in North America, and the Rabbinate issues the certificate in Israel — confirm it has actually been done"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both, for Orthodox and Conservative marriages",
+      "item": "Proof of Jewish status"
+    },
+    {
+      "id": "p1",
+      "who": "Both",
+      "item": "Religious marriage authorisation"
+    },
+    {
+      "id": "p2",
+      "who": "Both",
+      "item": "Civil marriage licence or notice"
+    },
+    {
+      "id": "p3",
+      "who": "Both",
+      "item": "Ketubah"
+    },
+    {
+      "id": "p4",
+      "who": "Either party previously married",
+      "item": "Get (religious divorce) from any previous Jewish marriage"
+    },
+    {
+      "id": "p5",
+      "who": "Either party who converted",
+      "item": "Conversion certificate"
+    },
+    {
+      "id": "p6",
+      "who": "Either party previously married or widowed",
+      "item": "Civil divorce decree or death certificate of a former spouse"
+    },
+    {
+      "id": "p7",
+      "who": "Both",
+      "item": "Birth certificates and passports"
+    },
+    {
+      "id": "p8",
+      "who": "Both, optional",
+      "item": "Tenaim (engagement contract)"
+    },
+    {
+      "id": "p9",
+      "who": "Both",
+      "item": "Marriage schedule and registration (England and Wales)"
+    },
+    {
+      "id": "p10",
+      "who": "Both, if marrying in Israel",
+      "item": "Rabbinate marriage file (Israel)"
+    },
+    {
+      "id": "p11",
+      "who": "The officiant",
+      "item": "Officiant's civil authority to solemnise"
+    },
+    {
+      "id": "p12",
+      "who": "The couple, via caterer and venue",
+      "item": "Kashrut certification for the reception"
+    }
+  ]
+}

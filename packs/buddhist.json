@@ -1,0 +1,763 @@
+{
+  "id": "buddhist",
+  "name": "Buddhist",
+  "shortName": "Buddhist",
+  "faithGroup": "Buddhist",
+  "blurb": "Monks bless, they do not marry you — so the wedding is yours to build, and the legal part happens somewhere else entirely.",
+  "commonCountries": [
+    "GB",
+    "TH",
+    "LK",
+    "MM",
+    "KH",
+    "VN",
+    "JP",
+    "CN",
+    "US",
+    "AU",
+    "CA"
+  ],
+  "typicalGuests": {
+    "low": 40,
+    "typical": 120,
+    "high": 400
+  },
+  "typicalDays": 1,
+  "terms": {
+    "officiant": "monks (who bless rather than solemnise)",
+    "ceremonyVenue": "temple, vihara or home shrine",
+    "ceremony": "the blessing",
+    "bestMan": "attendant",
+    "maidOfHonour": "attendant",
+    "reception": "the reception",
+    "firstDance": "first dance",
+    "witnesses": "witnesses"
+  },
+  "events": [
+    {
+      "id": "nekath",
+      "name": "Setting the auspicious time",
+      "when": "Six to twelve months before",
+      "optional": true,
+      "default": true,
+      "description": "In Sri Lankan and Thai practice an astrologer sets the auspicious times — the nekath — for dressing, entering, tying the hands and leaving. The whole day is then built around times you did not choose. Not all Buddhist communities do this.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "dana",
+      "name": "Almsgiving to the monks",
+      "when": "Wedding morning or the day before",
+      "optional": true,
+      "default": true,
+      "description": "Food is offered to the monastic community and merit is dedicated to the couple and to deceased relatives. It usually happens early — often before dawn — and is a separate occasion from the blessing itself.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "blessing",
+      "name": "The blessing ceremony",
+      "when": "Wedding day",
+      "optional": false,
+      "default": true,
+      "description": "Monks chant paritta — protective verses — in Pali. The couple kneel, water is poured, a sacred thread may be tied around the wrists or linking the couple's heads, and merit is dedicated. Monks do not conduct a marriage: they bless a marriage that the couple make themselves.",
+      "hosts": "The monastic community"
+    },
+    {
+      "id": "poruwa",
+      "name": "The poruwa, in Sri Lankan practice",
+      "when": "Wedding day",
+      "optional": true,
+      "default": false,
+      "description": "A decorated platform on which the couple stand for the ceremony, representing their new household. An elder conducts it, the little fingers are tied with thread and water poured, and the couple step off leading with the right foot at the auspicious moment.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "civil",
+      "name": "The civil marriage",
+      "when": "Before or after the blessing",
+      "optional": false,
+      "default": true,
+      "description": "In most Western countries the Buddhist blessing has no legal effect. The legal marriage is a register office or approved-premises ceremony, held separately.",
+      "hosts": "The couple"
+    },
+    {
+      "id": "reception",
+      "name": "The reception",
+      "when": "Wedding day",
+      "optional": false,
+      "default": true,
+      "description": "Entirely a matter of local culture. Thai, Sri Lankan, Vietnamese, Chinese, Japanese and Western Buddhist receptions have almost nothing in common with each other.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "khan-maak",
+      "name": "The groom's procession, in Thai practice",
+      "when": "Wedding morning",
+      "optional": true,
+      "default": false,
+      "description": "The khan maak procession brings the groom to the bride's house with drums, dancing and trays of gifts, and is playfully blocked at symbolic gates until he pays his way through.",
+      "hosts": "The groom's family"
+    },
+    {
+      "id": "water",
+      "name": "The water-pouring",
+      "when": "After the blessing",
+      "optional": true,
+      "default": true,
+      "description": "Guests queue to pour water over the couple's hands from a conch shell, offering a blessing as they do. With three hundred guests this takes far longer than anyone budgets for.",
+      "hosts": "All guests"
+    }
+  ],
+  "items": [
+    {
+      "id": "temple",
+      "name": "Temple or vihara donation",
+      "section": "Ceremony",
+      "event": "blessing",
+      "note": "Monks may not charge for religious services. You give dana — a donation — instead, and the temple will usually tell you what is customary if you ask plainly.",
+      "essential": true,
+      "shareOfBudget": 0.0242,
+      "unit": "fixed",
+      "supplierCategory": "Temple",
+      "religiousRequirement": true
+    },
+    {
+      "id": "monk-transport",
+      "name": "Transport and hospitality for the monks",
+      "section": "Ceremony",
+      "event": "blessing",
+      "note": "If the ceremony is not at the temple, the monks must be collected, seated appropriately and fed before midday. This is a logistical constraint, not a courtesy.",
+      "essential": true,
+      "shareOfBudget": 0.0161,
+      "unit": "fixed",
+      "supplierCategory": "Transport",
+      "religiousRequirement": true
+    },
+    {
+      "id": "dana-food",
+      "name": "Almsgiving food offering",
+      "section": "Ceremony",
+      "event": "dana",
+      "note": "Prepared for the monastic community, traditionally by the families. Monks in most Theravada traditions do not eat after midday, so timing is fixed.",
+      "essential": false,
+      "shareOfBudget": 0.0242,
+      "unit": "fixed",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": true
+    },
+    {
+      "id": "astrologer",
+      "name": "Astrologer's fee for the nekath",
+      "section": "Ceremony",
+      "event": "nekath",
+      "note": "Where the auspicious times are set, the astrologer is consulted early and the whole run of the day hangs off the times given.",
+      "essential": false,
+      "shareOfBudget": 0.0097,
+      "unit": "fixed",
+      "supplierCategory": "Astrologer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "poruwa-build",
+      "name": "Poruwa platform and decoration",
+      "section": "Flowers & Styling",
+      "event": "poruwa",
+      "note": "Built and dressed by a specialist in Sri Lankan practice — betel leaves, coconut flowers, white cloth.",
+      "essential": false,
+      "shareOfBudget": 0.0363,
+      "unit": "fixed",
+      "supplierCategory": "Decorator",
+      "religiousRequirement": false
+    },
+    {
+      "id": "thread",
+      "name": "Sacred thread, water vessel and conch",
+      "section": "Ceremony",
+      "event": "blessing",
+      "note": "The sai sin thread, the conch shell and the water vessel. Usually supplied by the temple; confirm rather than assume.",
+      "essential": false,
+      "shareOfBudget": 0.0081,
+      "unit": "fixed",
+      "supplierCategory": "Temple supplies",
+      "religiousRequirement": true
+    },
+    {
+      "id": "shrine",
+      "name": "Shrine, Buddha image and offerings",
+      "section": "Ceremony",
+      "event": "blessing",
+      "note": "Flowers, candles and incense before the Buddha image. Flowers that fade during the ceremony are the traditional point of them.",
+      "essential": true,
+      "shareOfBudget": 0.0161,
+      "unit": "fixed",
+      "supplierCategory": "Decorator",
+      "religiousRequirement": true
+    },
+    {
+      "id": "civil-fees",
+      "name": "Civil notice, registrar and certificates",
+      "section": "Ceremony",
+      "event": "civil",
+      "note": "Statutory fees for the legal marriage, which is separate from the blessing in most Western countries.",
+      "essential": true,
+      "shareOfBudget": 0.0161,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": true
+    },
+    {
+      "id": "registrar-attend",
+      "name": "Registrar attendance at a venue",
+      "section": "Ceremony",
+      "event": "civil",
+      "note": "Where you hold the legal ceremony at approved premises rather than the register office.",
+      "essential": false,
+      "shareOfBudget": 0.0161,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": false
+    },
+    {
+      "id": "venue",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Anything from a temple hall to a hotel. If a drumming procession is part of the day, ask about noise conditions before booking.",
+      "essential": false,
+      "shareOfBudget": 0.0726,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "event": "reception",
+      "note": "The largest line. Cater vegetarian properly — many Buddhist guests are vegetarian, and in some communities the whole event is.",
+      "essential": true,
+      "shareOfBudget": 0.2096,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "section": "Reception",
+      "event": "reception",
+      "note": "The fifth precept discourages intoxicants. Practice varies enormously: some families serve nothing, others serve freely. Ask both families before you order, and never assume the temple's view applies to the reception.",
+      "essential": false,
+      "shareOfBudget": 0.0444,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "cake",
+      "name": "Cake",
+      "section": "Reception",
+      "event": "reception",
+      "note": "A Western addition in most Buddhist cultures, and entirely optional.",
+      "essential": false,
+      "shareOfBudget": 0.0121,
+      "unit": "fixed",
+      "supplierCategory": "Baker",
+      "religiousRequirement": false
+    },
+    {
+      "id": "attire1",
+      "name": "Wedding outfit",
+      "section": "Attire",
+      "event": "blessing",
+      "note": "Thai chut thai, Sri Lankan osari, Vietnamese áo dài, Japanese kimono or Western dress. White is not automatically the colour, and in some East Asian contexts it carries funeral associations.",
+      "essential": true,
+      "shareOfBudget": 0.0605,
+      "unit": "fixed",
+      "supplierCategory": "Bridal boutique",
+      "religiousRequirement": false
+    },
+    {
+      "id": "attire2",
+      "name": "Second outfit",
+      "section": "Attire",
+      "event": "reception",
+      "note": "Changing between the blessing and the reception is standard in most Buddhist cultures.",
+      "essential": true,
+      "shareOfBudget": 0.0403,
+      "unit": "fixed",
+      "supplierCategory": "Tailor",
+      "religiousRequirement": false
+    },
+    {
+      "id": "jewellery",
+      "name": "Jewellery",
+      "section": "Attire",
+      "event": "blessing",
+      "note": "Gold is given and worn generously in Thai and Sri Lankan weddings, and is a family statement rather than an accessory.",
+      "essential": false,
+      "shareOfBudget": 0.0363,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "section": "Rings & Gifts",
+      "event": "civil",
+      "note": "Usually exchanged at the civil ceremony rather than the blessing, since the blessing has no exchange of vows.",
+      "essential": false,
+      "shareOfBudget": 0.0323,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "sinsod",
+      "name": "Sinsod or dowry, in Thai practice",
+      "section": "Rings & Gifts",
+      "event": "khan-maak",
+      "note": "Money and gold presented to the bride's family and displayed during the khan maak procession. Negotiated between families well in advance, and a real and substantial line rather than a token.",
+      "essential": false,
+      "shareOfBudget": 0.0403,
+      "unit": "fixed",
+      "supplierCategory": "",
+      "religiousRequirement": false
+    },
+    {
+      "id": "photo",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "event": "blessing",
+      "note": "Brief them on when to stay still. Chanting is not a moment to move around during, and the water-pouring is the shot everyone wants.",
+      "essential": true,
+      "shareOfBudget": 0.0605,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "video",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "event": "blessing",
+      "note": "Worth having for the chanting, which most guests will not understand in the moment and often want to revisit.",
+      "essential": false,
+      "shareOfBudget": 0.0282,
+      "unit": "fixed",
+      "supplierCategory": "Videographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers",
+      "section": "Flowers & Styling",
+      "event": "reception",
+      "note": "Jasmine, lotus and marigold carry meaning in most Buddhist cultures; orchids are the Thai default.",
+      "essential": false,
+      "shareOfBudget": 0.0323,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "music",
+      "name": "Musicians or DJ",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "Live traditional music during the procession, anything you like afterwards.",
+      "essential": false,
+      "shareOfBudget": 0.0444,
+      "unit": "fixed",
+      "supplierCategory": "DJ",
+      "religiousRequirement": false
+    },
+    {
+      "id": "drummers",
+      "name": "Drummers for the procession",
+      "section": "Music & Entertainment",
+      "event": "khan-maak",
+      "note": "Thai and Sri Lankan processions are loud by design. Check the venue's noise conditions.",
+      "essential": false,
+      "shareOfBudget": 0.0161,
+      "unit": "fixed",
+      "supplierCategory": "Musicians",
+      "religiousRequirement": false
+    },
+    {
+      "id": "stationery",
+      "name": "Invitations",
+      "section": "Stationery",
+      "event": "reception",
+      "note": "If the legal ceremony and the blessing are separate events, say clearly which one guests are invited to.",
+      "essential": true,
+      "shareOfBudget": 0.0202,
+      "unit": "fixed",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": true
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "section": "Transport",
+      "event": "reception",
+      "note": "Getting guests between the temple and the reception, and the monks to and from wherever the blessing happens.",
+      "essential": false,
+      "shareOfBudget": 0.0161,
+      "unit": "fixed",
+      "supplierCategory": "Transport",
+      "religiousRequirement": false
+    },
+    {
+      "id": "beauty",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "event": "blessing",
+      "note": "Traditional dressing for a Sri Lankan or Thai bride is elaborate and takes hours — and often has to finish by an auspicious time.",
+      "essential": false,
+      "shareOfBudget": 0.0282,
+      "unit": "fixed",
+      "supplierCategory": "Beauty",
+      "religiousRequirement": false
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts and favours",
+      "section": "Rings & Gifts",
+      "event": "reception",
+      "note": "Favours for guests, and thanks for the elders who conduct the poruwa or lead the procession.",
+      "essential": false,
+      "shareOfBudget": 0.0161,
+      "unit": "fixed",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "contingency",
+      "name": "Contingency",
+      "section": "Extras",
+      "event": "",
+      "note": "Auspicious times move, and monks' availability is not negotiable. Hold something back.",
+      "essential": false,
+      "shareOfBudget": 0.0226,
+      "unit": "fixed",
+      "supplierCategory": "",
+      "religiousRequirement": false
+    }
+  ],
+  "timeline": [
+    {
+      "monthsBefore": 14,
+      "task": "Ask the temple what it will and will not do, and whether the monks travel — some communities will only bless at the temple",
+      "critical": true
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Decide the civil plan first: in England and Wales a Buddhist blessing has no legal effect on its own and most viharas are not registered for marriage",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "If your families set auspicious times, consult the astrologer before booking anything, because the whole day hangs off the times given",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the temple and the monks — a monastic community's calendar is not a commercial diary and cannot be moved",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Check whether the wedding falls in Vassa, the rains retreat, when many communities avoid weddings",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the venue for the legal ceremony and, if it is approved premises, the registrar",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Agree the sinsod or equivalent between the families if your tradition includes one, and get the figure settled early",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Book the reception venue, checking noise conditions if there will be a drumming procession",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Book the caterer and confirm the vegetarian provision properly rather than as an afterthought",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Confirm the monks' meal must be served before midday, and build the morning around that",
+      "critical": true
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Order outfits — traditional dress from Thailand, Sri Lanka or Vietnam has long lead times and needs fittings",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Arrange the poruwa or shrine setup with whoever builds it",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Confirm who provides the sacred thread, conch and water vessel",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Brief the photographer on the chanting, the thread-tying and the water-pouring",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Send invitations, making clear which ceremony each guest is invited to",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Agree the alcohol question between both families before ordering drinks",
+      "critical": false
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Plan the water-pouring queue: with three hundred guests it takes far longer than anyone expects",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Give civil notice at the register office",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Confirm transport and hospitality arrangements for the monks",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Walk the run of the day against the auspicious times with someone who knows them",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Confirm final numbers with the caterer",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Confirm the dressing schedule against the auspicious dressing time",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Prepare the almsgiving offering",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "Register the civil marriage and collect the certificate",
+      "critical": true
+    }
+  ],
+  "paperwork": [
+    {
+      "item": "Civil notice of marriage",
+      "who": "Both",
+      "note": "In England and Wales at least 29 clear days before, in your district of residence. The Buddhist blessing is not a legal marriage, and couples who rely on it are legally unmarried."
+    },
+    {
+      "item": "Passports or birth certificates and proof of address",
+      "who": "Both",
+      "note": ""
+    },
+    {
+      "item": "Evidence of the ending of any previous marriage",
+      "who": "Either, if applicable",
+      "note": "Decree absolute or death certificate."
+    },
+    {
+      "item": "Check whether the vihara or temple is registered for marriage",
+      "who": "The couple",
+      "note": "A small number are. Most are not, which means the legal ceremony happens elsewhere and needs its own booking."
+    },
+    {
+      "item": "Registrar booking for approved premises",
+      "who": "The couple",
+      "note": "If you want the legal ceremony at your venue rather than the register office. Registrars are booked earlier than venues."
+    },
+    {
+      "item": "Registration of the marriage afterwards",
+      "who": "Both",
+      "note": "Collect the certified copy. Relying on a blessing alone surfaces years later in property, inheritance and immigration matters."
+    },
+    {
+      "item": "Marriage abroad: check recognition at home",
+      "who": "Both, if marrying in Thailand or Sri Lanka",
+      "note": "A Buddhist ceremony abroad usually needs the local civil registration too. Take the local marriage certificate home, translated and legalised if required."
+    },
+    {
+      "item": "Permission for an open flame or incense indoors",
+      "who": "The couple",
+      "note": "Candles and incense are used at the shrine. Some Western venues refuse both, or set off smoke detectors."
+    }
+  ],
+  "customs": [
+    {
+      "name": "Monks bless, they do not marry you",
+      "description": "The Vinaya keeps monastics out of the role of solemnising marriage — it is a worldly contract, not a sacrament. Monks chant, bless and receive alms. This surprises guests from other traditions who look for the moment the couple are pronounced married, because there isn't one.",
+      "optional": false
+    },
+    {
+      "name": "Paritta chanting",
+      "description": "Protective verses chanted in Pali, often by an odd number of monks. Guests are not expected to understand the words; the chanting itself is the blessing.",
+      "optional": false
+    },
+    {
+      "name": "The sacred thread",
+      "description": "A cotton thread — sai sin in Thai practice — linking the Buddha image, the monks and the couple, or tied around the wrists. It is cut or removed later and often kept.",
+      "optional": false
+    },
+    {
+      "name": "Water-pouring",
+      "description": "Water poured over the couple's joined hands from a conch shell, by monks, elders and then every guest in turn. It is the most photographed moment and the most underestimated in the schedule.",
+      "optional": false
+    },
+    {
+      "name": "Dana and the transfer of merit",
+      "description": "Almsgiving, with the merit dedicated to the couple and to deceased relatives. In many families this is the part that matters most and the reception is incidental.",
+      "optional": false
+    },
+    {
+      "name": "The poruwa",
+      "description": "In Sri Lankan weddings the couple stand on a decorated platform representing their household. Little fingers are tied, water poured, and they step off leading with the right foot at the auspicious moment.",
+      "optional": true
+    },
+    {
+      "name": "Auspicious times",
+      "description": "Sri Lankan and Thai families commonly have an astrologer set the nekath for each stage of the day. The schedule is then fixed by the times, not by the venue's convenience.",
+      "optional": true
+    },
+    {
+      "name": "Khan maak",
+      "description": "The Thai groom's procession to the bride's house, blocked at symbolic gates by her family until he negotiates his way through with envelopes. Loud, funny and entirely public.",
+      "optional": true
+    },
+    {
+      "name": "The fifth precept",
+      "description": "Buddhists undertake to abstain from intoxicants. How that translates at a wedding varies from an entirely dry event to an open bar, and the two families may not agree.",
+      "optional": true
+    },
+    {
+      "name": "Vassa, the rains retreat",
+      "description": "During the three months of the monastic rains retreat many communities avoid weddings altogether. Dates fall roughly July to October and shift with the lunar calendar.",
+      "optional": true
+    },
+    {
+      "name": "Colour",
+      "description": "White is not automatically bridal. In several East Asian Buddhist cultures white is the colour of mourning, and red or gold is worn instead.",
+      "optional": true
+    }
+  ],
+  "gotchas": [
+    "A Buddhist blessing is not a legal marriage in England and Wales, and most viharas are not registered for marriage. You need a separate civil ceremony or you are not married in law.",
+    "Buddhism is not one wedding tradition. Thai, Sri Lankan, Burmese, Cambodian, Vietnamese, Chinese, Japanese and Western convert practice differ so much that generic 'Buddhist wedding' advice is close to useless.",
+    "Monks in most Theravada traditions do not eat after midday. If the almsgiving is part of your day, the morning is fixed around that and cannot drift.",
+    "Monks may not be paid a fee. You offer dana instead. Trying to book them like a supplier, or naming a price, causes real offence.",
+    "Vassa, the rains retreat, closes roughly three months of the year for weddings in many communities. Check before falling in love with an August date.",
+    "Auspicious times are not decorative. Where a family uses them, the dressing, the entrance and the ceremony each have a fixed minute, and hair and make-up have to finish before it.",
+    "The water-pouring is a queue. Three hundred guests each pouring and offering a word takes well over an hour, and it happens before people eat.",
+    "The fifth precept means the alcohol question needs settling between both families early. It is the most common source of friction between a Buddhist family and a non-Buddhist one.",
+    "Incense and candles at the shrine set off smoke alarms and are banned outright by some Western venues. Get written permission.",
+    "Sinsod in Thai practice is a substantial, negotiated sum, not a symbolic gift, and it is displayed publicly. Families who have not discussed it in advance discover the gap on the day.",
+    "A ceremony in Thailand or Sri Lanka is not automatically recognised at home. You need the local civil registration and, usually, a legalised translation."
+  ],
+  "branches": {
+    "Thai": {
+      "label": "Thai",
+      "addGotchas": [
+        "Thai practice centres the khan maak procession and the sai sin thread. Sinsod is negotiated and displayed publicly."
+      ]
+    },
+    "Sri Lankan": {
+      "label": "Sri Lankan",
+      "addGotchas": [
+        "The poruwa ceremony and the nekath auspicious times are central, and an astrologer sets the minute for each stage of the day."
+      ]
+    },
+    "Vietnamese": {
+      "label": "Vietnamese",
+      "addEvents": [
+        {
+          "id": "le-gia-tien",
+          "name": "Lễ Gia Tiên — the ancestor ceremony",
+          "when": "Wedding morning",
+          "optional": false,
+          "default": true,
+          "description": "At both family altars the couple light incense and report the marriage to the ancestors. This, rather than any temple rite, is the heart of a Vietnamese wedding.",
+          "hosts": "Both families"
+        }
+      ],
+      "addGotchas": [
+        "Vietnamese Buddhist weddings are built around the family altars and the ancestor ceremony rather than a temple blessing. Red and gold are the colours; white is for funerals."
+      ]
+    },
+    "Chinese": {
+      "label": "Chinese",
+      "addEvents": [
+        {
+          "id": "tea",
+          "name": "The tea ceremony",
+          "when": "Wedding morning",
+          "optional": false,
+          "default": true,
+          "description": "The couple serve tea to elders in strict order of seniority, receiving red envelopes and jewellery in return. Getting the order wrong is a real offence.",
+          "hosts": "Both families"
+        }
+      ],
+      "addGotchas": [
+        "The tea ceremony order of seniority must be worked out in advance with both families, name by name.",
+        "White is a funeral colour in Chinese custom. The bride typically wears red for at least part of the day."
+      ]
+    },
+    "Tibetan": {
+      "label": "Tibetan",
+      "addGotchas": [
+        "Tibetan practice involves khata scarves and lama blessings, and dates are commonly set by a lama rather than an astrologer."
+      ]
+    },
+    "Japanese": {
+      "label": "Japanese",
+      "addGotchas": [
+        "Most Japanese weddings use Shinto or Christian-style ceremonies rather than Buddhist ones; Buddhist rites are more usual for funerals."
+      ]
+    },
+    "Western convert": {
+      "label": "Western convert",
+      "addGotchas": [
+        "Convert sanghas often have no established wedding form at all, so you are designing the ceremony with the teacher rather than inheriting one."
+      ]
+    },
+    "Other": {
+      "label": "Other"
+    }
+  },
+  "sources": [
+    "https://tibetanbuddhistencyclopedia.com/en/index.php/Thai_Buddhist_Wedding_ceremony",
+    "https://tibetanbuddhistencyclopedia.com/en/index.php/Traditional_Buddhist_Wedding_Ceremony",
+    "https://www.starckuberoi.co.uk/family-divorce/religious-marriage/",
+    "https://www.orj.co.uk/married-but-not-married-is-my-religious-marriage-recognised-in-the-uk/",
+    "https://vardags.com/law-guide/legal-marriage-requirements/religious-ceremonies-sikh-muslim-hindu",
+    "https://www.gov.uk/marriages-civil-partnerships",
+    "https://jothishi.com/buddhist-wedding/",
+    "https://deniselillie.com/buddhist-weddings/",
+    "https://www.wearekindred.com/journal/who-can-conduct-a-wedding-ceremony/"
+  ]
+}
