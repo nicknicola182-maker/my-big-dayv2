@@ -67,6 +67,9 @@ function renderApp(){
   if(!S.revealSeen){ renderReveal(); return; }   // survives a reload mid-reveal
   if(!S.plan) buildPlan();
   const t = S.tab;
+  /* Ziggy alone has a dark home. Everything else in his world stays pale, so
+     the surface is per-screen rather than per-world. */
+  applyWorld(t==="home" ? "home" : "sheet");
   const nm = [S.ans.n1,S.ans.n2].filter(Boolean).join(" & ") || "Our wedding";
   const days = S.ans.dateISO ? Math.ceil((new Date(S.ans.dateISO) - new Date())/86400000) : null;
   const header = t==="home" ? "" : `<header class="app">
@@ -79,10 +82,15 @@ function renderApp(){
       <main id="main">${VIEWS[t]? VIEWS[t]() : VIEWS.home()}</main>
       ${t==="budget"? savebar() : ""}
       <nav id="tabbar">
-        ${[["home","🏠","Home"],["budget","💷","Budget"],["guests","👥","Guests"],["list","✓","List"],["album","📸","Album"],["more","⋯","More"]].map(([k,i,l])=>
-          `<button class="${t===k?"on":""}" style="position:relative" onclick="S.tab='${k}';save();render()"><span class="ico">${i}</span>${l}${k==="album"?'<span class="tabdot"></span>':''}</button>`).join("")}
+        ${TABS().map(([k,i,l])=>
+          `<button class="${t===k?"on":""}" style="position:relative" onclick="S.tab='${k}';save();render()"><span class="ico">${i}</span>${esc(l)}${k==="album"?'<span class="tabdot"></span>':''}</button>`).join("")}
       </nav>
     </div><div id="sheets"></div>`;
+}
+
+const TAB_ICONS = {home:"🏠", budget:"💷", guests:"👥", list:"✓", album:"📸", more:"⋯"};
+function TABS(){
+  return ["home","budget","guests","list","album","more"].map(k=>[k, TAB_ICONS[k], tabLabel(k)]);
 }
 
 const VIEWS = {};
@@ -421,11 +429,20 @@ VIEWS.more = function(){
   <div class="sect"><h3>App</h3></div>
   ${S.unlocked? `<div class="card"><h3>✓ Everything unlocked</h3><div class="small">Thanks for supporting the app, darling.</div></div>`
     : `<div class="card" onclick="openPaywall()" style="cursor:pointer;background:linear-gradient(140deg,#F2EAF7,#fff)"><h3>Unlock everything — ${PRICE_LABEL}, once</h3><div class="small">No subscription. Yours forever.</div></div>`}
+  ${(()=>{ const p = persona(); return `
+  <div class="card" onclick="swapPlanner()" style="cursor:pointer">
+    <h3>${p? "↻ Swap planner" : "✨ Choose your planner"}</h3>
+    <div class="small">${p? "Currently "+esc(p.name)+" — "+esc(p.worldName)+". Change whenever you like; your plan is untouched."
+                          : "Four planners, four ways of laying the whole app out. Pick the one you want beside you."}</div>
+  </div>`; })()}
   <div class="card" onclick="restartOB()" style="cursor:pointer"><h3>↻ Change my answers</h3><div class="small">Re-run the questions — your guests, payments and ticks are kept where possible.</div></div>
   <div class="card" onclick="if(confirm('Really start completely fresh? Everything goes.')){localStorage.removeItem('weddingapp');location.reload();}" style="cursor:pointer"><h3 style="color:var(--red)">Start over</h3></div>
   <div class="small center" style="padding:10px 0 20px">My Big Day · prototype v0.24 · packs v1 · engine v1</div>`;
 };
-function restartOB(){ S.onboarded=false; obIx=0; S.plan=null; save(); render(); }
+function restartOB(){ S.onboarded=false; S.obIx=0; S.plan=null; save(); render(); }
+/* The gate promises "swap any time" — this is that promise, and it is one
+   state write. The plan is untouched; only the world it renders in changes. */
+function swapPlanner(){ renderGate(); }
 
 /* ----- sub-screens (sheets) ----- */
 function sheet(html){ document.getElementById("sheets").innerHTML =
@@ -885,5 +902,6 @@ async function aiScan(itemId, base64, mediaType){
 }
 /* ---------- boot ---------- */
 load();
+applyWorld();          // paint the world before first render, so there is no flash
 render();
 if(S && S.cloud) cloudPullOnBoot();

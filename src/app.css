@@ -150,14 +150,14 @@ header.app .sub{font-size:12.5px;color:var(--muted)}
 /* ---------- v20 feel: hero ---------- */
 .hero{padding:30px 22px 6px;text-align:center}
 .hero .eyebrow{font-size:12px;letter-spacing:.28em;color:#B08894;text-transform:uppercase;margin-bottom:10px}
-.hero .couple{font-family:'Gloock',serif;font-size:34px;line-height:1.1;color:#3A2530}
-.hero .amp{color:var(--rose);font-family:'Nothing',cursive;font-size:26px;padding:0 4px}
-.hero .when{font-family:'Gloock',serif;font-style:italic;font-size:15.5px;color:#7A5F6B;margin-top:10px}
+.hero .couple{font-family:var(--w-display);font-size:34px;line-height:1.1;color:var(--ink);text-transform:var(--w-display-case);letter-spacing:var(--w-display-track)}
+.hero .amp{color:var(--rose);font-family:var(--w-hand);font-size:26px;padding:0 4px}
+.hero .when{font-family:var(--w-display);font-style:italic;font-size:15.5px;color:var(--muted);margin-top:10px}
 .hero .flourish{width:120px;height:2px;margin:14px auto;background:linear-gradient(90deg,transparent,var(--blush-deep),transparent)}
 .hero .where{font-size:12px;letter-spacing:.16em;color:#A08792;text-transform:uppercase;line-height:1.9}
 /* stat cards */
 .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 16px 14px}
-.statgrid .sc{background:#fff;border-radius:20px;padding:18px 10px 16px;text-align:center;border:1px solid var(--line);border-top:4px solid var(--gold);box-shadow:0 2px 8px rgba(180,120,140,.07)}
+.statgrid .sc{background:var(--card);border-radius:var(--w-radius);padding:18px 10px 16px;text-align:center;border:1px solid var(--line);border-top:4px solid var(--gold);box-shadow:var(--w-shadow)}
 .statgrid .sc .em{font-size:26px;margin-bottom:8px}
 .statgrid .sc .lb{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .statgrid .sc .val{font-size:24px;font-weight:700}

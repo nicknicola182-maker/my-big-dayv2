@@ -1,10 +1,12 @@
 # Tests
 
 ```
-npm test              everything (packs + engine + app)
+npm test              everything (packs + engine + worlds + state + sync + app)
 npm run test:packs    culture packs conform to SCHEMA.md
+npm run test:worlds   the four planner worlds are complete
+npm run shots:worlds  render the 4-world screenshot matrix
 npm run test:engine   engine invariants + golden snapshots
-npm run golden        verify the 24 snapshots
+npm run golden        verify the 42 snapshots
 npm run check         verify build inputs exist
 ```
 
@@ -14,7 +16,7 @@ exploratory until they're ported.
 
 ## The golden snapshots — read this before regenerating
 
-`tests/goldens/` holds 24 files: **8 culture packs × 3 answer-set fixtures**, each a snapshot
+`tests/goldens/` holds 42 files: **14 culture packs × 3 answer-set fixtures**, each a snapshot
 of what `buildPlan()` produced — every event, every budget line and its allocation, the whole
 timeline with its dated labels, and all the paperwork.
 
@@ -79,10 +81,13 @@ It finds Chromium via `PLAYWRIGHT_BROWSERS_PATH` when that's set.
 
 | suite | what it guards |
 |---|---|
-| `packs` | the 8 culture packs conform to `SCHEMA.md` — sections, units, event refs, `shareOfBudget` sums |
-| `engine` | `buildPlan()` invariants + the 24 golden snapshots |
+| `packs` | the 14 culture packs conform to `SCHEMA.md` — sections, units, event refs, `shareOfBudget` sums |
+| `engine` | `buildPlan()` invariants + the 42 golden snapshots |
 | `state` | migration, save failure, onboarding position, the reveal flag |
-| `app` | real browser flow: onboarding → reveal → home, with reloads and a forced crash |
+| `branches` | the 67 branch deltas merge without corrupting a plan |
+| `worlds` | the four planner worlds are complete and stay distinct |
+| `sync` | field-level merge — never lose a row |
+| `app` | real browser flow: gate → onboarding → reveal → home, with reloads and a forced crash |
 
 Run one with `node tests/run.mjs <suite>`.
 
@@ -115,6 +120,42 @@ is held until they choose rather than silently replaced.
 RSVP, task and paperwork ticks, custom todos, item on/off, agreed/paid/deposit). **If
 you add a new synced mutation, call `touch()` on the row** — an unstamped row is treated
 as older than a stamped one, so a missing stamp means that edit quietly loses.
+
+## Worlds (`tests/worlds.mjs`)
+
+Four planners — Ziggy, Anneke, Rosie, Perdita. Picking one swaps the whole
+design world: palette, type, card model, navigation, progress metaphor and
+voice. It is not a theme toggle, and the tests exist to keep it from decaying
+into one.
+
+The expensive failure here is not a crash — it is a world that is *almost*
+complete, because that looks like a design decision rather than a bug:
+
+- **a missing voice string.** `say()` falls back to the neutral house voice, so
+  Ziggy would quietly go flat for one line. The suite asserts every key in
+  `VOICE` is written for all four worlds plus house — 18 keys × 5.
+- **a fallback across personas.** Worse than falling back to neutral: an Anneke
+  line surfacing in Ziggy's world reads as a bug to the couple and undoes the
+  premise. `say()` never does it, and the suite asserts every varied key
+  actually differs across the cast.
+- **a token block that misses a colour**, so a screen inherits the previous
+  world's palette. Every world must set all seven shared tokens.
+- **the cast blurring.** Four distinct signoffs, four distinct nav models, four
+  distinct progress metaphors — asserted by set size, so making two the same
+  fails.
+
+**Pack strings are never persona-varied, and the suite enforces it.** Paperwork,
+customs, gotchas and timeline text are research, not voice. Rewriting them per
+persona would be 1,376 rewrites and a factual-accuracy disaster — jurisdiction
+-specific legal guidance delivered in a jokey register. No key in `VOICE` is
+allowed to name pack content.
+
+`npm run shots:worlds` renders the matrix — 4 worlds × (home, budget, list,
+question) plus the gate. **Run it after touching `worlds.css`.** A world can pass
+every assertion above and still render wrong if a selector doesn't match; only a
+picture catches that. It caught three real ones: Ziggy's names rendering
+dark-on-dark, the step count printing twice for Perdita, and a rose glow leaking
+under Anneke's button.
 
 ## Branches (`tests/branches.mjs`)
 

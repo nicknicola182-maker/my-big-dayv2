@@ -11,7 +11,8 @@ import json, glob, os, base64, sys
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 SOURCES = [
-    "src/app.css", "src/app1.js", "src/sync.js", "src/app2.js",
+    "src/app.css", "src/worlds.css",
+    "src/worlds.js", "src/app1.js", "src/sync.js", "src/app2.js",
     "fonts/Gloock-Regular.woff2", "fonts/Outfit-Regular.woff2",
     "fonts/Outfit-Bold.woff2", "fonts/NothingYouCouldDo-Regular.woff2",
     "node_modules/qrcode-generator/dist/qrcode.js",
@@ -57,8 +58,10 @@ css = css.replace("%%F_GLOOCK%%", b64("fonts/Gloock-Regular.woff2"))
 css = css.replace("%%F_OUTFIT%%", b64("fonts/Outfit-Regular.woff2"))
 css = css.replace("%%F_OUTFITB%%", b64("fonts/Outfit-Bold.woff2"))
 css = css.replace("%%F_SCRIPT%%", b64("fonts/NothingYouCouldDo-Regular.woff2"))
+worlds_css = open("src/worlds.css").read()
 qr = open("node_modules/qrcode-generator/dist/qrcode.js").read()
 fflate = open("node_modules/fflate/umd/index.js").read()
+worlds = open("src/worlds.js").read()
 app1 = open("src/app1.js").read()
 sync = open("src/sync.js").read()
 app2 = open("src/app2.js").read()
@@ -71,13 +74,15 @@ html = f"""<!DOCTYPE html>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#F6DDE2">
 <title>My Big Day — the wedding planner who knows your traditions</title>
-<style>{css}</style>
+<style>{css}
+{worlds_css}</style>
 </head>
 <body>
 <div id="app"></div>
 <script>{fflate}</script>
 <script>{qr}</script>
 <script>{packs_js}</script>
+<script>{worlds}</script>
 <script>{app1}</script>
 <script>{sync}</script>
 <script>{app2}</script>

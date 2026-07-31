@@ -2,7 +2,7 @@
 /* The test runner. Asserts, reports, and exits non-zero on failure.
  *
  *   node tests/run.mjs              everything available
- *   node tests/run.mjs packs        one suite (packs | engine | branches | state | sync | app)
+ *   node tests/run.mjs packs        one suite (packs | engine | branches | state | worlds | sync | app)
  *
  * Paths are resolved from the repo, not hardcoded, so this runs anywhere.
  * If Playwright isn't installed the browser suite is reported SKIPPED — loudly,
@@ -169,6 +169,12 @@ if (wants('branches')) {
   guard('branches', () => runBranches({ describe, ok, eq, group }));
 }
 
+/* ── worlds: the four planner worlds ──────────────────────────── */
+if (wants('worlds')) {
+  const { run: runWorlds } = await import('./worlds.mjs');
+  guard('worlds', () => runWorlds({ describe, ok, eq, group }));
+}
+
 /* ── sync: merge + conflict protocol ──────────────────────────── */
 if (wants('sync')) {
   const { run: runSync } = await import('./sync.mjs');
@@ -225,9 +231,21 @@ if (wants('app')) await guardAsync('app — browser flows', async () => {
          Before this phase, obIx lived outside state and the reveal had no flag —
          a reload lost your place, and lost the reveal permanently. */
       const settle = 140;
-      const cont = async () => { await page.locator('text=Continue').first().click(); await page.waitForTimeout(settle); };
+      /* Driven by structure, not by copy. Every button label is persona-varied
+         now, so a text selector would only ever pass for one of the four worlds. */
+      const cont = async () => { await page.locator('#ob .foot .btn').first().click(); await page.waitForTimeout(settle); };
       const tap  = async sel => { await page.locator(sel).first().click(); await page.waitForTimeout(settle); };
-      await tap("text=Let's begin, my loves");
+
+      /* The persona gate is the new first screen — before the landing, before
+         question one. Picking a planner is what chooses the design world. */
+      ok(await page.locator('#gate').count() > 0, 'the persona gate comes first');
+      eq(await page.locator('#gate .pcard').count(), 4, 'all four planners are offered');
+      await tap('#gate .pcard:has-text("Ziggy")');
+      const picked = await page.evaluate(() => ({
+        world: S.worldId, attr: document.documentElement.getAttribute('data-world') }));
+      eq(picked.world, 'dressing', 'picking a planner sets the world');
+      eq(picked.attr, 'dressing', 'and paints it onto the document');
+      await tap('#landing .btn');
       await page.fill('#n1', 'Alex'); await page.fill('#n2', 'Sam');
       await cont();
 
@@ -243,7 +261,7 @@ if (wants('app')) await guardAsync('app — browser flows', async () => {
       await tap('.opt:has-text("Orthodox")'); await cont();
       await tap('.opt:has-text("Greek / Cypriot")'); await cont();
       await page.selectOption('#csel', 'CY'); await cont();
-      await tap('text=Skip for now');
+      await tap('#ob .foot .skip');
       await page.fill('#wdate', '2027-09-18'); await cont();
       await page.fill('#gexact', '250'); await cont();
       await page.locator('.opt').nth(2).click(); await page.waitForTimeout(settle); await cont();
@@ -262,13 +280,16 @@ if (wants('app')) await guardAsync('app — browser flows', async () => {
       ok(atReveal.revealSeen === false, 'the reveal is marked unseen until dismissed');
       eq(atReveal.cur, 'EUR', 'currency follows the country');
       ok(atReveal.budget > 0, 'a budget is set', `got ${atReveal.budget}`);
-      ok(await page.locator('text=Show me my wedding').count() > 0, 'the reveal is on screen');
+      ok(await page.locator('.reveal').count() > 0, 'the reveal is on screen');
+      // Ziggy's reveal CTA, proving the world survived the whole onboarding walk.
+      ok(await page.locator('text=Show me everything').count() > 0,
+        'and it speaks in the chosen planner’s voice');
 
       await page.reload(); await page.waitForTimeout(500);
-      ok(await page.locator('text=Show me my wedding').count() > 0,
+      ok(await page.locator('.reveal').count() > 0,
         'reloading mid-reveal returns to the reveal, not past it');
 
-      await tap('text=Show me my wedding');
+      await tap('.reveal .btn');
       await page.waitForTimeout(300);
       await page.screenshot({ path: path.join(shots, 'home.png') });
       const home = await page.evaluate(() => ({ revealSeen: S.revealSeen, tab: S.tab, items: S.plan.items.length }));

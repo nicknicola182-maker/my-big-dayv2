@@ -1,0 +1,247 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   The four planner worlds — visual layer.
+
+   Every value here is a token override on [data-world=…]. The six tabs and
+   fourteen sheets were written against the :root tokens in app.css, so they
+   re-skin automatically without a single view being edited. That is the whole
+   trick — four worlds cost far less than four times the work.
+
+   Structural per-world CSS (nav models, progress metaphors, card models) sits
+   at the bottom, keyed off the same attribute.
+
+   [data-surface] exists for Ziggy alone: his question screen is pale and his
+   home is near-black. Modelling that as an attribute rather than a JS flag
+   keeps it free and stops a dark-mode branch leaking into every later screen.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root{
+  /* World-shape tokens. Defaults are the house look — the neutral world used
+     before a planner is picked, and on the three surfaces that stay world-blind
+     by policy (the gate, the paywall, partner sync). */
+  --w-radius:16px; --w-radius-sm:12px; --w-btn-radius:16px;
+  --w-shadow:0 1px 3px rgba(180,120,140,.06);
+  --w-edge:1px solid var(--line);
+  --w-gutter:16px;
+  --w-display:'Gloock',Georgia,serif; --w-display-case:none; --w-display-track:0;
+  --w-hand:'Nothing',cursive; --w-hand-case:none; --w-hand-track:0;
+  --w-btn-track:.01em;
+  --w-rotate:0deg;
+  --w-metal:var(--gold);
+  --w-ambient:1;
+}
+
+/* ── Ziggy · The Dressing Room ─────────────────────────────────────────────
+   Velvet, mirror bulbs, gold foil. The only world with two grounds. */
+[data-world="dressing"]{
+  --paper:#FFF8F1; --card:#FFFDFA; --line:#F6E9E0;
+  --ink:#33262B; --muted:#9A7F8F;
+  --rose:#B62D77; --rose-deep:#8A1F63;
+  --grad:linear-gradient(135deg,#E0559C 0%,#B62D77 100%);
+  --gold:#E8BE6E; --w-metal:#E8BE6E;
+  --w-radius:20px; --w-radius-sm:15px; --w-btn-radius:18px;
+  --w-shadow:0 14px 34px rgba(120,35,90,.14), 0 0 0 1.5px rgba(232,190,110,.5);
+  --w-edge:none;
+  --w-gutter:22px;
+  --w-btn-track:.02em;
+}
+[data-world="dressing"] body,
+[data-world="dressing"] #phone,
+[data-world="dressing"] #ob{
+  background:linear-gradient(175deg,#FFF8F1 0%,#FDF0F5 55%,#FAE6EF 100%);
+}
+/* The dark home. Only this surface, only this world. */
+[data-world="dressing"][data-surface="home"]{
+  --paper:#320C2E; --card:rgba(255,255,255,.06); --line:rgba(232,190,110,.22);
+  --ink:#FBEDF4; --muted:#D9A8C6;
+}
+[data-world="dressing"][data-surface="home"] #phone{
+  background:radial-gradient(130% 90% at 50% 0%,#4A1240 0%,#320C2E 55%,#1F0720 100%);
+}
+[data-world="dressing"][data-surface="home"] header.app{
+  background:transparent;border-bottom:1px solid rgba(232,190,110,.22);
+}
+[data-world="dressing"][data-surface="home"] #tabbar{
+  background:rgba(31,7,32,.92);border-top:1px solid rgba(232,190,110,.22);
+}
+[data-world="dressing"][data-surface="home"] .card{
+  box-shadow:0 0 0 1.5px rgba(232,190,110,.45);
+}
+/* The stat tiles keep a lit surface on the dark home — they read as vanity
+   panels rather than holes, and the figures inside are set in fixed semantic
+   colours (green for headroom, amber for over) that need a light ground to
+   stay legible. The gold ring is what ties them to the world. */
+[data-world="dressing"][data-surface="home"] .statgrid .sc{
+  background:#FFFDFA;border-color:rgba(232,190,110,.5);
+  box-shadow:0 0 0 1.5px rgba(232,190,110,.4), 0 10px 26px rgba(0,0,0,.28);
+}
+[data-world="dressing"][data-surface="home"] .hero .eyebrow,
+[data-world="dressing"][data-surface="home"] .hero .where{color:#D9A8C6}
+[data-world="dressing"][data-surface="home"] .hero .flourish{
+  background:linear-gradient(90deg,transparent,rgba(232,190,110,.75),transparent);
+}
+
+/* ── Anneke · The Order Book ───────────────────────────────────────────────
+   An atelier ledger. Zero radii, zero shadow — if the shared components
+   survive Anneke they survive anything. */
+[data-world="order"]{
+  --paper:#FBF7F0; --card:#FBF7F0; --line:#E4D9C8;
+  --ink:#2B2025; --muted:#A08792;
+  --rose:#C9587A; --rose-deep:#AC3F63;
+  --grad:#C9587A;
+  --gold:#C29A5B; --w-metal:#C29A5B;
+  --w-radius:0px; --w-radius-sm:0px; --w-btn-radius:0px;
+  --w-shadow:none;
+  --w-edge:1px solid #E4D9C8;
+  --w-gutter:30px;
+  --w-display-track:-.01em;
+  --w-btn-track:.26em;
+  --w-ambient:0;
+}
+[data-world="order"] header.app{background:#FBF7F0;border-bottom:3px double #E4D9C8}
+[data-world="order"] .card{border-top:1px solid #E4D9C8;border-left:none;border-right:none;border-bottom:none}
+[data-world="order"] .btn{text-transform:uppercase;font-size:12.5px}
+
+/* ── Rosie · The Linen Table ───────────────────────────────────────────────
+   The plan as objects on a laid table. Everything sits a couple of degrees off. */
+[data-world="linen"]{
+  --paper:#F6EDE0; --card:#FFFDF9; --line:#EFE4D2;
+  --ink:#33262B; --muted:#A08792;
+  --rose:#C9587A; --rose-deep:#AC3F63;
+  --grad:#C9587A;
+  --gold:#BFA07F; --w-metal:#BFA07F;
+  --w-radius:14px; --w-radius-sm:10px; --w-btn-radius:8px;
+  --w-shadow:0 10px 26px rgba(60,40,30,.14);
+  --w-edge:1px solid #EFE4D2;
+  --w-gutter:26px;
+  --w-btn-track:.1em;
+  --w-rotate:-1.4deg;
+  --w-ambient:0;
+}
+[data-world="linen"] #phone,
+[data-world="linen"] #ob{
+  background:repeating-linear-gradient(90deg,#F6EDE0,#F6EDE0 14px,#F2E7D7 14px,#F2E7D7 15px);
+}
+[data-world="linen"] header.app{
+  background:repeating-linear-gradient(90deg,#F2E7D7,#F2E7D7 14px,#EFE1CE 14px,#EFE1CE 15px);
+  border-bottom:1px solid #E4D3BA;
+}
+/* Objects on a table, not rows in a list. Alternating tilt so it reads as a
+   pile rather than a mistake, and a strip of masking tape at the top. */
+[data-world="linen"] .card{position:relative;transform:rotate(var(--w-rotate))}
+[data-world="linen"] .card:nth-child(even){transform:rotate(calc(var(--w-rotate) * -1))}
+[data-world="linen"] .card::before{
+  content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(1.5deg);
+  width:64px;height:17px;background:rgba(233,214,180,.75);border-left:1px dashed rgba(0,0,0,.06);
+  border-right:1px dashed rgba(0,0,0,.06);
+}
+
+/* ── Perdita · The Monograph ───────────────────────────────────────────────
+   The wedding planned like a magazine issue. Flat colour, hairlines, all-caps
+   display — the whole identity is three tokens. */
+[data-world="monograph"]{
+  --paper:#FAF8F3; --card:#FAF8F3; --line:#E4DED2;
+  --ink:#17141A; --muted:#8A8087;
+  --rose:#7A1F2B; --rose-deep:#5E1621;
+  --grad:#17141A;
+  --gold:#B8B0A4; --w-metal:#B8B0A4;
+  --w-radius:0px; --w-radius-sm:0px; --w-btn-radius:0px;
+  --w-shadow:none;
+  --w-edge:1px solid #E4DED2;
+  --w-gutter:28px;
+  --w-display-case:uppercase; --w-display-track:-.01em;
+  --w-btn-track:.24em;
+  --w-ambient:0;
+  /* Perdita never gets handwriting. Her asides are withering and one word long,
+     so the script face becomes letter-spaced small caps automatically — which
+     removes a per-world branch at every "handwritten" slot in the app. */
+  --w-hand:'Outfit',system-ui,sans-serif; --w-hand-case:uppercase; --w-hand-track:.24em;
+}
+[data-world="monograph"] header.app{background:#FAF8F3;border-bottom:2px solid #17141A}
+[data-world="monograph"] .card{border-left:none;border-right:none;border-bottom:none;border-top:1px solid #E4DED2}
+[data-world="monograph"] .btn{text-transform:uppercase;font-size:12px}
+[data-world="monograph"] .opt{text-transform:none}
+
+/* ── shared components, now reading world tokens ──────────────────────────
+   These override the app.css defaults so every existing view re-skins. */
+.card{border-radius:var(--w-radius);box-shadow:var(--w-shadow);margin-left:var(--w-gutter);margin-right:var(--w-gutter)}
+[data-world="dressing"] .card,[data-world="linen"] .card{border:var(--w-edge)}
+.btn{border-radius:var(--w-btn-radius);letter-spacing:var(--w-btn-track)}
+.opt{border-radius:var(--w-radius-sm)}
+.chip{border-radius:var(--w-radius-sm)}
+input,select,textarea{border-radius:var(--w-radius-sm)}
+h2,#ob .qtitle,header.app .names,.land-title,.big{
+  font-family:var(--w-display);text-transform:var(--w-display-case);letter-spacing:var(--w-display-track);
+}
+.script{font-family:var(--w-hand);text-transform:var(--w-hand-case);letter-spacing:var(--w-hand-track)}
+[data-world="monograph"] .script{font-size:11px;font-weight:700;color:var(--rose)}
+
+/* The primary button's glow is a Ziggy/house flourish. A ledger and a magazine
+   do not glow — without this override the rose halo leaks into all four worlds. */
+[data-world="order"] .btn.rose,[data-world="order"] .btn.glam,
+[data-world="monograph"] .btn.rose,[data-world="monograph"] .btn.glam{box-shadow:none}
+[data-world="linen"] .btn.rose,[data-world="linen"] .btn.glam{box-shadow:0 4px 12px rgba(60,40,30,.18)}
+[data-world="dressing"] .btn.rose,[data-world="dressing"] .btn.glam{
+  box-shadow:0 6px 20px rgba(182,45,119,.4), 0 0 0 1.5px rgba(232,190,110,.55);
+}
+
+/* Ambient motion is gated on the world AND on the OS setting. Before this,
+   petals and sparkles ran unconditionally — an accessibility failure and a
+   battery drain in a WebView. */
+@media (prefers-reduced-motion:reduce){
+  .petal,.spark,#landing,#landing .btn.glam{animation:none!important}
+}
+[data-world="order"] .petal,[data-world="order"] .spark,
+[data-world="linen"] .petal,[data-world="linen"] .spark,
+[data-world="monograph"] .petal,[data-world="monograph"] .spark{display:none}
+[data-world="order"] #landing,[data-world="monograph"] #landing{animation:none}
+
+/* ═══ the persona gate ═══════════════════════════════════════════════════
+   Deliberately world-blind: it is the screen you pick a world on. */
+#gate{position:relative;height:100%;max-width:440px;margin:0 auto;overflow-y:auto;
+  background:linear-gradient(168deg,#FBEAEE 0%,#F8E7E4 45%,#F5E3D2 100%);padding:38px 22px calc(28px + env(safe-area-inset-bottom))}
+#gate .eyebrow{font-size:9.5px;letter-spacing:.32em;color:#B08894;text-transform:uppercase;margin-bottom:12px}
+#gate h1{font-family:'Gloock',Georgia,serif;font-weight:400;font-size:31px;line-height:1.14;color:#3A2530;margin-bottom:10px}
+#gate .sub{font-size:14px;color:#7A5F6B;line-height:1.55;margin-bottom:24px}
+#gate .pcard{display:flex;gap:14px;align-items:flex-start;width:100%;text-align:left;background:#fff;
+  border:1.5px solid #F0E2DE;border-radius:18px;padding:15px 16px;margin-bottom:11px;
+  box-shadow:0 2px 10px rgba(180,120,140,.07);transition:border-color .12s,box-shadow .12s}
+#gate .pcard.on{border-color:#C9587A;box-shadow:0 6px 20px rgba(201,88,122,.2)}
+#gate .av{flex:none;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'Gloock',Georgia,serif;font-size:20px}
+#gate .pname{font-family:'Gloock',Georgia,serif;font-size:18px;color:#33262B}
+#gate .ptitle{font-size:9.5px;letter-spacing:.22em;color:#B08894;text-transform:uppercase;margin:2px 0 6px}
+#gate .pquote{font-family:'Nothing',cursive;font-size:15px;color:#C9587A;line-height:1.3;margin-bottom:5px}
+#gate .ppitch{font-size:12.5px;color:#84717A;line-height:1.45}
+#gate .pworld{font-size:11px;color:#A98995;margin-top:6px;letter-spacing:.04em}
+#gate .foot{margin-top:6px}
+#gate .gnote{font-size:11.5px;color:#A98995;text-align:center;margin-top:14px;line-height:1.5}
+
+/* ═══ progress metaphors ═════════════════════════════════════════════════ */
+#ob .prog{background:var(--line)}
+#ob .prog i{background:var(--grad)}
+/* Anneke and Perdita count in words, not with a bar. */
+[data-world="order"] #ob .prog,[data-world="monograph"] #ob .prog{display:none}
+.pcount{font-size:10.5px;letter-spacing:.24em;color:var(--muted);text-transform:uppercase;margin:0 22px 4px}
+[data-world="monograph"] .pcount{color:var(--rose);font-weight:700}
+/* Ziggy counts in mirror bulbs. */
+.bulbs{display:flex;gap:5px;margin:0 22px 6px;flex-wrap:wrap}
+.bulbs i{width:7px;height:7px;border-radius:50%;background:rgba(232,190,110,.28);display:block}
+.bulbs i.on{background:#E8BE6E;box-shadow:0 0 7px rgba(232,190,110,.85)}
+/* Rosie counts in stitches. */
+[data-world="linen"] #ob .prog{height:3px;background:none;border-bottom:2px dashed #D9C3A5;border-radius:0}
+[data-world="linen"] #ob .prog i{display:none}
+
+/* ═══ navigation models ══════════════════════════════════════════════════ */
+/* Anneke and Perdita: text tabs, no icons. */
+[data-world="order"] #tabbar,[data-world="monograph"] #tabbar{background:var(--paper)}
+[data-world="order"] #tabbar{border-top:3px double var(--line)}
+[data-world="monograph"] #tabbar{border-top:2px solid var(--rose)}
+[data-world="order"] #tabbar .ico,[data-world="monograph"] #tabbar .ico{display:none}
+[data-world="order"] #tabbar button,[data-world="monograph"] #tabbar button{
+  font-size:9px;letter-spacing:.16em;text-transform:uppercase;padding:14px 0 12px}
+[data-world="monograph"] #tabbar button.on{color:var(--rose);border-bottom:2px solid var(--rose)}
+/* Rosie: the objects on the table are the nav, so the bar recedes to labels. */
+[data-world="linen"] #tabbar{background:#F2E7D7;border-top:1px solid #E4D3BA}
+[data-world="linen"] #tabbar .ico{font-size:17px}
+/* Ziggy: a chat thread with your best mate, so the bar is dark and gold-ruled. */
+[data-world="dressing"] #tabbar button.on{color:var(--gold)}
