@@ -8,7 +8,9 @@
     "test:packs": "node tests/run.mjs packs",
     "test:engine": "node tests/run.mjs engine",
     "golden": "node tests/golden.mjs",
-    "golden:write": "TZ=UTC node tests/golden.mjs --write"
+    "golden:write": "TZ=UTC node tests/golden.mjs --write",
+    "test:worlds": "node tests/run.mjs worlds",
+    "shots:worlds": "node tests/shots-worlds.mjs"
   },
   "dependencies": {
     "fflate": "^0.8.3",

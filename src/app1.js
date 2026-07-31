@@ -162,7 +162,7 @@ const PRICE_LABEL = "£6.99";
 
 /* ---------- state ---------- */
 let S = null;
-const SCHEMA_V = 3;
+const SCHEMA_V = 4;
 const STORE_KEY = "weddingapp";
 
 /* Every key the app will ever set is declared here. The ones that used to accrete at
@@ -174,7 +174,8 @@ const BLANK = () => ({
   ans:{}, plan:null, guests:[], tables:[], runsheet:[],
   budgetTotal:0, budgetEstimated:false, cur:"GBP",
   tab:"home", accOpen:{}, listFilter:"all", obIx:0,
-  customTodos:[], photos:[], albumCode:null, cloud:null, _pushedAt:0
+  customTodos:[], photos:[], albumCode:null, cloud:null, _pushedAt:0,
+  worldId:null                                    // which planner; null = gate not passed yet
 });
 
 /* Migrations run in order until the save is current. NEVER replace an unrecognised
@@ -188,6 +189,14 @@ const MIGRATIONS = {
       if(s[k] === undefined) s[k] = d[k];
     }
     s.v = 3;
+    return s;
+  },
+  3: s => {
+    /* The planner worlds arrive. An existing couple is mid-plan and must not be
+       thrown back to a gate screen, so they land in the neutral house world with
+       everything intact and can pick a planner from More whenever they like. */
+    if(s.worldId === undefined) s.worldId = null;
+    s.v = 4;
     return s;
   }
 };
@@ -448,6 +457,41 @@ function geoGuess(){
 }
 
 /* ---------- landing ---------- */
+/* ---------- the persona gate ----------
+   Before question one. This pick chooses the entire design world, not a palette,
+   so it comes before the landing screen and before any question.
+
+   Deliberately world-blind — it is the screen you choose a world on, so it
+   renders in the neutral house look. */
+function renderGate(){
+  applyWorld("gate");
+  document.getElementById("app").innerHTML = `
+  <div id="gate">
+    <div class="eyebrow">Before question one</div>
+    <h1>Who's planning this<br>with you?</h1>
+    <p class="sub">Same encyclopaedic brain underneath. Four very different bedside manners. Swap any time.</p>
+    ${PERSONAS.map(p=>`
+      <button class="pcard ${S.worldId===p.id?"on":""}" onclick="pickWorld('${p.id}')">
+        <span class="av" style="background:${p.avatar};color:${p.avatarInk}">${p.initial}</span>
+        <span style="flex:1">
+          <span class="pname" style="display:block">${esc(p.name)}</span>
+          <span class="ptitle" style="display:block">${esc(p.title)}</span>
+          <span class="pquote" style="display:block">${esc(p.quote)}</span>
+          <span class="ppitch" style="display:block">${esc(p.pitch)}</span>
+          <span class="pworld" style="display:block">${esc(p.worldName)} — ${esc(p.worldLine)}</span>
+        </span>
+      </button>`).join("")}
+    <p class="gnote">You're choosing a planner, not a colour scheme — each one lays the whole app out differently. Nothing is locked in; change your mind in More.</p>
+  </div>`;
+}
+function pickWorld(id){
+  S.worldId = id;
+  save();
+  applyWorld(S.onboarded ? "home" : "question");
+  if(S.onboarded){ render(); return; }             // swapped mid-plan, from More
+  renderOB();
+}
+
 function renderLanding(){
   const petals = Array.from({length:14},(_,i)=>{
     const l = (i*7.3+3)%100, d = (i*1.7)%9, dur = 9+(i*2.3)%8, s = 0.6+((i*13)%10)/14;
@@ -457,15 +501,17 @@ function renderLanding(){
     const l=(i*11+5)%100, t=(i*17+8)%90, d=(i*0.9)%4;
     return `<span class="spark" style="left:${l}%;top:${t}%;animation-delay:${d}s"></span>`;
   }).join("");
+  applyWorld("question");
+  const p = persona(), script = say("landingScript");
   document.getElementById("app").innerHTML = `
   <div id="landing">${petals}${sparks}
     <div class="land-inner">
-      <div style="font-size:12px;letter-spacing:.3em;color:#B08894;text-transform:uppercase;margin-bottom:14px">My Big Day</div>
-      <div class="script">darling…</div>
-      <h1 class="land-title">You're getting<br>married.</h1>
-      <p class="land-sub">Deep breath, champagne open. I plan weddings for a living — yours is about to be my favourite. A few little questions, and I'll build the whole thing around you two.</p>
-      <button class="btn glam" onclick="S.seenLanding=true;save();renderOB()">Let's begin, my loves</button>
-      <div class="land-foot">My Big Day · the planner who knows your traditions</div>
+      <div style="font-size:12px;letter-spacing:.3em;color:#B08894;text-transform:uppercase;margin-bottom:14px">${esc(say("landingKicker"))}</div>
+      ${script? `<div class="script">${esc(script)}</div>`:""}
+      <h1 class="land-title">${say("landingTitle")}</h1>
+      <p class="land-sub">${esc(say("landingBody"))}</p>
+      <button class="btn glam" onclick="S.seenLanding=true;save();renderOB()">${esc(say("landingCta"))}</button>
+      <div class="land-foot">${p? esc(p.name)+" · "+esc(p.worldName) : "My Big Day · the planner who knows your traditions"}</div>
     </div>
   </div>`;
 }
@@ -560,7 +606,25 @@ const VIGNETTES = {
 };
 
 /* onboarding position lives in S — a reload used to send the couple back to question one */
+/* Each world counts its questions in its own metaphor: Ziggy in mirror bulbs,
+   Anneke in roman numerals, Rosie in stitches, Perdita in issue numbers. The
+   count itself is shared — only its rendering differs. */
+function obProgress(i, total, pct){
+  const m = shape().progress;
+  if(m === "bulbs"){
+    return `<div class="bulbs">${Array.from({length:total},(_,ix)=>`<i class="${ix<i?"on":""}"></i>`).join("")}</div>`;
+  }
+  if(m === "roman" || m === "numero"){
+    /* No bar and no second count — the header already carries the number, in
+       this world's own formatting. A ledger and a magazine both count in words. */
+    return "";
+  }
+  return `<div class="prog"><i style="width:${pct}%"></i></div>`;
+}
+
 function renderOB(){
+  if(!S.worldId){ renderGate(); return; }          // pick a planner before question one
+  applyWorld("question");
   if(!S.seenLanding){ renderLanding(); return; }
   const steps = obSteps();
   if(S.obIx >= steps.length){ finishOB(); return; }
@@ -648,12 +712,16 @@ function renderOB(){
     st.type==="reception" ? true :
     st.type==="events"||st.type==="multi"||st.type==="country"||st.type==="date"||st.type==="partner" ? true :
     st.get()!==undefined && st.get()!==null;
+  /* The question count is honest: obSteps() builds a different number of steps
+     depending on the path taken (civil skips the faith chain, mixed-faith adds
+     one), so it is read from the live array rather than asserted as fourteen. */
+  const last = S.obIx === steps.length-1;
   document.getElementById("app").innerHTML = `<div id="ob">
     <div style="padding:20px 20px 12px;display:flex;justify-content:space-between;align-items:center">
-      <button onclick="obBack()" style="font-size:15px;${S.obIx===0?"visibility:hidden":""}">‹ Back</button>
-      <span class="small">${S.obIx+1} of ${steps.length}</span>
+      <button onclick="obBack()" style="font-size:15px;${S.obIx===0?"visibility:hidden":""}">‹ ${esc(say("back"))}</button>
+      <span class="small">${esc(stepCount(S.obIx+1, steps.length))}</span>
     </div>
-    <div class="prog"><i style="width:${pct}%"></i></div>
+    ${obProgress(S.obIx+1, steps.length, pct)}
     <div class="body">
       <div class="qwrap">
         ${VIGNETTES[st.id]||""}
@@ -663,8 +731,8 @@ function renderOB(){
       </div>
     </div>
     <div class="foot">
-      ${st.skip?`<button class="skip" onclick="obNext(true)">Skip for now</button>`:""}
-      ${st.type!=="partner"?`<button class="btn glam" ${canNext?"":"disabled"} onclick="obAdvance('${st.id}')">Continue</button>`:""}
+      ${st.skip?`<button class="skip" onclick="obNext(true)">${esc(say("skip"))}</button>`:""}
+      ${st.type!=="partner"?`<button class="btn glam" ${canNext?"":"disabled"} onclick="obAdvance('${st.id}')">${esc(say(last?"build":"next"))}</button>`:""}
     </div>
   </div>`;
 }
@@ -731,9 +799,10 @@ function finishOB(){
 function renderReveal(){
   const p = pack(), pl = S.plan;
   const nm = [S.ans.n1, S.ans.n2].filter(Boolean).join(" & ") || "Your wedding";
+  applyWorld("reveal");
   document.getElementById("app").innerHTML = `<div id="ob"><div class="body reveal">
     <div class="qwrap center">
-    <div class="script" style="font-size:26px">darlings…</div>
+    <div class="script" style="font-size:26px">${esc(say("revealKicker"))}</div>
     <div class="big">${esc(nm)}</div>
     <div class="small">${esc(dispName())}${pack2()? " · with "+esc(pack2().shortName)+" woven in":""}${S.ans.country? " · "+esc(countryOf(S.ans.country)[1]):""}</div>
     <div class="revstat">
@@ -754,8 +823,8 @@ function renderReveal(){
         <div style="display:flex;justify-content:space-between;font-size:14px;padding:8px 0 0;border-top:1.5px solid var(--line);margin-top:6px"><span><b>${fmt(S.budgetTotal)}</b> all in${g? ` · ${fmt(Math.round(S.budgetTotal/g))} a head`:""}</span>${S.budgetEstimated? `<span class="badge b-amber">sample</span>`:""}</div>
         ${S.budgetEstimated? `<div class="small" style="margin-top:8px">You said you didn't know — so I built this from your ${g? g+" guests, ":""}your tradition and ${esc(countryOf(S.ans.country||"GB")[1])} pricing. React to it, don't obey it.</div>`:""}
       </div>`; })() : ""}
-    <p style="font-size:14.5px;color:var(--muted);margin-bottom:26px">Look what we've made already — your traditions, your country, your numbers. Every figure is a starting point, and now we make it magnificent.</p>
-    <button class="btn glam" onclick="S.revealSeen=true;S.tab='home';save();render()">Show me my wedding</button>
+    <p style="font-size:14.5px;color:var(--muted);margin-bottom:26px">${esc(say("revealBody"))}</p>
+    <button class="btn glam" onclick="S.revealSeen=true;S.tab='home';save();render()">${esc(say("revealCta"))}</button>
     </div>
   </div></div>`;
 }

@@ -55,7 +55,7 @@ export function run({ describe, ok, eq, group }) {
     const { api } = boot({ seed: V2_SAVE });
     api.load();
     const S = api.S;
-    eq(S.v, 3, 'v2 save migrates to v3');
+    eq(S.v, 4, 'v2 save migrates all the way to v4');
     eq(S.ans.n1, 'Alex', 'names survive');
     eq(S.ans.packId, 'greek-orthodox', 'tradition survives');
     eq(S.budgetTotal, 42000, 'budget survives');
@@ -66,7 +66,42 @@ export function run({ describe, ok, eq, group }) {
     ok(S.revealSeen === true, 'already-onboarded couple is not sent back through the reveal');
     eq(S.obIx, 0, 'obIx is introduced');
     ok(Array.isArray(S.photos) && Array.isArray(S.customTodos), 'previously-undeclared keys get defaults');
-    group('v2 → v3', 'nothing lost');
+    eq(S.worldId, null, 'and lands in the neutral world rather than being sent to the gate');
+    group('v2 → v4', 'nothing lost across two migration steps');
+  }
+  {
+    /* The case the planner worlds actually create: a couple who is already deep
+       in their plan when the four worlds ship. They must not be thrown back to a
+       gate screen, and above all they must not lose anything. */
+    const V3_SAVE = JSON.stringify({
+      v: 3, unlocked: true, onboarded: true, seenLanding: true, revealSeen: true, obIx: 0,
+      ans: { n1: 'Priya', n2: 'Dev', packId: 'hindu', country: 'GB', dateISO: '2027-08-21' },
+      plan: { events: [{ id: 'baraat', name: 'Baraat' }], items: [{ id: 'mandap', on: true, alloc: 2000, agreed: 1850, paid: true }],
+              timeline: [{ id: 't1', done: true }], paperwork: [{ id: 'p1', done: true }] },
+      guests: [{ id: 'g1', name: 'Auntie', rsvp: 'yes' }, { id: 'g2', name: 'Raj' }],
+      tables: [{ id: 'tb1', seats: ['g1'] }], runsheet: [], customTodos: [{ id: 'c1', done: true }],
+      photos: [], albumCode: 'ABC123', cloud: { id: 'x', token: 'y' },
+      budgetTotal: 31000, budgetEstimated: false, cur: 'GBP', tab: 'guests', accOpen: {}, listFilter: 'all', _pushedAt: 0,
+    });
+    const { api } = boot({ seed: V3_SAVE });
+    api.load();
+    const S = api.S;
+    eq(S.v, 4, 'v3 save migrates to v4');
+    eq(S.worldId, null, 'an existing couple keeps the neutral world — not bounced to the gate');
+    eq(S.ans.n1, 'Priya', 'names survive');
+    eq(S.ans.packId, 'hindu', 'tradition survives');
+    eq(S.budgetTotal, 31000, 'budget survives');
+    eq(S.guests?.length, 2, 'guest list survives');
+    eq(S.plan?.items?.[0]?.agreed, 1850, 'agreed prices survive');
+    ok(S.plan?.items?.[0]?.paid === true, 'payments survive');
+    eq(S.plan?.timeline?.[0]?.done, true, 'ticked tasks survive');
+    eq(S.plan?.paperwork?.[0]?.done, true, 'ticked paperwork survives');
+    eq(S.customTodos?.[0]?.done, true, 'custom todos survive');
+    eq(S.tables?.length, 1, 'seating plan survives');
+    eq(S.albumCode, 'ABC123', 'album code survives');
+    ok(S.cloud && S.cloud.id === 'x', 'cloud pairing survives — they are not logged out');
+    ok(S.unlocked === true, 'and they are still unlocked — they paid');
+    group('v3 → v4', 'the worlds ship without disturbing a plan in progress');
   }
   {
     // The old code did `if(S.v!==2){ S = BLANK(); }` — this is that case.
@@ -78,19 +113,19 @@ export function run({ describe, ok, eq, group }) {
   {
     const { api, store } = boot({ seed: '{ this is not json' });
     api.load();
-    eq(api.S.v, 3, 'corrupt JSON falls back to a blank plan');
+    eq(api.S.v, 4, 'corrupt JSON falls back to a blank plan');
     ok(store.has('weddingapp.rescued'), 'and the unreadable save is parked, not discarded');
   }
   {
     const { api, store } = boot({ seed: JSON.stringify({ v: 1, ans: { n1: 'Alex' } }) });
     api.load();
-    eq(api.S.v, 3, 'a version with no migration path still boots');
+    eq(api.S.v, 4, 'a version with no migration path still boots');
     ok(store.get('weddingapp.rescued')?.includes('Alex'), 'and is preserved verbatim for recovery');
   }
   {
     const { api } = boot({ seed: null });
     api.load();
-    eq(api.S.v, 3, 'first run starts blank at the current version');
+    eq(api.S.v, 4, 'first run starts blank at the current version');
     ok(api.S.revealSeen === false, 'a new couple has not seen the reveal');
   }
 
