@@ -238,6 +238,42 @@ export function run({ describe, ok, eq, group }) {
     group('commerce', 'framing bespoke · price, features and pairing invariant');
   }
 
+  describe('beta build — unlocked for testers, never for shipping');
+  {
+    /* The failure that matters here is not "the beta build is locked" — it is
+       "the shipping build went out unlocked", which gives the app away and is
+       invisible until revenue is zero. So the two builds are separate artifacts
+       and the shipping one is asserted locked. */
+    const build = fs.readFileSync(path.join(ROOT, 'build.py'), 'utf8');
+    ok(/BETA = "--beta" in sys\.argv/.test(build), 'the beta build is opt-in via a flag');
+    ok(/dist\/beta\/index\.html/.test(build), 'and writes to its own artifact');
+    // If --beta could overwrite dist/index.html, one stray flag ships an
+    // unlocked app. The write is in an else branch precisely to stop that.
+    ok(/if BETA:[\s\S]*?dist\/beta\/index\.html[\s\S]*?else:[\s\S]*?dist\/index\.html/.test(build),
+      'and can never overwrite the shipping build');
+    ok(/BETA_UNLOCK = %s/.test(build), 'the flag reaches the page as a constant');
+
+    ok(/function betaUnlocked/.test(app1), 'the app reads it through one helper');
+    ok(/BETA_UNLOCK === true/.test(app1), 'strictly, so an undefined constant is locked');
+    ok(/function applyBeta/.test(app1), 'and applies it on every load path');
+    // A tester with an existing saved plan must be unlocked too, not just a
+    // first-run arrival — otherwise the flag appears not to work.
+    // Five exits: no save, unreadable save, newer-schema save, migrated save,
+    // and the unrecoverable fallback. Miss one and the flag silently does
+    // nothing for whichever tester happens to land on that path.
+    const loadFn = app1.split('function load(){')[1].split('\n}')[0];
+    eq((loadFn.match(/applyBeta\(\)/g) || []).length, 5, 'all five load exits apply it');
+    ok(/Beta build/.test(app2), 'and the build says so on screen rather than pretending');
+
+    const dist = path.join(ROOT, 'dist', 'index.html');
+    if (fs.existsSync(dist)) {
+      const built = fs.readFileSync(dist, 'utf8');
+      ok(/const BETA_UNLOCK = false;/.test(built),
+        'the committed dist/index.html is LOCKED', 'the shipping artifact must never be unlocked');
+    }
+    group('beta', 'separate artifact · shipping build asserted locked');
+  }
+
   describe('worlds — pack content is never persona-varied');
   {
     // Paperwork, customs, gotchas and timeline text are research, not voice.

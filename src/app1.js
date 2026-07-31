@@ -233,22 +233,31 @@ function save(){
   }
 }
 
+/* Set by build.py. Only ever true in the --beta build, which is emitted to
+   dist/beta/ and never to dist/index.html — so the shipping artifact cannot
+   accidentally be an unlocked one. */
+function betaUnlocked(){ return typeof BETA_UNLOCK !== "undefined" && BETA_UNLOCK === true; }
+
 function load(){
   let raw = null;
   try{ raw = localStorage.getItem(STORE_KEY); }catch(e){}
-  if(!raw){ S = BLANK(); return; }
+  if(!raw){ S = BLANK(); applyBeta(); return; }
 
   let parsed = null;
   try{ parsed = JSON.parse(raw); }catch(e){}
-  if(!parsed || typeof parsed !== "object"){ rescue(raw); S = BLANK(); return; }
+  if(!parsed || typeof parsed !== "object"){ rescue(raw); S = BLANK(); applyBeta(); return; }
 
-  if(parsed.v > SCHEMA_V){ S = parsed; return; }   // written by a newer build — leave it alone
+  if(parsed.v > SCHEMA_V){ S = parsed; applyBeta(); return; }   // newer build — leave it alone
   const migrated = migrate(parsed);
-  if(migrated){ S = migrated; save(); return; }
+  if(migrated){ S = migrated; applyBeta(); save(); return; }
 
   rescue(raw);                                     // keep it; recoverable by a human later
   S = BLANK();
+  applyBeta();
 }
+/* Applied after every load path, not just the blank one, so a tester who
+   already has a saved plan is unlocked too rather than only new arrivals. */
+function applyBeta(){ if(S && betaUnlocked()) S.unlocked = true; }
 
 function fmt(n){ const s = CURSYM[S.cur]||"£"; if(n==null||isNaN(n)) return "—";
   return s + Math.round(n).toLocaleString("en-GB"); }

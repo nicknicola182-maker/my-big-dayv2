@@ -3,3 +3,7 @@ tests/shots/
 prototype/node_modules/
 prototype/dist/
 prototype/.parcel-cache/
+
+# The --beta build is an unlocked artifact for testers. Generated on demand by
+# 'python3 build.py --beta'; never committed, so it cannot drift into a release.
+dist/beta/
