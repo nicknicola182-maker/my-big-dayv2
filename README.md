@@ -4,17 +4,21 @@
 ## Layout
 ```
 src/            App source (built into one self-contained HTML file)
-  app1.js       Data, culture engine, onboarding (questions, vignettes, geo-guess)
+  worlds.js     The four planners — identity, structural models, voice
+  worlds.css    Their visual layer: token overrides under [data-world=…]
+  app1.js       Data, culture engine, state, the gate, onboarding, reveal
   app2.js       Main app UI (Home/Budget/Guests/List/Album/More), quotes, scan, cloud sync
+  sync.js       Field-level merge between two phones (pure — no DOM, no fetch)
   app.css       Champagne Blush design system + question vignettes
-packs/          The core IP: 8 researched culture packs + SCHEMA.md data model
+packs/          The core IP: 14 researched culture packs, 67 branch deltas + SCHEMA.md
 fonts/          Subsetted woff2 (Gloock, Outfit, Nothing You Could Do) — inlined at build
 build.py        Build: inlines fonts, gzips packs, bundles QR + fflate libs → dist/index.html
 dist/           index.html — the complete app, one file, works offline
 backend/        Cloudflare Worker API (couples/pairing, plan sync, guest QR album→R2,
                 geo, FX, AI scan, suppliers proxy, enquiries) + wrangler.toml with the
                 REAL provisioned resource IDs + DEPLOY.md (one command: npx wrangler deploy)
-tests/          Playwright end-to-end tests (chromium)
+tests/          Assertion suites + 42 golden snapshots + browser flows — see tests/README.md
+tools/          Dev tooling, never shipped — see tools/README.md
 docs/           Brand voice & identity, social ad package, competitor analysis,
                 design philosophy, flow review, change log, project resume notes
 ```
