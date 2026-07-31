@@ -11,7 +11,7 @@ import json, glob, os, base64, sys
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 SOURCES = [
-    "src/app.css", "src/app1.js", "src/app2.js",
+    "src/app.css", "src/app1.js", "src/sync.js", "src/app2.js",
     "fonts/Gloock-Regular.woff2", "fonts/Outfit-Regular.woff2",
     "fonts/Outfit-Bold.woff2", "fonts/NothingYouCouldDo-Regular.woff2",
     "node_modules/qrcode-generator/dist/qrcode.js",
@@ -60,6 +60,7 @@ css = css.replace("%%F_SCRIPT%%", b64("fonts/NothingYouCouldDo-Regular.woff2"))
 qr = open("node_modules/qrcode-generator/dist/qrcode.js").read()
 fflate = open("node_modules/fflate/umd/index.js").read()
 app1 = open("src/app1.js").read()
+sync = open("src/sync.js").read()
 app2 = open("src/app2.js").read()
 
 html = f"""<!DOCTYPE html>
@@ -78,6 +79,7 @@ html = f"""<!DOCTYPE html>
 <script>{qr}</script>
 <script>{packs_js}</script>
 <script>{app1}</script>
+<script>{sync}</script>
 <script>{app2}</script>
 </body>
 </html>"""

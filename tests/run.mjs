@@ -2,7 +2,7 @@
 /* The test runner. Asserts, reports, and exits non-zero on failure.
  *
  *   node tests/run.mjs              everything available
- *   node tests/run.mjs packs        one suite (packs | engine | app)
+ *   node tests/run.mjs packs        one suite (packs | engine | state | sync | app)
  *
  * Paths are resolved from the repo, not hardcoded, so this runs anywhere.
  * If Playwright isn't installed the browser suite is reported SKIPPED — loudly,
@@ -161,6 +161,12 @@ if (wants('engine')) {
 if (wants('state')) {
   const { run: runState } = await import('./state.mjs');
   guard('state', () => runState({ describe, ok, eq, group }));
+}
+
+/* ── sync: merge + conflict protocol ──────────────────────────── */
+if (wants('sync')) {
+  const { run: runSync } = await import('./sync.mjs');
+  guard('sync', () => runSync({ describe, ok, eq, group }));
 }
 
 /* ── app: browser flows ───────────────────────────────────────── */

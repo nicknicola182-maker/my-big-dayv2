@@ -45,26 +45,40 @@ export default {
         return J({ id: row.id, token: row.token });
       }
 
-      /* ---------- plan sync (last write wins) ---------- */
+      /* ---------- plan sync (optimistic concurrency; client merges on 409) ---------- */
       if (p === "/api/plan") {
         const cid = await auth(req, env);
         if (!cid) return J({ error: "unauthorised" }, 401);
         if (req.method === "GET") {
-          const row = await env.DB.prepare("SELECT data, updated_at FROM plans WHERE couple_id=?").bind(cid).first();
-          return J(row ? { data: JSON.parse(row.data), updatedAt: row.updated_at } : { data: null, updatedAt: null });
+          const row = await env.DB.prepare("SELECT data, rev, updated_at FROM plans WHERE couple_id=?").bind(cid).first();
+          return J(row ? { data: JSON.parse(row.data), rev: row.rev || 0, updatedAt: row.updated_at }
+                       : { data: null, rev: 0, updatedAt: null });
         }
         if (req.method === "PUT") {
           const body = await req.json().catch(() => null);
           if (!body || !body.data) return J({ error: "data required" }, 400);
           const txt = JSON.stringify(body.data);
           if (txt.length > 900_000) return J({ error: "plan too large" }, 413);
+
+          /* Optimistic concurrency. The client sends the rev it last saw; if the
+             other phone has written since, we hand back the current plan and let
+             the client merge rather than overwriting somebody's afternoon. */
+          const hdr = req.headers.get("If-Match");
+          const baseRev = hdr != null ? parseInt(hdr, 10) : (body.baseRev != null ? body.baseRev | 0 : null);
+          const cur = await env.DB.prepare("SELECT data, rev FROM plans WHERE couple_id=?").bind(cid).first();
+          const curRev = cur ? (cur.rev || 0) : 0;
+          if (baseRev != null && !Number.isNaN(baseRev) && cur && baseRev !== curRev) {
+            return J({ conflict: true, rev: curRev, data: JSON.parse(cur.data) }, 409);
+          }
+
+          const nextRev = curRev + 1;
           await env.DB.prepare(
-            "INSERT INTO plans (couple_id, data, updated_at, device) VALUES (?,?,datetime('now'),?) " +
-            "ON CONFLICT(couple_id) DO UPDATE SET data=excluded.data, updated_at=datetime('now'), device=excluded.device")
-            .bind(cid, txt, (body.device || "").slice(0, 40)).run();
+            "INSERT INTO plans (couple_id, data, rev, updated_at, device) VALUES (?,?,?,datetime('now'),?) " +
+            "ON CONFLICT(couple_id) DO UPDATE SET data=excluded.data, rev=excluded.rev, updated_at=datetime('now'), device=excluded.device")
+            .bind(cid, txt, nextRev, (body.device || "").slice(0, 40)).run();
           await env.DB.prepare("UPDATE couples SET last_seen=datetime('now') WHERE id=?").bind(cid).run();
           const row = await env.DB.prepare("SELECT updated_at FROM plans WHERE couple_id=?").bind(cid).first();
-          return J({ ok: true, updatedAt: row.updated_at });
+          return J({ ok: true, rev: nextRev, updatedAt: row.updated_at });
         }
       }
 

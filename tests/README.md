@@ -97,3 +97,21 @@ It also asserts the things that are easy to regress and impossible to notice: a 
 from a *newer* build is kept rather than wiped, an unreadable save is parked at
 `weddingapp.rescued` rather than discarded, a full phone tells the couple once rather
 than on every keystroke, and reopening mid-onboarding resumes at the same question.
+
+## Sync (`tests/sync.mjs`)
+
+The scenario in *"merge — the guest-list case"* is the bug, written down: Alex adds
+three guests at 09:00; Sam, offline on the train with an older copy, ticks two tasks;
+Sam's phone reconnects and writes last. Under the old whole-document sync, Alex's
+three guests were gone — silently, with no undo.
+
+The merge in `src/sync.js` is pure and has no DOM or network, so it is tested directly.
+Its rule: **never lose a row.** Rows merge by id, so anything either side added
+survives; where both sides edited the same row, the later `_m` stamp wins. Only genuine
+scalar clashes — two different budget figures — are surfaced to the couple, and local
+is held until they choose rather than silently replaced.
+
+`touch()` sets `_m`, and is called at every mutation site that syncs (guest add/edit/
+RSVP, task and paperwork ticks, custom todos, item on/off, agreed/paid/deposit). **If
+you add a new synced mutation, call `touch()` on the row** — an unstamped row is treated
+as older than a stamped one, so a missing stamp means that edit quietly loses.
