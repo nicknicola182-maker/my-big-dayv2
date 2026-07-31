@@ -1,0 +1,742 @@
+{
+  "packId": "civil",
+  "currency": "EUR",
+  "budgetTotal": 44000,
+  "counts": {
+    "events": 5,
+    "items": 45,
+    "itemsOn": 21,
+    "timeline": 29,
+    "paperwork": 16,
+    "runsheet": 5
+  },
+  "allocatedTotal": 44000,
+  "sections": {
+    "Attire": 3687,
+    "Beauty": 582,
+    "Ceremony": 583,
+    "Extras": 485,
+    "Flowers & Styling": 2135,
+    "Music & Entertainment": 3577,
+    "Photos & Film": 3300,
+    "Reception": 27613,
+    "Rings & Gifts": 1456,
+    "Stationery": 582
+  },
+  "events": [
+    {
+      "id": "hen-stag",
+      "name": "Hen and stag celebrations"
+    },
+    {
+      "id": "ceremony",
+      "name": "The ceremony"
+    },
+    {
+      "id": "drinks-reception",
+      "name": "Drinks reception"
+    },
+    {
+      "id": "reception",
+      "name": "Wedding breakfast and speeches"
+    },
+    {
+      "id": "evening-reception",
+      "name": "Evening reception"
+    }
+  ],
+  "items": [
+    {
+      "id": "notice-fees",
+      "name": "Notice of marriage fees",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 146
+    },
+    {
+      "id": "registrar-ceremony-fee",
+      "name": "Registrar and ceremony fee",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 388
+    },
+    {
+      "id": "celebrant-fee",
+      "name": "Celebrant fee",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 0
+    },
+    {
+      "id": "marriage-certificates",
+      "name": "Marriage certificate copies",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.001,
+      "alloc": 49
+    },
+    {
+      "id": "ceremony-room-hire",
+      "name": "Ceremony room or space hire",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 0
+    },
+    {
+      "id": "ceremony-musicians",
+      "name": "Ceremony musicians",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "unity-ceremony-supplies",
+      "name": "Symbolic ceremony supplies",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.001,
+      "alloc": 0
+    },
+    {
+      "id": "destination-legal-documents",
+      "name": "Destination wedding legal documents",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.002,
+      "alloc": 0
+    },
+    {
+      "id": "reception-venue",
+      "name": "Venue hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.095,
+      "alloc": 4610
+    },
+    {
+      "id": "catering",
+      "name": "Wedding meal",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.23,
+      "alloc": 11161
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks and bar",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.092,
+      "alloc": 4465
+    },
+    {
+      "id": "evening-food",
+      "name": "Evening food",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 582
+    },
+    {
+      "id": "outfit-one",
+      "name": "Wedding dress or first outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.05,
+      "alloc": 2426
+    },
+    {
+      "id": "outfit-two",
+      "name": "Partner's outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 873
+    },
+    {
+      "id": "accessories",
+      "name": "Shoes, veil and accessories",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 388
+    },
+    {
+      "id": "wedding-party-outfits",
+      "name": "Wedding party outfits",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "hair-makeup",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 582
+    },
+    {
+      "id": "party-beauty",
+      "name": "Wedding party hair and make-up",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "bouquets-buttonholes",
+      "name": "Bouquets and buttonholes",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.014,
+      "alloc": 679
+    },
+    {
+      "id": "ceremony-flowers",
+      "name": "Ceremony flowers and arch",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 0
+    },
+    {
+      "id": "reception-flowers",
+      "name": "Reception flowers and styling",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.03,
+      "alloc": 1456
+    },
+    {
+      "id": "lighting-dancefloor",
+      "name": "Lighting and dance floor",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "signage-decor",
+      "name": "Signage and decor extras",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.068,
+      "alloc": 3300
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.035,
+      "alloc": 0
+    },
+    {
+      "id": "photo-booth",
+      "name": "Photo booth",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "band",
+      "name": "Band or main entertainment",
+      "section": "Music & Entertainment",
+      "on": true,
+      "religious": false,
+      "share": 0.058,
+      "alloc": 3577
+    },
+    {
+      "id": "dj",
+      "name": "DJ",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 0
+    },
+    {
+      "id": "daytime-entertainment",
+      "name": "Daytime entertainment",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations and save the dates",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 582
+    },
+    {
+      "id": "on-the-day-stationery",
+      "name": "On-the-day stationery",
+      "section": "Stationery",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-cars",
+      "name": "Wedding cars",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest transport",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": false,
+      "share": 0.03,
+      "alloc": 1456
+    },
+    {
+      "id": "party-gifts",
+      "name": "Gifts for the wedding party and parents",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "favours",
+      "name": "Favours",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-insurance",
+      "name": "Wedding insurance",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    },
+    {
+      "id": "accommodation",
+      "name": "Wedding night accommodation",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "planner-coordinator",
+      "name": "Planner or on-the-day coordinator",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 0
+    },
+    {
+      "id": "confetti",
+      "name": "Confetti",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.001,
+      "alloc": 0
+    },
+    {
+      "id": "diy-structure",
+      "name": "Marquee or structure hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.1,
+      "alloc": 4853
+    },
+    {
+      "id": "diy-power",
+      "name": "Generators & power",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 971
+    },
+    {
+      "id": "diy-toilets",
+      "name": "Luxury toilet hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 971
+    },
+    {
+      "id": "diy-permit",
+      "name": "Site permission, licences & insurance",
+      "section": "Extras",
+      "on": true,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 485
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 14,
+      "critical": true,
+      "when": "Jul 2026",
+      "task": "Decide the shape of the day: register office, an approved venue with a registrar, or a celebrant-led ceremony with a separate statutory marriage (England and Wales) or a legally authorised celebrant (Scotland and Northern Ireland)"
+    },
+    {
+      "id": "t1",
+      "mb": 14,
+      "critical": false,
+      "when": "Jul 2026",
+      "task": "Agree the overall budget and rough guest numbers with everyone contributing"
+    },
+    {
+      "id": "t2",
+      "mb": 13,
+      "critical": true,
+      "when": "Aug 2026",
+      "task": "In England and Wales, check the registration service's availability for your date before you confirm the venue: the registrar and the venue are separate bookings and both must line up"
+    },
+    {
+      "id": "t3",
+      "mb": 12,
+      "critical": true,
+      "when": "Sept 2026",
+      "task": "Book the venue, checking it is on the council's approved premises list if a registrar is marrying you there in England or Wales"
+    },
+    {
+      "id": "t4",
+      "mb": 12,
+      "critical": true,
+      "when": "Sept 2026",
+      "task": "Book the registrars' attendance with the council, or book your celebrant"
+    },
+    {
+      "id": "t5",
+      "mb": 12,
+      "critical": false,
+      "when": "Sept 2026",
+      "task": "Take out wedding insurance as soon as the first deposits are paid"
+    },
+    {
+      "id": "t6",
+      "mb": 11,
+      "critical": false,
+      "when": "Oct 2026",
+      "task": "Book the photographer and videographer"
+    },
+    {
+      "id": "t26",
+      "mb": 11,
+      "critical": true,
+      "when": "Oct 2026",
+      "task": "Get the landowner's permission in writing, and walk the site — access for vehicles, water, noise, a wet-weather plan"
+    },
+    {
+      "id": "t7",
+      "mb": 10,
+      "critical": false,
+      "when": "Nov 2026",
+      "task": "Book the band or DJ, checking the venue's sound limiter and finish time first"
+    },
+    {
+      "id": "t8",
+      "mb": 10,
+      "critical": false,
+      "when": "Nov 2026",
+      "task": "Start outfit shopping; made-to-order dresses need six months or more plus alterations"
+    },
+    {
+      "id": "t9",
+      "mb": 9,
+      "critical": false,
+      "when": "Dec 2026",
+      "task": "Send save the dates, especially if guests are travelling"
+    },
+    {
+      "id": "t27",
+      "mb": 9,
+      "critical": false,
+      "when": "Dec 2026",
+      "task": "Book the marquee or structure, generators and toilets — from-scratch venue kit gets booked out fast"
+    },
+    {
+      "id": "t10",
+      "mb": 8,
+      "critical": false,
+      "when": "Jan 2027",
+      "task": "Book the florist, and the caterer if your venue is dry hire"
+    },
+    {
+      "id": "t11",
+      "mb": 8,
+      "critical": true,
+      "when": "Jan 2027",
+      "task": "If marrying abroad, research that country's legal requirements, residency rules and paperwork now, and decide whether to do the legal marriage at home instead"
+    },
+    {
+      "id": "t12",
+      "mb": 7,
+      "critical": false,
+      "when": "Feb 2027",
+      "task": "Start shaping the ceremony: choose readings, music and any symbolic elements, and begin the script with your celebrant if you have one"
+    },
+    {
+      "id": "t13",
+      "mb": 6,
+      "critical": false,
+      "when": "Mar 2027",
+      "task": "In England and Wales, send your proposed music and readings to the registration service for approval, since religious content is not allowed and decisions vary between districts"
+    },
+    {
+      "id": "t14",
+      "mb": 5,
+      "critical": false,
+      "when": "Apr 2027",
+      "task": "Order invitations"
+    },
+    {
+      "id": "t15",
+      "mb": 4,
+      "critical": false,
+      "when": "May 2027",
+      "task": "Send invitations, making the daytime and evening guest distinction unmissable if you have one"
+    },
+    {
+      "id": "t16",
+      "mb": 4,
+      "critical": true,
+      "when": "May 2027",
+      "task": "Give notice: in England and Wales at your local register office at least 29 days before the ceremony (valid 12 months); in Scotland submit M10 forms no later than 29 days and no earlier than 3 months before; in Northern Ireland at least 28 days before"
+    },
+    {
+      "id": "t28",
+      "mb": 4,
+      "critical": true,
+      "when": "May 2027",
+      "task": "Confirm how the legal ceremony happens — an unlicensed site usually means a separate signing"
+    },
+    {
+      "id": "t17",
+      "mb": 3,
+      "critical": false,
+      "when": "Jun 2027",
+      "task": "Buy the wedding rings, or decide you are not having them"
+    },
+    {
+      "id": "t18",
+      "mb": 3,
+      "critical": false,
+      "when": "Jun 2027",
+      "task": "Hair and make-up trial, timed near a dress fitting"
+    },
+    {
+      "id": "t19",
+      "mb": 3,
+      "critical": false,
+      "when": "Jun 2027",
+      "task": "Choose your two witnesses and tell them what the role involves"
+    },
+    {
+      "id": "t20",
+      "mb": 2,
+      "critical": false,
+      "when": "Jul 2027",
+      "task": "Write your personal vows and share them with your celebrant, or check what additions your registrar allows"
+    },
+    {
+      "id": "t21",
+      "mb": 2,
+      "critical": true,
+      "when": "Jul 2027",
+      "task": "Confirm final numbers with the caterer and the running order with the venue"
+    },
+    {
+      "id": "t22",
+      "mb": 1,
+      "critical": false,
+      "when": "Aug 2027",
+      "task": "Final venue meeting: confirm registrar or celebrant arrival time, the pre-ceremony interview, and where the signing table goes"
+    },
+    {
+      "id": "t23",
+      "mb": 1,
+      "critical": true,
+      "when": "Aug 2027",
+      "task": "If your main ceremony is celebrant-led in England or Wales, confirm the statutory register office booking and the witnesses attending it"
+    },
+    {
+      "id": "t24",
+      "mb": 0.5,
+      "critical": true,
+      "when": "Aug 2027",
+      "task": "In Scotland, collect the marriage schedule in person from the register office in the seven days before the wedding; in Northern Ireland collect it no more than 14 days before"
+    },
+    {
+      "id": "t25",
+      "mb": 0.25,
+      "critical": false,
+      "when": "Aug 2027",
+      "task": "Walk through the ceremony space, or hold a short rehearsal if your celebrant offers one"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both",
+      "item": "Notice of marriage (England and Wales)"
+    },
+    {
+      "id": "p1",
+      "who": "Both",
+      "item": "Documents for giving notice"
+    },
+    {
+      "id": "p2",
+      "who": "Either party previously married",
+      "item": "Evidence a previous marriage or civil partnership has ended"
+    },
+    {
+      "id": "p3",
+      "who": "Either, if applicable",
+      "item": "Evidence of any name change"
+    },
+    {
+      "id": "p4",
+      "who": "Any partner who is not a British or Irish citizen without settled or pre-settled status",
+      "item": "Immigration documents and joint notice"
+    },
+    {
+      "id": "p5",
+      "who": "Both",
+      "item": "Marriage schedule (England and Wales)"
+    },
+    {
+      "id": "p6",
+      "who": "Both",
+      "item": "Marriage certificates"
+    },
+    {
+      "id": "p7",
+      "who": "Both",
+      "item": "M10 marriage notice forms (Scotland)"
+    },
+    {
+      "id": "p8",
+      "who": "Both",
+      "item": "Marriage schedule (Scotland)"
+    },
+    {
+      "id": "p9",
+      "who": "Both",
+      "item": "Marriage notice forms (Northern Ireland)"
+    },
+    {
+      "id": "p10",
+      "who": "Both",
+      "item": "Three months notification (Republic of Ireland)"
+    },
+    {
+      "id": "p11",
+      "who": "Both, if your main ceremony is celebrant-led",
+      "item": "Statutory ceremony booking (England and Wales two-step)"
+    },
+    {
+      "id": "p12",
+      "who": "Both, if marrying abroad and the country requires one",
+      "item": "Certificate of no impediment"
+    },
+    {
+      "id": "p13",
+      "who": "Both, if marrying abroad",
+      "item": "Legalisation and translations for marrying abroad"
+    },
+    {
+      "id": "p14",
+      "who": "Both, if you married abroad",
+      "item": "Foreign marriage certificate"
+    },
+    {
+      "id": "p-dest",
+      "who": "Both",
+      "item": "Check how a marriage in Cyprus is recognised at home, and what notice/documents your home country requires"
+    }
+  ]
+}

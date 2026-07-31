@@ -1,0 +1,688 @@
+{
+  "packId": "muslim",
+  "currency": "GBP",
+  "budgetTotal": 30000,
+  "counts": {
+    "events": 5,
+    "items": 42,
+    "itemsOn": 20,
+    "timeline": 26,
+    "paperwork": 15,
+    "runsheet": 5
+  },
+  "allocatedTotal": 30001,
+  "sections": {
+    "Attire": 2996,
+    "Beauty": 862,
+    "Ceremony": 2210,
+    "Flowers & Styling": 1873,
+    "Photos & Film": 4046,
+    "Reception": 16516,
+    "Rings & Gifts": 674,
+    "Stationery": 449,
+    "Transport": 375
+  },
+  "events": [
+    {
+      "id": "engagement",
+      "name": "The engagement (mangni / tolbeh / nişan)"
+    },
+    {
+      "id": "mehndi",
+      "name": "Mehndi / henna night"
+    },
+    {
+      "id": "nikah",
+      "name": "The nikah"
+    },
+    {
+      "id": "civil",
+      "name": "Civil marriage or registration"
+    },
+    {
+      "id": "walima",
+      "name": "The walima"
+    }
+  ],
+  "items": [
+    {
+      "id": "mahr",
+      "name": "Mahr (the bride's marriage gift)",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.035,
+      "alloc": 1311
+    },
+    {
+      "id": "nikah-venue-fee",
+      "name": "Mosque or nikah venue fee",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 375
+    },
+    {
+      "id": "imam-honorarium",
+      "name": "Imam or officiant honorarium",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 225
+    },
+    {
+      "id": "nikah-documents",
+      "name": "Nikah contract and certificates",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.003,
+      "alloc": 112
+    },
+    {
+      "id": "premarital-course",
+      "name": "Pre-marriage counselling or course",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    },
+    {
+      "id": "civil-fees",
+      "name": "Civil marriage notice, licence and registrar fees",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 187
+    },
+    {
+      "id": "quran-reciter",
+      "name": "Qur'an reciter",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.002,
+      "alloc": 0
+    },
+    {
+      "id": "venue-hire",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.1,
+      "alloc": 4760
+    },
+    {
+      "id": "catering",
+      "name": "Halal catering for the main reception",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.21,
+      "alloc": 9995
+    },
+    {
+      "id": "drinks",
+      "name": "Soft drinks, juices and tea",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.025,
+      "alloc": 1190
+    },
+    {
+      "id": "walima-catering",
+      "name": "Walima catering (if held as a separate event)",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.065,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "dates-sweets",
+      "name": "Dates and sweets after the nikah",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "service-staffing",
+      "name": "Service staff and cleanup",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 571
+    },
+    {
+      "id": "bridal-outfit",
+      "name": "Bridal outfit for the main day",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.06,
+      "alloc": 2247
+    },
+    {
+      "id": "event-outfits",
+      "name": "Outfits for the other events",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 0
+    },
+    {
+      "id": "groom-outfit",
+      "name": "Groom's outfits",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 749
+    },
+    {
+      "id": "party-attire",
+      "name": "Family and wedding party outfits",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "stage-decor",
+      "name": "Stage and backdrop",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.028,
+      "alloc": 1049
+    },
+    {
+      "id": "venue-styling",
+      "name": "Table styling and room decor",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.022,
+      "alloc": 824
+    },
+    {
+      "id": "mehndi-styling",
+      "name": "Mehndi / henna night styling",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "garlands-flowers",
+      "name": "Fresh flowers and garlands",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "sofreh-aghd",
+      "name": "Sofreh aghd spread (Iranian)",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 2618
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.03,
+      "alloc": 1428
+    },
+    {
+      "id": "album",
+      "name": "Albums and prints",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "nasheed-daf",
+      "name": "Nasheed singers or daf drummers",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.007,
+      "alloc": 0
+    },
+    {
+      "id": "dj-band",
+      "name": "DJ or live band",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 0
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 449
+    },
+    {
+      "id": "favours",
+      "name": "Guest favours",
+      "section": "Stationery",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "couple-transport",
+      "name": "Wedding cars",
+      "section": "Transport",
+      "on": true,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 375
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest transport and parking",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 674
+    },
+    {
+      "id": "bridal-jewellery",
+      "name": "Bridal gold and jewellery",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 0
+    },
+    {
+      "id": "gift-trays",
+      "name": "Gift trays between the families",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 0
+    },
+    {
+      "id": "family-gifts",
+      "name": "Thank-you gifts",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "henna-artist",
+      "name": "Henna artist",
+      "section": "Beauty",
+      "on": true,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 300
+    },
+    {
+      "id": "hair-makeup",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": true,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 562
+    },
+    {
+      "id": "groom-grooming",
+      "name": "Groom's grooming",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    },
+    {
+      "id": "planner",
+      "name": "Wedding planner or coordinator",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.022,
+      "alloc": 0
+    },
+    {
+      "id": "charity",
+      "name": "Charity and feeding people in need",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "prayer-space",
+      "name": "Prayer space at the venue",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 12,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "Decide the shape of the wedding with both families: which events you are having, over how many days, and whether celebrations are mixed, separated or a mixture"
+    },
+    {
+      "id": "t1",
+      "mb": 12,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "Speak to the imam or mosque about the nikah: their requirements, availability, fees and whether they can also solemnise the civil marriage in your country"
+    },
+    {
+      "id": "t2",
+      "mb": 12,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "Check the calendar: Ramadan makes daytime catering impractical, Eid seasons book out suppliers, and many Shia families avoid the mourning months of Muharram and Safar"
+    },
+    {
+      "id": "t3",
+      "mb": 11,
+      "critical": true,
+      "when": "Jul 2026",
+      "task": "Book the reception venue, confirming in writing that it allows outside halal caterers, will run a dry event without penalty, and can accommodate any separation or prayer space you need"
+    },
+    {
+      "id": "t4",
+      "mb": 11,
+      "critical": false,
+      "when": "Jul 2026",
+      "task": "Agree between the families who is hosting and paying for what — traditionally the bride's side hosts the main day and the groom's side the walima, but every family settles it differently"
+    },
+    {
+      "id": "t5",
+      "mb": 10,
+      "critical": true,
+      "when": "Aug 2026",
+      "task": "Agree the mahr together — amount, what form it takes, and how much is prompt versus deferred — before anyone else weighs in"
+    },
+    {
+      "id": "t6",
+      "mb": 10,
+      "critical": true,
+      "when": "Aug 2026",
+      "task": "Confirm who will act as wali and who your witnesses will be, and check your imam's expectations, which differ between schools"
+    },
+    {
+      "id": "t7",
+      "mb": 10,
+      "critical": true,
+      "when": "Aug 2026",
+      "task": "Book the halal caterer and ask exactly how the meat is certified, not just whether it is halal"
+    },
+    {
+      "id": "t8",
+      "mb": 9,
+      "critical": false,
+      "when": "Sept 2026",
+      "task": "Book the photographer and videographer, raising gender-separated coverage and photo-sharing rules now rather than on the day"
+    },
+    {
+      "id": "t9",
+      "mb": 9,
+      "critical": false,
+      "when": "Sept 2026",
+      "task": "Plan the mehndi or henna night and book the henna artist for the day before it"
+    },
+    {
+      "id": "t10",
+      "mb": 8,
+      "critical": true,
+      "when": "Oct 2026",
+      "task": "Submit the mosque's marriage application and book any required premarital counselling session"
+    },
+    {
+      "id": "t11",
+      "mb": 8,
+      "critical": false,
+      "when": "Oct 2026",
+      "task": "Book entertainment appropriate to your family — dhol players, a zaffa troupe, nasheed singers, a DJ — and brief them on the family's expectations"
+    },
+    {
+      "id": "t12",
+      "mb": 7,
+      "critical": false,
+      "when": "Nov 2026",
+      "task": "Start outfit shopping early if anything is being made or ordered from abroad, counting one outfit per event"
+    },
+    {
+      "id": "t13",
+      "mb": 6,
+      "critical": true,
+      "when": "Dec 2026",
+      "task": "Sort the legal marriage: give notice at the register office in the United Kingdom, plan the licence timing in the United States, book the civil ceremony in countries where it must come first"
+    },
+    {
+      "id": "t14",
+      "mb": 6,
+      "critical": false,
+      "when": "Dec 2026",
+      "task": "Order invitations, deciding which guests are invited to which events"
+    },
+    {
+      "id": "t15",
+      "mb": 5,
+      "critical": false,
+      "when": "Jan 2027",
+      "task": "Book hair and make-up, requesting a female team or hijab-experienced artist if you need one"
+    },
+    {
+      "id": "t16",
+      "mb": 4,
+      "critical": true,
+      "when": "Feb 2027",
+      "task": "Gather the nikah paperwork: identity documents, and divorce or death certificates and any Islamic divorce documentation if either of you was married before"
+    },
+    {
+      "id": "t17",
+      "mb": 4,
+      "critical": false,
+      "when": "Feb 2027",
+      "task": "Walk the venue and plan prayer space, washing access and where maghrib falls in the running order"
+    },
+    {
+      "id": "t18",
+      "mb": 3,
+      "critical": true,
+      "when": "Mar 2027",
+      "task": "Finalise the nikah contract with the imam: the mahr as agreed, and any conditions either of you wants written in — read every clause before the day"
+    },
+    {
+      "id": "t19",
+      "mb": 3,
+      "critical": false,
+      "when": "Mar 2027",
+      "task": "Buy the rings, remembering that grooms generally avoid gold"
+    },
+    {
+      "id": "t20",
+      "mb": 2,
+      "critical": true,
+      "when": "Apr 2027",
+      "task": "In the United States, collect the marriage licence inside its validity window; in the United Kingdom, confirm the notice has cleared and the registrar or authorised person is booked"
+    },
+    {
+      "id": "t21",
+      "mb": 2,
+      "critical": false,
+      "when": "Apr 2027",
+      "task": "Confirm final menus, guest numbers per event and dietary needs with the caterer"
+    },
+    {
+      "id": "t22",
+      "mb": 1,
+      "critical": false,
+      "when": "May 2027",
+      "task": "Agree the nikah running order with the imam: language, who gives the khutbah, how consent will be taken, and whether photography is permitted during it"
+    },
+    {
+      "id": "t23",
+      "mb": 1,
+      "critical": false,
+      "when": "May 2027",
+      "task": "Confirm logistics for the henna night and any processions — including that the venue allows drums outside"
+    },
+    {
+      "id": "t24",
+      "mb": 0,
+      "critical": true,
+      "when": "Jun 2027",
+      "task": "On the nikah day, bring the documents, the licence where applicable, the witnesses and the signed-off contract — nothing else about the day matters if these are missing"
+    },
+    {
+      "id": "t25",
+      "mb": 0,
+      "critical": true,
+      "when": "Jun 2027",
+      "task": "Afterwards, collect the nikah certificate, register the marriage with the civil authority where that is a separate step, and hold the walima"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both",
+      "item": "Civil marriage licence or notice of marriage"
+    },
+    {
+      "id": "p1",
+      "who": "Both",
+      "item": "Photo identity documents"
+    },
+    {
+      "id": "p2",
+      "who": "Either party previously married",
+      "item": "Proof any previous marriage has ended"
+    },
+    {
+      "id": "p3",
+      "who": "Either party previously married Islamically",
+      "item": "Islamic divorce documentation"
+    },
+    {
+      "id": "p4",
+      "who": "A partner who converted to Islam",
+      "item": "Certificate of conversion (shahada certificate)"
+    },
+    {
+      "id": "p5",
+      "who": "The bride",
+      "item": "Wali (bride's guardian) confirmed"
+    },
+    {
+      "id": "p6",
+      "who": "Both",
+      "item": "Two witnesses arranged"
+    },
+    {
+      "id": "p7",
+      "who": "Both",
+      "item": "Mahr recorded in the contract"
+    },
+    {
+      "id": "p8",
+      "who": "Both",
+      "item": "Mosque marriage application"
+    },
+    {
+      "id": "p9",
+      "who": "Both",
+      "item": "Nikah certificate (nikah nama)"
+    },
+    {
+      "id": "p10",
+      "who": "Both, in most Muslim-majority countries",
+      "item": "Registration with the nikah registrar"
+    },
+    {
+      "id": "p11",
+      "who": "Both, in some countries",
+      "item": "Premarital medical screening"
+    },
+    {
+      "id": "p12",
+      "who": "Both, in England and Wales",
+      "item": "Registrar or authorised person booked"
+    },
+    {
+      "id": "p13",
+      "who": "Either party with foreign documents",
+      "item": "Translations and apostilles"
+    },
+    {
+      "id": "p14",
+      "who": "Both",
+      "item": "Marriage certificate after the event"
+    }
+  ]
+}

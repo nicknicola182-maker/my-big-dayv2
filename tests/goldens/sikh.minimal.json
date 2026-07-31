@@ -1,0 +1,713 @@
+{
+  "packId": "sikh",
+  "currency": "GBP",
+  "budgetTotal": 24000,
+  "counts": {
+    "events": 12,
+    "items": 42,
+    "itemsOn": 22,
+    "timeline": 26,
+    "paperwork": 14,
+    "runsheet": 12
+  },
+  "allocatedTotal": 23999,
+  "sections": {
+    "Attire": 3560,
+    "Beauty": 445,
+    "Ceremony": 2066,
+    "Extras": 954,
+    "Flowers & Styling": 1113,
+    "Music & Entertainment": 954,
+    "Photos & Film": 3178,
+    "Reception": 9600,
+    "Rings & Gifts": 1430,
+    "Stationery": 381,
+    "Transport": 318
+  },
+  "events": [
+    {
+      "id": "roka",
+      "name": "Roka and kurmai (engagement)"
+    },
+    {
+      "id": "path",
+      "name": "Sukhmani Sahib or Akhand Path"
+    },
+    {
+      "id": "mehndi",
+      "name": "Mehndi night"
+    },
+    {
+      "id": "maiyan",
+      "name": "Maiyan (vatna)"
+    },
+    {
+      "id": "sangeet",
+      "name": "Sangeet"
+    },
+    {
+      "id": "jaggo",
+      "name": "Jaggo"
+    },
+    {
+      "id": "chooda",
+      "name": "Chooda ceremony"
+    },
+    {
+      "id": "baraat",
+      "name": "Baraat and milni"
+    },
+    {
+      "id": "anand-karaj",
+      "name": "Anand Karaj"
+    },
+    {
+      "id": "langar",
+      "name": "Langar"
+    },
+    {
+      "id": "doli",
+      "name": "Doli (vidaai)"
+    },
+    {
+      "id": "reception",
+      "name": "Reception"
+    }
+  ],
+  "items": [
+    {
+      "id": "gurdwara-donation",
+      "name": "Gurdwara donation and booking",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.012,
+      "alloc": 381
+    },
+    {
+      "id": "granthi-ragi-offering",
+      "name": "Offering for the granthi and ragis",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.008,
+      "alloc": 254
+    },
+    {
+      "id": "karah-prashad",
+      "name": "Karah prashad (deg)",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.004,
+      "alloc": 127
+    },
+    {
+      "id": "langar-contribution",
+      "name": "Langar contribution",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.03,
+      "alloc": 954
+    },
+    {
+      "id": "head-coverings",
+      "name": "Head coverings for guests",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.003,
+      "alloc": 95
+    },
+    {
+      "id": "palla",
+      "name": "Palla",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.002,
+      "alloc": 64
+    },
+    {
+      "id": "milni-garlands",
+      "name": "Milni garlands and shagun",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 191
+    },
+    {
+      "id": "sehra-kalgi",
+      "name": "Sehra and kalgi",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    },
+    {
+      "id": "venue-hire",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.09,
+      "alloc": 2861
+    },
+    {
+      "id": "catering",
+      "name": "Reception catering",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.2,
+      "alloc": 6358
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks and bar",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 0
+    },
+    {
+      "id": "late-food",
+      "name": "Late-night food",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "service-staffing",
+      "name": "Service charge and staffing",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 381
+    },
+    {
+      "id": "bridal-outfits",
+      "name": "Bridal outfits",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.05,
+      "alloc": 1589
+    },
+    {
+      "id": "bridal-jewellery",
+      "name": "Bridal jewellery",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.04,
+      "alloc": 1272
+    },
+    {
+      "id": "chooda-kalire",
+      "name": "Chooda and kalire",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "groom-outfits",
+      "name": "Groom's outfits and turbans",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.022,
+      "alloc": 699
+    },
+    {
+      "id": "family-outfits",
+      "name": "Family and wedding party outfits",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 0
+    },
+    {
+      "id": "gurdwara-decor",
+      "name": "Gurdwara floral decoration",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "reception-styling",
+      "name": "Reception styling and centrepieces",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.035,
+      "alloc": 1113
+    },
+    {
+      "id": "stage-backdrop",
+      "name": "Stage and backdrop",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 0
+    },
+    {
+      "id": "prewedding-decor",
+      "name": "Mehndi and sangeet decor",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 1748
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.045,
+      "alloc": 1430
+    },
+    {
+      "id": "album",
+      "name": "Albums and prints",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "dhol",
+      "name": "Dhol players",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "dj-band",
+      "name": "DJ or live act",
+      "section": "Music & Entertainment",
+      "on": true,
+      "religious": false,
+      "share": 0.03,
+      "alloc": 954
+    },
+    {
+      "id": "av-lighting",
+      "name": "Sound, lighting and dance floor",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 0
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 381
+    },
+    {
+      "id": "favours",
+      "name": "Favours and mithai boxes",
+      "section": "Stationery",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "ghodi",
+      "name": "Ghodi or baraat vehicle",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.007,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-cars",
+      "name": "Wedding cars and the doli car",
+      "section": "Transport",
+      "on": true,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 318
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest coaches and parking",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 0
+    },
+    {
+      "id": "family-gifts",
+      "name": "Family gift exchange and shagun",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": false,
+      "share": 0.045,
+      "alloc": 1430
+    },
+    {
+      "id": "bridal-beauty",
+      "name": "Bridal hair and make-up",
+      "section": "Beauty",
+      "on": true,
+      "religious": false,
+      "share": 0.014,
+      "alloc": 445
+    },
+    {
+      "id": "mehndi-artist",
+      "name": "Mehndi artist",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "family-beauty",
+      "name": "Hair and make-up for family",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "prewedding-hosting",
+      "name": "Pre-wedding event hosting",
+      "section": "Extras",
+      "on": true,
+      "religious": false,
+      "share": 0.03,
+      "alloc": 954
+    },
+    {
+      "id": "path-donation",
+      "name": "Donation for the Sukhmani Sahib or Akhand Path",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "planner",
+      "name": "Wedding planner or coordinator",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 15,
+      "critical": true,
+      "when": "15 months before",
+      "task": "Speak to your gurdwara before booking anything else: confirm they will conduct your Anand Karaj, what declarations they require, and how their diary works"
+    },
+    {
+      "id": "t1",
+      "mb": 14,
+      "critical": true,
+      "when": "14 months before",
+      "task": "If one of you is not Sikh, have the conversation with the gurdwara committee now: practice varies, some require the non-Sikh partner to formally adopt the Sikh faith, and alternatives such as a civil marriage followed by an ardas of blessing exist"
+    },
+    {
+      "id": "t2",
+      "mb": 13,
+      "critical": true,
+      "when": "13 months before",
+      "task": "Fix the date and book the gurdwara slot; any day is religiously acceptable, so popular weekends go early for practical rather than religious reasons"
+    },
+    {
+      "id": "t3",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Book the reception venue, checking its capacity, its own-caterer policy and whether your bar plans fit the venue"
+    },
+    {
+      "id": "t4",
+      "mb": 12,
+      "critical": false,
+      "when": "12 months before",
+      "task": "Book the photographer and videographer, and confirm they have worked in a gurdwara before"
+    },
+    {
+      "id": "t5",
+      "mb": 11,
+      "critical": true,
+      "when": "11 months before",
+      "task": "Draw up the guest lists per event: gurdwara and langar, which are open and large, and the reception, which is seated and fixed"
+    },
+    {
+      "id": "t6",
+      "mb": 10,
+      "critical": false,
+      "when": "10 months before",
+      "task": "Start outfit shopping or ordering, especially anything coming from India, and book tailoring time"
+    },
+    {
+      "id": "t7",
+      "mb": 10,
+      "critical": false,
+      "when": "10 months before",
+      "task": "Book the caterer for the reception and agree per-head price, minimums and the vegetarian or mixed menu"
+    },
+    {
+      "id": "t8",
+      "mb": 9,
+      "critical": false,
+      "when": "9 months before",
+      "task": "Book the DJ or band, and the dhol players for the baraat, jaggo and reception"
+    },
+    {
+      "id": "t9",
+      "mb": 8,
+      "critical": true,
+      "when": "8 months before",
+      "task": "Meet the granthi to walk through the ceremony: the palla, the four laavan, where each family sits and stands, and what the gurdwara permits for photography and decoration"
+    },
+    {
+      "id": "t10",
+      "mb": 8,
+      "critical": false,
+      "when": "8 months before",
+      "task": "Book the mehndi artist and the hair and make-up team, flagging the pre-dawn start on the wedding morning"
+    },
+    {
+      "id": "t11",
+      "mb": 7,
+      "critical": false,
+      "when": "7 months before",
+      "task": "Order invitations, with separate cards or inserts for each event"
+    },
+    {
+      "id": "t12",
+      "mb": 6,
+      "critical": false,
+      "when": "6 months before",
+      "task": "Coordinate the chooda with the bride's maternal uncle and order the kalire"
+    },
+    {
+      "id": "t13",
+      "mb": 6,
+      "critical": false,
+      "when": "6 months before",
+      "task": "Book the ghodi or baraat car, the wedding and doli cars, and guest coaches between venues"
+    },
+    {
+      "id": "t14",
+      "mb": 5,
+      "critical": true,
+      "when": "5 months before",
+      "task": "Sort the legal route for your country: check whether your gurdwara is registered for marriages in England and Wales, or how you will obtain the licence in the United States or Canada, or lodge the Notice of Intended Marriage in Australia"
+    },
+    {
+      "id": "t15",
+      "mb": 4,
+      "critical": true,
+      "when": "4 months before",
+      "task": "Give civil notice or apply for the licence within your country's window, and book the registrar or register office if your gurdwara ceremony will not itself be legally binding"
+    },
+    {
+      "id": "t16",
+      "mb": 4,
+      "critical": true,
+      "when": "4 months before",
+      "task": "Confirm langar numbers with the gurdwara and whether food must come from the gurdwara kitchen or an approved caterer"
+    },
+    {
+      "id": "t17",
+      "mb": 3,
+      "critical": false,
+      "when": "3 months before",
+      "task": "Book the Sukhmani Sahib or Akhand Path with the gurdwara if you are holding one"
+    },
+    {
+      "id": "t18",
+      "mb": 3,
+      "critical": false,
+      "when": "3 months before",
+      "task": "Agree the milni list with both families: which pairs of relatives will be introduced, and prepare the garlands and gifts"
+    },
+    {
+      "id": "t19",
+      "mb": 2,
+      "critical": false,
+      "when": "2 months before",
+      "task": "Order the palla, sehra, rumals for guests, and garlands, and check the gurdwara's position on the sehra and kalgi in the darbar hall"
+    },
+    {
+      "id": "t20",
+      "mb": 2,
+      "critical": true,
+      "when": "2 months before",
+      "task": "Plan the wedding-day schedule around the morning ceremony: baraat arrival, milni, ceremony, langar, doli, and the gap before the evening reception"
+    },
+    {
+      "id": "t21",
+      "mb": 1,
+      "critical": true,
+      "when": "1 months before",
+      "task": "Brief non-Sikh guests: heads covered and shoes off for everyone, modest dress that works for sitting on the floor, no alcohol or tobacco anywhere on gurdwara premises, and no applause in the darbar hall"
+    },
+    {
+      "id": "t22",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Prepare the offerings: the gurdwara donation, envelopes for the granthi and ragis, and the deg and langar contributions"
+    },
+    {
+      "id": "t23",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Confirm final numbers with the reception caterer and the running order with the DJ and dhol players"
+    },
+    {
+      "id": "t24",
+      "mb": 0,
+      "critical": false,
+      "when": "0 months before",
+      "task": "Hold the mehndi, maiyan, sangeet and jaggo in the final days, keeping the night before the ceremony from running too late: the wedding morning starts early"
+    },
+    {
+      "id": "t25",
+      "mb": 0,
+      "critical": true,
+      "when": "0 months before",
+      "task": "After the wedding, complete the legal registration and collect your marriage certificate; in India, register under the Anand Marriage Act where your state has notified rules"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both",
+      "item": "Gurdwara booking and declaration forms"
+    },
+    {
+      "id": "p1",
+      "who": "Both",
+      "item": "Photo identification and birth certificates"
+    },
+    {
+      "id": "p2",
+      "who": "Either party previously married",
+      "item": "Decree absolute or final divorce decree"
+    },
+    {
+      "id": "p3",
+      "who": "Either party widowed",
+      "item": "Death certificate of a former spouse"
+    },
+    {
+      "id": "p4",
+      "who": "Both",
+      "item": "Civil notice of marriage or marriage licence"
+    },
+    {
+      "id": "p5",
+      "who": "Both, in England and Wales",
+      "item": "Confirmation that the gurdwara is registered for marriages"
+    },
+    {
+      "id": "p6",
+      "who": "Both, where required",
+      "item": "Registrar or authorised person booking"
+    },
+    {
+      "id": "p7",
+      "who": "Both, in India",
+      "item": "Registration under the Anand Marriage Act"
+    },
+    {
+      "id": "p8",
+      "who": "Both",
+      "item": "Marriage certificate copies"
+    },
+    {
+      "id": "p9",
+      "who": "The partner joining the faith, where applicable",
+      "item": "Declaration and welcome for a partner adopting the Sikh faith"
+    },
+    {
+      "id": "p10",
+      "who": "Both",
+      "item": "Two witnesses for the civil marriage"
+    },
+    {
+      "id": "p11",
+      "who": "Both, if marrying abroad",
+      "item": "Certificate of no impediment or equivalent"
+    },
+    {
+      "id": "p12",
+      "who": "Both families",
+      "item": "Gurdwara conduct agreement"
+    },
+    {
+      "id": "p13",
+      "who": "Either, optional",
+      "item": "Name change documents"
+    }
+  ]
+}

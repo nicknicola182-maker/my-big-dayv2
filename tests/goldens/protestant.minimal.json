@@ -1,0 +1,694 @@
+{
+  "packId": "protestant",
+  "currency": "GBP",
+  "budgetTotal": 24000,
+  "counts": {
+    "events": 9,
+    "items": 40,
+    "itemsOn": 20,
+    "timeline": 27,
+    "paperwork": 15,
+    "runsheet": 9
+  },
+  "allocatedTotal": 24000,
+  "sections": {
+    "Attire": 2430,
+    "Beauty": 360,
+    "Ceremony": 810,
+    "Flowers & Styling": 1950,
+    "Music & Entertainment": 1650,
+    "Photos & Film": 1950,
+    "Reception": 12990,
+    "Rings & Gifts": 960,
+    "Stationery": 540,
+    "Transport": 360
+  },
+  "events": [
+    {
+      "id": "marriage-prep",
+      "name": "Meetings with the vicar or minister"
+    },
+    {
+      "id": "banns-readings",
+      "name": "Reading of the banns"
+    },
+    {
+      "id": "hen-stag",
+      "name": "Hen and stag celebrations"
+    },
+    {
+      "id": "rehearsal",
+      "name": "Rehearsal and rehearsal dinner"
+    },
+    {
+      "id": "ceremony",
+      "name": "The marriage service"
+    },
+    {
+      "id": "photographs-confetti",
+      "name": "Photographs and confetti at the church door"
+    },
+    {
+      "id": "drinks-reception",
+      "name": "Drinks reception"
+    },
+    {
+      "id": "wedding-breakfast",
+      "name": "Wedding breakfast and speeches"
+    },
+    {
+      "id": "evening-reception",
+      "name": "Evening reception"
+    }
+  ],
+  "items": [
+    {
+      "id": "church-wedding-fee",
+      "name": "Church wedding fee",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.015,
+      "alloc": 450
+    },
+    {
+      "id": "banns-licence-notice",
+      "name": "Banns, licence or notice fees",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.004,
+      "alloc": 120
+    },
+    {
+      "id": "registrar-or-authorised-person",
+      "name": "Registrar attendance",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 0
+    },
+    {
+      "id": "minister-gift",
+      "name": "Gift or honorarium for a visiting minister",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 0
+    },
+    {
+      "id": "marriage-prep-course",
+      "name": "Marriage preparation or premarital counselling",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 0
+    },
+    {
+      "id": "organist",
+      "name": "Organist",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 240
+    },
+    {
+      "id": "choir",
+      "name": "Church choir",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "bell-ringers",
+      "name": "Bell ringers",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 0
+    },
+    {
+      "id": "verger",
+      "name": "Verger or caretaker",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.002,
+      "alloc": 0
+    },
+    {
+      "id": "church-heating",
+      "name": "Church heating",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.002,
+      "alloc": 0
+    },
+    {
+      "id": "reception-venue",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.1,
+      "alloc": 3000
+    },
+    {
+      "id": "catering",
+      "name": "Wedding breakfast",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.23,
+      "alloc": 6900
+    },
+    {
+      "id": "drinks",
+      "name": "Bar, wine and toast drink",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.09,
+      "alloc": 2700
+    },
+    {
+      "id": "evening-food",
+      "name": "Evening food",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.035,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.013,
+      "alloc": 390
+    },
+    {
+      "id": "rehearsal-dinner",
+      "name": "Rehearsal dinner",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-dress",
+      "name": "Wedding dress and alterations",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 1650
+    },
+    {
+      "id": "veil-accessories",
+      "name": "Veil, shoes and accessories",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 240
+    },
+    {
+      "id": "groom-attire",
+      "name": "Groom's outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 540
+    },
+    {
+      "id": "wedding-party-attire",
+      "name": "Wedding party outfits",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 0
+    },
+    {
+      "id": "hair-makeup",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 360
+    },
+    {
+      "id": "party-beauty",
+      "name": "Wedding party hair and make-up",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "church-flowers",
+      "name": "Church flowers",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 450
+    },
+    {
+      "id": "bouquets-buttonholes",
+      "name": "Bouquets and buttonholes",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 450
+    },
+    {
+      "id": "reception-flowers",
+      "name": "Reception flowers and styling",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.035,
+      "alloc": 1050
+    },
+    {
+      "id": "lighting-styling",
+      "name": "Lighting and decor",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.065,
+      "alloc": 1950
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.035,
+      "alloc": 0
+    },
+    {
+      "id": "evening-band-dj",
+      "name": "Band or DJ",
+      "section": "Music & Entertainment",
+      "on": true,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 1650
+    },
+    {
+      "id": "daytime-musicians",
+      "name": "Daytime musicians",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations and save the dates",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 360
+    },
+    {
+      "id": "order-of-service",
+      "name": "Order of service booklets",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 180
+    },
+    {
+      "id": "on-the-day-stationery",
+      "name": "On-the-day stationery",
+      "section": "Stationery",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-cars",
+      "name": "Wedding cars",
+      "section": "Transport",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 360
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest transport",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.007,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": true,
+      "share": 0.032,
+      "alloc": 960
+    },
+    {
+      "id": "party-gifts",
+      "name": "Gifts for the wedding party and parents",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "favours",
+      "name": "Favours",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "accommodation",
+      "name": "Wedding night and guest accommodation",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "wedding-insurance",
+      "name": "Wedding insurance",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Contact the church before booking anything else, and ask about dates, fees and what the church expects of you"
+    },
+    {
+      "id": "t1",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Church of England: check you can marry there, either by living in the parish or through a qualifying connection such as baptism, past residence, six months on the worship register, or a parent or grandparent married in that church"
+    },
+    {
+      "id": "t2",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "If either of you has been married before, raise it at the first conversation: remarriage is at the discretion of the individual vicar or minister in most Protestant churches"
+    },
+    {
+      "id": "t3",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Book the reception venue"
+    },
+    {
+      "id": "t4",
+      "mb": 11,
+      "critical": false,
+      "when": "11 months before",
+      "task": "Draft the guest list, decide daytime versus evening guests, and agree with both families who is paying for what"
+    },
+    {
+      "id": "t5",
+      "mb": 10,
+      "critical": false,
+      "when": "10 months before",
+      "task": "Book the photographer and videographer, and ask the vicar or minister what photography is allowed during the service"
+    },
+    {
+      "id": "t6",
+      "mb": 10,
+      "critical": false,
+      "when": "10 months before",
+      "task": "Book the band or DJ for the evening"
+    },
+    {
+      "id": "t7",
+      "mb": 9,
+      "critical": false,
+      "when": "9 months before",
+      "task": "Start dress shopping, allowing for order lead time plus alterations"
+    },
+    {
+      "id": "t8",
+      "mb": 9,
+      "critical": false,
+      "when": "9 months before",
+      "task": "Book the florist, and ask whether the church has its own flower team and any seasonal restrictions"
+    },
+    {
+      "id": "t9",
+      "mb": 8,
+      "critical": false,
+      "when": "8 months before",
+      "task": "Send save the dates, particularly if guests are travelling"
+    },
+    {
+      "id": "t10",
+      "mb": 8,
+      "critical": false,
+      "when": "8 months before",
+      "task": "Begin marriage preparation or premarital counselling if your church runs or requires it, which most US pastors do"
+    },
+    {
+      "id": "t11",
+      "mb": 6,
+      "critical": false,
+      "when": "6 months before",
+      "task": "Choose hymns, readings and the form of vows with the vicar or minister, and decide whether to include Holy Communion"
+    },
+    {
+      "id": "t12",
+      "mb": 6,
+      "critical": false,
+      "when": "6 months before",
+      "task": "Book the organist, and the choir and bell ringers if you want them, telling them now if the service will be filmed"
+    },
+    {
+      "id": "t13",
+      "mb": 6,
+      "critical": false,
+      "when": "6 months before",
+      "task": "Order invitations"
+    },
+    {
+      "id": "t14",
+      "mb": 5,
+      "critical": true,
+      "when": "5 months before",
+      "task": "Confirm your legal route: banns for most Church of England weddings, a common or special licence where banns will not work, register office notice for other denominations in England and Wales, marriage notice in Scotland, or a state licence in the US"
+    },
+    {
+      "id": "t15",
+      "mb": 5,
+      "critical": true,
+      "when": "5 months before",
+      "task": "If either of you is not a British or Irish citizen without settled status, tell the vicar now, because the wedding will need a superintendent registrar's schedule instead of banns and notice can take longer"
+    },
+    {
+      "id": "t16",
+      "mb": 4,
+      "critical": true,
+      "when": "4 months before",
+      "task": "Church of England: arrange banns at the wedding church and at the parish church where each of you lives"
+    },
+    {
+      "id": "t17",
+      "mb": 4,
+      "critical": true,
+      "when": "4 months before",
+      "task": "Other denominations in England and Wales: give notice at your local register office at least 29 days before the wedding; the notice names the building, so settle the venue first"
+    },
+    {
+      "id": "t18",
+      "mb": 4,
+      "critical": false,
+      "when": "4 months before",
+      "task": "Send invitations"
+    },
+    {
+      "id": "t19",
+      "mb": 3,
+      "critical": true,
+      "when": "3 months before",
+      "task": "Banns are read on three Sundays in each church; go along to hear them read if you can"
+    },
+    {
+      "id": "t20",
+      "mb": 2,
+      "critical": true,
+      "when": "2 months before",
+      "task": "Scotland: submit marriage notice forms to the registrar, no later than 29 days and no earlier than three months before the wedding"
+    },
+    {
+      "id": "t21",
+      "mb": 2,
+      "critical": true,
+      "when": "2 months before",
+      "task": "Collect the banns certificate from your home parish and deliver it to the wedding church, without which the wedding cannot go ahead"
+    },
+    {
+      "id": "t22",
+      "mb": 2,
+      "critical": false,
+      "when": "2 months before",
+      "task": "Send the order of service to the vicar or minister for checking, then print"
+    },
+    {
+      "id": "t23",
+      "mb": 1,
+      "critical": true,
+      "when": "1 months before",
+      "task": "US: check your state's licence rules, since many licences expire 30 to 90 days after issue and a few states have a short waiting period, and collect it in the right window"
+    },
+    {
+      "id": "t24",
+      "mb": 1,
+      "critical": true,
+      "when": "1 months before",
+      "task": "Final meeting with the vicar or minister to walk through the service, confirm the music list and settle any outstanding fees"
+    },
+    {
+      "id": "t25",
+      "mb": 0.5,
+      "critical": true,
+      "when": "0.5 months before",
+      "task": "Rehearsal at the church with the wedding party, readers and, if possible, the musicians"
+    },
+    {
+      "id": "t26",
+      "mb": 0.25,
+      "critical": true,
+      "when": "0.25 months before",
+      "task": "Scotland: collect the marriage schedule in person from the registrar, no more than seven days before the wedding, and put someone reliable in charge of bringing it on the day"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both",
+      "item": "Banns of marriage"
+    },
+    {
+      "id": "p1",
+      "who": "Each of you living outside the wedding parish",
+      "item": "Banns certificate from your home parish"
+    },
+    {
+      "id": "p2",
+      "who": "Both, if banns will not work",
+      "item": "Common licence"
+    },
+    {
+      "id": "p3",
+      "who": "Both, in unusual circumstances",
+      "item": "Special licence"
+    },
+    {
+      "id": "p4",
+      "who": "Both, in specific cases",
+      "item": "Superintendent registrar's marriage schedule"
+    },
+    {
+      "id": "p5",
+      "who": "Both, for non-Anglican church weddings in England and Wales",
+      "item": "Notice of marriage at the register office"
+    },
+    {
+      "id": "p6",
+      "who": "The church or the couple",
+      "item": "Authorised person or registrar booking"
+    },
+    {
+      "id": "p7",
+      "who": "Both, Church of England only",
+      "item": "Evidence of qualifying connection"
+    },
+    {
+      "id": "p8",
+      "who": "Both",
+      "item": "Passport or photo identification and proof of address"
+    },
+    {
+      "id": "p9",
+      "who": "Either party previously married",
+      "item": "Decree absolute, or former spouse's death certificate"
+    },
+    {
+      "id": "p10",
+      "who": "Both, plus two witnesses",
+      "item": "Marriage schedule or marriage document signed on the day"
+    },
+    {
+      "id": "p11",
+      "who": "Both, marrying in Scotland",
+      "item": "Marriage notice forms and schedule"
+    },
+    {
+      "id": "p12",
+      "who": "Both, marrying in the US",
+      "item": "State marriage licence"
+    },
+    {
+      "id": "p13",
+      "who": "The minister, in the US",
+      "item": "Officiant authorisation"
+    },
+    {
+      "id": "p14",
+      "who": "Both, varies by church",
+      "item": "Church membership or faith expectations"
+    }
+  ]
+}

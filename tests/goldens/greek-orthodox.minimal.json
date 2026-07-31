@@ -1,0 +1,765 @@
+{
+  "packId": "greek-orthodox",
+  "currency": "GBP",
+  "budgetTotal": 24000,
+  "counts": {
+    "events": 9,
+    "items": 45,
+    "itemsOn": 29,
+    "timeline": 30,
+    "paperwork": 16,
+    "runsheet": 9
+  },
+  "allocatedTotal": 23997,
+  "sections": {
+    "Attire": 2380,
+    "Beauty": 453,
+    "Ceremony": 1360,
+    "Flowers & Styling": 1785,
+    "Music & Entertainment": 1558,
+    "Photos & Film": 2833,
+    "Reception": 11362,
+    "Rings & Gifts": 906,
+    "Stationery": 1020,
+    "Transport": 340
+  },
+  "events": [
+    {
+      "id": "engagement",
+      "name": "The engagement (arravones)"
+    },
+    {
+      "id": "invitations",
+      "name": "Delivering the invitations (ta prosklitiria)"
+    },
+    {
+      "id": "krevati",
+      "name": "Making the bed (to krevati)"
+    },
+    {
+      "id": "bachelor",
+      "name": "Stag and hen celebrations"
+    },
+    {
+      "id": "paramoni",
+      "name": "The eve (i paramoni)"
+    },
+    {
+      "id": "stolisma",
+      "name": "The dressing (to stolisma / ta allamata)"
+    },
+    {
+      "id": "ceremony",
+      "name": "The Service of Betrothal and the Service of Crowning"
+    },
+    {
+      "id": "chairetisma",
+      "name": "The congratulations line (to chairetisma)"
+    },
+    {
+      "id": "reception",
+      "name": "The reception"
+    }
+  ],
+  "items": [
+    {
+      "id": "church-offering",
+      "name": "Church offering",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.012,
+      "alloc": 340
+    },
+    {
+      "id": "priest-offering",
+      "name": "Offering to the priest",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 170
+    },
+    {
+      "id": "chanter-choir",
+      "name": "Chanter and choir",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.005,
+      "alloc": 142
+    },
+    {
+      "id": "church-permissions",
+      "name": "Certificates and permission to marry",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.003,
+      "alloc": 85
+    },
+    {
+      "id": "civil-registration",
+      "name": "Civil registration and notice fees",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 113
+    },
+    {
+      "id": "stefana",
+      "name": "Stefana (wedding crowns)",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.008,
+      "alloc": 227
+    },
+    {
+      "id": "lambades",
+      "name": "Lambades (wedding candles)",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.004,
+      "alloc": 113
+    },
+    {
+      "id": "ceremony-tray",
+      "name": "Tray, goblet and wine",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.003,
+      "alloc": 85
+    },
+    {
+      "id": "koufeta-rice",
+      "name": "Koufeta, rice and petals for the church",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 85
+    },
+    {
+      "id": "stefanothiki",
+      "name": "Stefanothiki (crown case)",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    },
+    {
+      "id": "church-flowers",
+      "name": "Church flowers and aisle decoration",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.025,
+      "alloc": 708
+    },
+    {
+      "id": "venue-hire",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.065,
+      "alloc": 1842
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.24,
+      "alloc": 6800
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.07,
+      "alloc": 1983
+    },
+    {
+      "id": "service-charge",
+      "name": "Service charge, corkage and staffing",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 340
+    },
+    {
+      "id": "wedding-cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.014,
+      "alloc": 397
+    },
+    {
+      "id": "traditional-dish",
+      "name": "Resi or traditional wedding dish",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "late-food",
+      "name": "Late-night food",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "reception-styling",
+      "name": "Table centrepieces and reception styling",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.03,
+      "alloc": 850
+    },
+    {
+      "id": "bouquets",
+      "name": "Bouquets and buttonholes",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 227
+    },
+    {
+      "id": "band",
+      "name": "Live band",
+      "section": "Music & Entertainment",
+      "on": true,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 1558
+    },
+    {
+      "id": "dj",
+      "name": "DJ",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 0
+    },
+    {
+      "id": "violarides",
+      "name": "Traditional musicians for the dressing",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "dance-troupe",
+      "name": "Traditional dance troupe",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "plates-flowers",
+      "name": "Flowers and plates for throwing",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 0
+    },
+    {
+      "id": "av-lighting",
+      "name": "Lighting, sound and staging",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.018,
+      "alloc": 0
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.06,
+      "alloc": 1700
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.04,
+      "alloc": 1133
+    },
+    {
+      "id": "album",
+      "name": "Album, prints and parents' copies",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.007,
+      "alloc": 0
+    },
+    {
+      "id": "gown",
+      "name": "Bridal gown",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.052,
+      "alloc": 1473
+    },
+    {
+      "id": "bridal-accessories",
+      "name": "Veil, shoes, jewellery and wrap",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 340
+    },
+    {
+      "id": "groom-outfit",
+      "name": "Groom's outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 567
+    },
+    {
+      "id": "party-attire",
+      "name": "Koumbaroi and bridal party outfits",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "hair-makeup",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": true,
+      "religious": false,
+      "share": 0.016,
+      "alloc": 453
+    },
+    {
+      "id": "family-beauty",
+      "name": "Hair and make-up for mothers and attendants",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 0
+    },
+    {
+      "id": "groom-shave",
+      "name": "Barber for the groom's shave",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.016,
+      "alloc": 453
+    },
+    {
+      "id": "bomboniere",
+      "name": "Bomboniera (favours)",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 567
+    },
+    {
+      "id": "wedding-cars",
+      "name": "Wedding cars",
+      "section": "Transport",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 340
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest transport",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 0
+    },
+    {
+      "id": "rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": false,
+      "share": 0.025,
+      "alloc": 708
+    },
+    {
+      "id": "koumbaroi-gift",
+      "name": "Gifts for the koumbaroi",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": false,
+      "share": 0.007,
+      "alloc": 198
+    },
+    {
+      "id": "family-gifts",
+      "name": "Gifts for parents and attendants",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.007,
+      "alloc": 0
+    },
+    {
+      "id": "planner",
+      "name": "Wedding planner or coordinator",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.027,
+      "alloc": 0
+    },
+    {
+      "id": "translations",
+      "name": "Document translation and apostilles",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 15,
+      "critical": true,
+      "when": "15 months before",
+      "task": "Speak to your parish priest before you book anything else, and ask which dates the church cannot marry you on"
+    },
+    {
+      "id": "t1",
+      "mb": 14,
+      "critical": true,
+      "when": "14 months before",
+      "task": "Check the fasting seasons against your shortlist: Great Lent and Holy Week, the Dormition fast in the first half of August, the Nativity fast, and the fixed days of 5 and 6 January, 29 August and 14 September"
+    },
+    {
+      "id": "t2",
+      "mb": 14,
+      "critical": true,
+      "when": "14 months before",
+      "task": "If either of you was married before, start the ecclesiastical divorce now, because it is separate from the civil divorce and takes months"
+    },
+    {
+      "id": "t3",
+      "mb": 13,
+      "critical": true,
+      "when": "13 months before",
+      "task": "Confirm the church is free and get the date written into the parish diary before you book a venue"
+    },
+    {
+      "id": "t4",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Agree who the koumbaros or koumbara will be and confirm they are an Orthodox Christian in good standing, since only an Orthodox sponsor may exchange the rings and the crowns"
+    },
+    {
+      "id": "t5",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Book the reception venue, checking its standing capacity as well as its seated capacity"
+    },
+    {
+      "id": "t6",
+      "mb": 11,
+      "critical": true,
+      "when": "11 months before",
+      "task": "Draw up the two guest lists you actually need: the church and dinner list, and the much larger congratulations list"
+    },
+    {
+      "id": "t7",
+      "mb": 11,
+      "critical": false,
+      "when": "11 months before",
+      "task": "Book the band, the photographer and the videographer, which go first at popular dates"
+    },
+    {
+      "id": "t8",
+      "mb": 10,
+      "critical": false,
+      "when": "10 months before",
+      "task": "Order or arrange the stefana and lambades with the koumbaroi, and agree who is paying for what"
+    },
+    {
+      "id": "t9",
+      "mb": 9,
+      "critical": true,
+      "when": "9 months before",
+      "task": "Start the paperwork: baptismal certificates for both of you, and certificates of freedom to marry or celibacy from your parish"
+    },
+    {
+      "id": "t10",
+      "mb": 8,
+      "critical": true,
+      "when": "8 months before",
+      "task": "If one of you is not Orthodox, confirm with the priest that the baptism is accepted and complete any declaration about raising children in the Orthodox faith"
+    },
+    {
+      "id": "t11",
+      "mb": 8,
+      "critical": false,
+      "when": "8 months before",
+      "task": "Book the caterer and confirm the per-head price, the minimum numbers and what happens if numbers rise"
+    },
+    {
+      "id": "t12",
+      "mb": 7,
+      "critical": false,
+      "when": "7 months before",
+      "task": "Book the violarides or traditional musicians for the morning dressing if you are having one"
+    },
+    {
+      "id": "t13",
+      "mb": 6,
+      "critical": true,
+      "when": "6 months before",
+      "task": "Begin the meetings with your priest and ask him to walk you through the service, including where you stand and what the koumbaros does"
+    },
+    {
+      "id": "t14",
+      "mb": 6,
+      "critical": false,
+      "when": "6 months before",
+      "task": "Order the invitations, allowing generously for the congratulations list and for hand delivery"
+    },
+    {
+      "id": "t15",
+      "mb": 5,
+      "critical": true,
+      "when": "5 months before",
+      "task": "In Cyprus, book the thalassaemia screening appointments for both of you and collect the certificates"
+    },
+    {
+      "id": "t16",
+      "mb": 4,
+      "critical": true,
+      "when": "4 months before",
+      "task": "Submit your documents to the priest so he can apply to the Metropolis or Archdiocese for permission to marry"
+    },
+    {
+      "id": "t17",
+      "mb": 4,
+      "critical": false,
+      "when": "4 months before",
+      "task": "Confirm the church's rules on photography, flowers, aisle runners, rice and confetti in writing"
+    },
+    {
+      "id": "t18",
+      "mb": 3,
+      "critical": false,
+      "when": "3 months before",
+      "task": "Start delivering the invitations in person, family by family"
+    },
+    {
+      "id": "t19",
+      "mb": 3,
+      "critical": true,
+      "when": "3 months before",
+      "task": "Give notice of marriage to the civil authority: the register office in the United Kingdom, the municipality in Greece, the Notice of Intended Marriage in Australia, the county clerk in the United States"
+    },
+    {
+      "id": "t20",
+      "mb": 3,
+      "critical": true,
+      "when": "3 months before",
+      "task": "In England and Wales, confirm whether the church is registered for marriages and book the registrar if one must attend"
+    },
+    {
+      "id": "t21",
+      "mb": 2,
+      "critical": true,
+      "when": "2 months before",
+      "task": "In Greece, publish the marriage announcement in a daily newspaper and collect the marriage licence from the parish or Metropolis"
+    },
+    {
+      "id": "t22",
+      "mb": 2,
+      "critical": true,
+      "when": "2 months before",
+      "task": "Confirm the ecclesiastical permission has come back from the Metropolis and check its expiry date against your wedding date"
+    },
+    {
+      "id": "t23",
+      "mb": 2,
+      "critical": false,
+      "when": "2 months before",
+      "task": "Book hair, make-up and the barber to come to the houses on the morning, for the mothers and attendants as well as the couple"
+    },
+    {
+      "id": "t24",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Buy the koufeta, the wine for the common cup and the rice or petals, within the church's rules"
+    },
+    {
+      "id": "t25",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Pay the church balance and put the priest's and chanter's envelopes together"
+    },
+    {
+      "id": "t26",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Fix the date of the krevati with the friends who will make the bed, and the eve gathering with both families"
+    },
+    {
+      "id": "t27",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Confirm running times with the band and agree the overtime rate in writing"
+    },
+    {
+      "id": "t28",
+      "mb": 0,
+      "critical": false,
+      "when": "0 months before",
+      "task": "Hold the stolisma and the eve gathering, and give the koumbaroi the stefana, lambades and tray to bring to the church"
+    },
+    {
+      "id": "t29",
+      "mb": 0,
+      "critical": true,
+      "when": "0 months before",
+      "task": "In the days after the wedding, register the marriage: within 40 days at the lixiarcheio in Greece, within 45 days with the Registrar in Cyprus"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "The Orthodox party, and often both",
+      "item": "Orthodox baptismal certificate"
+    },
+    {
+      "id": "p1",
+      "who": "The non-Orthodox party",
+      "item": "Baptismal certificate for a non-Orthodox partner"
+    },
+    {
+      "id": "p2",
+      "who": "Both",
+      "item": "Certificate of freedom to marry or celibacy (pistopoiitiko agamias)"
+    },
+    {
+      "id": "p3",
+      "who": "Both",
+      "item": "Permission or licence to marry from the Metropolis or Archdiocese"
+    },
+    {
+      "id": "p4",
+      "who": "Both",
+      "item": "Civil marriage licence or notice of marriage"
+    },
+    {
+      "id": "p5",
+      "who": "Both, in Cyprus",
+      "item": "Thalassaemia screening certificate"
+    },
+    {
+      "id": "p6",
+      "who": "Either party previously married in the Orthodox Church",
+      "item": "Ecclesiastical divorce decree"
+    },
+    {
+      "id": "p7",
+      "who": "Either party previously married",
+      "item": "Civil divorce decree"
+    },
+    {
+      "id": "p8",
+      "who": "Either party widowed",
+      "item": "Death certificate of a former spouse"
+    },
+    {
+      "id": "p9",
+      "who": "The non-Orthodox party, in most jurisdictions",
+      "item": "Declaration that children will be baptised and raised Orthodox"
+    },
+    {
+      "id": "p10",
+      "who": "The sponsor",
+      "item": "Certificate of good standing for the koumbaros or koumbara"
+    },
+    {
+      "id": "p11",
+      "who": "Both, in the United States and Australia",
+      "item": "Certificate of membership or stewardship"
+    },
+    {
+      "id": "p12",
+      "who": "Both",
+      "item": "Passport or birth certificate"
+    },
+    {
+      "id": "p13",
+      "who": "Either party with foreign documents",
+      "item": "Certified translations and apostilles"
+    },
+    {
+      "id": "p14",
+      "who": "Both",
+      "item": "Registration of the marriage after the ceremony"
+    },
+    {
+      "id": "p15",
+      "who": "Both, in England and Wales",
+      "item": "Registrar attendance or separate civil ceremony"
+    }
+  ]
+}

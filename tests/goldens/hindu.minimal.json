@@ -1,0 +1,702 @@
+{
+  "packId": "hindu",
+  "currency": "GBP",
+  "budgetTotal": 24000,
+  "counts": {
+    "events": 9,
+    "items": 41,
+    "itemsOn": 26,
+    "timeline": 29,
+    "paperwork": 12,
+    "runsheet": 9
+  },
+  "allocatedTotal": 24001,
+  "sections": {
+    "Attire": 1699,
+    "Beauty": 510,
+    "Ceremony": 1982,
+    "Flowers & Styling": 2208,
+    "Music & Entertainment": 991,
+    "Photos & Film": 2406,
+    "Reception": 10697,
+    "Rings & Gifts": 2773,
+    "Stationery": 509,
+    "Transport": 226
+  },
+  "events": [
+    {
+      "id": "roka",
+      "name": "Roka and engagement (sagai / nischitartham)"
+    },
+    {
+      "id": "ganesh-puja",
+      "name": "Ganesh puja and opening rituals"
+    },
+    {
+      "id": "haldi",
+      "name": "Haldi (pithi / gaye holud)"
+    },
+    {
+      "id": "mehndi",
+      "name": "Mehndi"
+    },
+    {
+      "id": "sangeet",
+      "name": "Sangeet"
+    },
+    {
+      "id": "baraat",
+      "name": "Baraat, milni and welcome"
+    },
+    {
+      "id": "ceremony",
+      "name": "The wedding ceremony (vivaah)"
+    },
+    {
+      "id": "vidaai",
+      "name": "Vidaai (farewell)"
+    },
+    {
+      "id": "reception",
+      "name": "Reception"
+    }
+  ],
+  "items": [
+    {
+      "id": "pandit-fee",
+      "name": "Pandit's fee (dakshina)",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.008,
+      "alloc": 226
+    },
+    {
+      "id": "muhurat-consultation",
+      "name": "Muhurat and horoscope consultation",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.002,
+      "alloc": 57
+    },
+    {
+      "id": "ceremony-venue",
+      "name": "Ceremony venue hire",
+      "section": "Ceremony",
+      "on": true,
+      "religious": false,
+      "share": 0.055,
+      "alloc": 1557
+    },
+    {
+      "id": "mandap",
+      "name": "Mandap hire and decoration",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": true,
+      "share": 0.045,
+      "alloc": 1274
+    },
+    {
+      "id": "havan-samagri",
+      "name": "Puja items and havan samagri",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.005,
+      "alloc": 142
+    },
+    {
+      "id": "varmala-garlands",
+      "name": "Varmala garlands",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": true,
+      "share": 0.003,
+      "alloc": 85
+    },
+    {
+      "id": "reception-venue",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.07,
+      "alloc": 1981
+    },
+    {
+      "id": "catering-wedding-day",
+      "name": "Wedding day catering",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.22,
+      "alloc": 6226
+    },
+    {
+      "id": "catering-pre-events",
+      "name": "Catering for haldi, mehndi and sangeet",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.05,
+      "alloc": 1415
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.028,
+      "alloc": 792
+    },
+    {
+      "id": "service-staffing",
+      "name": "Service charge and staffing",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 283
+    },
+    {
+      "id": "wedding-cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "mithai-favours",
+      "name": "Mithai and favours",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 283
+    },
+    {
+      "id": "bridal-outfit",
+      "name": "Bridal lehenga or sari",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.045,
+      "alloc": 1274
+    },
+    {
+      "id": "bridal-additional-outfits",
+      "name": "Bride's outfits for the other events",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 0
+    },
+    {
+      "id": "groom-sherwani",
+      "name": "Groom's sherwani or ceremony outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 425
+    },
+    {
+      "id": "groom-additional-outfits",
+      "name": "Groom's outfits for the other events",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.007,
+      "alloc": 0
+    },
+    {
+      "id": "family-outfits",
+      "name": "Outfits for parents and close family",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 0
+    },
+    {
+      "id": "safa-turbans",
+      "name": "Safas for the baraat",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.003,
+      "alloc": 0
+    },
+    {
+      "id": "mangalsutra",
+      "name": "Mangalsutra or thali",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": true,
+      "share": 0.008,
+      "alloc": 226
+    },
+    {
+      "id": "gold-jewellery",
+      "name": "Bridal gold and jewellery",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": false,
+      "share": 0.08,
+      "alloc": 2264
+    },
+    {
+      "id": "rings",
+      "name": "Engagement and wedding rings",
+      "section": "Rings & Gifts",
+      "on": true,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 283
+    },
+    {
+      "id": "family-gifts",
+      "name": "Gifts between the families (shagun)",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 0
+    },
+    {
+      "id": "sangeet-entertainment",
+      "name": "Sangeet DJ, sound and staging",
+      "section": "Music & Entertainment",
+      "on": true,
+      "religious": false,
+      "share": 0.015,
+      "alloc": 425
+    },
+    {
+      "id": "choreographer",
+      "name": "Sangeet choreographer",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 0
+    },
+    {
+      "id": "dhol-baraat",
+      "name": "Dhol players for the baraat",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "ceremony-musicians",
+      "name": "Ceremony musicians (shehnai or nadaswaram)",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.004,
+      "alloc": 0
+    },
+    {
+      "id": "reception-music",
+      "name": "Reception DJ or band",
+      "section": "Music & Entertainment",
+      "on": true,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 566
+    },
+    {
+      "id": "av-lighting",
+      "name": "Lighting, sound and staging",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 0
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.05,
+      "alloc": 1415
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.035,
+      "alloc": 991
+    },
+    {
+      "id": "album",
+      "name": "Albums and parents' copies",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "bridal-hmua",
+      "name": "Bridal hair and make-up",
+      "section": "Beauty",
+      "on": true,
+      "religious": false,
+      "share": 0.012,
+      "alloc": 340
+    },
+    {
+      "id": "mehndi-artist",
+      "name": "Mehndi artist",
+      "section": "Beauty",
+      "on": true,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 170
+    },
+    {
+      "id": "family-beauty",
+      "name": "Hair and make-up for mothers and close family",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.006,
+      "alloc": 0
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 226
+    },
+    {
+      "id": "baraat-transport",
+      "name": "Baraat horse or car",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.005,
+      "alloc": 0
+    },
+    {
+      "id": "guest-transport",
+      "name": "Wedding cars and guest transport",
+      "section": "Transport",
+      "on": true,
+      "religious": false,
+      "share": 0.008,
+      "alloc": 226
+    },
+    {
+      "id": "florals-styling",
+      "name": "Florals and venue styling",
+      "section": "Flowers & Styling",
+      "on": true,
+      "religious": false,
+      "share": 0.03,
+      "alloc": 849
+    },
+    {
+      "id": "planner",
+      "name": "Wedding planner or coordinator",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.025,
+      "alloc": 0
+    },
+    {
+      "id": "guest-accommodation",
+      "name": "Accommodation for out-of-town family",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 14,
+      "critical": true,
+      "when": "14 months before",
+      "task": "Sit down with your pandit or astrologer and fix the muhurat before you book anything else, since the auspicious date and time anchor every other booking"
+    },
+    {
+      "id": "t1",
+      "mb": 14,
+      "critical": true,
+      "when": "14 months before",
+      "task": "Ask which periods are closed for weddings in your community's calendar, such as Chaturmas, adhik maas and periods when Venus or Jupiter is combust, so you know which months are simply unavailable"
+    },
+    {
+      "id": "t2",
+      "mb": 13,
+      "critical": true,
+      "when": "13 months before",
+      "task": "Agree between the two families who is hosting and paying for what, event by event, before the big bookings are made"
+    },
+    {
+      "id": "t3",
+      "mb": 13,
+      "critical": true,
+      "when": "13 months before",
+      "task": "Book the ceremony and reception venues, confirming in writing that they allow an open flame for the havan and can open at the hour your muhurat requires"
+    },
+    {
+      "id": "t4",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Book the pandit for the wedding date and the supporting pujas, since good pandits are booked out on the same auspicious dates as the venues"
+    },
+    {
+      "id": "t5",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Draw up guest lists per event with both families, since the ceremony, sangeet and reception lists usually differ"
+    },
+    {
+      "id": "t6",
+      "mb": 11,
+      "critical": false,
+      "when": "11 months before",
+      "task": "Book the photographer and videographer for the full multi-day span, not just the wedding day"
+    },
+    {
+      "id": "t7",
+      "mb": 10,
+      "critical": true,
+      "when": "10 months before",
+      "task": "Book a caterer experienced in Indian and fully vegetarian cooking, and agree the approach to eggs, Jain and vegan requirements and alcohol with both families"
+    },
+    {
+      "id": "t8",
+      "mb": 10,
+      "critical": false,
+      "when": "10 months before",
+      "task": "Book the mandap and decor company and connect them directly with the venue about the fire"
+    },
+    {
+      "id": "t9",
+      "mb": 9,
+      "critical": false,
+      "when": "9 months before",
+      "task": "Start outfit shopping for the couple, allowing for a buying trip to India or long lead times on made-to-order lehengas and sherwanis"
+    },
+    {
+      "id": "t10",
+      "mb": 9,
+      "critical": false,
+      "when": "9 months before",
+      "task": "Begin jewellery purchases, spreading the gold buying over the months rather than one late purchase"
+    },
+    {
+      "id": "t11",
+      "mb": 8,
+      "critical": false,
+      "when": "8 months before",
+      "task": "Book the sangeet DJ, dhol players, ceremony musicians and, if you want one, the choreographer"
+    },
+    {
+      "id": "t12",
+      "mb": 8,
+      "critical": false,
+      "when": "8 months before",
+      "task": "Book the mehndi artist and the hair and make-up artist for all events, confirming they can start before dawn if the muhurat is early"
+    },
+    {
+      "id": "t13",
+      "mb": 7,
+      "critical": false,
+      "when": "7 months before",
+      "task": "Reserve hotel blocks for out-of-town family across the full event span"
+    },
+    {
+      "id": "t14",
+      "mb": 6,
+      "critical": false,
+      "when": "6 months before",
+      "task": "Order invitations with separate event inserts, and send save-the-dates to overseas guests who need visas and flights"
+    },
+    {
+      "id": "t15",
+      "mb": 6,
+      "critical": false,
+      "when": "6 months before",
+      "task": "Fix the schedule of pre-wedding events with both families, including who hosts the haldi, mehndi and sangeet and where"
+    },
+    {
+      "id": "t16",
+      "mb": 5,
+      "critical": true,
+      "when": "5 months before",
+      "task": "Check the legal position where you are marrying: whether the pandit can solemnise legally, whether the venue is registered, and whether you need a separate civil ceremony"
+    },
+    {
+      "id": "t17",
+      "mb": 4,
+      "critical": true,
+      "when": "4 months before",
+      "task": "Walk through the ceremony with your pandit: which rituals are included, how long it will run, who performs the kanyadaan and the other family roles, and whether he will explain the rituals in English as he goes"
+    },
+    {
+      "id": "t18",
+      "mb": 4,
+      "critical": false,
+      "when": "4 months before",
+      "task": "Collect the samagri list from the pandit and agree who is sourcing the puja items"
+    },
+    {
+      "id": "t19",
+      "mb": 3,
+      "critical": true,
+      "when": "3 months before",
+      "task": "Give legal notice where required: notice of marriage in the United Kingdom, the Notice of Intended Marriage in Australia, the marriage licence application window in the United States or Canada"
+    },
+    {
+      "id": "t20",
+      "mb": 3,
+      "critical": false,
+      "when": "3 months before",
+      "task": "Plan the baraat route with the venue and check whether a street procession or horse needs council or police permission"
+    },
+    {
+      "id": "t21",
+      "mb": 3,
+      "critical": false,
+      "when": "3 months before",
+      "task": "Hold the menu tasting and fix the final menus per event"
+    },
+    {
+      "id": "t22",
+      "mb": 2,
+      "critical": true,
+      "when": "2 months before",
+      "task": "Confirm the exact muhurat timing with the pandit and build the wedding day run sheet backwards from it"
+    },
+    {
+      "id": "t23",
+      "mb": 2,
+      "critical": false,
+      "when": "2 months before",
+      "task": "Start sangeet rehearsals and confirm the performance running order"
+    },
+    {
+      "id": "t24",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Chase RSVPs per event, set the seating plan and order the mithai boxes per household"
+    },
+    {
+      "id": "t25",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Confirm every vendor against the run sheet, and order the fresh garlands and florals for delivery on the day"
+    },
+    {
+      "id": "t26",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Write a short ceremony program explaining the rituals for guests who have not attended a Hindu wedding before"
+    },
+    {
+      "id": "t27",
+      "mb": 0,
+      "critical": false,
+      "when": "0 months before",
+      "task": "Hold the Ganesh puja, haldi, mehndi and sangeet on the planned days, keeping the bridal mehndi session clear of other commitments"
+    },
+    {
+      "id": "t28",
+      "mb": 0,
+      "critical": true,
+      "when": "0 months before",
+      "task": "After the wedding, register the marriage and obtain the certificate: with the state registrar in India, or confirm the licence or schedule has been returned where the pandit solemnised legally"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both",
+      "item": "Civil marriage licence or notice of marriage"
+    },
+    {
+      "id": "p1",
+      "who": "The couple",
+      "item": "Confirmation the pandit can legally solemnise"
+    },
+    {
+      "id": "p2",
+      "who": "Both",
+      "item": "Separate civil ceremony where the religious one has no legal effect"
+    },
+    {
+      "id": "p3",
+      "who": "Both, if marrying in India",
+      "item": "Marriage registration in India"
+    },
+    {
+      "id": "p4",
+      "who": "Both",
+      "item": "Proof of age and identity"
+    },
+    {
+      "id": "p5",
+      "who": "Either party previously married",
+      "item": "Divorce decree absolute"
+    },
+    {
+      "id": "p6",
+      "who": "Either party widowed",
+      "item": "Death certificate of a former spouse"
+    },
+    {
+      "id": "p7",
+      "who": "Couples where one partner is not Hindu, Sikh, Jain or Buddhist",
+      "item": "Special Marriage Act route for interfaith couples in India"
+    },
+    {
+      "id": "p8",
+      "who": "Both, if marrying at a temple",
+      "item": "Temple booking and religious requirements"
+    },
+    {
+      "id": "p9",
+      "who": "The couple and both families",
+      "item": "The pandit's samagri list"
+    },
+    {
+      "id": "p10",
+      "who": "Either party with foreign documents",
+      "item": "Apostilles and certified translations"
+    },
+    {
+      "id": "p11",
+      "who": "Couples living across borders",
+      "item": "Marriage certificate for immigration"
+    }
+  ]
+}
