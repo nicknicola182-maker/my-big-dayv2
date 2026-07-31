@@ -1,0 +1,1035 @@
+{
+  "id": "jewish",
+  "name": "Jewish",
+  "shortName": "Jewish",
+  "faithGroup": "Jewish",
+  "blurb": "Signing the ketubah, the bedeken, standing together under the chuppah for the sheva brachot and the breaking of the glass, then the hora — with the aufruf before and, in traditional communities, a week of festive meals after.",
+  "commonCountries": [
+    "IL",
+    "US",
+    "GB",
+    "FR",
+    "CA",
+    "AU",
+    "ZA",
+    "AR",
+    "DE",
+    "UA",
+    "HU",
+    "NL",
+    "BR"
+  ],
+  "typicalGuests": {
+    "low": 80,
+    "typical": 180,
+    "high": 500
+  },
+  "typicalDays": 1,
+  "terms": {
+    "officiant": "rabbi",
+    "ceremonyVenue": "chuppah venue",
+    "ceremony": "the chuppah",
+    "bestMan": "best man",
+    "maidOfHonour": "maid of honour",
+    "reception": "reception",
+    "firstDance": "hora",
+    "witnesses": "eidim"
+  },
+  "events": [
+    {
+      "id": "engagement",
+      "name": "Engagement party (vort or tenaim)",
+      "when": "Six to eighteen months before",
+      "optional": true,
+      "default": false,
+      "description": "In many Orthodox communities the engagement is marked with a vort, a gathering with short speeches, or a tenaim ceremony where the two families formally agree to the match and the mothers break a plate. Many families now sign the tenaim on the wedding day itself, or skip the document and simply hold a party. Outside Orthodoxy this is usually just an engagement party.",
+      "hosts": "Either or both families"
+    },
+    {
+      "id": "henna",
+      "name": "Henna night",
+      "when": "In the week before",
+      "optional": true,
+      "default": false,
+      "description": "A pre-wedding celebration from Sephardi and Mizrahi communities, especially those with roots in Morocco, Yemen, Iraq, Iran and elsewhere in the Middle East and North Africa. Henna paste is applied to the hands of the couple and guests, the couple often wear traditional dress, and there is music, dancing and a table of sweets. Increasingly popular in Israel and the diaspora, including at weddings where only one side has the tradition.",
+      "hosts": "Traditionally the families, often the couple's mothers and grandmothers"
+    },
+    {
+      "id": "aufruf",
+      "name": "Aufruf and Shabbat kallah",
+      "when": "The Shabbat before, or the one before that",
+      "optional": true,
+      "default": true,
+      "description": "The groom, or in egalitarian communities the couple together, is called up to the Torah in synagogue and the congregation sings and throws soft sweets. The family usually sponsors the kiddush afterwards. In communities where the couple do not see each other in the final week, the bride holds her own gathering, the Shabbat kallah. Sephardi communities traditionally hold the aliyah on the Shabbat after the wedding instead, the Shabbat chatan.",
+      "hosts": "The groom's family sponsors the kiddush, customs vary"
+    },
+    {
+      "id": "mikveh",
+      "name": "Mikveh immersion",
+      "when": "In the days before",
+      "optional": true,
+      "default": true,
+      "description": "The bride immerses in the mikveh, the ritual bath, in the days before the wedding, with a preparation appointment and an attendant present. In traditional practice this is required rather than optional, and the wedding date is often set with it in mind. Many grooms also immerse as a custom. Reform and Conservative communities increasingly encourage immersion for either or both partners as spiritual preparation, and community mikvehs welcome couples of all streams.",
+      "hosts": "Private, booked with the mikveh"
+    },
+    {
+      "id": "civil-ceremony",
+      "name": "Civil ceremony or registration",
+      "when": "Before or on the wedding day, depending on country",
+      "optional": true,
+      "default": false,
+      "description": "Whether you need a separate civil step depends on the country. In England and Wales the religious ceremony can be legally binding after civil preliminaries, with the synagogue's secretary for marriages registering it. In the United States, Canada and Australia the rabbi normally solemnises the civil marriage too. In France, Germany and much of continental Europe a town-hall civil ceremony must come first. In Israel there is no civil marriage, so couples marrying outside the Rabbinate hold a civil ceremony abroad.",
+      "hosts": "The couple"
+    },
+    {
+      "id": "tisch",
+      "name": "Kabbalat panim and the tisch",
+      "when": "Wedding day, before the ceremony",
+      "optional": true,
+      "default": true,
+      "description": "Two receptions before the ceremony. At the kabbalat panim the bride is greeted and blessed by guests; at the groom's tisch there is singing, a word of Torah that friends traditionally interrupt, and the signing of the ketubah in front of the witnesses. At the end of the tisch the groom is danced over to the bride for the bedeken, where he lowers her veil, a custom recalling Rebecca veiling herself before meeting Isaac. Egalitarian and same-sex couples often hold a single combined tisch or greet guests together.",
+      "hosts": "The couple and their parents"
+    },
+    {
+      "id": "ceremony",
+      "name": "The chuppah",
+      "when": "Wedding day",
+      "optional": false,
+      "default": true,
+      "description": "The ceremony under the wedding canopy joins what were historically two separate ceremonies. Kiddushin, the betrothal: a blessing over wine and the giving of the ring with the words 'Harei at mekudeshet li' before two witnesses. Then the ketubah is read aloud to separate the two parts, and nisuin completes the marriage with the sheva brachot, the seven blessings, sung over a second cup of wine. The glass is broken, everyone calls 'Mazal tov!', and the couple leave together. Typically 25 to 45 minutes.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "yichud",
+      "name": "Yichud",
+      "when": "Straight after the ceremony",
+      "optional": true,
+      "default": true,
+      "description": "The couple withdraw to a private room for a short time alone, with the door watched by two witnesses in Orthodox practice. If they have been fasting they break the fast together here. It is a required part of the marriage in Ashkenazi Orthodox practice, less universal among Sephardim, and kept by many non-Orthodox couples simply as a quiet fifteen minutes before the party.",
+      "hosts": "The couple, in a room arranged with the venue"
+    },
+    {
+      "id": "reception",
+      "name": "The reception (seudat mitzvah)",
+      "when": "Wedding day",
+      "optional": false,
+      "default": true,
+      "description": "The wedding meal is a seudat mitzvah, a religious celebration in its own right, and gladdening the couple is considered a mitzvah for every guest. Expect the hora early rather than late, with the couple lifted on chairs, and at Orthodox weddings separate men's and women's dancing, sometimes with a mechitza divider. The meal ends with Grace after Meals and, at traditional weddings, the seven blessings repeated over wine.",
+      "hosts": "Traditionally the parents, now usually shared"
+    },
+    {
+      "id": "sheva-brachot-week",
+      "name": "The week of sheva brachot",
+      "when": "The seven days after",
+      "optional": true,
+      "default": false,
+      "description": "In traditional communities, friends and family host festive meals for the couple on each of the seven nights after the wedding, ending with the seven blessings again. Each meal needs a minyan and, apart from Shabbat, at least one guest who was not at the wedding, the panim chadashot or new face. Sephardi families often centre the week on the Shabbat chatan, the celebratory Shabbat after the wedding. Most Reform and secular couples skip the week or keep just one dinner.",
+      "hosts": "Different friends and relatives each night"
+    }
+  ],
+  "items": [
+    {
+      "id": "rabbi-fee",
+      "name": "Rabbi's fee",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "The officiant's fee or honorarium, usually covering the preparation meetings as well as the day. If your rabbi is travelling to the venue, cover travel, and accommodation if the wedding runs close to Shabbat. Synagogue members sometimes pay less or nothing, with a donation expected instead.",
+      "essential": true,
+      "shareOfBudget": 0.015,
+      "unit": "fixed",
+      "supplierCategory": "Synagogue",
+      "religiousRequirement": true
+    },
+    {
+      "id": "cantor-fee",
+      "name": "Cantor (chazan)",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "Many couples have a cantor sing the blessings under the chuppah, particularly the sheva brachot. Optional if your rabbi sings, or if you are giving the blessings to friends and relatives as honours.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Synagogue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "synagogue-fee",
+      "name": "Synagogue or ceremony venue fee",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "A chuppah can stand anywhere — synagogue, hotel, garden or hall — so this is the fee for wherever the ceremony happens. Synagogues usually charge less for members, and in the United Kingdom the officiating synagogue normally expects one of you to be a member. Many couples hold ceremony and reception in one venue.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "fixed",
+      "supplierCategory": "Synagogue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "marriage-authorisation",
+      "name": "Religious marriage authorisation fees",
+      "section": "Ceremony",
+      "event": "",
+      "note": "Orthodox marriages generally need formal authorisation before the wedding: in the United Kingdom from the Office of the Chief Rabbi (or the equivalent body for your community), in Israel by opening a marriage file with the Rabbinate. There is an administrative fee and a document check. Reform, Liberal and Conservative communities have their own, usually lighter, processes through the synagogue.",
+      "essential": true,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Synagogue",
+      "religiousRequirement": true
+    },
+    {
+      "id": "civil-fees",
+      "name": "Civil notice and registration fees",
+      "section": "Ceremony",
+      "event": "civil-ceremony",
+      "note": "The state's fees: notice of marriage at the register office in England and Wales, the marriage licence in the United States and Canada, the Notice of Intended Marriage in Australia, the town-hall ceremony where civil marriage is compulsory. Small money, hard deadlines.",
+      "essential": true,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": false
+    },
+    {
+      "id": "ketubah",
+      "name": "Ketubah",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "The marriage document itself, signed before the ceremony and read under the chuppah, is often commissioned as artwork to hang at home for life. Prices run from a printed text to hand-painted calligraphy. Confirm the exact text with your rabbi before ordering: Orthodox, Conservative (with or without the Lieberman clause) and Reform egalitarian texts differ, and a beautiful ketubah with the wrong text cannot be used.",
+      "essential": true,
+      "shareOfBudget": 0.007,
+      "unit": "fixed",
+      "supplierCategory": "Judaica",
+      "religiousRequirement": true
+    },
+    {
+      "id": "ceremony-wine-glass",
+      "name": "Kiddush cups, wine and the glass to break",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "Two cups of kosher wine are blessed under the chuppah, one for the betrothal and one for the seven blessings. Families often lend heirloom kiddush cups. You also need the glass to break, wrapped in cloth or a bag; some couples keep the shards in a keepsake.",
+      "essential": true,
+      "shareOfBudget": 0.002,
+      "unit": "fixed",
+      "supplierCategory": "Judaica",
+      "religiousRequirement": true
+    },
+    {
+      "id": "kippot",
+      "name": "Kippot for guests",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "Personalised kippot (skullcaps) printed with your names and the date, offered in a basket for guests to wear. Order per guest with plenty spare; they double as a favour. Less expected at secular ceremonies.",
+      "essential": false,
+      "shareOfBudget": 0.004,
+      "unit": "perGuest",
+      "supplierCategory": "Judaica",
+      "religiousRequirement": false
+    },
+    {
+      "id": "mikveh-fee",
+      "name": "Mikveh fees",
+      "section": "Ceremony",
+      "event": "mikveh",
+      "note": "The immersion appointment, usually with a preparation room and attendant. Some communities also expect the groom to immerse, often at a men's session. A modest fee, but book it early because the timing is tied to the wedding date.",
+      "essential": false,
+      "shareOfBudget": 0.001,
+      "unit": "perPerson",
+      "supplierCategory": "Mikveh",
+      "religiousRequirement": false
+    },
+    {
+      "id": "aufruf-kiddush",
+      "name": "Aufruf kiddush",
+      "section": "Ceremony",
+      "event": "aufruf",
+      "note": "Sponsoring the kiddush, the refreshments after the Shabbat morning service, when the groom or couple is called to the Torah. Ranges from wine and cake to a full lunch. The soft sweets thrown in the synagogue are usually supplied by the family too.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Synagogue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "chuppah-hire",
+      "name": "Chuppah hire or build",
+      "section": "Flowers & Styling",
+      "event": "ceremony",
+      "note": "The canopy itself: four poles and a covering, open on all four sides. Florists and venues hire structures from simple to elaborate, but a tallit (prayer shawl) held on four poles by friends is completely traditional and effectively free. Ashkenazi custom favours standing under the open sky, so check whether your venue can do an outdoor or skylight chuppah if that matters to you.",
+      "essential": true,
+      "shareOfBudget": 0.014,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": true
+    },
+    {
+      "id": "chuppah-flowers",
+      "name": "Chuppah and ceremony flowers",
+      "section": "Flowers & Styling",
+      "event": "ceremony",
+      "note": "Dressing the chuppah is the main floral moment of the ceremony, and a flower-covered chuppah is one of the bigger single floral items on the market. Aisle and entrance arrangements are the same as at any wedding.",
+      "essential": true,
+      "shareOfBudget": 0.018,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "reception-styling",
+      "name": "Table centrepieces and reception styling",
+      "section": "Flowers & Styling",
+      "event": "reception",
+      "note": "Centrepieces, linen and room styling, priced per table. If there will be energetic circle dancing, keep the dance floor clear of anything that can be knocked over and ask the florist to weight tall arrangements.",
+      "essential": true,
+      "shareOfBudget": 0.03,
+      "unit": "perTable",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bouquets",
+      "name": "Bouquets and buttonholes",
+      "section": "Flowers & Styling",
+      "event": "ceremony",
+      "note": "Bouquet for the bride, buttonholes for the groom, fathers and grandfathers, corsages for the mothers. Standard wedding florals with no particular religious rules attached.",
+      "essential": true,
+      "shareOfBudget": 0.007,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "venue-hire",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "event": "reception",
+      "note": "If you need fully kosher catering, the venue question comes first: some venues have kosher kitchens or are on a community's approved list, others must be koshered for the day or allow an outside kosher caterer in. Ask about corkage on kosher wine, dance floor size for the hora, and a room for yichud. For a Saturday night wedding in summer, check how late the venue can run, since you cannot start until after Shabbat ends.",
+      "essential": true,
+      "shareOfBudget": 0.105,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "event": "reception",
+      "note": "The largest line. Fully supervised kosher catering costs noticeably more per head than standard catering: a restricted supplier pool, supervision, and koshering or bringing in equipment all add cost. A kosher meat meal means no dairy anywhere in the menu, including butter, cream sauces and most desserts, so taste the dessert course before you commit. Couples not keeping full kashrut often choose 'kosher-style' menus (no pork or shellfish, no meat with milk) at ordinary prices — decide early which you need, because it drives the venue choice.",
+      "essential": true,
+      "shareOfBudget": 0.26,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "kashrut-supervision",
+      "name": "Kashrut supervision (mashgiach)",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Fully kosher events need a mashgiach, the supervisor licensed by a kashrut authority who oversees the kitchen on the day. Sometimes included in the caterer's price, sometimes billed separately, plus the authority's certification fee. In the United Kingdom the United Synagogue requires supervision by a recognised kashrut authority for wedding receptions; in Israel the Rabbinate asks about the venue's kashrut certificate when you open your marriage file.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks and kosher wine",
+      "section": "Reception",
+      "event": "reception",
+      "note": "At a supervised event all wine and grape products must be kosher, and many authorities expect mevushal wine when waiting staff are not observant Jews, so agree the wine list with the caterer or supervisor rather than buying independently. Spirits and most beers are straightforward. L'chaim toasts start early, often at the tisch.",
+      "essential": true,
+      "shareOfBudget": 0.06,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "cake",
+      "name": "Wedding cake and desserts",
+      "section": "Reception",
+      "event": "reception",
+      "note": "After a kosher meat meal the cake must be parev — made without dairy — which rules out buttercream and many standard recipes, so use a kosher baker or confirm your baker can work parev under supervision. No such constraint at a fish or dairy reception.",
+      "essential": true,
+      "shareOfBudget": 0.015,
+      "unit": "fixed",
+      "supplierCategory": "Cake maker",
+      "religiousRequirement": false
+    },
+    {
+      "id": "service-staffing",
+      "name": "Service charge and staffing",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Waiting and bar staff, corkage and cake-cutting fees. Kosher caterers working in a non-kosher venue often bring their own equipment and extra staff, which shows up here.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "sheva-brachot-hosting",
+      "name": "Sheva brachot meals contribution",
+      "section": "Reception",
+      "event": "sheva-brachot-week",
+      "note": "The week of festive meals is traditionally hosted and paid for by friends and family rather than the couple, but many couples contribute to the bigger nights or host the final one. Only relevant if you are keeping the week.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "band",
+      "name": "Live band",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "The band makes or breaks the hora, so book one that knows Jewish weddings: the standard simcha repertoire, when to strike up as you enter from yichud, and how to keep a twenty-minute dance set going. Klezmer, Israeli and mixed party bands are all common. At Orthodox weddings brief them on separate dancing and any limits on women's solo vocals.",
+      "essential": true,
+      "shareOfBudget": 0.055,
+      "unit": "perHour",
+      "supplierCategory": "Band",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dj",
+      "name": "DJ",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "Instead of or alongside the band, often taking the later part of the night. Give them the same briefing on the hora set and any Hebrew or Israeli must-plays.",
+      "essential": false,
+      "shareOfBudget": 0.016,
+      "unit": "fixed",
+      "supplierCategory": "DJ",
+      "religiousRequirement": false
+    },
+    {
+      "id": "ceremony-music",
+      "name": "Ceremony musicians",
+      "section": "Music & Entertainment",
+      "event": "ceremony",
+      "note": "Music for the processional and under the chuppah — a string ensemble, a singer, or the band's acoustic players. Traditional processional pieces exist but there is no fixed liturgy for the walk in, so the choice is yours; check anything secular with your rabbi if marrying in a synagogue.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Band",
+      "religiousRequirement": false
+    },
+    {
+      "id": "shtick",
+      "name": "Shtick and dancing props",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "At traditional weddings guests entertain the couple during the dancing — juggling, signs, masks, jump ropes, costumes — known as shtick. Families often buy a box of props in advance. Inexpensive and hugely worth it if your crowd will use it.",
+      "essential": false,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Entertainment",
+      "religiousRequirement": false
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Book someone who knows the running order: the ketubah signing, bedeken, glass and hora are fast, one-off moments. If you are not seeing each other before the bedeken there is no 'first look', so portraits happen before separately and together afterwards. No photography is possible during Shabbat itself, so an aufruf is not a photo event, and a Saturday night wedding compresses the portrait window.",
+      "essential": true,
+      "shareOfBudget": 0.055,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "The moments couples most regret losing are the bedeken, the sheva brachot being sung, the glass and the first hora set. Brief them on where the witnesses and rabbi will stand so the ring moment is not blocked.",
+      "essential": false,
+      "shareOfBudget": 0.035,
+      "unit": "fixed",
+      "supplierCategory": "Videographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "album",
+      "name": "Album and prints",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Usually ordered after the wedding, with copies for both sets of parents. The signed ketubah photographed well is a favourite opening page.",
+      "essential": false,
+      "shareOfBudget": 0.007,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "gown",
+      "name": "Wedding dress",
+      "section": "Attire",
+      "event": "",
+      "note": "In Orthodox settings dresses are modest by convention — shoulders and often collarbone covered, sometimes with a detachable topper for the ceremony that comes off for dancing. Elsewhere anything goes. White is customary across all streams as a symbol of the day's clean slate.",
+      "essential": true,
+      "shareOfBudget": 0.055,
+      "unit": "fixed",
+      "supplierCategory": "Bridal shop",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bridal-accessories",
+      "name": "Veil, shoes and accessories",
+      "section": "Attire",
+      "event": "",
+      "note": "The veil matters more than usual because of the bedeken, where the groom lowers it over the bride's face before the ceremony — choose one that can actually be lowered and lifted. Comfortable shoes or a change of shoes for the hora are not optional in practice.",
+      "essential": true,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Bridal shop",
+      "religiousRequirement": false
+    },
+    {
+      "id": "groom-outfit",
+      "name": "Groom's outfit and kittel",
+      "section": "Attire",
+      "event": "",
+      "note": "Suit or, in more formal communities, a dark suit or frock coat. Many Ashkenazi grooms wear a kittel, a simple white robe, over the suit under the chuppah — often borrowed or a family one rather than bought. A new tallit is a common gift from the bride's family in traditional communities.",
+      "essential": true,
+      "shareOfBudget": 0.018,
+      "unit": "fixed",
+      "supplierCategory": "Menswear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "party-attire",
+      "name": "Wedding party outfits",
+      "section": "Attire",
+      "event": "",
+      "note": "Bridesmaids and groomsmen are a modern addition rather than a Jewish requirement; the traditional escorts are the parents, who walk each of you down the aisle. Whether the couple pays for outfits follows local convention, not religious rule.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "perPerson",
+      "supplierCategory": "Bridal shop",
+      "religiousRequirement": false
+    },
+    {
+      "id": "hair-makeup",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "event": "",
+      "note": "Timed around the kabbalat panim rather than the ceremony, since you are receiving guests and being photographed an hour or more before the chuppah. Book the trial well ahead. If the bride is immersing in the mikveh the night before, schedule nails and anything that cannot get wet for afterwards.",
+      "essential": true,
+      "shareOfBudget": 0.016,
+      "unit": "fixed",
+      "supplierCategory": "Hair and make-up",
+      "religiousRequirement": false
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations",
+      "section": "Stationery",
+      "event": "",
+      "note": "Traditionally printed with the Hebrew date alongside the civil one, and often with Hebrew text on one side or one panel. Both sets of parents are conventionally named as hosts. Check the Hebrew spelling of names with your rabbi before printing — the same names go on the ketubah.",
+      "essential": true,
+      "shareOfBudget": 0.015,
+      "unit": "perGuest",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "benchers-programs",
+      "name": "Benchers and order of service",
+      "section": "Stationery",
+      "event": "reception",
+      "note": "Benchers (birkonim) are booklets with Grace after Meals and the sheva brachot, printed with your names and date, one per guest or per couple, taken home as a keepsake. An order-of-service sheet explaining the ceremony is kind to guests who have not been to a Jewish wedding; many couples print one even for a mostly Jewish crowd.",
+      "essential": false,
+      "shareOfBudget": 0.005,
+      "unit": "perGuest",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "favours",
+      "name": "Favours",
+      "section": "Stationery",
+      "event": "reception",
+      "note": "No fixed Jewish tradition here — kippot and benchers often serve as the favours. Some couples give a donation to charity in guests' names instead, in the spirit of tzedakah.",
+      "essential": false,
+      "shareOfBudget": 0.005,
+      "unit": "perGuest",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "wedding-cars",
+      "name": "Wedding cars",
+      "section": "Transport",
+      "event": "ceremony",
+      "note": "Standard wedding transport. If any of the wedding events touch Shabbat — an aufruf lunch, a Saturday night ceremony — observant guests will not drive until Shabbat ends, which affects timings more than the cars themselves.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Car hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest transport",
+      "section": "Transport",
+      "event": "reception",
+      "note": "Coaches are worth it when the ceremony and reception are apart, or for a Saturday night wedding ending very late. For guests walking to a Shabbat-adjacent event, check the venue is within walking distance of accommodation.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Coach hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "event": "ceremony",
+      "note": "The ring given under the chuppah is traditionally a plain metal band with no stones, owned outright by the giver, placed on the right index finger before the witnesses. Engagement rings with stones are worn again after the ceremony but are not used for kiddushin. Orthodox ceremonies have one ring given by the groom; Conservative and Reform ceremonies commonly have a double-ring exchange.",
+      "essential": true,
+      "shareOfBudget": 0.025,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": true
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts for parents, honourees and each other",
+      "section": "Rings & Gifts",
+      "event": "",
+      "note": "Small gifts for those given honours — the sheva brachot reciters, the chuppah holders, the witnesses — plus parents and each other. Judaica such as a kiddush cup or candlesticks is the conventional choice.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "perPerson",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "planner",
+      "name": "Wedding planner or coordinator",
+      "section": "Extras",
+      "event": "",
+      "note": "Useful for any large wedding, and particularly for kosher logistics in a non-kosher venue, Saturday night turnarounds, or an Israel wedding planned from abroad. Choose someone who has actually run the tisch-bedeken-chuppah sequence to time.",
+      "essential": false,
+      "shareOfBudget": 0.025,
+      "unit": "fixed",
+      "supplierCategory": "Planner",
+      "religiousRequirement": false
+    },
+    {
+      "id": "henna-party",
+      "name": "Henna night",
+      "section": "Extras",
+      "event": "henna",
+      "note": "For Sephardi and Mizrahi families: the henna artist, traditional costumes (often hired), sweets, music and a venue or a family home. Scales from an evening at home to a second full event, especially in Israel.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Entertainment",
+      "religiousRequirement": false
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "section": "Extras",
+      "event": "",
+      "note": "Many Jewish communal venues, especially in Europe, use trained security at large events as standard, sometimes arranged through communal security bodies. Some synagogues include it in the venue fee; private venues may ask you to arrange it. Ask early rather than assuming.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Security",
+      "religiousRequirement": false
+    },
+    {
+      "id": "tzedakah",
+      "name": "Tzedakah (charitable giving)",
+      "section": "Extras",
+      "event": "",
+      "note": "Giving to charity in connection with the wedding is a widespread custom across all streams — a donation on the day, a percentage of the budget, or leftover food to a food charity. Entirely voluntary, and meaningful at any size.",
+      "essential": false,
+      "shareOfBudget": 0.004,
+      "unit": "fixed",
+      "supplierCategory": "Charity",
+      "religiousRequirement": false
+    }
+  ],
+  "timeline": [
+    {
+      "monthsBefore": 12,
+      "task": "Check dates against the Jewish calendar before booking anything: no weddings on Shabbat or festivals, and most of the Omer and the Three Weeks are closed in traditional practice — ask your rabbi exactly which days your community permits",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Choose your officiant and stream early — Orthodox, Conservative/Masorti, Reform/Liberal or a secular celebrant — because it determines the paperwork, the ketubah text, the venue options and, for mixed-faith couples, who will marry you at all",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the rabbi and the ceremony venue together, and confirm the date is in the synagogue diary",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "If either of you was previously married in a Jewish ceremony, start the get (religious divorce) now — Orthodox and Conservative rabbis cannot marry you without it, and it takes months",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Gather proof of Jewish status for an Orthodox marriage: parents' ketubah, a letter from a recognised rabbi, or conversion certificates — records held abroad can take a long time to obtain",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Book the reception venue, checking kosher catering arrangements, dance floor size for the hora, and a private room for yichud",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the kosher caterer, or agree with the venue how the kitchen will be supervised or koshered — the approved-caterer list for your kashrut authority narrows the field, so move early",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the band, photographer and videographer, briefing them on the tisch, bedeken, chuppah and hora running order",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Apply for religious marriage authorisation: through the Office of the Chief Rabbi in the United Kingdom, your movement's equivalent elsewhere, or by planning the Rabbinate marriage file if marrying in Israel",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Order the ketubah, agreeing the exact text with your rabbi before the artist starts — commissioned pieces take weeks to months",
+      "critical": true
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Arrange the chuppah: hire one, ask the synagogue about theirs, or plan to use a family tallit on poles held by friends",
+      "critical": false
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Begin marriage preparation with your rabbi — most movements expect a few meetings, and Orthodox communities run chatan and kallah classes",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Choose the two witnesses (eidim) with your rabbi's guidance — in Orthodox practice they must be religiously observant Jewish men unrelated to either of you or to each other, so do not assume close family can do it",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Order invitations with the Hebrew date, and confirm the Hebrew spelling of both your names and your parents' Hebrew names — the same details go on the ketubah",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Decide who receives honours: sheva brachot reciters, chuppah pole holders, ketubah reader — traditional weddings have many honours to give, which is a gift to both families",
+      "critical": false
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Order kippot and benchers printed with your names and the date",
+      "critical": false
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Buy the wedding band — a plain metal ring with no stones for the ceremony, owned by the giver — and a second one if you are doing a double-ring exchange",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Complete civil preliminaries: give notice at the register office in England and Wales, lodge the Notice of Intended Marriage in Australia, or diarise the marriage licence window in the United States and Canada",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Arrange the aufruf with your synagogue and book the kiddush",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Book the mikveh appointment for the days before the wedding, and a men's session for the groom if he is immersing",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Finalise the menu with the caterer and kashrut supervisor, remembering a meat meal means a parev dessert and cake",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "If keeping the week of sheva brachot, line up hosts for each night and warn them about the panim chadashot — each meal needs a guest who was not at the wedding",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Walk through the ceremony with your rabbi: the ketubah signing, the bedeken, who walks with whom, circling, the ring declaration and the glass",
+      "critical": true
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Confirm timings for a Shabbat-adjacent date: a Saturday night wedding cannot start until Shabbat ends, which in summer is very late — check havdalah time, supplier overtime and venue closing",
+      "critical": true
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Arrange the yichud room with the venue, including food and drink to break the wedding-day fast if you are fasting",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "Bring the ketubah, the ring, the wrapped glass, the kiddush cups and wine, and the kittel if wearing one — give one person the job of having them all at the venue",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0,
+      "task": "After the wedding, make sure the marriage is civilly registered: the synagogue's secretary for marriages files it in England and Wales, the officiant returns the licence in North America, and the Rabbinate issues the certificate in Israel — confirm it has actually been done",
+      "critical": true
+    }
+  ],
+  "paperwork": [
+    {
+      "item": "Proof of Jewish status",
+      "who": "Both, for Orthodox and Conservative marriages",
+      "note": "Typically your parents' ketubah, your own or a parent's synagogue marriage record, or a letter from a recognised rabbi. Orthodox authorities follow matrilineal descent or an Orthodox conversion; Conservative similarly. Reform in North America and Liberal Judaism in Britain also recognise patrilineal descent with Jewish upbringing, so the same couple may face different requirements in different communities."
+    },
+    {
+      "item": "Religious marriage authorisation",
+      "who": "Both",
+      "note": "In the United Kingdom, Orthodox marriages require authorisation from the Office of the Chief Rabbi (or the relevant authority for Sephardi, Federation, Masorti, Reform or Liberal communities), with a document meeting and a fee. In Israel, a marriage file is opened with the Rabbinate at least 45 days before. In North America there is usually no central authorisation; the officiating rabbi checks status directly."
+    },
+    {
+      "item": "Civil marriage licence or notice",
+      "who": "Both",
+      "note": "Varies entirely by country. England and Wales: notice at the register office at least 29 days before (longer for some nationalities). United States and Canada: a state or provincial licence, signed by the rabbi. Australia: Notice of Intended Marriage at least one month before, with the rabbi as an authorised celebrant. France, Germany and much of Europe: a civil ceremony at the town hall must precede the religious one."
+    },
+    {
+      "item": "Ketubah",
+      "who": "Both",
+      "note": "Signed by the two witnesses just before the ceremony, read under the chuppah, and kept by the couple — traditionally in the wife's keeping, since it records obligations towards her. The text must match your officiant's requirements: traditional Aramaic for Orthodox, often with the Lieberman clause for Conservative, egalitarian or bilingual texts for Reform and same-sex couples."
+    },
+    {
+      "item": "Get (religious divorce) from any previous Jewish marriage",
+      "who": "Either party previously married",
+      "note": "A civil divorce is not sufficient for Orthodox or Conservative remarriage; a get from a recognised beit din is required and can take months. British Reform operates its own beit din and also requires a get; American Reform generally accepts a civil divorce. Start this before anything else if it applies."
+    },
+    {
+      "item": "Conversion certificate",
+      "who": "Either party who converted",
+      "note": "Recognition varies sharply by movement: Orthodox authorities accept only conversions under recognised Orthodox auspices, while Conservative, Reform and Liberal communities accept their own and often each other's. If you converted, raise it with your intended officiant at the very first meeting."
+    },
+    {
+      "item": "Civil divorce decree or death certificate of a former spouse",
+      "who": "Either party previously married or widowed",
+      "note": "The final decree, not the provisional one, for the civil authorities — needed alongside, not instead of, the get where a get applies."
+    },
+    {
+      "item": "Birth certificates and passports",
+      "who": "Both",
+      "note": "For the civil preliminaries, and for the Rabbinate in Israel, which may also ask for parents' documents when checking status."
+    },
+    {
+      "item": "Tenaim (engagement contract)",
+      "who": "Both, optional",
+      "note": "A traditional document formalising the engagement, still used in many Orthodox communities and often signed at the wedding itself, marked by the mothers breaking a plate. Not a legal requirement anywhere; most non-Orthodox couples skip it."
+    },
+    {
+      "item": "Marriage schedule and registration (England and Wales)",
+      "who": "Both",
+      "note": "Jewish marriages have a distinct legal route under the Marriage Act: after civil notice, the marriage can be solemnised 'according to the usages of the Jews' at any location, and the synagogue's appointed secretary for marriages handles the registration. Confirm your synagogue has a certified secretary for marriages and that the schedule is signed on the day."
+    },
+    {
+      "item": "Rabbinate marriage file (Israel)",
+      "who": "Both, if marrying in Israel",
+      "note": "There is no civil marriage in Israel: a legally recognised Jewish wedding must go through the Chief Rabbinate, which requires proof of Jewish status to Orthodox standards, proof you are unmarried, and details of the kosher venue. Couples who cannot or do not wish to marry this way — including mixed-faith and same-sex couples — marry civilly abroad, which Israel then records; non-Rabbinate Jewish ceremonies in Israel are meaningful but not state-recognised."
+    },
+    {
+      "item": "Officiant's civil authority to solemnise",
+      "who": "The officiant",
+      "note": "In the United States, Canada and Australia the rabbi normally acts for the state too, but registration rules vary by state, province and even city, so confirm your rabbi is authorised where you are marrying — especially for a destination wedding or an independent or student officiant."
+    },
+    {
+      "item": "Kashrut certification for the reception",
+      "who": "The couple, via caterer and venue",
+      "note": "Where the wedding is under Orthodox auspices, the reception is usually expected to be supervised by a recognised kashrut authority — the United Synagogue requires this in Britain, and the Israeli Rabbinate asks about the venue's kashrut certificate. Get the caterer's certification in writing for your authority to check."
+    }
+  ],
+  "customs": [
+    {
+      "name": "The ketubah",
+      "description": "The Jewish marriage document, some two thousand years old as a form, traditionally written in Aramaic and recording the husband's obligations to his wife. It is signed by two witnesses before the ceremony and read aloud under the chuppah. Conservative ketubot often add the Lieberman clause, agreeing in advance to accept a religious court's ruling if the marriage ends, as a protection against a withheld divorce. Reform and egalitarian ketubot recast the text as mutual promises, often in Hebrew and English. Many couples commission the ketubah as artwork and hang it at home.",
+      "optional": false
+    },
+    {
+      "name": "The chuppah",
+      "description": "The four-posted canopy, open on all sides, under which the ceremony happens. It stands for the home the couple will build: open like Abraham and Sarah's tent, sheltered above. It can be a florist's structure or a family tallit on four poles held by friends, and Ashkenazi custom favours placing it under the open sky. Being married under a chuppah, wherever it stands, is common to all streams.",
+      "optional": false
+    },
+    {
+      "name": "Kiddushin and nisuin: the two ceremonies",
+      "description": "A Jewish wedding is historically two ceremonies. Kiddushin (also called erusin), the betrothal, is effected when the ring is given and accepted before witnesses; nisuin, the marriage proper, is the seven blessings and the couple's first moments together. For around a thousand years the two have been held together under the chuppah, separated only by the reading of the ketubah, which is why there are two cups of wine.",
+      "optional": false
+    },
+    {
+      "name": "The ring and the declaration",
+      "description": "The ring is a plain band without stones, owned by the giver, placed on the recipient's right index finger with the declaration 'Harei at mekudeshet li b'taba'at zo k'dat Moshe v'Yisrael' — 'By this ring you are consecrated to me according to the law of Moses and Israel' — in front of the two witnesses. This moment, not the vows familiar from other traditions, is what effects the marriage. Conservative and Reform couples usually exchange rings both ways; egalitarian declarations for the second ring vary by community.",
+      "optional": false
+    },
+    {
+      "name": "The bedeken",
+      "description": "Before the ceremony the groom, accompanied by singing and dancing, lowers the veil over the bride's face. The custom recalls Rebecca veiling herself on meeting Isaac, and is often explained as the groom confirming he is marrying the right person — unlike Jacob, who wasn't. Parents commonly bless their children at this moment. Reform couples treat it as optional, and same-sex and egalitarian couples adapt it or greet each other in their own way.",
+      "optional": true
+    },
+    {
+      "name": "Kabbalat panim and the tisch",
+      "description": "The pre-ceremony receptions: the bride enthroned among her guests at the kabbalat panim, the groom at his tisch with song, drink and an attempted Torah discourse that friends traditionally drown out. The ketubah is signed here. Many egalitarian couples hold one combined tisch or each hold their own regardless of gender.",
+      "optional": true
+    },
+    {
+      "name": "Circling",
+      "description": "In Ashkenazi custom the bride circles the groom, traditionally seven times, on arriving under the chuppah — variously explained as building the walls of their new home or a protective circle. Many contemporary couples across all streams circle each other, three times each and one together, or omit it. Sephardi practice generally does not include circling.",
+      "optional": true
+    },
+    {
+      "name": "The sheva brachot",
+      "description": "The seven blessings sung over wine that form the heart of nisuin, moving from the creation of the world to the joy of this particular couple, ending with the voice of joy and gladness, the voice of the groom and the voice of the bride. Distributing them among honoured relatives, friends and teachers is one of the ways a traditional wedding involves many people. They are sung again after the wedding meal.",
+      "optional": false
+    },
+    {
+      "name": "Breaking the glass",
+      "description": "At the end of the ceremony a glass, wrapped for safety, is broken underfoot and everyone calls 'Mazal tov!'. The classic explanation is remembering the destruction of the Temple in Jerusalem at the height of joy; others hear it as a reminder of the world's brokenness or of love's fragility. Traditionally the groom breaks it; many Reform and egalitarian couples break one each or break it together. Some couples keep the shards in a keepsake or have them set into an object.",
+      "optional": false
+    },
+    {
+      "name": "Yichud",
+      "description": "Straight after the chuppah the couple spend a short time completely alone in a private room — in Orthodox practice a formal part of the marriage, with witnesses at the door. It is where a fasting couple break their fast, and for everyone it is a rare quiet moment on a loud day. Standard in Ashkenazi practice; some Sephardi communities do not have the couple seclude immediately, and many non-Orthodox couples keep it simply because it is a good idea.",
+      "optional": true
+    },
+    {
+      "name": "The hora and gladdening the couple",
+      "description": "The circle dance to 'Hava Nagila' and the simcha repertoire, with the couple lifted on chairs at the centre, often holding a napkin or handkerchief between them. Making the couple rejoice is counted a mitzvah, which is why guests perform, juggle and hold up signs (shtick) rather than just dancing. At Orthodox weddings men and women dance in separate circles, sometimes with a mechitza between them; elsewhere everyone dances together.",
+      "optional": false
+    },
+    {
+      "name": "The aufruf",
+      "description": "On a Shabbat before the wedding the groom — or the couple together in egalitarian communities — is called up to the Torah, and the congregation sings and throws soft sweets for a sweet life. A kiddush follows. In Sephardi custom the celebratory aliyah traditionally comes on the Shabbat after the wedding, the Shabbat chatan, rather than before.",
+      "optional": true
+    },
+    {
+      "name": "Mikveh before the wedding",
+      "description": "The bride immerses in the ritual bath in the days before the wedding — in traditional practice a requirement, timed carefully, and treated as a private and moving threshold moment. Many grooms immerse too as a custom. Non-Orthodox movements have warmly reclaimed pre-wedding immersion as spiritual preparation for either partner, and open community mikvehs make it accessible to couples of every stream.",
+      "optional": true
+    },
+    {
+      "name": "Fasting on the wedding day",
+      "description": "Ashkenazi custom treats the wedding day as a personal Yom Kippur: the couple fast from dawn until they break the fast together after the ceremony, and the groom's tisch and the quiet of the day carry some of that solemnity. Sephardi practice generally does not include fasting, and the fast is waived on days when fasting is forbidden, such as Rosh Chodesh.",
+      "optional": true
+    },
+    {
+      "name": "The kittel",
+      "description": "Many Ashkenazi grooms wear a kittel, the simple white robe also worn on Yom Kippur, over their suit under the chuppah — white for purity and a clean slate, and a quiet reminder of mortality at the moment of greatest joy. The bride's white dress is often given the same explanation.",
+      "optional": true
+    },
+    {
+      "name": "Not seeing each other beforehand",
+      "description": "In traditional Ashkenazi practice the couple do not see each other for the week before the wedding, meeting again only at the bedeken, which gives that moment its charge. Many couples keep just the wedding day itself, or only the hour before; others skip the custom entirely and do a first look for photographs.",
+      "optional": true
+    },
+    {
+      "name": "The week of sheva brachot",
+      "description": "For seven days after the wedding, traditional communities feast the couple: a festive meal each evening hosted by different friends or relatives, ending with the seven blessings sung again over wine. Each gathering needs a minyan and, except on Shabbat, panim chadashot — a new face, someone who was not at the wedding — so the joy keeps widening. The couple are treated as royalty all week and traditionally do no work.",
+      "optional": true
+    },
+    {
+      "name": "Henna night",
+      "description": "Sephardi and Mizrahi families, particularly of Moroccan, Yemenite, Iraqi and Persian heritage, hold a henna celebration in the week before the wedding: henna paste pressed into the palms of the couple and guests for blessing and protection, traditional costume, songs and tables of sweets. It has had a strong revival in Israel and the diaspora, sometimes as a second large event with its own budget.",
+      "optional": true
+    },
+    {
+      "name": "Breaking a plate at the tenaim",
+      "description": "When the tenaim, the engagement conditions, are signed — historically at the engagement, now often on the wedding day — the two mothers break a china plate together. Like the glass at the ceremony's end, an unrepairable break marks an unrepealable commitment. Kept mainly in Orthodox and traditional Ashkenazi circles.",
+      "optional": true
+    },
+    {
+      "name": "The mezinke",
+      "description": "An Ashkenazi folk custom from the klezmer tradition: when parents marry off their last child, they are seated in the middle of the dance floor, crowned with flowers, and the guests dance around them to the tune 'Di Mezinke Oysgegebn'. A lovely thing to warn your band about in advance if it applies.",
+      "optional": true
+    },
+    {
+      "name": "Auspicious and avoided days",
+      "description": "Tuesday is traditionally considered a lucky day to marry, because in the creation story God says 'it was good' twice on the third day. Many communities also favour Rosh Chodesh, the new month. These are customs rather than law — unlike Shabbat, festivals and the mourning seasons, which are genuine constraints.",
+      "optional": true
+    },
+    {
+      "name": "Egalitarian and same-sex adaptations",
+      "description": "Reform, Liberal, Reconstructionist and, since 2012, Conservative movements offer marriage ceremonies for same-sex couples, adapting the ketubah, the ring declarations and rituals like the bedeken and circling. Many opposite-sex couples in these movements use the same egalitarian forms — double rings, mutual declarations, both breaking the glass. Orthodox communities do not offer same-sex marriage ceremonies.",
+      "optional": true
+    }
+  ],
+  "gotchas": [
+    "Check the Jewish calendar before you fall in love with a date. Shabbat (Friday sundown to Saturday nightfall), festivals and their eves are closed in all traditional practice, and two mourning seasons — roughly a month of the Omer in spring and the Three Weeks in high summer — close further weeks. The date list is the first conversation with your rabbi, not the last.",
+    "Omer observance varies widely. Traditional practice keeps around 33 days of the period between Pesach and Shavuot wedding-free, but which days are open — Lag BaOmer, Rosh Chodesh, before or after — differs by community, Ashkenazi and Sephardi custom, and movement. Conservative rulings are more lenient, and many Reform rabbis will marry throughout the Omer. Ask your own rabbi rather than trusting a generic list.",
+    "The Three Weeks (17 Tammuz to Tisha B'Av, usually July into August) fall exactly in peak wedding season. Ashkenazi Orthodox practice holds no weddings for the whole period; Sephardi custom is often stricter only from the start of Av; Conservative authorities permit ceremonies until the end of Tammuz; many Reform rabbis avoid only Tisha B'Av itself. A midsummer date can be fine in one community and impossible in the next.",
+    "A Saturday night wedding cannot start until Shabbat ends at nightfall, which in northern-hemisphere summer can be after ten o'clock. Saturday night dates work beautifully in winter and are brutal in June — check the havdalah time for your date before booking anything.",
+    "Friday weddings must finish with everyone home before Shabbat starts at sundown, which is why observant communities rarely use them outside winter or Israel, where a Friday afternoon chuppah before an early Shabbat-eve dinner is common.",
+    "Fully kosher catering restricts your venue as much as your menu. Many venues cannot host a supervised kosher caterer, or charge heavily for koshering the kitchen; communities keep approved lists. Decide between fully supervised kosher and 'kosher-style' before booking the venue, because it is very hard to change afterwards — and if your rabbi or either family expects supervision, confirm which kashrut authority they will accept.",
+    "A kosher meat meal means no dairy anywhere: no butter on the table, no cream sauces, no cheese course, and a parev wedding cake. Also budget for the mashgiach (supervisor) and remember that all wine and grape juice must be kosher — with mevushal wine expected by many authorities when non-observant staff pour.",
+    "The legal status of the religious ceremony varies by country. In England and Wales the chuppah can itself be legally binding after register-office notice, through the synagogue's secretary for marriages, and uniquely can be held anywhere. In the United States, Canada and Australia the rabbi usually solemnises the civil marriage. In France, Germany and much of Europe you must marry at the town hall first. Never assume — confirm your specific arrangement in writing.",
+    "In Israel there is no civil marriage. State-recognised Jewish weddings go through the Orthodox Rabbinate only, with proof of Jewish status to Orthodox standards; Reform, Conservative and secular ceremonies in Israel are not state-recognised, and mixed-faith and same-sex couples cannot legally marry there at all. Many Israeli couples marry civilly abroad and have the marriage recorded on return. Plan an Israel wedding's paperwork months ahead.",
+    "Proof of Jewish status can take longer than any other document. Orthodox authorisation typically wants your parents' ketubah or a letter from a recognised rabbi, and tracing records from another country — or from grandparents who fled one — can take months. Converts should raise their conversion with the officiant at the first meeting, because recognition depends entirely on which movement performed it.",
+    "A civil divorce is not a Jewish divorce. If either of you was previously married in a Jewish ceremony, Orthodox and Conservative rabbis — and the British Reform beit din — require a get before remarriage, and obtaining one can be slow, especially if the former spouse is uncooperative. Start it before you book anything.",
+    "The witnesses are a halachic requirement, not an honour to hand out freely. In Orthodox practice the two eidim must be observant Jewish men who are not related to either of you or to each other — which usually rules out fathers and brothers. Conservative and Reform communities are more flexible, and many accept women as witnesses. Agree the names with your rabbi well in advance.",
+    "Interfaith couples should ask the officiating question first, not last. Orthodox and Conservative rabbis will not officiate at a marriage between a Jew and a non-Jew; policies among Reform and Liberal rabbis range from full officiation to blessings with conditions, and in Britain Liberal Judaism allows mixed-faith couples a ceremony of celebration. Finding the right officiant early saves heartbreak later.",
+    "The ceremony ring should be a plain band with no stones, owned outright by the giver — buying it on credit or borrowing it can technically invalidate the kiddushin in Orthodox eyes. The diamond engagement ring goes back on after the ceremony; it just isn't used under the chuppah.",
+    "If you are fasting on the wedding day, plan for it: no drinks at the kabbalat panim for the couple, a first bite in the yichud room, and a schedule that doesn't leave a fasting couple standing for photographs for three hours. Sephardi couples generally don't fast, and on certain dates fasting is not permitted anyway.",
+    "The ketubah needs everyone's Hebrew names — yours and usually your parents' — with correct spellings, and the document is filled in and signed on the day. Get the names checked by your rabbi weeks early, and appoint someone to bring the ketubah, the ring and the wrapped glass to the venue.",
+    "At an Orthodox wedding, tell the band and venue about separate dancing early: two circles need a bigger dance floor than one, and a mechitza needs setting up. Guests unfamiliar with the custom appreciate a line about it in the invitation or order of service.",
+    "An aufruf is a Shabbat event, so there is no photography and observant guests will not drive — keep it walkable and unplugged, and don't schedule the photographer.",
+    "If you are keeping the week of sheva brachot, the couple's diary is full for seven nights, which surprises couples planning a honeymoon departure the morning after the wedding. Traditional couples often delay the honeymoon a week; others hold one sheva brachot dinner and leave."
+  ],
+  "sources": [
+    "https://www.chabad.org/library/article_cdo/aid/476757/jewish/Jewish-Wedding-Ceremony-Traditions.htm",
+    "https://www.chabad.org/library/article_cdo/aid/465162/jewish/The-Jewish-Marriage-Ceremony.htm",
+    "https://www.chabad.org/library/article_cdo/aid/476754/jewish/Approved-Dates-for-a-Wedding.htm",
+    "https://www.chabad.org/library/article_cdo/aid/475825/jewish/The-Week-Beforehand.htm",
+    "https://www.chabad.org/library/article_cdo/aid/2984558/jewish/What-to-Expect-at-a-Sheva-Brachot.htm",
+    "https://www.chabad.org/library/article_cdo/aid/479965/jewish/Sheva-Brachot-Text-and-Guide.htm",
+    "https://www.chabad.org/theJewishWoman/article_cdo/aid/5368691/jewish/Mikvah-Before-a-Wedding.htm",
+    "https://www.chabad.org/library/article_cdo/aid/4283691/jewish/Mevushal-Keeping-Kosher-Wine-Kosher.htm",
+    "https://www.myjewishlearning.com/article/erusin-the-first-of-the-two-ceremonies/",
+    "https://www.myjewishlearning.com/article/the-sheva-berakhot/",
+    "https://www.myjewishlearning.com/article/the-ketubah-evolutions-in-the-jewish-marriage-contract/",
+    "https://www.myjewishlearning.com/article/mikveh-a-spiritual-preparation-for-marriage/",
+    "https://www.myjewishlearning.com/article/ask-the-expert-wedding-timing/",
+    "https://www.myjewishlearning.com/article/civil-marriage-in-israel/",
+    "https://www.myjewishlearning.com/2015/10/07/embracing-a-jewish-henna-wedding-tradition/",
+    "https://www.myjewishlearning.com/article/ask-the-expert-mevushal-wine/",
+    "https://reformjudaism.org/beliefs-practices/lifecycle-rituals/weddings/12-rituals-you-may-see-jewish-wedding",
+    "https://exploringjudaism.org/living/lifecycles/marriage-and-divorce/weddings/when-can-a-jewish-wedding-happen/",
+    "https://www.rabbinicalassembly.org/sites/default/files/2020-03/Egalitarian%20Kiddushin%202020%20final.pdf",
+    "https://en.wikipedia.org/wiki/Lieberman_clause",
+    "https://theus.org.uk/what-we-do/marriage/getting-married-with-the-united-synagogue/",
+    "https://chiefrabbi.org/marriage-authorisation/",
+    "https://theus.org.uk/what-we-do/marriage/getting-married-in-israel/",
+    "https://en.itim.org.il/itim-guide-to-getting-married-in-israel/",
+    "https://en.wikipedia.org/wiki/Recognition_of_civil_marriage_in_Israel",
+    "https://www.legislation.gov.uk/ukpga/Eliz2/7-8/13",
+    "https://assets.publishing.service.gov.uk/media/63fc8f088fa8f527f310d479/A_Guide_for_Secretaries_for_Marriages_-_February_2023.pdf",
+    "https://www.liberaljudaism.org/marriage-mixed-faith-blessings-faq/",
+    "https://www.liberaljudaism.org/2020/10/statement-on-new-practices-for-mixed-faith-marriages/",
+    "https://en.wikipedia.org/wiki/Aufruf",
+    "https://www.yoatzot.org/639/",
+    "https://sephardicu.com/lifecycle/marriage/sheva-brachot/",
+    "https://jewishaction.com/religion/jewish-thought/legalease_tuesday_weddings/",
+    "https://jewishaction.com/jewish-living/whats_the_truth_about_sheva_berachot/",
+    "https://18doors.org/timing_and_location_of_a_jewish_wedding/",
+    "https://aish.com/wedding-dates/"
+  ]
+}

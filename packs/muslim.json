@@ -1,0 +1,1062 @@
+{
+  "id": "muslim",
+  "name": "Muslim (Nikah)",
+  "shortName": "Muslim",
+  "faithGroup": "Muslim",
+  "blurb": "The nikah at its heart — offer and acceptance, the mahr, the witnesses — with everything around it shaped by your families' tradition: a henna night, a baraat, a walima, one quiet afternoon or a whole week of gatherings.",
+  "commonCountries": [
+    "PK",
+    "IN",
+    "BD",
+    "ID",
+    "MY",
+    "TR",
+    "EG",
+    "SA",
+    "AE",
+    "MA",
+    "NG",
+    "SO",
+    "GB",
+    "US",
+    "CA",
+    "FR",
+    "DE",
+    "AU"
+  ],
+  "typicalGuests": {
+    "low": 80,
+    "typical": 300,
+    "high": 1000
+  },
+  "typicalDays": 3,
+  "terms": {
+    "officiant": "imam",
+    "ceremonyVenue": "mosque",
+    "ceremony": "nikah",
+    "bestMan": "best man",
+    "maidOfHonour": "maid of honour",
+    "reception": "walima",
+    "firstDance": "couple's entrance",
+    "witnesses": "witnesses"
+  },
+  "events": [
+    {
+      "id": "engagement",
+      "name": "The engagement (mangni / tolbeh / nişan)",
+      "when": "Three to eighteen months before",
+      "optional": true,
+      "default": true,
+      "description": "The two families meet formally and the match is agreed. In Arab communities this is the tolbeh, where the groom's family formally asks for the bride's hand and Surah al-Fatiha is often recited to seal it; South Asian families hold a mangni with rings and sweets; Turkish families a söz and then a nişan party. Religiously an engagement is only a promise: you are not married to each other until the nikah, and many families keep contact chaperoned until then.",
+      "hosts": "Usually the bride's family receives the groom's"
+    },
+    {
+      "id": "dholki",
+      "name": "Dholki nights (South Asian)",
+      "when": "One to four weeks before",
+      "optional": true,
+      "default": false,
+      "description": "Informal evenings of wedding songs sung around the dhol drum at home, held on several nights in the run-up in Pakistani and North Indian Muslim families. Entirely cultural, low cost, and one of the warmest parts of the season — mostly needing food, tea and a good drummer or a cousin who can keep rhythm.",
+      "hosts": "Each family, at home"
+    },
+    {
+      "id": "mehndi",
+      "name": "Mehndi / henna night",
+      "when": "One to three days before",
+      "optional": true,
+      "default": true,
+      "description": "A cultural celebration, not a religious requirement, found in some form from Morocco to Malaysia. South Asian families hold the mehndi with yellow and green outfits, henna for the bride, songs and choreographed dances; Arab families the laylat al-henna; Somali families their own henna parties. At the Turkish kına gecesi the bride sits veiled in red while candles circle her, a gold coin is pressed into her hennaed palm, and she is traditionally moved to tears by the songs. It can be women-only, or mixed, or one party per family — decide early because it drives the venue and guest list.",
+      "hosts": "Traditionally the bride's family; many families now hold a joint event"
+    },
+    {
+      "id": "nikah",
+      "name": "The nikah",
+      "when": "Wedding day",
+      "optional": false,
+      "default": true,
+      "description": "The marriage itself: a short ceremony built around the offer and acceptance (ijab and qabul) before witnesses, the mahr declared, the contract signed, a sermon and prayers, and sweets or dates handed round. Arab communities call it katb el-kitab, Malay and Indonesian communities the akad nikah, Turkish families the imam nikahı; Iranian families hold the aqd seated before the sofreh aghd spread. It can take place in a mosque, at home or at the reception venue, and can run fifteen minutes or an hour. In some families the couple sit together; in others the bride's consent is taken separately by the imam and witnesses, or given through her representative (vakil).",
+      "hosts": "Traditionally the bride's family"
+    },
+    {
+      "id": "civil",
+      "name": "Civil marriage or registration",
+      "when": "Before or on the wedding day",
+      "optional": true,
+      "default": true,
+      "description": "Whether the nikah is also the legal marriage depends entirely on the country. In most Muslim-majority countries the registered nikah is the legal marriage. In the United States the imam usually signs the state marriage licence. In the United Kingdom a nikah alone is usually not legally recognised, in Turkey only the civil ceremony at the registry has legal effect, and in France the civil ceremony must come before any religious one — so many couples hold a short civil ceremony first or on the same day.",
+      "hosts": "The couple"
+    },
+    {
+      "id": "baraat",
+      "name": "Baraat and shaadi (South Asian)",
+      "when": "Wedding day",
+      "optional": true,
+      "default": false,
+      "description": "The groom arrives in procession — the baraat — with family, drummers and sometimes a decorated car or horse, and is received by the bride's family, who host the main reception (the shaadi). The nikah often happens during this event if it has not already. The day ends with the rukhsati, the bride's formal and often tearful farewell to her family. This is South Asian culture layered on top of the nikah, not an Islamic requirement.",
+      "hosts": "The bride's family"
+    },
+    {
+      "id": "walima",
+      "name": "The walima",
+      "when": "Wedding day or within a few days",
+      "optional": true,
+      "default": true,
+      "description": "The marriage feast hosted by the groom's side after the marriage, a confirmed sunnah rather than an obligation in most schools. The Prophet's guidance emphasises simplicity and inviting the poor as well as the wealthy, not only the well-off. In the South Asian sequence it is the final big event, hosted a day or more after the shaadi; in many other communities one combined reception serves as the walima.",
+      "hosts": "The groom and his family"
+    },
+    {
+      "id": "dugun",
+      "name": "The wedding party (düğün / farah / aroos)",
+      "when": "Wedding day",
+      "optional": true,
+      "default": false,
+      "description": "The single big celebration model common in Turkish, Arab, Somali and many other communities. A Turkish düğün includes the takı töreni, where guests queue to pin gold coins and banknotes to the couple; an Arab farah opens with the zaffa procession and often ends in dabke; a Somali aroos features buraanbur poetry performed by the women. Many families treat this one party as the walima rather than holding two events.",
+      "hosts": "Both families, often shared"
+    },
+    {
+      "id": "bersanding",
+      "name": "Bersanding (Malay / Southeast Asian)",
+      "when": "Wedding day or the day after",
+      "optional": true,
+      "default": false,
+      "description": "The sitting-in-state ceremony of Malay and many Indonesian weddings: after the akad nikah, the couple are enthroned on the pelamin dais as king and queen for a day, blessed by elders who sprinkle rose water and rice (merenjis), with kompang drummers and a feast (kenduri) for the whole community. Often held twice, once hosted by each family.",
+      "hosts": "The bride's family, then often repeated by the groom's"
+    },
+    {
+      "id": "toddobobax",
+      "name": "Seventh-day gatherings (Somali)",
+      "when": "The week after",
+      "optional": true,
+      "default": false,
+      "description": "Somali tradition keeps the celebration going after the aroos. On the seventh night the xeedho-fur is held: a decorated vessel prepared by the bride's family, wrapped in intricate knots, is ceremonially opened by the groom's side. The toddobobax marks the couple's re-emergence after their first week together.",
+      "hosts": "Both families"
+    }
+  ],
+  "items": [
+    {
+      "id": "mahr",
+      "name": "Mahr (the bride's marriage gift)",
+      "section": "Ceremony",
+      "event": "nikah",
+      "note": "The obligatory gift from the groom to the bride, agreed before the nikah and recorded in the contract. It is her exclusive property — not a payment to her family — and can be money, gold, property or something non-material. It may be given at once (prompt) or partly deferred, in which case the deferred part remains a debt owed to her. Amounts vary enormously between families and countries; the sunnah leans towards keeping it within the groom's means.",
+      "essential": true,
+      "shareOfBudget": 0.035,
+      "unit": "fixed",
+      "supplierCategory": "None",
+      "religiousRequirement": true
+    },
+    {
+      "id": "nikah-venue-fee",
+      "name": "Mosque or nikah venue fee",
+      "section": "Ceremony",
+      "event": "nikah",
+      "note": "Islam does not require the nikah to happen in a mosque — home or the reception venue are equally valid — but many couples prefer one. Mosques usually charge an administrative fee and ask for an application some weeks ahead; some require a pre-marriage meeting or counselling session first.",
+      "essential": true,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Mosque",
+      "religiousRequirement": false
+    },
+    {
+      "id": "imam-honorarium",
+      "name": "Imam or officiant honorarium",
+      "section": "Ceremony",
+      "event": "nikah",
+      "note": "There is no priesthood in Islam and religiously any knowledgeable Muslim can conduct a nikah, but most couples ask an imam. An honorarium is customary rather than required, and travel costs are extra if the imam comes to your venue. In some countries the officiant must also be licensed to solemnise the civil marriage — worth checking when you book.",
+      "essential": true,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Mosque",
+      "religiousRequirement": false
+    },
+    {
+      "id": "nikah-documents",
+      "name": "Nikah contract and certificates",
+      "section": "Ceremony",
+      "event": "nikah",
+      "note": "The written contract (nikah nama in South Asia) and the mosque's marriage certificate, with copies for both of you. The contract itself is the marriage, so read every clause before the day — including any conditions either of you wants added — rather than signing it unread in front of two hundred people.",
+      "essential": true,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Mosque",
+      "religiousRequirement": true
+    },
+    {
+      "id": "premarital-course",
+      "name": "Pre-marriage counselling or course",
+      "section": "Ceremony",
+      "event": "nikah",
+      "note": "Not an Islamic requirement, but a growing number of mosques — especially in North America — make a premarital counselling session a condition of performing the nikah, and many couples find it genuinely useful.",
+      "essential": false,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Mosque",
+      "religiousRequirement": false
+    },
+    {
+      "id": "civil-fees",
+      "name": "Civil marriage notice, licence and registrar fees",
+      "section": "Ceremony",
+      "event": "civil",
+      "note": "The legal side: notice fees and a register office ceremony in the United Kingdom, the state marriage licence in the United States, the belediye ceremony in Turkey, the mairie in France, or nikah registration fees in Muslim-majority countries. Small money, large consequences if skipped.",
+      "essential": true,
+      "shareOfBudget": 0.005,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": false
+    },
+    {
+      "id": "quran-reciter",
+      "name": "Qur'an reciter",
+      "section": "Ceremony",
+      "event": "nikah",
+      "note": "Many families open the nikah or the reception with a short recitation. Often a family member does it as an honour; a professional qari is a modest booking if not.",
+      "essential": false,
+      "shareOfBudget": 0.002,
+      "unit": "fixed",
+      "supplierCategory": "Mosque",
+      "religiousRequirement": false
+    },
+    {
+      "id": "venue-hire",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "event": "",
+      "note": "The questions that matter more than the room: does the venue allow outside halal caterers, will it run a fully dry event without an inflated minimum spend, can it provide a prayer space, and can it be split or screened if you want separate men's and women's areas? Banqueting halls used to Muslim weddings answer all four without blinking; many mainstream venues do not.",
+      "essential": true,
+      "shareOfBudget": 0.1,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "catering",
+      "name": "Halal catering for the main reception",
+      "section": "Reception",
+      "event": "",
+      "note": "The biggest line in the budget. Ask caterers directly how their meat is certified rather than accepting 'halal-style', and check cooking alcohol and gelatine as well as the meat. Cuisines vary with the family — biryani and karahi, mansaf and ouzi, nasi minyak, Turkish kebabs, Somali rice and camel or goat — and at large weddings buffets and family-style service are more common than plated courses.",
+      "essential": true,
+      "shareOfBudget": 0.21,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "drinks",
+      "name": "Soft drinks, juices and tea",
+      "section": "Reception",
+      "event": "",
+      "note": "Muslim weddings are alcohol-free, so the drinks budget goes on juices, mocktails, lassi or ayran, fizzy drinks, and endless tea and coffee. It is a much smaller line than a Western bar, but do not let a venue charge you a bar minimum for it.",
+      "essential": true,
+      "shareOfBudget": 0.025,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "walima-catering",
+      "name": "Walima catering (if held as a separate event)",
+      "section": "Reception",
+      "event": "walima",
+      "note": "If the groom's family hosts a separate walima, it needs its own catering. The sunnah is a genuine feast but a simple one — the Prophet's own walimas were modest, and inviting the poor as well as the prosperous is part of the point. Many couples now channel some of this line into feeding people in need.",
+      "essential": false,
+      "shareOfBudget": 0.065,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "wedding-cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "event": "",
+      "note": "Common but entirely optional. Check the boring details: gelatine in fillings and alcohol in flavourings both catch couples out with mainstream bakers.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Cake maker",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dates-sweets",
+      "name": "Dates and sweets after the nikah",
+      "section": "Reception",
+      "event": "nikah",
+      "note": "Dried dates or sweets are traditionally handed round the moment the nikah concludes — mithai in South Asia, chocolates and dates elsewhere. A small, loved line.",
+      "essential": false,
+      "shareOfBudget": 0.005,
+      "unit": "fixed",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "service-staffing",
+      "name": "Service staff and cleanup",
+      "section": "Reception",
+      "event": "",
+      "note": "Waiting staff, buffet service and cleardown, often quoted separately from the food at community halls. If your event is gender-separated, ask for appropriately assigned staff for each side.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bridal-outfit",
+      "name": "Bridal outfit for the main day",
+      "section": "Attire",
+      "event": "",
+      "note": "A red or deep-toned lehenga or gharara in South Asian tradition, a white gown or embroidered kaftan in much of the Arab world, a gown with hijab styling for many brides everywhere. There is no religiously mandated wedding dress — modesty norms are interpreted by each family — so buy for your tradition and your comfort across a very long day.",
+      "essential": true,
+      "shareOfBudget": 0.06,
+      "unit": "fixed",
+      "supplierCategory": "Bridal shop",
+      "religiousRequirement": false
+    },
+    {
+      "id": "event-outfits",
+      "name": "Outfits for the other events",
+      "section": "Attire",
+      "event": "",
+      "note": "A multi-day wedding means multiple outfits: mehndi yellows and greens, a different colour for the walima, sometimes a nikah outfit as well. This is where multi-event budgets quietly double — renting, borrowing and re-wearing are all normal and nothing to apologise for.",
+      "essential": false,
+      "shareOfBudget": 0.02,
+      "unit": "fixed",
+      "supplierCategory": "Bridal shop",
+      "religiousRequirement": false
+    },
+    {
+      "id": "groom-outfit",
+      "name": "Groom's outfits",
+      "section": "Attire",
+      "event": "",
+      "note": "Sherwani with turban for a baraat, a suit or tuxedo, a thobe and bisht in Gulf tradition, baju melayu with songket for a Malay groom. One rule with a religious basis: pure silk clothing is generally considered impermissible for men, so check fabrics on traditional pieces.",
+      "essential": true,
+      "shareOfBudget": 0.02,
+      "unit": "fixed",
+      "supplierCategory": "Menswear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "party-attire",
+      "name": "Family and wedding party outfits",
+      "section": "Attire",
+      "event": "",
+      "note": "Coordinated colours for siblings and close friends at the mehndi and main day are a South Asian staple. Who pays varies by family; agree it early.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "perPerson",
+      "supplierCategory": "Bridal shop",
+      "religiousRequirement": false
+    },
+    {
+      "id": "stage-decor",
+      "name": "Stage and backdrop",
+      "section": "Flowers & Styling",
+      "event": "",
+      "note": "The decorated stage or sofa where the couple sit and every guest comes for photographs is the centrepiece of South Asian and many Arab and African receptions, and it is priced accordingly. If you are having more than one event, ask about re-using or restyling one build rather than paying for two.",
+      "essential": true,
+      "shareOfBudget": 0.028,
+      "unit": "fixed",
+      "supplierCategory": "Decorator",
+      "religiousRequirement": false
+    },
+    {
+      "id": "venue-styling",
+      "name": "Table styling and room decor",
+      "section": "Flowers & Styling",
+      "event": "",
+      "note": "Centrepieces, linen and lighting, scaled to a large guest count. At three hundred guests, one flower fewer per table is a real saving.",
+      "essential": true,
+      "shareOfBudget": 0.022,
+      "unit": "perTable",
+      "supplierCategory": "Decorator",
+      "religiousRequirement": false
+    },
+    {
+      "id": "mehndi-styling",
+      "name": "Mehndi / henna night styling",
+      "section": "Flowers & Styling",
+      "event": "mehndi",
+      "note": "Marigolds, colourful drapes, floor seating, decorated trays and candles for the henna night. Traditionally more homespun than the main day — family assembling it together is part of the event.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Decorator",
+      "religiousRequirement": false
+    },
+    {
+      "id": "garlands-flowers",
+      "name": "Fresh flowers and garlands",
+      "section": "Flowers & Styling",
+      "event": "",
+      "note": "The bride's bouquet where that custom is followed, flower garlands (haar) exchanged or worn in South Asian tradition, and fresh flower jewellery for the mehndi.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "sofreh-aghd",
+      "name": "Sofreh aghd spread (Iranian)",
+      "section": "Flowers & Styling",
+      "event": "nikah",
+      "note": "The ceremonial spread Iranian couples sit before during the aqd: a mirror and candelabra, honey, flatbread, herbs, decorated eggs and sugar cones ground over the couple's heads under a held canopy of cloth. A specialist sofreh designer is now a standard booking for Persian weddings; a family heirloom spread is equally traditional.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Decorator",
+      "religiousRequirement": false
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Multi-day coverage adds up fast, so decide which events matter most on camera. If any part of the day is gender-separated, or some guests observe hijab and do not want to be photographed by or shown to men, you will need a female photographer for the women's side and clear rules about where images go — good Muslim-wedding specialists handle this routinely.",
+      "essential": true,
+      "shareOfBudget": 0.055,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "The same gender-separation considerations as photography. The moments couples most regret losing are the ijab and qabul themselves and the rukhsati.",
+      "essential": true,
+      "shareOfBudget": 0.03,
+      "unit": "fixed",
+      "supplierCategory": "Videographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "album",
+      "name": "Albums and prints",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Both families will expect copies, and a multi-event wedding produces far more material to edit than a single day. Budget the album separately from the shooting.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dhol-players",
+      "name": "Dhol drummers (South Asian)",
+      "section": "Music & Entertainment",
+      "event": "baraat",
+      "note": "Dhol players lead the baraat in and lift the mehndi. Usually booked by the hour in small troupes.",
+      "essential": false,
+      "shareOfBudget": 0.007,
+      "unit": "perHour",
+      "supplierCategory": "Entertainment",
+      "religiousRequirement": false
+    },
+    {
+      "id": "zaffa-troupe",
+      "name": "Zaffa troupe (Arab)",
+      "section": "Music & Entertainment",
+      "event": "dugun",
+      "note": "The drummers, singers and sometimes dancers who bring the couple into the hall in the traditional Arab wedding procession, an Egyptian and Levantine custom now common across the Arab world and its diaspora.",
+      "essential": false,
+      "shareOfBudget": 0.007,
+      "unit": "fixed",
+      "supplierCategory": "Entertainment",
+      "religiousRequirement": false
+    },
+    {
+      "id": "nasheed-daf",
+      "name": "Nasheed singers or daf drummers",
+      "section": "Music & Entertainment",
+      "event": "",
+      "note": "For families who prefer religious singing or percussion-only music, nasheed artists and daf (frame drum) groups are the standard booking. Announcing a wedding with the duff has support in the hadith tradition, which is why even quite conservative celebrations usually include it.",
+      "essential": false,
+      "shareOfBudget": 0.007,
+      "unit": "fixed",
+      "supplierCategory": "Entertainment",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dj-band",
+      "name": "DJ or live band",
+      "section": "Music & Entertainment",
+      "event": "",
+      "note": "How much music and dancing a wedding has varies enormously between Muslim families — from none at all, to women-only dancing behind closed doors, to a full mixed dance floor with a live band. Agree the family position before booking anything, and brief the DJ on content either way.",
+      "essential": false,
+      "shareOfBudget": 0.018,
+      "unit": "fixed",
+      "supplierCategory": "DJ",
+      "religiousRequirement": false
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations",
+      "section": "Stationery",
+      "event": "",
+      "note": "Often per-family rather than per-person, and often carrying different event details for different guests — the whole community to the walima, close family to the nikah. Many designs open with the Bismillah; digital invitations are now fully accepted in most communities.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "perGuest",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "favours",
+      "name": "Guest favours",
+      "section": "Stationery",
+      "event": "",
+      "note": "Sugared almonds in Turkish and Arab tradition, boxed mithai in South Asia, dates and chocolates everywhere. One per household is a legitimate economy at large weddings.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "perGuest",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "couple-transport",
+      "name": "Wedding cars",
+      "section": "Transport",
+      "event": "",
+      "note": "Cars for the couple between homes, mosque and venue. A multi-event wedding means multiple runs across several days — book as a package.",
+      "essential": true,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Car hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "baraat-procession",
+      "name": "Baraat procession transport",
+      "section": "Transport",
+      "event": "baraat",
+      "note": "The decorated car, vintage car or horse for the groom's arrival, plus any coach bringing the baraat party together so the procession arrives as one. Check the venue actually allows a procession with drums outside before paying for one.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Car hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest transport and parking",
+      "section": "Transport",
+      "event": "",
+      "note": "Coaches between mosque and venue where they are far apart, and parking at community halls, which is the most common guest complaint at large weddings.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Coach hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "event": "nikah",
+      "note": "Rings are a cultural custom, not an Islamic requirement, though most couples exchange them. One genuinely religious constraint: gold is generally considered impermissible for men to wear, so grooms usually choose silver, platinum or palladium.",
+      "essential": true,
+      "shareOfBudget": 0.018,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bridal-jewellery",
+      "name": "Bridal gold and jewellery",
+      "section": "Rings & Gifts",
+      "event": "",
+      "note": "A major line in South Asian, Arab, Turkish and Somali tradition: the bridal gold set, the Egyptian shabka, the gold pinned to the couple at a Turkish takı töreni. Sometimes the jewellery is itself part or all of the mahr — if so, say that clearly in the contract so it is legally and religiously hers.",
+      "essential": false,
+      "shareOfBudget": 0.055,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "gift-trays",
+      "name": "Gift trays between the families",
+      "section": "Rings & Gifts",
+      "event": "engagement",
+      "note": "Decorated trays of gifts exchanged between the families: the Malay hantaran negotiated alongside the mas kahwin, the lefe boxes a Hausa groom sends the bride before the wedding, similar bride-and-groom baskets across South Asia and the Arab world. Cultural, and in some communities the subject of real negotiation — keep it distinct from the mahr, which is the bride's alone.",
+      "essential": false,
+      "shareOfBudget": 0.015,
+      "unit": "fixed",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "family-gifts",
+      "name": "Thank-you gifts",
+      "section": "Rings & Gifts",
+      "event": "",
+      "note": "For parents, the imam if he declines a fee, hosts of the pre-wedding nights, and helpers across the week.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "perPerson",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "henna-artist",
+      "name": "Henna artist",
+      "section": "Beauty",
+      "event": "mehndi",
+      "note": "Bridal henna is intricate and takes hours, so it is usually applied the day before the mehndi night itself, with simpler designs for guests on the night. Ask for natural henna and check for 'black henna', which can burn skin.",
+      "essential": true,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Henna artist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "hair-makeup",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "event": "",
+      "note": "Multiple events mean multiple looks. Brides who wear hijab need an artist experienced in hijab styling; brides preparing in a women-only space need a female team, booked to come to you.",
+      "essential": true,
+      "shareOfBudget": 0.015,
+      "unit": "fixed",
+      "supplierCategory": "Hair and make-up",
+      "religiousRequirement": false
+    },
+    {
+      "id": "groom-grooming",
+      "name": "Groom's grooming",
+      "section": "Beauty",
+      "event": "",
+      "note": "A barber visit before the main day; in some cultures the groom has his own small henna mark applied at the henna night.",
+      "essential": false,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Barber",
+      "religiousRequirement": false
+    },
+    {
+      "id": "planner",
+      "name": "Wedding planner or coordinator",
+      "section": "Extras",
+      "event": "",
+      "note": "Worth serious thought for a multi-day, multi-venue wedding with two family guest lists. Planners who know Muslim weddings will also carry the supplier book you need: certified halal caterers, female photographers, venues relaxed about dry events.",
+      "essential": false,
+      "shareOfBudget": 0.022,
+      "unit": "fixed",
+      "supplierCategory": "Planner",
+      "religiousRequirement": false
+    },
+    {
+      "id": "charity",
+      "name": "Charity and feeding people in need",
+      "section": "Extras",
+      "event": "walima",
+      "note": "Inviting the poor to the walima is part of the sunnah of the feast, and many couples honour it by donating surplus food, sponsoring meals, or giving sadaqah to mark the marriage. Optional in budget terms, close to the heart of the tradition in spirit.",
+      "essential": false,
+      "shareOfBudget": 0.005,
+      "unit": "fixed",
+      "supplierCategory": "None",
+      "religiousRequirement": false
+    },
+    {
+      "id": "prayer-space",
+      "name": "Prayer space at the venue",
+      "section": "Extras",
+      "event": "",
+      "note": "Prayer mats, a clean quiet room, qibla direction marked, and access to washing facilities. Maghrib will fall during most evening receptions and a portion of your guests will want to pray it.",
+      "essential": false,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    }
+  ],
+  "timeline": [
+    {
+      "monthsBefore": 12,
+      "task": "Decide the shape of the wedding with both families: which events you are having, over how many days, and whether celebrations are mixed, separated or a mixture",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Speak to the imam or mosque about the nikah: their requirements, availability, fees and whether they can also solemnise the civil marriage in your country",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Check the calendar: Ramadan makes daytime catering impractical, Eid seasons book out suppliers, and many Shia families avoid the mourning months of Muharram and Safar",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Book the reception venue, confirming in writing that it allows outside halal caterers, will run a dry event without penalty, and can accommodate any separation or prayer space you need",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Agree between the families who is hosting and paying for what — traditionally the bride's side hosts the main day and the groom's side the walima, but every family settles it differently",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Agree the mahr together — amount, what form it takes, and how much is prompt versus deferred — before anyone else weighs in",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Confirm who will act as wali and who your witnesses will be, and check your imam's expectations, which differ between schools",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Book the halal caterer and ask exactly how the meat is certified, not just whether it is halal",
+      "critical": true
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Book the photographer and videographer, raising gender-separated coverage and photo-sharing rules now rather than on the day",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Plan the mehndi or henna night and book the henna artist for the day before it",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Submit the mosque's marriage application and book any required premarital counselling session",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Book entertainment appropriate to your family — dhol players, a zaffa troupe, nasheed singers, a DJ — and brief them on the family's expectations",
+      "critical": false
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Start outfit shopping early if anything is being made or ordered from abroad, counting one outfit per event",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Sort the legal marriage: give notice at the register office in the United Kingdom, plan the licence timing in the United States, book the civil ceremony in countries where it must come first",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Order invitations, deciding which guests are invited to which events",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Book hair and make-up, requesting a female team or hijab-experienced artist if you need one",
+      "critical": false
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Gather the nikah paperwork: identity documents, and divorce or death certificates and any Islamic divorce documentation if either of you was married before",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Walk the venue and plan prayer space, washing access and where maghrib falls in the running order",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Finalise the nikah contract with the imam: the mahr as agreed, and any conditions either of you wants written in — read every clause before the day",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Buy the rings, remembering that grooms generally avoid gold",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "In the United States, collect the marriage licence inside its validity window; in the United Kingdom, confirm the notice has cleared and the registrar or authorised person is booked",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Confirm final menus, guest numbers per event and dietary needs with the caterer",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Agree the nikah running order with the imam: language, who gives the khutbah, how consent will be taken, and whether photography is permitted during it",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Confirm logistics for the henna night and any processions — including that the venue allows drums outside",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "On the nikah day, bring the documents, the licence where applicable, the witnesses and the signed-off contract — nothing else about the day matters if these are missing",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0,
+      "task": "Afterwards, collect the nikah certificate, register the marriage with the civil authority where that is a separate step, and hold the walima",
+      "critical": true
+    }
+  ],
+  "paperwork": [
+    {
+      "item": "Civil marriage licence or notice of marriage",
+      "who": "Both",
+      "note": "Varies entirely by country. United Kingdom: notice at the register office at least 29 days ahead, then either a registrar, a registered building with an authorised person, or a separate civil ceremony. United States: a state marriage licence the imam signs. Turkey: the belediye civil ceremony is the only legally effective one. France: the mairie ceremony must precede any religious one. Most Muslim-majority countries: registration of the nikah itself is the legal marriage."
+    },
+    {
+      "item": "Photo identity documents",
+      "who": "Both",
+      "note": "Passports or national ID for the civil authority and usually for the mosque's own records."
+    },
+    {
+      "item": "Proof any previous marriage has ended",
+      "who": "Either party previously married",
+      "note": "The final civil divorce decree or the former spouse's death certificate, for both the civil authority and the mosque."
+    },
+    {
+      "item": "Islamic divorce documentation",
+      "who": "Either party previously married Islamically",
+      "note": "Many mosques ask for evidence that a previous Islamic marriage was properly ended (talaq or khula) and that the waiting period (iddah) is complete, separately from the civil divorce."
+    },
+    {
+      "item": "Certificate of conversion (shahada certificate)",
+      "who": "A partner who converted to Islam",
+      "note": "Many mosques ask a convert for a shahada certificate or a letter from an imam. If none exists, most will arrange the declaration and paperwork themselves — allow a little time rather than raising it the week before."
+    },
+    {
+      "item": "Wali (bride's guardian) confirmed",
+      "who": "The bride",
+      "note": "In the Maliki, Shafi'i and Hanbali schools the bride's wali — usually her father — is part of a valid contract; the Hanafi school allows an adult woman to contract her own marriage, though involving family is still preferred. Most Shia jurists require the father's or grandfather's consent for a previously unmarried bride. A bride without a Muslim relative can ask the imam to act as wali. Settle who it is well before the day."
+    },
+    {
+      "item": "Two witnesses arranged",
+      "who": "Both",
+      "note": "Sunni practice requires two adult Muslim witnesses to hear the offer and acceptance — classically two men, or a man and two women in some schools, and the wali cannot double as one. In Shia jurisprudence witnesses are recommended rather than required for the nikah, but any civil registration will need its own witnesses anyway."
+    },
+    {
+      "item": "Mahr recorded in the contract",
+      "who": "Both",
+      "note": "The amount or description, and the split between prompt and deferred, written into the nikah contract. An unwritten mahr is the single most common source of later dispute."
+    },
+    {
+      "item": "Mosque marriage application",
+      "who": "Both",
+      "note": "Most mosques have their own application form, fee and lead time — commonly two weeks to two months — and some require a premarital meeting or counselling session before they will perform the nikah."
+    },
+    {
+      "item": "Nikah certificate (nikah nama)",
+      "who": "Both",
+      "note": "The mosque's or registrar's record of the religious marriage, signed by the couple, wali and witnesses. Get certified copies for each of you; in South Asia check the nikah nama's clauses carefully — including any delegated right of divorce — before signing."
+    },
+    {
+      "item": "Registration with the nikah registrar",
+      "who": "Both, in most Muslim-majority countries",
+      "note": "In Pakistan, Bangladesh, India, Malaysia, Indonesia and much of the Middle East the nikah must be registered with a state-appointed registrar or religious-affairs office for the marriage to have full legal effect. The officiant usually handles it — confirm that he has."
+    },
+    {
+      "item": "Premarital medical screening",
+      "who": "Both, in some countries",
+      "note": "Several Muslim-majority countries, including Saudi Arabia and the United Arab Emirates, require premarital medical tests before a marriage can be registered. Check the marriage authority where you are marrying."
+    },
+    {
+      "item": "Registrar or authorised person booked",
+      "who": "Both, in England and Wales",
+      "note": "A nikah is only legally binding there if it happens in a registered building with an authorised person or registrar present. Many mosques are registered for marriages and many are not — confirm in writing which yours is, or book a civil ceremony as well."
+    },
+    {
+      "item": "Translations and apostilles",
+      "who": "Either party with foreign documents",
+      "note": "Divorce decrees, conversion certificates and birth certificates from another country commonly need certified translation and legalisation, especially for marriages registered in the Middle East or South Asia. Allow weeks."
+    },
+    {
+      "item": "Marriage certificate after the event",
+      "who": "Both",
+      "note": "Collect the civil certificate as well as the nikah certificate. If you married abroad, check what your home country needs to recognise the marriage — usually the foreign certificate, translated and legalised."
+    }
+  ],
+  "customs": [
+    {
+      "name": "Ijab and qabul",
+      "description": "The heart of the nikah: one party (or their representative) makes the offer of marriage and the other accepts it, clearly and freely, in one sitting. Everything else — venue, dress, even the imam — is arrangement around this exchange. Consent must be genuine; a marriage contracted under compulsion is invalid.",
+      "optional": false
+    },
+    {
+      "name": "The mahr",
+      "description": "The gift the groom is religiously obliged to give the bride, agreed before the contract and belonging to her alone — not to her father, not to the household. It can be gold, money, property, or something non-material; a famous hadith accepts even teaching the bride Qur'an. It may be paid at once or partly deferred as a debt. It is the opposite of a bride price paid to the family, and it is not a dowry brought by the bride.",
+      "optional": false
+    },
+    {
+      "name": "The wali",
+      "description": "The bride's guardian, normally her father, who represents her interests in the contract. The Maliki, Shafi'i and Hanbali schools treat the wali's participation as a condition of validity; the Hanafi school holds that an adult woman may contract her own marriage. Most Shia jurists require the father's or paternal grandfather's permission for a never-married bride. A wali exists to protect the bride, not to overrule her — her consent is required in every school.",
+      "optional": false
+    },
+    {
+      "name": "The witnesses",
+      "description": "In Sunni law the contract must be heard by two adult Muslim witnesses for the marriage to be valid — classically two men, or one man and two women in some schools. Shia jurisprudence does not require witnesses for the nikah itself, though having them is recommended and any civil registration will require its own. Being asked to witness is an honour usually given to respected family members.",
+      "optional": false
+    },
+    {
+      "name": "The khutbah al-nikah",
+      "description": "The short marriage sermon traditionally given before the contract, built around three verses of the Qur'an on God-consciousness and the famous hadith on marriage. It is recommended rather than required, usually takes a few minutes, and is often the moment an imam adds advice to the couple in the language of the congregation.",
+      "optional": true
+    },
+    {
+      "name": "Conditions in the contract",
+      "description": "The nikah is a contract, and either party may write lawful conditions into it — where the couple will live, the bride's right to continue working or studying, or a delegated right of divorce. Scholars differ on which conditions bind, but discussing them openly before marriage is an established and respected practice, not a modern invention.",
+      "optional": true
+    },
+    {
+      "name": "The walima",
+      "description": "The feast the groom hosts after the marriage, a confirmed sunnah in most schools. The Prophet's instruction to a companion was simply to hold a feast 'even with one sheep', and his own walimas were modest. Inviting the poor as well as the rich is part of the tradition, and accepting a walima invitation is strongly encouraged. The competitive scale of some modern walimas is culture, not religion — the sunnah, if anything, pushes the other way.",
+      "optional": false
+    },
+    {
+      "name": "Announcing the marriage with the duff",
+      "description": "The hadith tradition encourages making the marriage public and known, and mentions the duff, the frame drum, in that context. This is why even conservative celebrations that avoid other music usually welcome daf drumming and nasheed singing.",
+      "optional": true
+    },
+    {
+      "name": "No priesthood",
+      "description": "Islam has no ordained clergy, and religiously the nikah does not need an imam — any trustworthy Muslim who knows the requirements can conduct it. In practice almost every couple uses an imam, both for confidence in the procedure and because in many countries he doubles as the registrar or licensed officiant.",
+      "optional": true
+    },
+    {
+      "name": "Separate or mixed celebrating",
+      "description": "Practice ranges from fully separate men's and women's halls, to one room with separate seating, to fully mixed celebrations, depending on the family and community rather than on any single agreed rule. Full separation changes the planning arithmetic — two sound systems, two serving lines, a female photographer — and behind closed doors the women's side is often the livelier party, with dancing and finery that never appear on the mixed side.",
+      "optional": true
+    },
+    {
+      "name": "Dates and sweets after the nikah",
+      "description": "The moment the contract is concluded, dates, mithai or chocolates are passed around the room and congratulations begin. Small, universal, and one of the few customs found in almost every Muslim community.",
+      "optional": true
+    },
+    {
+      "name": "The mehndi night",
+      "description": "The henna celebration held a day or more before the wedding — the South Asian mehndi with its yellows, songs and staged dances by cousins and friends; the Arab laylat al-henna; henna parties across the Horn of Africa. Cultural rather than religious, and one of the events most often trimmed or merged when budgets tighten, because it carries its own decor, outfits and catering.",
+      "optional": true
+    },
+    {
+      "name": "The Turkish kına gecesi",
+      "description": "The Turkish henna night has its own choreography: the bride sits under a red veil while women circle her with candles and sing deliberately sorrowful songs — tradition says she should cry — and henna is placed in her palm around a gold coin pressed there by her mother-in-law. On the wedding day itself her brother or a male relative ties a red ribbon, the kırmızı kuşak, around her waist before she leaves her family home.",
+      "optional": true
+    },
+    {
+      "name": "The baraat",
+      "description": "The South Asian groom's procession: he arrives with his family and friends behind dhol drummers, sometimes on a horse or in a decorated car, and is received — and often playfully obstructed — at the entrance by the bride's side. Cultural, shared with Hindu and Sikh weddings of the region, and not an Islamic practice.",
+      "optional": true
+    },
+    {
+      "name": "The rukhsati",
+      "description": "The bride's formal departure with her husband at the end of the South Asian wedding day, and its emotional peak — the goodbyes are real and the tears are expected. In many Pakistani families a Qur'an is held over the bride's head as she walks out, a gesture of blessing that is family custom rather than religious requirement.",
+      "optional": true
+    },
+    {
+      "name": "Wedding games",
+      "description": "South Asian receptions run on gentle mischief: the bride's sisters steal the groom's shoes and ransom them back (joota chhupai), sisters-in-law offer the groom milk for a price (doodh pilai), and the couple race to find a ring in a bowl of milky water. All culture, all optional, all remembered for years.",
+      "optional": true
+    },
+    {
+      "name": "The zaffa",
+      "description": "The Arab wedding procession that brings the couple into the celebration behind drummers, singers and sometimes dancers with swords or candles — Egyptian and Levantine in origin and now common across the Arab world and its diaspora. It replaces the Western couple's entrance rather than adding to it.",
+      "optional": true
+    },
+    {
+      "name": "The tolbeh and reading the Fatiha",
+      "description": "In Arab families the groom and his elders formally visit the bride's family to ask for her hand, and the agreement is often sealed by everyone reciting Surah al-Fatiha together. In much of West Africa the wedding solemnisation itself is called the Fatiha, conducted between the families at the mosque — sometimes traditionally without the couple even present.",
+      "optional": true
+    },
+    {
+      "name": "The takı töreni",
+      "description": "The gold-pinning ceremony of a Turkish düğün: guests queue to pin gold coins, bracelets and banknotes onto ribbons worn by the couple while an announcer calls out the gifts. It is the main wedding gift channel, expected to help the couple start their household, and it has close cousins in Arab, Somali and Balkan celebrations.",
+      "optional": true
+    },
+    {
+      "name": "The sofreh aghd",
+      "description": "The Iranian ceremonial spread before which the couple sit for the aqd: a mirror and candelabra for light and future, honey to share sweetness, herbs, decorated eggs and flatbread, while married women hold a cloth canopy over the couple and grind sugar cones onto it. Pre-Islamic Persian in origin and beloved across Iranian communities of every religious stripe.",
+      "optional": true
+    },
+    {
+      "name": "Bersanding and merenjis",
+      "description": "In Malay and many Indonesian weddings the couple, after the akad nikah, are seated in state on the pelamin dais and blessed by elders sprinkling rose water and rice — the merenjis — with kompang drums and sometimes a silat performance at the entrance. The mas kahwin (the Malay mahr) and hantaran gift trays are agreed beforehand, and the kenduri feast is open-handed to the whole community.",
+      "optional": true
+    },
+    {
+      "name": "Buraanbur and the xeedho",
+      "description": "At a Somali aroos the women perform buraanbur — improvised celebratory poetry with drumming and dance in the couple's honour. In the week after, the xeedho, an elaborately wrapped vessel prepared by the bride's family, is ceremonially untied by the groom's side on the seventh night, and the couple's first week of seclusion ends with the toddobobax.",
+      "optional": true
+    },
+    {
+      "name": "The Fatiha and the lefe",
+      "description": "In Hausa and much of northern Nigerian tradition the marriage is solemnised at the Fatiha, agreed between the families at the mosque, after which come days of cultural celebration: the lefe — suitcases of clothes, jewellery and perfume sent by the groom to the bride — the kamu, where the groom's side playfully pays to unveil the bride, and the budan kai unveiling. The religious core and the cultural festival are understood by everyone as distinct layers.",
+      "optional": true
+    }
+  ],
+  "gotchas": [
+    "In England and Wales a mosque nikah on its own is usually not a legal marriage. The Court of Appeal confirmed in 2020 (Attorney General v Akhter) that a nikah-only couple are treated as never legally married, with no divorce rights over the family home or finances. Unless your mosque is a registered building with an authorised person, give notice and hold a civil ceremony as well — a large share of British Muslim couples have skipped this and many only discover the consequences at separation or bereavement.",
+    "The same trap exists elsewhere in different forms: in Turkey only the civil ceremony has legal effect, in France the civil marriage must legally come before any religious ceremony, and in Germany and several other countries a religious-only marriage simply has no legal existence. Check your country's rule before setting the order of events.",
+    "In the United States, get the state marriage licence before the nikah — the imam signs it as officiant — and check your state's rules on who may solemnise, since some states require the officiant to be registered. A nikah without a licence has the same non-status as an unregistered nikah in the UK.",
+    "The mahr is the bride's alone. It is not a payment to her father or family, and treating it as one has no basis in Islamic law. Put the amount and the prompt/deferred split in writing in the contract: the deferred portion is a real debt, and courts in several countries have enforced written mahr agreements.",
+    "Do not let anyone present a cultural custom to you as a religious obligation — or the reverse. The nikah, mahr, consent and (in Sunni practice) witnesses are religion; the mehndi, baraat, rukhsati, gold sets, gift trays and the scale of the walima are culture, and every one of them can be resized or skipped without anyone's marriage being less Islamic.",
+    "Dry weddings collide with venue economics. Many mainstream venues make their margin on the bar and respond to a no-alcohol event with a higher room fee or minimum spend, and some refuse outside caterers entirely. Ask about both in the first email, and get the alcohol-free arrangement in writing so a duty manager does not quietly open the bar for non-Muslim guests on the night.",
+    "'Halal' on a caterer's flyer is not certification. Ask who certifies their meat, how they separate preparation if they also cook non-halal, and about the quiet offenders: alcohol in sauces and desserts, and pork-derived gelatine in the cake.",
+    "If any part of the celebration is gender-separated, tell every supplier at booking, not on the day. It changes the floor plan, the sound system, the serving plan and above all the photography — a male photographer at the door of the women's hall with no female second shooter is one of the most common wedding-day failures at separated events.",
+    "Some guests will not want their photograph taken or shared, particularly women who dress differently in the women-only space. Agree with the photographer how images are captured, who reviews them and where they may be posted — and say so on the invitation if the events are separated.",
+    "Maghrib falls in the middle of most evening receptions. Build a fifteen-minute pause into the running order and provide a prayer space with washing access; a reception that ignores it will lose a third of the room at sunset anyway.",
+    "Weddings during Ramadan are religiously valid but practically hard: guests are fasting until sunset, daytime catering is pointless, and an evening event becomes an iftar with a wedding attached. The weeks after each Eid are peak season, so venues and caterers in Muslim areas book out far ahead.",
+    "Many Shia families will not celebrate during Muharram and Safar, the mourning months, and dates near Ashura are particularly sensitive. In a mixed Sunni–Shia family, agree the date with both sides before booking anything.",
+    "Expectations about the wali and witnesses differ by school and by imam — a Hanafi imam may be comfortable with what a Shafi'i imam is not, and Shia practice differs again. If your families follow different schools, or one of you is a convert with no Muslim relatives, raise it with the officiating imam months ahead so the solution is settled quietly.",
+    "Interfaith situations need an early, honest conversation. Classical law permits a Muslim man to marry a Christian or Jewish woman but most imams will not solemnise a Muslim woman's marriage to a non-Muslim man, and mosques vary in how they handle both. If this affects you, speak to imams early — practice genuinely differs — and take the civil-law side seriously regardless.",
+    "Read the nikah contract before the day. In South Asia the printed nikah nama includes clauses — including the bride's delegated right of divorce — that are routinely struck out by whoever fills in the form unless the couple insists otherwise. Nobody reviews a contract well while wearing wedding clothes in front of guests.",
+    "Guest lists at Muslim weddings inflate structurally: invitations go per family, the walima is traditionally open-handed, and in many communities not inviting someone is a slight their whole household remembers. Budget per guest from the start and decide early which events are whole-community and which are close-family.",
+    "Multi-day weddings multiply everything — outfits, decor, catering, photography — and the mehndi in particular quietly grows into a second wedding. Deciding which single event carries the spectacle, and keeping the others deliberately simple, is the highest-leverage budget decision in this tradition."
+  ],
+  "sources": [
+    "https://www.binai.org.au/blog/what-is-nikah",
+    "https://en.wikipedia.org/wiki/Islamic_marriage_contract",
+    "https://www.islamicfoundation.org/services/nikah-services",
+    "https://www.learnreligions.com/the-islamic-marriage-contract-2004429",
+    "https://fiqh.islamonline.net/en/witnesses-and-mahr-dower-for-marriage/",
+    "https://fiqh.islamonline.net/en/mahr-dower-concept-rulings/",
+    "https://masjidds.org/2020/01/22/marriage-without-a-guardian/",
+    "https://al-islam.org/organizations/AalimNetwork/msg00200.html",
+    "https://www.sistani.org/english/book/48/2365/",
+    "https://al-islam.org/muta-temporary-marriage-islamic-law-sachiko-murata/permanent-marriage",
+    "https://seekersguidance.org/answers/hanafi-fiqh/the-fiqh-of-the-marriage-feast-walima/",
+    "https://islamqa.org/hanafi/seekersguidance-hanafi/32722/",
+    "https://fiqh.islamonline.net/en/should-the-wedding-feast-walimah-be-after-the-consummation-of-marriage/",
+    "https://islamqa.org/shafii/qibla-shafii/33047/segregation/",
+    "https://muslimmatters.org/2008/05/22/weddings-to-separate-or-not-to-separate/",
+    "https://connaughtlaw.com/islamic-marriage-uk-law-muslim-nikah-recognition/",
+    "https://asadakhan.wordpress.com/2020/09/06/court-of-appeal-on-nikah-and-non-qualifying-ceremonies/",
+    "https://ohrh.law.ox.ac.uk/akhter-v-khan-recognising-or-not-recognising-religious-marriages-in-the-uk/",
+    "https://www.amaliah.com/post/70055/how-and-why-muslims-should-register-civil-marriage-uk",
+    "https://www.citizensadvice.org.uk/family/living-together-marriage-and-civil-partnership/getting-married/",
+    "https://hellosalam.pk/pakistani-wedding-rituals-meaning/",
+    "https://theworldofhsy.com/blogs/hsy-gazette/all-the-pakistani-wedding-events-explained",
+    "https://www.herculture.org/blog/2016/10/9/so-many-events-the-culture-of-pakistani-marriage",
+    "https://en.wikipedia.org/wiki/Zaffa",
+    "https://khatarabic.com/Blog-Articles/arabic-wedding-traditions.html",
+    "https://welcome2jordan.com/arab-wedding-traditions/",
+    "https://www.theknot.com/content/lebanese-wedding-traditions",
+    "https://civilisable.com/turkish-wedding-traditions/",
+    "https://www.remitly.com/blog/lifestyle-culture/wedding-traditions-in-turkey/",
+    "https://50gram.com.my/the-6-stages-of-a-traditional-malay-wedding/",
+    "https://www.etawau.com/Culture/MalayWedding.htm",
+    "https://theweddingnotebook.com/inspire/ideas-and-advice/the-twn-guide-to-malay-weddings",
+    "https://blog.harusihub.com/post/somali-wedding-traditions-kenya/",
+    "https://en.wikipedia.org/wiki/Lefe",
+    "https://www.zola.com/expert-advice/what-to-expect-at-a-black-muslim-wedding",
+    "https://www.middleeasteye.net/discover/iran-weddings-inside-look-sofreh-aqd",
+    "https://familyspice.com/the-persian-wedding-ceremony-aghd-demystified/",
+    "https://guidesforbrides.co.uk/wedding-ideas/what-to-expect-when-attending-a-muslim-wedding"
+  ]
+}

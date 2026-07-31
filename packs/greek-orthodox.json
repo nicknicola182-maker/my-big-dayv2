@@ -1,0 +1,1094 @@
+{
+  "id": "greek-orthodox",
+  "name": "Greek Orthodox",
+  "shortName": "Greek Orthodox",
+  "faithGroup": "Christian",
+  "blurb": "The Service of Betrothal and the Service of Crowning in an Orthodox church, with the koumbaroi who crown you, the stefana, the common cup and the days of family customs either side.",
+  "commonCountries": [
+    "GR",
+    "CY",
+    "US",
+    "AU",
+    "GB",
+    "CA",
+    "DE",
+    "ZA",
+    "RO",
+    "RS",
+    "BG",
+    "UA",
+    "RU"
+  ],
+  "typicalGuests": {
+    "low": 150,
+    "typical": 350,
+    "high": 1500
+  },
+  "typicalDays": 2,
+  "terms": {
+    "officiant": "priest",
+    "ceremonyVenue": "church",
+    "ceremony": "the crowning",
+    "bestMan": "koumbaros",
+    "maidOfHonour": "koumbara",
+    "reception": "reception",
+    "firstDance": "first dance",
+    "witnesses": "koumbaroi"
+  },
+  "events": [
+    {
+      "id": "engagement",
+      "name": "The engagement (arravones)",
+      "when": "Six to eighteen months before",
+      "optional": true,
+      "default": true,
+      "description": "The two families meet and the rings are exchanged, often blessed informally by a priest at home or in church. Plain gold bands are worn on the left hand from this point and are moved to the right hand by the priest during the wedding service, so the engagement ring and the wedding ring are usually the same ring. In Cyprus the engagement is often a full party in its own right, with a hall, a band and a large guest list; in Greece and in the diaspora it is more often a family dinner.",
+      "hosts": "Traditionally the bride's family, increasingly shared"
+    },
+    {
+      "id": "invitations",
+      "name": "Delivering the invitations (ta prosklitiria)",
+      "when": "Two to four months before",
+      "optional": true,
+      "default": true,
+      "description": "Greek and Cypriot invitations are traditionally handed over in person rather than posted, by the couple, their parents or the koumbaroi, with a visit and a coffee at each house. In Cypriot villages the whole community counted as invited by default, and the historic form of the invitation was a ring of sesame bread called a glistarka. The in-person round is the single biggest reason Cypriot guest lists run into the high hundreds: an invitation delivered by hand is very hard to decline.",
+      "hosts": "The couple and both sets of parents"
+    },
+    {
+      "id": "krevati",
+      "name": "Making the bed (to krevati)",
+      "when": "One to seven days before",
+      "optional": true,
+      "default": true,
+      "description": "Friends and unmarried female relatives make up the couple's marital bed together, usually three times, while the women sing. Guests then throw rice for roots, koufeta for sweetness and money for prosperity onto the bed, and a baby is rolled across it for fertility. In Cyprus the older form is the paploma, where the mattress or quilt is sewn and stuffed with wool by hand and a red ribbon is crossed at the corners. Food and drink are served and it doubles as the first party of the week.",
+      "hosts": "Usually the couple, at their new home"
+    },
+    {
+      "id": "resi",
+      "name": "Cooking the resi",
+      "when": "Two to three days before",
+      "optional": true,
+      "default": false,
+      "description": "A Cypriot custom, strongest in the Paphos and Limassol districts. Wheat is pounded with wooden flails, then cooked slowly for hours with lamb or goat to make resi, the dish served to the whole village at the wedding. It is a communal job spread over a day or more and is now often done by a caterer or a village association rather than the family.",
+      "hosts": "The two families and the village"
+    },
+    {
+      "id": "bachelor",
+      "name": "Stag and hen celebrations",
+      "when": "One to eight weeks before",
+      "optional": true,
+      "default": true,
+      "description": "A modern addition rather than a traditional one, and in Greece and Cyprus it is usually a night out rather than a weekend away. It does not replace the older customs of the eve and the dressing, which still happen.",
+      "hosts": "The koumbaroi and close friends"
+    },
+    {
+      "id": "paramoni",
+      "name": "The eve (i paramoni)",
+      "when": "The night before",
+      "optional": true,
+      "default": true,
+      "description": "Each family hosts at home the night before, with food, wine and live music. In Cyprus this is the first of the three nights of a full traditional wedding and can run until the early hours. In much of the diaspora it has shrunk to a family dinner, which is where a rehearsal dinner would sit if you are having one.",
+      "hosts": "Each family hosts its own side"
+    },
+    {
+      "id": "stolisma",
+      "name": "The dressing (to stolisma / ta allamata)",
+      "when": "Wedding morning",
+      "optional": true,
+      "default": true,
+      "description": "The bride and groom are dressed at their parents' homes in front of family and friends, with violi and laouto players in the room. The groom is shaved by the koumbaros; the bride is dressed by the koumbara and her friends. In Cyprus, where it is called ta allamata, the clothes are laid on a chair under a red cloth, incensed three times and danced with by each relative in turn, then a red sash is tied three times around the waist by the parents. Guests pin money or throw rice as they take their turn.",
+      "hosts": "Each family hosts at its own home"
+    },
+    {
+      "id": "civil-registration",
+      "name": "Civil ceremony or registrar attendance",
+      "when": "Same day or shortly before",
+      "optional": true,
+      "default": false,
+      "description": "Whether you need this depends entirely on the country. In Greece, Cyprus, the United States, Canada and Australia the priest can register the marriage and no separate ceremony is needed. In England and Wales the church must be a registered building and either an authorised person or a registrar must be present, so many couples either book the registrar into the church service or complete a short register office ceremony first.",
+      "hosts": "The couple"
+    },
+    {
+      "id": "ceremony",
+      "name": "The Service of Betrothal and the Service of Crowning",
+      "when": "Wedding day",
+      "optional": false,
+      "default": true,
+      "description": "Two services celebrated back to back, historically separate. The betrothal blesses and exchanges the rings; the crowning places the stefana on your heads, joins your right hands, reads the wedding at Cana, gives you the common cup and leads you three times around the table in the Dance of Isaiah. Together they run around 45 minutes to an hour. There are no vows and no ring exchange spoken by the couple: the priest acts and the koumbaros exchanges the rings and the crowns three times each on your behalf.",
+      "hosts": "Traditionally the bride's family, now usually shared"
+    },
+    {
+      "id": "chairetisma",
+      "name": "The congratulations line (to chairetisma)",
+      "when": "Straight after the service",
+      "optional": true,
+      "default": true,
+      "description": "The couple, their parents and the koumbaroi stand in line and every guest passes to congratulate them. In Cyprus this is a distinct part of the day with its own much larger guest list: people who were not at the church and will not stay for dinner come to the chairetisma, hand over an envelope and leave. It routinely takes one to three hours and is where most of the money is given.",
+      "hosts": "The couple and both sets of parents"
+    },
+    {
+      "id": "reception",
+      "name": "The reception",
+      "when": "Wedding evening",
+      "optional": false,
+      "default": true,
+      "description": "Dinner, the first dance, the money dance and then Greek dancing until very late. The order is looser than at a Western reception: speeches are short or absent, and the dancing starts early and does not stop. The couple's dance is followed by the parents and the koumbaroi leading in turn, then the floor opens.",
+      "hosts": "Traditionally the bride's family, now usually shared"
+    },
+    {
+      "id": "antigamos",
+      "name": "The day after (o antigamos)",
+      "when": "The day after",
+      "optional": true,
+      "default": false,
+      "description": "A Cypriot custom. The families gather again the next day, often at the couple's or the parents' house, to eat the leftovers, count the money given and thank the people who worked on the wedding. In some villages it is called ta pkiata, after returning the borrowed plates.",
+      "hosts": "Both families together"
+    }
+  ],
+  "items": [
+    {
+      "id": "church-offering",
+      "name": "Church offering",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "The donation to the parish for the use of the church. Most parishes publish a figure and it is usually higher if neither of you is a registered member or steward there. In the United States and the United Kingdom this is a stated fee with a deposit and a balance date; in Greece and Cyprus it is more often a discretionary offering.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "fixed",
+      "supplierCategory": "Church",
+      "religiousRequirement": true
+    },
+    {
+      "id": "priest-offering",
+      "name": "Offering to the priest",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "A personal envelope for the celebrant, separate from the parish fee and normally handed over on the day. Allow for the preparation meetings as well as the service. If a priest travels to you, or if you want a second priest concelebrating, cover travel and accommodation too.",
+      "essential": true,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Church",
+      "religiousRequirement": false
+    },
+    {
+      "id": "chanter-choir",
+      "name": "Chanter and choir",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "The psaltis chants the service. Some parishes include one in the fee, others charge separately, and a full Byzantine choir is a further cost again. Only chanting and, in some jurisdictions, an organ are permitted inside the church; recorded music and instruments are not.",
+      "essential": true,
+      "shareOfBudget": 0.005,
+      "unit": "fixed",
+      "supplierCategory": "Church",
+      "religiousRequirement": true
+    },
+    {
+      "id": "church-permissions",
+      "name": "Certificates and permission to marry",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "The certificate of freedom to marry or celibacy for each of you, and the licence or permission issued by the Metropolis or Archdiocese. These carry small administrative fees and are charged per person. They expire, usually after six months, so timing matters more than cost.",
+      "essential": true,
+      "shareOfBudget": 0.003,
+      "unit": "perPerson",
+      "supplierCategory": "Church",
+      "religiousRequirement": true
+    },
+    {
+      "id": "civil-registration",
+      "name": "Civil registration and notice fees",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "Notice fees, licence fees and, where a registrar has to attend the church, the registrar's attendance fee. In Greece this covers the municipal marriage licence and the newspaper announcement; in Cyprus the freedom certificates and thalassaemia certificates; in England and Wales the notice at the register office for each of you.",
+      "essential": true,
+      "shareOfBudget": 0.004,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": false
+    },
+    {
+      "id": "stefana",
+      "name": "Stefana (wedding crowns)",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "The two crowns joined by a single white ribbon that is never cut. They are traditionally bought and brought by the koumbaros or koumbara, so agree early who is paying rather than buying two sets. Anything from simple wax orange blossom and ribbon to heavy silver or gold; many families reuse a parent's pair.",
+      "essential": true,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Church supplies",
+      "religiousRequirement": true
+    },
+    {
+      "id": "lambades",
+      "name": "Lambades (wedding candles)",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "The pair of tall decorated candles that stand either side of you during the service and are lit at the start of the crowning. Also usually provided by the koumbaroi. Some churches cap the height, so check before you commission anything large.",
+      "essential": true,
+      "shareOfBudget": 0.004,
+      "unit": "fixed",
+      "supplierCategory": "Church supplies",
+      "religiousRequirement": true
+    },
+    {
+      "id": "ceremony-tray",
+      "name": "Tray, goblet and wine",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "The dhiskos, the silver tray that carries the rings, the crowns and the koufeta to the altar, plus the goblet and the sweet wine for the common cup. Nama is normal in Greece and the diaspora, koumandaria in Cyprus. Ask the church what it supplies; many keep a goblet and expect you to bring only the wine.",
+      "essential": true,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Church supplies",
+      "religiousRequirement": true
+    },
+    {
+      "id": "koufeta-rice",
+      "name": "Koufeta, rice and petals for the church",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "Sugared almonds for the tray and to hand round after the service, and rice or petals for guests to throw. Check the rules first. Many parishes, especially in the United States and the United Kingdom, ban rice, almonds and confetti inside and outside the building and allow only biodegradable petals, with a cleaning charge if you ignore it.",
+      "essential": true,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Church supplies",
+      "religiousRequirement": false
+    },
+    {
+      "id": "stefanothiki",
+      "name": "Stefanothiki (crown case)",
+      "section": "Ceremony",
+      "event": "ceremony",
+      "note": "The glazed case the stefana are kept in afterwards, traditionally hung on the bedroom wall above the bed. Bought after the wedding as often as before it, and sometimes the koumbaroi's gift.",
+      "essential": false,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Church supplies",
+      "religiousRequirement": false
+    },
+    {
+      "id": "church-flowers",
+      "name": "Church flowers and aisle decoration",
+      "section": "Flowers & Styling",
+      "event": "ceremony",
+      "note": "Arrangements for the entrance, the aisle and the table where the crowns and the Gospel sit. Orthodox churches are already highly decorated, so most couples do far less here than at a Western church wedding. Many parishes restrict aisle runners, petals on the floor and anything fixed to the iconostasis.",
+      "essential": true,
+      "shareOfBudget": 0.025,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "venue-hire",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Cypriot and Greek weddings need a venue that can take a very large number of people standing for the chairetisma as well as seated for dinner, which rules out most conventional wedding venues. Village halls, hotel gardens and purpose-built wedding halls are the norm. Ask specifically about the standing capacity, not just the seated one.",
+      "essential": true,
+      "shareOfBudget": 0.065,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "event": "reception",
+      "note": "The largest single line by a wide margin, and the one most affected by the guest count. Expect meze rather than a plated three-course meal in Greece and Cyprus: souvla, kleftiko, halloumi, koupepia, salads and bread brought continuously to the table. Get the per-head price and the minimum numbers in writing, and agree what happens if two hundred more people turn up than you counted.",
+      "essential": true,
+      "shareOfBudget": 0.24,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Wine, beer, spirits and zivania or tsipouro. Open bar is the expectation at Greek and Cypriot weddings rather than a nice extra. Check corkage carefully: bringing your own wine and spirits is common and can save a great deal at these volumes.",
+      "essential": true,
+      "shareOfBudget": 0.07,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "service-charge",
+      "name": "Service charge, corkage and staffing",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Waiting staff, bar staff, corkage and cake-cutting fees. At a wedding of several hundred these add up to a meaningful line of their own and are frequently quoted separately from the per-head price.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "wedding-cake",
+      "name": "Wedding cake",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Usually a tiered cake cut late in the evening. Greek and Cypriot receptions also put out trays of sweets alongside it, so the cake itself does not need to feed everyone.",
+      "essential": true,
+      "shareOfBudget": 0.014,
+      "unit": "fixed",
+      "supplierCategory": "Cake maker",
+      "religiousRequirement": false
+    },
+    {
+      "id": "traditional-dish",
+      "name": "Resi or traditional wedding dish",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Resi in Cyprus, gamopilafo in Crete: a wheat or rice dish cooked in lamb or goat stock and served to everyone. If you want it made the traditional way rather than by the venue, it needs to be commissioned separately and started days in advance.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "late-food",
+      "name": "Late-night food",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Greek and Cypriot receptions run past two in the morning and a second wave of food, usually souvla or soup, is normal rather than optional.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "reception-styling",
+      "name": "Table centrepieces and reception styling",
+      "section": "Flowers & Styling",
+      "event": "reception",
+      "note": "Centrepieces, linen, chair covers and any styling of the room. Because the guest count is high, this is priced per table and scales fast: cutting one flower from each centrepiece across a hundred tables is a real saving.",
+      "essential": true,
+      "shareOfBudget": 0.03,
+      "unit": "perTable",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bouquets",
+      "name": "Bouquets and buttonholes",
+      "section": "Flowers & Styling",
+      "event": "ceremony",
+      "note": "The bride's bouquet, which the groom traditionally hands to her at the church door rather than her carrying it in, plus buttonholes for the groom, the koumbaroi, the fathers and often a corsage for each mother. In Cyprus some brides throw half a pomegranate instead of a bouquet.",
+      "essential": true,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "band",
+      "name": "Live band",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "A Greek band with bouzouki is the centre of the evening, not background music. Bands are usually booked for a set number of hours with overtime rates, and Greek and Cypriot receptions almost always run over. Agree the overtime rate up front.",
+      "essential": true,
+      "shareOfBudget": 0.055,
+      "unit": "perHour",
+      "supplierCategory": "Band",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dj",
+      "name": "DJ",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "Often booked alongside the band rather than instead of it, to cover the breaks and to take the later part of the night.",
+      "essential": false,
+      "shareOfBudget": 0.018,
+      "unit": "fixed",
+      "supplierCategory": "DJ",
+      "religiousRequirement": false
+    },
+    {
+      "id": "violarides",
+      "name": "Traditional musicians for the dressing",
+      "section": "Music & Entertainment",
+      "event": "stolisma",
+      "note": "The violi and laouto players who come to the house for the stolisma or allamata, sing the traditional wedding songs and call each relative forward in turn. In Cyprus these are the violarides and the custom does not really work without them. They are booked for the morning only and are a separate booking from the evening band.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "fixed",
+      "supplierCategory": "Band",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dance-troupe",
+      "name": "Traditional dance troupe",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "A folk dance group to open the dancing, common at larger Cypriot and Cretan weddings and at diaspora weddings where guests may not know the steps.",
+      "essential": false,
+      "shareOfBudget": 0.006,
+      "unit": "fixed",
+      "supplierCategory": "Entertainment",
+      "religiousRequirement": false
+    },
+    {
+      "id": "plates-flowers",
+      "name": "Flowers and plates for throwing",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "Trays of flowers for guests to throw over the dancers, and plaster plates if your venue permits smashing. Many venues in Greece and Cyprus now allow flowers only. Check before you buy, and buy plaster rather than china if you do.",
+      "essential": false,
+      "shareOfBudget": 0.004,
+      "unit": "fixed",
+      "supplierCategory": "Entertainment",
+      "religiousRequirement": false
+    },
+    {
+      "id": "av-lighting",
+      "name": "Lighting, sound and staging",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "Uplighting, a dance floor and a PA that can cover a very large room. Often bundled with the band or the venue, but worth pricing separately at scale.",
+      "essential": false,
+      "shareOfBudget": 0.018,
+      "unit": "fixed",
+      "supplierCategory": "AV hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Most Greek and Cypriot couples book from the stolisma in the morning through to the first dance, which is a long day. Ask whether the photographer has worked in an Orthodox church before: the priest controls where they may stand, the key moments happen with the couple's backs to the congregation, and some parishes limit the post-service photo session to half an hour.",
+      "essential": true,
+      "shareOfBudget": 0.06,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "videographer",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Same constraints as the photographer. The Dance of Isaiah and the crowning are the two moments couples most regret losing, and both are short.",
+      "essential": true,
+      "shareOfBudget": 0.04,
+      "unit": "fixed",
+      "supplierCategory": "Videographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "album",
+      "name": "Album, prints and parents' copies",
+      "section": "Photos & Film",
+      "event": "",
+      "note": "Almost always bought after the wedding and almost always underestimated. Both sets of parents and the koumbaroi will expect an album.",
+      "essential": false,
+      "shareOfBudget": 0.007,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "gown",
+      "name": "Bridal gown",
+      "section": "Attire",
+      "event": "",
+      "note": "Allow for the fact the dress is worn from the morning dressing at home right through to a very late night of dancing, and that money may be pinned to it. Shoulders are traditionally covered in church, though practice varies by parish and some priests will ask for a wrap or bolero.",
+      "essential": true,
+      "shareOfBudget": 0.052,
+      "unit": "fixed",
+      "supplierCategory": "Bridal shop",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bridal-accessories",
+      "name": "Veil, shoes, jewellery and wrap",
+      "section": "Attire",
+      "event": "",
+      "note": "The groom traditionally buys the bride's shoes, and the koumbaros puts coins inside them for luck. Unmarried friends write their names on the sole; whoever's name has worn away by the end of the night marries next.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "fixed",
+      "supplierCategory": "Bridal shop",
+      "religiousRequirement": false
+    },
+    {
+      "id": "groom-outfit",
+      "name": "Groom's outfit",
+      "section": "Attire",
+      "event": "",
+      "note": "Suit, shirt, shoes and accessories. Note that the groom is dressed in front of an audience at the stolisma, so anything fiddly is worth practising.",
+      "essential": true,
+      "shareOfBudget": 0.02,
+      "unit": "fixed",
+      "supplierCategory": "Menswear",
+      "religiousRequirement": false
+    },
+    {
+      "id": "party-attire",
+      "name": "Koumbaroi and bridal party outfits",
+      "section": "Attire",
+      "event": "",
+      "note": "Who pays varies. In Greece and Cyprus attendants normally pay for themselves; in the American and Australian diaspora the couple more often contributes.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "perPerson",
+      "supplierCategory": "Bridal shop",
+      "religiousRequirement": false
+    },
+    {
+      "id": "hair-makeup",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "event": "stolisma",
+      "note": "Booked to the house for the morning dressing rather than to a salon, because the stolisma happens at home with a room full of people watching. Price the trial and the travel separately.",
+      "essential": true,
+      "shareOfBudget": 0.016,
+      "unit": "fixed",
+      "supplierCategory": "Hair and make-up",
+      "religiousRequirement": false
+    },
+    {
+      "id": "family-beauty",
+      "name": "Hair and make-up for mothers and attendants",
+      "section": "Beauty",
+      "event": "stolisma",
+      "note": "At Greek and Cypriot weddings both mothers, the koumbara, the sisters and often the grandmothers are all done at the house on the morning. It is a bigger booking than couples expect and needs a team rather than one artist.",
+      "essential": false,
+      "shareOfBudget": 0.01,
+      "unit": "perPerson",
+      "supplierCategory": "Hair and make-up",
+      "religiousRequirement": false
+    },
+    {
+      "id": "groom-shave",
+      "name": "Barber for the groom's shave",
+      "section": "Beauty",
+      "event": "stolisma",
+      "note": "The traditional shave is performed by the koumbaros, but most grooms now have a barber standing by to make it look right, with the koumbaros taking the first symbolic stroke.",
+      "essential": false,
+      "shareOfBudget": 0.003,
+      "unit": "fixed",
+      "supplierCategory": "Barber",
+      "religiousRequirement": false
+    },
+    {
+      "id": "invitations",
+      "name": "Invitations",
+      "section": "Stationery",
+      "event": "invitations",
+      "note": "Print more than you think. Cypriot lists in particular run far past the seated numbers because the chairetisma is separately and much more widely invited, and invitations are delivered by hand so extras get given out on the doorstep. Greek and Cypriot invitations conventionally name both sets of parents as the hosts.",
+      "essential": true,
+      "shareOfBudget": 0.016,
+      "unit": "perGuest",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bomboniere",
+      "name": "Bomboniera (favours)",
+      "section": "Stationery",
+      "event": "reception",
+      "note": "The small tulle or box favour holding koufeta, given to every guest. The number of almonds is always odd, usually five or seven, because the couple's life cannot be divided. One per household is normal in Greece and Cyprus rather than one per person, which matters a great deal at these numbers.",
+      "essential": true,
+      "shareOfBudget": 0.02,
+      "unit": "perGuest",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "wedding-cars",
+      "name": "Wedding cars",
+      "section": "Transport",
+      "event": "ceremony",
+      "note": "The bride travels from her parents' house to the church, and the couple from the church to the reception. In villages a short walking procession behind the musicians replaces the car altogether.",
+      "essential": true,
+      "shareOfBudget": 0.012,
+      "unit": "fixed",
+      "supplierCategory": "Car hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "guest-transport",
+      "name": "Guest transport",
+      "section": "Transport",
+      "event": "reception",
+      "note": "Coaches between the church and the reception, which is worth costing properly when the church is in a village and the reception is not. Also parking, which is the single most common complaint at large Greek and Cypriot weddings.",
+      "essential": false,
+      "shareOfBudget": 0.008,
+      "unit": "fixed",
+      "supplierCategory": "Coach hire",
+      "religiousRequirement": false
+    },
+    {
+      "id": "rings",
+      "name": "Wedding rings",
+      "section": "Rings & Gifts",
+      "event": "ceremony",
+      "note": "Plain gold bands are the tradition, often the same rings worn on the left hand since the engagement and moved to the right hand by the priest during the betrothal. Greek and Cypriot couples wear the wedding ring on the right hand; much of the diaspora has switched to the left.",
+      "essential": true,
+      "shareOfBudget": 0.025,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "koumbaroi-gift",
+      "name": "Gifts for the koumbaroi",
+      "section": "Rings & Gifts",
+      "event": "",
+      "note": "The koumbaros and koumbara take on a lifelong role and traditionally pay for the stefana, the lambades and the tray themselves, so the gift is meaningful rather than token. An icon is the conventional choice.",
+      "essential": true,
+      "shareOfBudget": 0.007,
+      "unit": "fixed",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "family-gifts",
+      "name": "Gifts for parents and attendants",
+      "section": "Rings & Gifts",
+      "event": "",
+      "note": "For both sets of parents, the attendants and anyone who hosted the krevati or the stolisma.",
+      "essential": false,
+      "shareOfBudget": 0.007,
+      "unit": "perPerson",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "planner",
+      "name": "Wedding planner or coordinator",
+      "section": "Extras",
+      "event": "",
+      "note": "Worth pricing seriously at Greek and Cypriot scale. A day coordinator who can run a three-hour congratulations line, keep the food moving for six hundred people and manage a band that plays past two is doing a different job from a planner at a hundred-guest wedding.",
+      "essential": false,
+      "shareOfBudget": 0.027,
+      "unit": "fixed",
+      "supplierCategory": "Planner",
+      "religiousRequirement": false
+    },
+    {
+      "id": "translations",
+      "name": "Document translation and apostilles",
+      "section": "Extras",
+      "event": "",
+      "note": "Needed when a baptismal certificate, birth certificate or divorce decree comes from another country. Greece requires certified translations into Greek by an approved translator; Cyprus accepts Greek or English. Budget the time as well as the money, because records held by a parish abroad can take months.",
+      "essential": false,
+      "shareOfBudget": 0.004,
+      "unit": "fixed",
+      "supplierCategory": "Translation",
+      "religiousRequirement": false
+    }
+  ],
+  "timeline": [
+    {
+      "monthsBefore": 15,
+      "task": "Speak to your parish priest before you book anything else, and ask which dates the church cannot marry you on",
+      "critical": true
+    },
+    {
+      "monthsBefore": 14,
+      "task": "Check the fasting seasons against your shortlist: Great Lent and Holy Week, the Dormition fast in the first half of August, the Nativity fast, and the fixed days of 5 and 6 January, 29 August and 14 September",
+      "critical": true
+    },
+    {
+      "monthsBefore": 14,
+      "task": "If either of you was married before, start the ecclesiastical divorce now, because it is separate from the civil divorce and takes months",
+      "critical": true
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Confirm the church is free and get the date written into the parish diary before you book a venue",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Agree who the koumbaros or koumbara will be and confirm they are an Orthodox Christian in good standing, since only an Orthodox sponsor may exchange the rings and the crowns",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book the reception venue, checking its standing capacity as well as its seated capacity",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Draw up the two guest lists you actually need: the church and dinner list, and the much larger congratulations list",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Book the band, the photographer and the videographer, which go first at popular dates",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Order or arrange the stefana and lambades with the koumbaroi, and agree who is paying for what",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Start the paperwork: baptismal certificates for both of you, and certificates of freedom to marry or celibacy from your parish",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "If one of you is not Orthodox, confirm with the priest that the baptism is accepted and complete any declaration about raising children in the Orthodox faith",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Book the caterer and confirm the per-head price, the minimum numbers and what happens if numbers rise",
+      "critical": false
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Book the violarides or traditional musicians for the morning dressing if you are having one",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Begin the meetings with your priest and ask him to walk you through the service, including where you stand and what the koumbaros does",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Order the invitations, allowing generously for the congratulations list and for hand delivery",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "In Cyprus, book the thalassaemia screening appointments for both of you and collect the certificates",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Submit your documents to the priest so he can apply to the Metropolis or Archdiocese for permission to marry",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Confirm the church's rules on photography, flowers, aisle runners, rice and confetti in writing",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Start delivering the invitations in person, family by family",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Give notice of marriage to the civil authority: the register office in the United Kingdom, the municipality in Greece, the Notice of Intended Marriage in Australia, the county clerk in the United States",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "In England and Wales, confirm whether the church is registered for marriages and book the registrar if one must attend",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "In Greece, publish the marriage announcement in a daily newspaper and collect the marriage licence from the parish or Metropolis",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Confirm the ecclesiastical permission has come back from the Metropolis and check its expiry date against your wedding date",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Book hair, make-up and the barber to come to the houses on the morning, for the mothers and attendants as well as the couple",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Buy the koufeta, the wine for the common cup and the rice or petals, within the church's rules",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Pay the church balance and put the priest's and chanter's envelopes together",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Fix the date of the krevati with the friends who will make the bed, and the eve gathering with both families",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Confirm running times with the band and agree the overtime rate in writing",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "Hold the stolisma and the eve gathering, and give the koumbaroi the stefana, lambades and tray to bring to the church",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "In the days after the wedding, register the marriage: within 40 days at the lixiarcheio in Greece, within 45 days with the Registrar in Cyprus",
+      "critical": true
+    }
+  ],
+  "paperwork": [
+    {
+      "item": "Orthodox baptismal certificate",
+      "who": "The Orthodox party, and often both",
+      "note": "Proof of baptism in the name of the Father, Son and Holy Spirit. If you were baptised abroad, request it early: a parish in Greece or Cyprus can take weeks or months to send one, and a certified translation may then be needed."
+    },
+    {
+      "item": "Baptismal certificate for a non-Orthodox partner",
+      "who": "The non-Orthodox party",
+      "note": "The Church will marry an Orthodox Christian to a baptised Christian of a Trinitarian church, and the certificate is how that is checked. Roman Catholic, Anglican, Lutheran, Methodist, Presbyterian, Armenian, Coptic and similar baptisms are normally accepted. Groups that do not baptise in the Trinity, or that rebaptise, generally are not."
+    },
+    {
+      "item": "Certificate of freedom to marry or celibacy (pistopoiitiko agamias)",
+      "who": "Both",
+      "note": "Issued by your own parish, usually on the word of two witnesses who are not close relatives, confirming you have not married before. It expires, commonly after six months, so do not get it too early."
+    },
+    {
+      "item": "Permission or licence to marry from the Metropolis or Archdiocese",
+      "who": "Both",
+      "note": "The priest applies on your behalf once your certificates are in. There is a fee and a processing time of anything from a week to a month or more. Nothing else in the church process can be finalised without it."
+    },
+    {
+      "item": "Civil marriage licence or notice of marriage",
+      "who": "Both",
+      "note": "Varies entirely by country. Greece: a marriage licence from the municipality of your residence plus a marriage announcement published in a daily newspaper. Cyprus: freedom certificates and a notification. United States: a state marriage licence, which the priest signs. Australia: a Notice of Intended Marriage at least one calendar month before. England and Wales: notice at the register office at least 29 days before."
+    },
+    {
+      "item": "Thalassaemia screening certificate",
+      "who": "Both, in Cyprus",
+      "note": "The Church of Cyprus has required a premarital thalassaemia certificate since 1983 as part of the island's screening programme. It confirms you have been tested and counselled; it does not prevent you marrying."
+    },
+    {
+      "item": "Ecclesiastical divorce decree",
+      "who": "Either party previously married in the Orthodox Church",
+      "note": "Separate from and additional to the civil divorce, and issued by the Metropolis. It usually has to be final at least a month before the new wedding, and it commonly takes far longer to obtain than couples expect."
+    },
+    {
+      "item": "Civil divorce decree",
+      "who": "Either party previously married",
+      "note": "The final decree, not the provisional one."
+    },
+    {
+      "item": "Death certificate of a former spouse",
+      "who": "Either party widowed",
+      "note": ""
+    },
+    {
+      "item": "Declaration that children will be baptised and raised Orthodox",
+      "who": "The non-Orthodox party, in most jurisdictions",
+      "note": "Required in the Australian and American archdioceses and normal elsewhere. Conversion of the non-Orthodox partner is not required, and marrying in the church does not by itself make them a member."
+    },
+    {
+      "item": "Certificate of good standing for the koumbaros or koumbara",
+      "who": "The sponsor",
+      "note": "If the sponsor belongs to a different parish, their own priest must confirm in writing that they are an Orthodox Christian in good standing. A sponsor whose own marriage was never blessed by the Church, or who divorced without an ecclesiastical divorce, will normally be refused."
+    },
+    {
+      "item": "Certificate of membership or stewardship",
+      "who": "Both, in the United States and Australia",
+      "note": "Parishes commonly check that at least one of you is a registered member, and the church fee is often materially higher if neither of you is."
+    },
+    {
+      "item": "Passport or birth certificate",
+      "who": "Both",
+      "note": ""
+    },
+    {
+      "item": "Certified translations and apostilles",
+      "who": "Either party with foreign documents",
+      "note": "Greece requires translation into Greek by an approved translator. Cyprus accepts Greek or English. Allow weeks, not days."
+    },
+    {
+      "item": "Registration of the marriage after the ceremony",
+      "who": "Both",
+      "note": "Greece: declare the marriage at the lixiarcheio within 40 days, or pay a fine. Cyprus: a certified copy must reach the Registrar within 45 days. In the United States, Australia and Canada the priest normally submits the paperwork; confirm he has."
+    },
+    {
+      "item": "Registrar attendance or separate civil ceremony",
+      "who": "Both, in England and Wales",
+      "note": "An Orthodox church can only marry you legally if the building is registered for marriages and an authorised person or a registrar is present. Some parishes are set up for this, some are not, and where they are not the couple completes a short register office ceremony first."
+    }
+  ],
+  "customs": [
+    {
+      "name": "The koumbaros and koumbara",
+      "description": "Not a best man and maid of honour. The koumbaroi are sponsors of the marriage: they exchange the rings three times and the crowns three times during the service, they traditionally buy the stefana, the lambades and the tray, and they are conventionally asked to baptise your first child, which makes them spiritual kin to your family for life. That last part is why the Church requires them to be Orthodox in good standing. A non-Orthodox friend can stand with you and sign as a witness, but cannot crown you.",
+      "optional": false
+    },
+    {
+      "name": "The Service of Betrothal",
+      "description": "The first of the two services, historically performed at the engagement and now joined to the wedding. The priest blesses the rings, signs them three times over each of your foreheads beginning with the groom, and places them on your right hands. The koumbaros then exchanges them three times between you.",
+      "optional": false
+    },
+    {
+      "name": "The stefana",
+      "description": "Two crowns joined by a single white ribbon, placed on your heads by the priest and exchanged three times by the koumbaros. They mark you as king and queen of your household, and they are also crowns of martyrdom, because a marriage asks both of you to give things up. The ribbon is never cut. Afterwards the crowns are kept in a stefanothiki, traditionally hung above the bed.",
+      "optional": false
+    },
+    {
+      "name": "No vows",
+      "description": "There are no vows and no spoken 'I do' in the Orthodox service. Marriage is understood as something God does rather than a contract the couple make, so the priest acts and the couple stand. Guests from other traditions are often surprised by this, and it is worth putting a line in the order of service.",
+      "optional": false
+    },
+    {
+      "name": "The common cup",
+      "description": "After the Gospel reading about the wedding at Cana, you drink three times each from one cup of sweet wine. It is not communion. It stands for everything you will share from now on, the difficult as much as the good.",
+      "optional": false
+    },
+    {
+      "name": "The Dance of Isaiah",
+      "description": "The priest leads you three times around the table holding the Gospel and the cross, with the koumbaros following behind holding the ribbon that joins the crowns. These are your first steps as a married couple, and in many parishes guests throw rice at you as you go. Three hymns are sung, the first beginning 'Isaiah, dance for joy'.",
+      "optional": false
+    },
+    {
+      "name": "Rice and koufeta",
+      "description": "Rice for roots and fertility, koufeta for sweetness. Guests throw rice and petals as you leave the church, and every guest is given a bomboniera holding an odd number of sugared almonds, usually five or seven, because a marriage cannot be divided. The almond is hard, the sugar is sweet: the wish is for more sweet than hard. Many churches now ban rice and almonds on the premises entirely.",
+      "optional": false
+    },
+    {
+      "name": "The dressing (to stolisma / ta allamata)",
+      "description": "The bride and groom are dressed at home on the wedding morning in front of family and friends, with violi and laouto players in the room. In Cyprus the clothes are first laid on a chair under a red cloth, incensed three times, and danced with by each relative in turn. Then comes the zosimo: the parents circle a red sash three times around the waist, for fertility and against the evil eye. Guests pin money or throw rice as they take their turn.",
+      "optional": true
+    },
+    {
+      "name": "The shaving of the groom",
+      "description": "The koumbaros shaves the groom, or at least takes the first stroke, as a public sign of trust. Friends then help him dress, each doing one thing, so that everyone has a part.",
+      "optional": true
+    },
+    {
+      "name": "The krevati",
+      "description": "Friends and unmarried female relatives make the marital bed, usually three times, then throw rice, koufeta and money onto it and roll a baby across it. The baby's sex is said to predict your first child's. In Cyprus the older form is the paploma, where the quilt is sewn and stuffed by hand with a red cross of ribbon at the corners.",
+      "optional": true
+    },
+    {
+      "name": "The bride's shoes",
+      "description": "The groom traditionally buys the bride's shoes and the koumbaros puts coins inside them. Unmarried friends write their names on the sole before the wedding, and whichever name has worn away by the end of the night is the next to marry.",
+      "optional": true
+    },
+    {
+      "name": "The nifopsomo",
+      "description": "In parts of mainland Greece, a large wedding bread is broken over the bride's head as she leaves her parents' house and shared out among everyone standing there.",
+      "optional": true
+    },
+    {
+      "name": "Stepping on the foot",
+      "description": "When the epistle reaches the line asking the wife to respect her husband, guests watch the bride's feet: if she steps on the groom's foot first, she will run the house. It is a joke, and everyone in the church is in on it.",
+      "optional": true
+    },
+    {
+      "name": "The congratulations line (to chairetisma)",
+      "description": "The couple, both sets of parents and the koumbaroi stand in a line and every guest passes to congratulate them. In Cyprus this is the part of the day most people attend, it can last two or three hours, and it is where guests hand over the envelope. Wear shoes you can stand in.",
+      "optional": true
+    },
+    {
+      "name": "Money at the wedding",
+      "description": "Cash is the wedding gift, not an alternative to one. In Cyprus and much of Greece it is handed over in a named envelope at the congratulations line, and the amount is scaled to closeness, from a small sum for an acquaintance to a substantial one for family. The older form, still done during the couple's dance, is pinning banknotes directly onto the bride's dress and the groom's suit. Between them these customs are expected to cover a large part of the cost of the day, which is why the guest list is not treated as a cost to be cut.",
+      "optional": true
+    },
+    {
+      "name": "The zeibekiko",
+      "description": "A solo improvised dance, traditionally danced by one man alone to a slow heavy song, most often the groom or the bride's father. Nobody joins in. The people around him kneel in a circle and clap the rhythm, and cutting in is a serious insult. It is the emotional centre of the night rather than a party piece.",
+      "optional": true
+    },
+    {
+      "name": "The dances",
+      "description": "The couple dance first, then the parents and the koumbaroi lead in turn, then the floor opens. Expect kalamatianos and syrtos as the open circle dances everyone can join, tsamikos, tsifteteli, and hasapiko or sirtaki. Cyprus adds the sousta; Crete adds pentozali and its own sousta. The lead dancer is expected to tip the band.",
+      "optional": true
+    },
+    {
+      "name": "Plate smashing",
+      "description": "More myth than tradition. Breaking plates was a feature of Athenian nightclub culture from the 1950s onwards rather than an old wedding rite, it was restricted by law under the junta, and in Greece it has largely been replaced by throwing trays of flowers over the dancers. It survives at some Greek-American, Australian and Cypriot receptions, usually with plaster plates, and many venues now forbid it outright. Ask your venue before you assume it is happening.",
+      "optional": true
+    },
+    {
+      "name": "The wedding ring hand",
+      "description": "Greek and Cypriot couples wear the wedding ring on the right hand. Plain gold bands are worn on the left from the engagement and the priest moves them to the right during the betrothal service. Much of the diaspora has quietly switched to the left hand, and Romanian Orthodox practice differs again.",
+      "optional": true
+    },
+    {
+      "name": "Delivering the invitations by hand",
+      "description": "Invitations are taken round in person by the couple, their parents or the koumbaroi, with a visit at each house. In Cypriot villages anyone from either family's village counted as invited without a card at all, and the historic invitation was a ring of sesame bread called a glistarka.",
+      "optional": true
+    },
+    {
+      "name": "The antigamos",
+      "description": "In Cyprus the families gather again the day after to eat what is left, count the money and thank the people who worked. In some villages it is called ta pkiata, after returning the borrowed plates.",
+      "optional": true
+    },
+    {
+      "name": "Avoiding a leap year",
+      "description": "There is a persistent folk belief in Greece and Cyprus that marrying in a leap year is unlucky, and marriage rates measurably dip in those years. It is superstition rather than Church teaching, and no priest will refuse you, but older relatives may raise it.",
+      "optional": true
+    }
+  ],
+  "gotchas": [
+    "Set the date with the priest before the venue. Roughly a third of the year is closed to weddings between Great Lent and Holy Week, the Dormition fast in the first half of August, the Nativity fast, and fixed days including 5 and 6 January, 29 August and 14 September.",
+    "How much of the Nativity fast is closed varies by jurisdiction. The Greek Orthodox Archdiocese of America and many diaspora parishes restrict 13 to 25 December; the Church of Cyprus and much of Greece treat the whole fast from 15 November as closed. Ask your own priest rather than reading a list from another country.",
+    "The Church of Cyprus does not marry on Wednesdays or Fridays outside the meat-eating periods, since both are fast days.",
+    "The koumbaros or koumbara must be an Orthodox Christian in good standing. A non-Orthodox partner cannot be the koumbaros of their own wedding, and a friend who is Orthodox but whose own marriage was not blessed by the Church, or who divorced without an ecclesiastical divorce, will normally be refused. Ask the priest before you ask the friend.",
+    "An ecclesiastical divorce is a separate process from a civil divorce and is granted by the Metropolis, not a court. It routinely takes six months or more and the church wedding cannot be scheduled until it is final.",
+    "An Orthodox Christian may marry a baptised Christian of a Trinitarian church, but not an unbaptised person. If your partner is not baptised, the only route is baptism first, which needs its own preparation and time.",
+    "Certificates expire. Certificates of freedom to marry and the permission from the Metropolis are commonly valid for six months only, so obtaining them a year in advance means doing it twice.",
+    "In England and Wales an Orthodox wedding is only legally binding if the church building is registered for marriages and an authorised person or registrar is present. Some parishes are set up for this and some are not. Confirm in writing which applies to yours before you plan around it.",
+    "In Greece the marriage must be declared at the lixiarcheio within 40 days or you pay a fine, and after 130 days the fine rises. In Cyprus a certified copy must reach the Registrar within 45 days.",
+    "Guest numbers are not really within your control at a Cypriot wedding. Because the congratulations line is openly invited and invitations are delivered by hand, several hundred people who never confirmed will come. Plan the standing capacity and the drinks for a number well above your seated count.",
+    "Money given by guests is expected to cover much of the day, but it arrives on the night and most suppliers want paying before it. Cash flow, not total cost, is what catches Cypriot and Greek couples out.",
+    "Most parishes ban rice, almonds and confetti inside and outside the church, and some charge a cleaning fine. Ask what is permitted before you buy anything to throw.",
+    "Photographers and videographers are tightly constrained inside an Orthodox church. The priest decides where they may stand, several key moments happen with your backs to the congregation, and the post-service session may be capped at half an hour if another wedding follows.",
+    "Only chanting and, in some jurisdictions, an organ are allowed inside the church. Recorded music, string quartets and secular processional pieces are not, and 'Here Comes the Bride' is not used.",
+    "The service has no vows and cannot be personalised. Readings, hymns and the order are fixed, there are no personal readings or self-written promises, and requests to change it will be declined kindly but firmly.",
+    "A second or third marriage is celebrated in an abbreviated penitential form rather than the full service. A fourth is not permitted at all. If it is a first marriage for one of you, most priests will use the full service.",
+    "Spiritual kinship is a real impediment. Godparents cannot marry their godchildren or their godchildren's parents, and two people baptised by the same godparent cannot marry each other. First cousins and several in-law relationships are also barred.",
+    "Book the band by the hour and agree the overtime rate in writing. Greek and Cypriot receptions habitually run two or three hours past the contracted finish.",
+    "Bomboniera are conventionally one per household in Greece and Cyprus and one per person in much of the diaspora. Confirm which you are doing before ordering eight hundred of them.",
+    "In Cyprus both of you need a thalassaemia screening certificate before the Church will marry you. It is quick, but it is one more appointment to book and one more certificate to chase."
+  ],
+  "sources": [
+    "https://www.goarch.org/-/instructions-for-weddings-divorces-baptisms-funerals-and-memorials",
+    "https://www.denver.goarch.org/marriage-guidelines",
+    "https://stjohntpa.org/church_files/Sacraments/Wedding%20Guidelines%20v4.pdf",
+    "https://www.stsophia.org.uk/wp-content/uploads/2025/09/2026-Weddings-Information-Guide-eng.pdf",
+    "https://greekorthodox.org.au/services-and-sacraments/marriage/",
+    "https://stspyridon.org.au/sacraments/marriage-laws",
+    "https://hcgm.org/greek-orthodox-wedding-traditions/",
+    "https://theamm.org/articles/1290-greek-orthodox-weddings-from-koumbaroi-to-holy-crowns-and-the-common-cup",
+    "https://www.thenationalherald.com/greek-wedding-traditions/",
+    "https://www.greekboston.com/wedding/no-vows/",
+    "https://www.greekboston.com/wedding/expectations-koumbaro-koumbara/",
+    "https://greekweddings.wordpress.com/2009/07/30/what-should-the-koumbari-pay-for/",
+    "https://greekweddings.wordpress.com/2008/02/15/krevati-bed-making-ceremony/",
+    "https://greekweddings.wordpress.com/2008/01/27/your-wedding-ringleft-or-right-hand/",
+    "https://orthodoxwiki.org/Marriage",
+    "https://www.greekcookingmadeeasy.com/specials/traditions-of-greek-orthodox-church-wedding-ceremony-",
+    "https://musicwavecy.com/en/allamata-of-the-bride-and-groom-in-cyprus/",
+    "https://cypruscelebrant.com/2025/06/27/greek-cypriot-weddings/",
+    "https://vowly.wedding/en/cyprus/blog/cyprus-wedding-traditions",
+    "https://www.the-real-cyprus.com/cyprus-wedding-traditions.html",
+    "https://dom.com.cy/en/live/lifehacks/svadebnyye-traditsii-kipra/",
+    "https://www.cyprusexploration.com/history/ethnographics/the-wedding/",
+    "https://yasoocyprus.com/cypriot-weddings-traditional-customs-and-ceremonies/",
+    "https://www.gamosmagazine.com.cy/en/planning/before-after/how-to-procedure/",
+    "https://imconstantias.org.cy/ekdosi-gamou-stin-aggliki/",
+    "https://ucm.org.cy/wp-content/uploads/The_Marriage_Law_en.pdf",
+    "https://www.mdpi.com/2073-4425/16/4/360",
+    "https://easywedding.gr/blog/khartia-gamou-poia-einai-ta-dikaiologetika-threskeutikou-gamou",
+    "https://www.vvv.gov.gr/index.php/lixiarxeio/gamos",
+    "https://gamosportal.gr/blog/idees-symvoules/dikaiologitika-gia-gamo",
+    "https://en.wikipedia.org/wiki/Plate_smashing",
+    "https://tapediatispolis.com/dance-the-night-away-popular-greek-dance-styles-for-weddings-and-parties/",
+    "https://cyprus-mail.com/2023/05/20/i-do-the-sad-truth-about-cyprus-weddings",
+    "https://www.confetti.co.uk/wedding/ceremonies/greek-orthodox-weddings/"
+  ]
+}
