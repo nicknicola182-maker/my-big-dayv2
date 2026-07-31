@@ -191,7 +191,15 @@ if (wants('app')) await guardAsync('app — browser flows', async () => {
       const exe = process.env.PLAYWRIGHT_BROWSERS_PATH
         ? path.join(process.env.PLAYWRIGHT_BROWSERS_PATH, 'chromium')
         : undefined;
-      const browser = await chromium.launch(exe && fs.existsSync(exe) ? { executablePath: exe } : {});
+      /* The package can be installed without the browser binaries. That's a skip,
+         not a failure — otherwise a fresh `npm install` looks like broken tests. */
+      let browser = null;
+      try {
+        browser = await chromium.launch(exe && fs.existsSync(exe) ? { executablePath: exe } : {});
+      } catch (e) {
+        skipped('browser flows', 'no chromium binary — run: npx playwright install chromium');
+        return;
+      }
       const shots = path.join(ROOT, 'tests', 'shots');
       fs.mkdirSync(shots, { recursive: true });
 
