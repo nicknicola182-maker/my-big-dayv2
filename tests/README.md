@@ -74,3 +74,26 @@ npm i -D playwright && npm run build && npm test
 ```
 
 It finds Chromium via `PLAYWRIGHT_BROWSERS_PATH` when that's set.
+
+## Suites
+
+| suite | what it guards |
+|---|---|
+| `packs` | the 8 culture packs conform to `SCHEMA.md` — sections, units, event refs, `shareOfBudget` sums |
+| `engine` | `buildPlan()` invariants + the 24 golden snapshots |
+| `state` | migration, save failure, onboarding position, the reveal flag |
+| `app` | real browser flow: onboarding → reveal → home, with reloads and a forced crash |
+
+Run one with `node tests/run.mjs <suite>`.
+
+## State (`tests/state.mjs`)
+
+These cover the beta-blocking defects, and the migration cases matter more than they
+look: before this, `if(S.v!==2){ S = BLANK(); }` meant **any schema change silently
+deleted a couple's planning** — names, date, guest list, agreed prices, ticked tasks.
+The suite seeds a realistic v2 save and asserts every one of those survives.
+
+It also asserts the things that are easy to regress and impossible to notice: a save
+from a *newer* build is kept rather than wiped, an unreadable save is parked at
+`weddingapp.rescued` rather than discarded, a full phone tells the couple once rather
+than on every keystroke, and reopening mid-onboarding resumes at the same question.

@@ -139,12 +139,84 @@ const PRICE_LABEL = "£6.99";
 
 /* ---------- state ---------- */
 let S = null;
-const BLANK = () => ({v:2, unlocked:false, onboarded:false, seenLanding:false, ans:{}, plan:null,
-  guests:[], tables:[], runsheet:[], budgetTotal:0, cur:"GBP", tab:"home", accOpen:{}});
+const SCHEMA_V = 3;
+const STORE_KEY = "weddingapp";
 
-function save(){ try{ localStorage.setItem("weddingapp", JSON.stringify(S)); }catch(e){} }
-function load(){ try{ const r = localStorage.getItem("weddingapp"); if(r){ S = JSON.parse(r); if(S.v!==2){ S = BLANK(); } return; } }catch(e){}
-  S = BLANK(); }
+/* Every key the app will ever set is declared here. The ones that used to accrete at
+   runtime (photos, cloud, customTodos…) are declared too, so migrations can reason
+   about the shape instead of guessing. */
+const BLANK = () => ({
+  v: SCHEMA_V,
+  unlocked:false, onboarded:false, seenLanding:false, revealSeen:false,
+  ans:{}, plan:null, guests:[], tables:[], runsheet:[],
+  budgetTotal:0, budgetEstimated:false, cur:"GBP",
+  tab:"home", accOpen:{}, listFilter:"all", obIx:0,
+  customTodos:[], photos:[], albumCode:null, cloud:null, _pushedAt:0
+});
+
+/* Migrations run in order until the save is current. NEVER replace an unrecognised
+   save with a blank one — that is a couple's planning and they cannot get it back. */
+const MIGRATIONS = {
+  2: s => {
+    s.obIx = 0;                                   // onboarding position is persisted from v3 on
+    s.revealSeen = !!s.onboarded;                 // anyone already in the app has seen it
+    const d = BLANK();
+    for(const k of ["listFilter","customTodos","photos","albumCode","cloud","_pushedAt","budgetEstimated"]){
+      if(s[k] === undefined) s[k] = d[k];
+    }
+    s.v = 3;
+    return s;
+  }
+};
+
+function migrate(s){
+  while(s.v < SCHEMA_V){
+    const step = MIGRATIONS[s.v];
+    if(!step) return null;                        // no path forward — caller preserves it
+    const before = s.v;
+    s = step(s);
+    if(s.v === before) return null;               // buggy migration; don't spin
+  }
+  return s;
+}
+
+/* Park an unreadable save instead of discarding it. */
+function rescue(raw){
+  try{ localStorage.setItem(STORE_KEY+".rescued", raw); }catch(e){}
+}
+
+let saveBroken = false;
+function save(){
+  try{
+    localStorage.setItem(STORE_KEY, JSON.stringify(S));
+    if(saveBroken){ saveBroken = false; if(typeof toast === "function") toast("Saved — we're back in sync."); }
+  }catch(e){
+    if(saveBroken) return;                        // already said so; don't nag on every keystroke
+    saveBroken = true;
+    const full = e && (e.name === "QuotaExceededError" || e.name === "NS_ERROR_DOM_QUOTA_REACHED" || e.code === 22);
+    console.error("save failed", e);
+    if(typeof toast === "function") toast(full
+      ? "Your phone's storage is full, so I can't save changes. Remove a few album photos and I'll try again."
+      : "I couldn't save that change — don't close the app just yet.");
+  }
+}
+
+function load(){
+  let raw = null;
+  try{ raw = localStorage.getItem(STORE_KEY); }catch(e){}
+  if(!raw){ S = BLANK(); return; }
+
+  let parsed = null;
+  try{ parsed = JSON.parse(raw); }catch(e){}
+  if(!parsed || typeof parsed !== "object"){ rescue(raw); S = BLANK(); return; }
+
+  if(parsed.v > SCHEMA_V){ S = parsed; return; }   // written by a newer build — leave it alone
+  const migrated = migrate(parsed);
+  if(migrated){ S = migrated; save(); return; }
+
+  rescue(raw);                                     // keep it; recoverable by a human later
+  S = BLANK();
+}
 
 function fmt(n){ const s = CURSYM[S.cur]||"£"; if(n==null||isNaN(n)) return "—";
   return s + Math.round(n).toLocaleString("en-GB"); }
@@ -425,13 +497,13 @@ const VIGNETTES = {
  partner:  '<div class="vig vig-partner"><span class="e">📱</span><span class="lv">💌</span><span class="e">📱</span></div>'
 };
 
-let obIx = 0;
+/* onboarding position lives in S — a reload used to send the couple back to question one */
 function renderOB(){
   if(!S.seenLanding){ renderLanding(); return; }
   const steps = obSteps();
-  if(obIx >= steps.length){ finishOB(); return; }
-  const st = steps[obIx], a = S.ans;
-  const pct = Math.round((obIx)/steps.length*100);
+  if(S.obIx >= steps.length){ finishOB(); return; }
+  const st = steps[S.obIx], a = S.ans;
+  const pct = Math.round((S.obIx)/steps.length*100);
   let body = "";
   if(st.type==="names"){
     body = `<input id="n1" placeholder="Your name" value="${esc(a.n1||"")}" style="margin-bottom:10px">
@@ -516,8 +588,8 @@ function renderOB(){
     st.get()!==undefined && st.get()!==null;
   document.getElementById("app").innerHTML = `<div id="ob">
     <div style="padding:20px 20px 12px;display:flex;justify-content:space-between;align-items:center">
-      <button onclick="obBack()" style="font-size:15px;${obIx===0?"visibility:hidden":""}">‹ Back</button>
-      <span class="small">${obIx+1} of ${steps.length}</span>
+      <button onclick="obBack()" style="font-size:15px;${S.obIx===0?"visibility:hidden":""}">‹ Back</button>
+      <span class="small">${S.obIx+1} of ${steps.length}</span>
     </div>
     <div class="prog"><i style="width:${pct}%"></i></div>
     <div class="body">
@@ -550,8 +622,8 @@ function obAdvance(id){
   if(id==="country"){ S.cur = countryOf(a.country||"GB")[2]; }
   obNext();
 }
-function obNext(){ obIx++; save(); renderOB(); }
-function obBack(){ if(obIx>0){ obIx--; renderOB(); } }
+function obNext(){ S.obIx++; save(); renderOB(); }
+function obBack(){ if(S.obIx>0){ S.obIx--; save(); renderOB(); } }
 function obPick(stepId, v){
   const st = obSteps().find(s=>s.id===stepId);
   st.set(v); save(); renderOB();
@@ -583,7 +655,7 @@ function obMulti(stepId, o){
   st.set(cur); save(); renderOB();
 }
 function finishOB(){
-  if(!S.ans.packId){ obIx = 1; renderOB(); return; }
+  if(!S.ans.packId){ S.obIx = 1; save(); renderOB(); return; }
   if(S.ans.packId==="civil" && !S.ans.ceremony) S.ans.ceremony = S.ans.variant || "Civil ceremony";
   if(S.ans.budgetMode==="estimate" && !S.budgetTotal){
     S.budgetTotal = estimateBudget(); S.budgetEstimated = true;
@@ -591,7 +663,7 @@ function finishOB(){
   }
   buildPlan();
   seedCeremony();
-  S.onboarded = true; save();
+  S.onboarded = true; S.revealSeen = false; save();
   renderReveal();
 }
 function renderReveal(){
@@ -621,7 +693,7 @@ function renderReveal(){
         ${S.budgetEstimated? `<div class="small" style="margin-top:8px">You said you didn't know — so I built this from your ${g? g+" guests, ":""}your tradition and ${esc(countryOf(S.ans.country||"GB")[1])} pricing. React to it, don't obey it.</div>`:""}
       </div>`; })() : ""}
     <p style="font-size:14.5px;color:var(--muted);margin-bottom:26px">Look what we've made already — your traditions, your country, your numbers. Every figure is a starting point, and now we make it magnificent.</p>
-    <button class="btn glam" onclick="S.tab='home';save();render()">Show me my wedding</button>
+    <button class="btn glam" onclick="S.revealSeen=true;S.tab='home';save();render()">Show me my wedding</button>
     </div>
   </div></div>`;
 }

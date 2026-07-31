@@ -33,6 +33,26 @@ const skipped = (what, why) => { skip++; console.log(`  ⊘ SKIPPED ${what} — 
 const only = process.argv[2];
 const wants = s => !only || only === s;
 
+/* A suite that throws is a failure with a summary, not a dead process. */
+const guardAsync = async (name, fn) => {
+  try { return await fn(); }
+  catch (e) {
+    fail++;
+    failures.push(`${name} › suite threw: ${e && e.message || e}`);
+    console.log(`  ✗ suite threw: ${(e && e.message || e).toString().split('\n')[0]}`);
+  }
+};
+
+const guard = (name, fn) => {
+  try { return fn(); }
+  catch (e) {
+    fail++;
+    const msg = `${name} › suite threw: ${e && e.message || e}`;
+    failures.push(msg);
+    console.log(`  ✗ suite threw: ${e && e.message || e}`);
+  }
+};
+
 /* ── packs: conformance to SCHEMA.md ──────────────────────────── */
 const SECTIONS = ['Ceremony', 'Reception', 'Attire', 'Flowers & Styling', 'Photos & Film',
   'Music & Entertainment', 'Stationery', 'Transport', 'Rings & Gifts', 'Beauty', 'Extras'];
@@ -137,8 +157,14 @@ if (wants('engine')) {
   }
 }
 
+/* ── state: persistence, migration, recovery ──────────────────── */
+if (wants('state')) {
+  const { run: runState } = await import('./state.mjs');
+  guard('state', () => runState({ describe, ok, eq, group }));
+}
+
 /* ── app: browser flows ───────────────────────────────────────── */
-if (wants('app')) {
+if (wants('app')) await guardAsync('app — browser flows', async () => {
   describe('app — browser flows');
   const dist = path.join(ROOT, 'dist', 'index.html');
   if (!ok(fs.existsSync(dist), 'dist/index.html exists', 'run: python3 build.py')) {
@@ -167,18 +193,83 @@ if (wants('app')) {
       await page.screenshot({ path: path.join(shots, 'landing.png') });
 
       ok(await page.locator('#app').count() > 0, 'app root renders');
-      const state = await page.evaluate(() => (typeof S === 'undefined' ? null : { v: S.v, onboarded: S.onboarded }));
-      ok(state !== null, 'global state initialises');
-      eq(state?.v, 2, 'state schema version is 2');
+      const boot = await page.evaluate(() =>
+        (typeof S === 'undefined' ? null : { v: S.v, schema: SCHEMA_V, onboarded: S.onboarded, revealSeen: S.revealSeen }));
+      ok(boot !== null, 'global state initialises');
+      eq(boot?.v, boot?.schema, 'a fresh save is written at the current schema version');
+      ok(boot?.revealSeen === false, 'a new couple has not seen the reveal');
       ok(errors.length === 0, 'no console or page errors on boot', errors.slice(0, 3).join('\n      '));
+      group('boot', 'landing screen');
+
+      /* Walk the Greek Orthodox path to the reveal, then reload mid-reveal.
+         Before this phase, obIx lived outside state and the reveal had no flag —
+         a reload lost your place, and lost the reveal permanently. */
+      const settle = 140;
+      const cont = async () => { await page.locator('text=Continue').first().click(); await page.waitForTimeout(settle); };
+      const tap  = async sel => { await page.locator(sel).first().click(); await page.waitForTimeout(settle); };
+      await tap("text=Let's begin, my loves");
+      await page.fill('#n1', 'Alex'); await page.fill('#n2', 'Sam');
+      await cont();
+
+      const midway = await page.evaluate(() => S.obIx);
+      ok(midway > 0, 'onboarding position is tracked in saved state', `obIx = ${midway}`);
+      await page.reload(); await page.waitForTimeout(400);
+      const resumed = await page.evaluate(() => ({ obIx: S.obIx, n1: S.ans.n1 }));
+      eq(resumed.obIx, midway, 'reloading resumes at the same question');
+      eq(resumed.n1, 'Alex', 'with answers intact');
+
+      await tap('.opt:has-text("Yes — a religious")'); await cont();
+      await tap('.opt:has-text("Christian")'); await cont();
+      await tap('.opt:has-text("Orthodox")'); await cont();
+      await tap('.opt:has-text("Greek / Cypriot")'); await cont();
+      await page.selectOption('#csel', 'CY'); await cont();
+      await tap('text=Skip for now');
+      await page.fill('#wdate', '2027-09-18'); await cont();
+      await page.fill('#gexact', '250'); await cont();
+      await page.locator('.opt').nth(2).click(); await page.waitForTimeout(settle); await cont();
+      await tap('.opt:has-text("Our own church")'); await cont();
+      await tap(".opt:has-text(\"I've got the place\")");
+      await page.fill('#rother', 'Ktima Oasis Limassol'); await cont();
+      await cont();                                          // events: keep defaults
+      await tap('text=Food & drink'); await tap('text=Photography & film'); await cont();
+      await tap('.opt:has-text("Glamorous")'); await cont();
+      await tap('text=Just me for now');
+      await page.waitForTimeout(400);
+      await page.screenshot({ path: path.join(shots, 'reveal.png') });
+
+      const atReveal = await page.evaluate(() => ({ onboarded: S.onboarded, revealSeen: S.revealSeen, cur: S.cur, budget: S.budgetTotal }));
+      ok(atReveal.onboarded, 'onboarding completes');
+      ok(atReveal.revealSeen === false, 'the reveal is marked unseen until dismissed');
+      eq(atReveal.cur, 'EUR', 'currency follows the country');
+      ok(atReveal.budget > 0, 'a budget is set', `got ${atReveal.budget}`);
+      ok(await page.locator('text=Show me my wedding').count() > 0, 'the reveal is on screen');
+
+      await page.reload(); await page.waitForTimeout(500);
+      ok(await page.locator('text=Show me my wedding').count() > 0,
+        'reloading mid-reveal returns to the reveal, not past it');
+
+      await tap('text=Show me my wedding');
+      await page.waitForTimeout(300);
+      await page.screenshot({ path: path.join(shots, 'home.png') });
+      const home = await page.evaluate(() => ({ revealSeen: S.revealSeen, tab: S.tab, items: S.plan.items.length }));
+      ok(home.revealSeen === true, 'dismissing the reveal records it');
+      eq(home.tab, 'home', 'lands on home');
+      ok(home.items > 0, 'the plan is populated', `${home.items} items`);
+      ok(await page.locator('#tabbar').count() > 0, 'the tab bar renders');
+
+      /* The error boundary: force a throw and confirm the couple gets a way out. */
+      await page.evaluate(() => { window.__viewsHome = VIEWS.home; VIEWS.home = () => { throw new Error('boom'); }; render(); });
+      await page.waitForTimeout(200);
+      ok(await page.locator('text=Something went wrong').count() > 0, 'a render crash shows a recovery screen');
+      ok(await page.locator('text=Download my plan').count() > 0, 'and offers the plan as a download');
+      await page.evaluate(() => { VIEWS.home = window.__viewsHome; render(); });
+      ok(await page.locator('#tabbar').count() > 0, 'and the app recovers afterwards');
 
       await browser.close();
-      group('boot', 'landing screen');
-      skipped('onboarding / reveal / tab flows',
-        'the four legacy smoke scripts still cover these without assertions — porting them is Phase 0 follow-up');
+      group('flow', 'onboarding → reveal → home, with reloads');
     }
   }
-}
+});
 
 /* ── report ───────────────────────────────────────────────────── */
 console.log(`\n${'─'.repeat(60)}`);

@@ -38,8 +38,33 @@ function dateInWords(){
 }
 function planned(){ return S.plan.items.filter(i=>i.on).reduce((s,i)=>s+(i.agreed??i.alloc??0),0); }
 
+/* Any throw in here used to leave #app blank with no route back. */
 function render(){
+  try{ renderApp(); }
+  catch(e){ renderCrash(e); }
+}
+
+function renderCrash(err){
+  console.error("render failed", err);
+  const app = document.getElementById("app");
+  if(!app) return;
+  let href = "";
+  try{ href = "data:application/json;charset=utf-8,"+encodeURIComponent(localStorage.getItem(STORE_KEY)||"{}"); }catch(e){}
+  app.innerHTML = `
+    <div id="phone"><div class="body" style="padding:34px 22px">
+      <h2 style="font-family:Gloock,serif;font-size:26px;margin:0 0 10px">Something went wrong.</h2>
+      <p style="color:var(--muted);line-height:1.6;margin:0">Your plan is safe — it's saved on this phone, not lost.
+      Take a copy if you'd like one, then reload.</p>
+      ${href? `<a href="${href}" download="my-big-day-plan.json" class="btn" style="display:block;text-align:center;margin-top:20px;text-decoration:none">Download my plan</a>`:""}
+      <button class="btn" style="margin-top:10px;background:#fff;color:var(--ink);border:1.5px solid var(--line)" onclick="location.reload()">Reload the app</button>
+      <p class="small" style="margin-top:20px;color:var(--muted)">If it keeps happening, send us that file and we'll put it right.</p>
+      <pre class="small" style="white-space:pre-wrap;opacity:.5;margin-top:12px">${esc(String((err&&err.message)||err))}</pre>
+    </div></div>`;
+}
+
+function renderApp(){
   if(!S.onboarded){ renderOB(); return; }
+  if(!S.revealSeen){ renderReveal(); return; }   // survives a reload mid-reveal
   if(!S.plan) buildPlan();
   const t = S.tab;
   const nm = [S.ans.n1,S.ans.n2].filter(Boolean).join(" & ") || "Our wedding";
