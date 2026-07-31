@@ -21,7 +21,7 @@ export function run({ describe, ok, eq, group }) {
   /* worlds.js is plain script, not a module, so it is evaluated rather than
      imported — the same way the browser gets it. */
   const sandbox = {};
-  const expose = ['PERSONAS', 'WORLD_IDS', 'WORLD_SHAPE', 'VOICE', 'TAB_LABELS',
+  const expose = ['PERSONAS', 'WORLD_IDS', 'WORLD_SHAPE', 'VOICE', 'TAB_LABELS', 'SHARED',
     'say', 'tabLabel', 'ordinal', 'stepCount', 'personaOf', 'shape', 'worldId'];
   const fn = new Function('S', 'document', src + '\n;return {' + expose.map(k => `${k}:typeof ${k}!=="undefined"?${k}:undefined`).join(',') + '};');
   let W = fn(null, undefined);
@@ -176,6 +176,66 @@ export function run({ describe, ok, eq, group }) {
     ok(/background:transparent!important/.test(css),
       'the inline section tint is overridden where it would read wrong');
     group('composition', 'nav models · sheet models · row models');
+  }
+
+  describe('worlds — paywall & partner sync: framing varies, facts do not');
+  {
+    /* These two screens are now bespoke. That is only safe because the parts
+       that must not vary are held in SHARED and asserted here. */
+    ok(!!W.SHARED, 'the invariant block exists');
+    eq(W.SHARED.PAY_FEATURES.length, 9, 'nine features, one list');
+
+    // A per-world features list would be four things to keep in step with the
+    // store listing, and any discrepancy is a review rejection.
+    for (const key of ['PAY_FEATURES', 'PAY_TERMS', 'PAY_RESTORE', 'PAIR_BUTTON', 'PAIR_INSTRUCTION']) {
+      ok(key in W.SHARED, `${key} is shared, not per-world`);
+      ok(!(key in W.VOICE), `${key} has not grown a per-world variant`);
+    }
+
+    // The instruction names the button by its label. If either is varied
+    // without the other, the couple is told to tap something that isn't there
+    // — while standing next to each other trying to make it work.
+    ok(W.SHARED.PAIR_INSTRUCTION.includes(W.SHARED.PAIR_BUTTON),
+      'the pairing instruction names the button by its exact label',
+      `"${W.SHARED.PAIR_BUTTON}"`);
+
+    // The price is single-source in app1.js and must not be duplicated here.
+    ok(/const PRICE_LABEL = /.test(app1), 'the price is declared once');
+    ok(!/£\d/.test(src), 'and worlds.js never hardcodes a price');
+    const payCalls = (app2.match(/PRICE_LABEL/g) || []).length;
+    ok(payCalls >= 5, 'every price render interpolates it', `${payCalls} sites`);
+    ok(/SHARED\.PAY_FEATURES\.map/.test(app2), 'the paywall renders the shared list');
+    ok(/SHARED\.PAY_TERMS/.test(app2), 'and the shared terms');
+    ok(/SHARED\.PAIR_INSTRUCTION/.test(app2), 'partner sync renders the shared instruction');
+    ok(/SHARED\.PAIR_BUTTON/.test(app2), 'and labels the button from the same source');
+
+    /* The terms say "No subscription". No world may contradict them.
+       Perdita's headline was "THE SUBSCRIPTION" — sitting two lines above
+       "One payment. No subscription. Yours forever." A store reviewer reads
+       the purchase screen as one page, and so does the couple. */
+    ok(/no subscription/i.test(W.SHARED.PAY_TERMS), 'the terms disclaim a subscription');
+    for (const key of ['payTitle', 'payLead', 'payCta', 'payAck']) {
+      for (const w of WORLDS.concat(['house'])) {
+        const val = String(W.VOICE[key][w] || '');
+        ok(!/subscri/i.test(val),
+          `${key}/${w} does not contradict the terms by promising a subscription`, val);
+        /* Affirmative claims only. "Nothing is removed from the free plan" and
+           "No renewal" are consistent with the terms — they disclaim rather
+           than promise, so a bare /free|renew/ would be wrong here. */
+        ok(!/free trial|per month|per year|\/mo\b|a month|a year|auto-?renew|renews\b/i.test(val),
+          `${key}/${w} promises no recurring billing the terms do not support`, val);
+      }
+    }
+
+    // The framing, by contrast, must genuinely differ.
+    for (const key of ['payTitle', 'payLead', 'payCta', 'syncTitle', 'syncLead']) {
+      const vals = WORLDS.map(w => W.VOICE[key][w]);
+      eq(new Set(vals).size, 4, `${key} is written four ways`);
+    }
+    // And the feature marker changes with the world: ticks, roman, issue numbers.
+    const markers = WORLDS.map(w => W.WORLD_SHAPE[w].payMarker);
+    ok(new Set(markers).size >= 3, 'the feature list is marked differently per world', markers.join(' · '));
+    group('commerce', 'framing bespoke · price, features and pairing invariant');
   }
 
   describe('worlds — pack content is never persona-varied');
