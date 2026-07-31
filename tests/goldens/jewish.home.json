@@ -3,12 +3,12 @@
   "currency": "GBP",
   "budgetTotal": 30000,
   "counts": {
-    "events": 6,
+    "events": 7,
     "items": 41,
     "itemsOn": 22,
     "timeline": 27,
     "paperwork": 13,
-    "runsheet": 6
+    "runsheet": 7
   },
   "allocatedTotal": 30001,
   "sections": {
@@ -46,6 +46,10 @@
     {
       "id": "reception",
       "name": "The reception (seudat mitzvah)"
+    },
+    {
+      "id": "badeken",
+      "name": "Badeken — the veiling"
     }
   ],
   "items": [

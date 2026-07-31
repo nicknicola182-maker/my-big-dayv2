@@ -1,0 +1,444 @@
+{
+  "packId": "quaker",
+  "currency": "GBP",
+  "budgetTotal": 24000,
+  "counts": {
+    "events": 6,
+    "items": 24,
+    "itemsOn": 8,
+    "timeline": 20,
+    "paperwork": 7,
+    "runsheet": 6
+  },
+  "allocatedTotal": 24000,
+  "sections": {
+    "Attire": 4824,
+    "Ceremony": 1689,
+    "Photos & Film": 3216,
+    "Reception": 12059,
+    "Stationery": 2212
+  },
+  "events": [
+    {
+      "id": "application",
+      "name": "Application to the area meeting"
+    },
+    {
+      "id": "clearness",
+      "name": "Meeting for clearness"
+    },
+    {
+      "id": "notice",
+      "name": "Giving notice to the superintendent registrar"
+    },
+    {
+      "id": "ceremony",
+      "name": "The meeting for worship for solemnisation"
+    },
+    {
+      "id": "signing",
+      "name": "Signing the certificate"
+    },
+    {
+      "id": "meal",
+      "name": "The shared meal"
+    }
+  ],
+  "items": [
+    {
+      "id": "mh-hire",
+      "name": "Meeting house hire",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0268,
+      "alloc": 1207
+    },
+    {
+      "id": "mh-donation",
+      "name": "Donation to the meeting",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.0134,
+      "alloc": 0
+    },
+    {
+      "id": "certificate",
+      "name": "The Quaker marriage certificate",
+      "section": "Stationery",
+      "on": true,
+      "religious": true,
+      "share": 0.0268,
+      "alloc": 1207
+    },
+    {
+      "id": "reg-fees",
+      "name": "Notice fees and certified copies",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0107,
+      "alloc": 482
+    },
+    {
+      "id": "seating",
+      "name": "Extra seating and layout",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.0179,
+      "alloc": 0
+    },
+    {
+      "id": "hearing",
+      "name": "Hearing loop or amplification",
+      "section": "Ceremony",
+      "on": false,
+      "religious": false,
+      "share": 0.0161,
+      "alloc": 0
+    },
+    {
+      "id": "venue",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0804,
+      "alloc": 0
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.2677,
+      "alloc": 12059
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0536,
+      "alloc": 0
+    },
+    {
+      "id": "cake",
+      "name": "Cake",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0179,
+      "alloc": 0
+    },
+    {
+      "id": "hire-crockery",
+      "name": "Crockery, glassware and linen hire",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0179,
+      "alloc": 0
+    },
+    {
+      "id": "attire1",
+      "name": "Wedding outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.0625,
+      "alloc": 2815
+    },
+    {
+      "id": "attire2",
+      "name": "Second outfit",
+      "section": "Attire",
+      "on": true,
+      "religious": false,
+      "share": 0.0446,
+      "alloc": 2009
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.0446,
+      "alloc": 0
+    },
+    {
+      "id": "photo",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.0714,
+      "alloc": 3216
+    },
+    {
+      "id": "video",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.0312,
+      "alloc": 0
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.0312,
+      "alloc": 0
+    },
+    {
+      "id": "stationery",
+      "name": "Invitations and order of the day",
+      "section": "Stationery",
+      "on": true,
+      "religious": true,
+      "share": 0.0223,
+      "alloc": 1005
+    },
+    {
+      "id": "travel",
+      "name": "Transport",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.0179,
+      "alloc": 0
+    },
+    {
+      "id": "music",
+      "name": "Musicians for the meal",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.0402,
+      "alloc": 0
+    },
+    {
+      "id": "beauty",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.0268,
+      "alloc": 0
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts for those who helped",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.0179,
+      "alloc": 0
+    },
+    {
+      "id": "childcare",
+      "name": "Children's room during worship",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.0134,
+      "alloc": 0
+    },
+    {
+      "id": "contingency",
+      "name": "Contingency",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.0268,
+      "alloc": 0
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 13,
+      "critical": true,
+      "when": "13 months before",
+      "task": "Talk to the clerk of your area meeting before fixing anything — the meeting's agreement is the gate everything else passes through"
+    },
+    {
+      "id": "t1",
+      "mb": 12,
+      "critical": true,
+      "when": "12 months before",
+      "task": "Write formally to the area meeting asking to marry under its care"
+    },
+    {
+      "id": "t2",
+      "mb": 11,
+      "critical": true,
+      "when": "11 months before",
+      "task": "If neither of you is a member, ask about attender status and what the meeting requires — a registering officer's certificate is needed at the register office if either of you is not a member"
+    },
+    {
+      "id": "t3",
+      "mb": 10,
+      "critical": true,
+      "when": "10 months before",
+      "task": "Agree a date with the meeting, remembering that regular meetings for worship have first claim on the building"
+    },
+    {
+      "id": "t4",
+      "mb": 9,
+      "critical": true,
+      "when": "9 months before",
+      "task": "Attend your meeting for clearness with the appointed Friends"
+    },
+    {
+      "id": "t5",
+      "mb": 8,
+      "critical": false,
+      "when": "8 months before",
+      "task": "Ask the meeting directly about photography, video, flowers, alcohol and confetti rather than assuming any of them"
+    },
+    {
+      "id": "t6",
+      "mb": 8,
+      "critical": false,
+      "when": "8 months before",
+      "task": "Check the meeting house capacity, access and hearing loop"
+    },
+    {
+      "id": "t7",
+      "mb": 7,
+      "critical": true,
+      "when": "7 months before",
+      "task": "Commission the marriage certificate — calligraphers book up and the sheet must be ready to sign on the day"
+    },
+    {
+      "id": "t8",
+      "mb": 6,
+      "critical": true,
+      "when": "6 months before",
+      "task": "Appoint the two witnesses who will sign, and confirm who is acting as registering officer"
+    },
+    {
+      "id": "t9",
+      "mb": 6,
+      "critical": false,
+      "when": "6 months before",
+      "task": "Book catering, or arrange the shared meal with the meeting"
+    },
+    {
+      "id": "t10",
+      "mb": 5,
+      "critical": true,
+      "when": "5 months before",
+      "task": "Send invitations with a plain explanation of Quaker worship — most guests will not know what to expect"
+    },
+    {
+      "id": "t11",
+      "mb": 4,
+      "critical": false,
+      "when": "4 months before",
+      "task": "Book the photographer and brief them on when they may and may not move"
+    },
+    {
+      "id": "t12",
+      "mb": 3,
+      "critical": true,
+      "when": "3 months before",
+      "task": "Give notice of marriage at the register office; you must have lived in the district seven days first"
+    },
+    {
+      "id": "t13",
+      "mb": 3,
+      "critical": true,
+      "when": "3 months before",
+      "task": "If either of you is not a member, get the registering officer's certificate to the superintendent registrar when you give notice"
+    },
+    {
+      "id": "t14",
+      "mb": 2,
+      "critical": false,
+      "when": "2 months before",
+      "task": "Confirm the room layout and seating with the meeting"
+    },
+    {
+      "id": "t15",
+      "mb": 2,
+      "critical": false,
+      "when": "2 months before",
+      "task": "Arrange care for young children during the hour of worship"
+    },
+    {
+      "id": "t16",
+      "mb": 1,
+      "critical": true,
+      "when": "1 months before",
+      "task": "Walk through the day with the registering officer — who speaks, when the certificate is read, how the meeting closes"
+    },
+    {
+      "id": "t17",
+      "mb": 1,
+      "critical": false,
+      "when": "1 months before",
+      "task": "Confirm the shared meal, crockery and who is clearing up"
+    },
+    {
+      "id": "t18",
+      "mb": 0,
+      "critical": true,
+      "when": "0 months before",
+      "task": "Bring the certificate, the register documents and pens that will not smudge for a hundred signatures"
+    },
+    {
+      "id": "t19",
+      "mb": 0,
+      "critical": true,
+      "when": "0 months before",
+      "task": "After the wedding, the registering officer registers the marriage — collect your certified copy"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both",
+      "item": "Application to the area meeting for marriage under its care"
+    },
+    {
+      "id": "p1",
+      "who": "The non-member",
+      "item": "Registering officer's certificate, if either of you is not a member"
+    },
+    {
+      "id": "p2",
+      "who": "Both",
+      "item": "Notice of marriage at the register office"
+    },
+    {
+      "id": "p3",
+      "who": "Both",
+      "item": "Passports or birth certificates and proof of address"
+    },
+    {
+      "id": "p4",
+      "who": "Either, if applicable",
+      "item": "Evidence of the ending of any previous marriage"
+    },
+    {
+      "id": "p5",
+      "who": "Both",
+      "item": "The Quaker marriage certificate"
+    },
+    {
+      "id": "p6",
+      "who": "Both",
+      "item": "Registration of the marriage by the registering officer"
+    }
+  ]
+}

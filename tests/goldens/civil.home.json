@@ -6,8 +6,8 @@
     "events": 5,
     "items": 41,
     "itemsOn": 17,
-    "timeline": 26,
-    "paperwork": 15,
+    "timeline": 27,
+    "paperwork": 16,
     "runsheet": 5
   },
   "allocatedTotal": 30000,
@@ -438,6 +438,13 @@
       "task": "In England and Wales, check the registration service's availability for your date before you confirm the venue: the registrar and the venue are separate bookings and both must line up"
     },
     {
+      "id": "t26",
+      "mb": 13,
+      "critical": true,
+      "when": "May 2026",
+      "task": "Confirm in writing that your venue holds current approved-premises status and which room the approval covers, before you pay a deposit"
+    },
+    {
       "id": "t3",
       "mb": 12,
       "critical": true,
@@ -674,6 +681,11 @@
       "id": "p14",
       "who": "Both, if you married abroad",
       "item": "Foreign marriage certificate"
+    },
+    {
+      "id": "p15",
+      "who": "The couple",
+      "item": "Check the venue is approved premises, or book the register office"
     }
   ]
 }

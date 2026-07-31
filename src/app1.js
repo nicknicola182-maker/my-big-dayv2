@@ -46,7 +46,11 @@ const PACK_TAGS = {
  "muslim":"the nikah at the heart of it all",
  "hindu":"days of colour building to the fire",
  "sikh":"the Anand Karaj, done properly",
- "civil":"your rules, your words, your day"
+ "civil":"your rules, your words, your day",
+ "buddhist":"monks bless, and the day is yours to build",
+ "jain":"ahimsa in the vows and on every plate",
+ "bahai":"one sentence, two witnesses, every parent's blessing",
+ "quaker":"a room full of silence until someone is moved"
 };
 const VARIANTS = {
  "greek-orthodox":["Greek / Cypriot","Russian","Serbian","Romanian","Other Orthodox"],
@@ -56,7 +60,11 @@ const VARIANTS = {
  "muslim":["South Asian","Arab","Turkish, Balkan & Central Asian","Southeast Asian","African","Other / mixed"],
  "hindu":["North Indian","South Indian","Gujarati","Bengali","Punjabi Hindu","Other / diaspora"],
  "sikh":null,
- "civil":["Register office","Licensed venue","Celebrant-led","Humanist","Other"]
+ "civil":["Register office","Licensed venue","Celebrant-led","Humanist","Other"],
+ "buddhist":["Thai","Sri Lankan","Vietnamese","Chinese","Tibetan","Japanese","Western convert","Other"],
+ "jain":["Svetambara","Digambara","Gujarati Jain","Marwari Jain","Other"],
+ "bahai":["Persian heritage","South Asian heritage","African heritage","Western","Other"],
+ "quaker":null
 };
 ["greek-orthodox","roman-catholic","protestant","muslim","hindu"].forEach(k=>{
   if(VARIANTS[k] && !VARIANTS[k].some(v=>/^Other/.test(v))) VARIANTS[k].push("Other");
@@ -68,7 +76,10 @@ const VTITLES = {
  "jewish":["Which movement are you part of?","It shapes the ceremony, the dates and the details."],
  "muslim":["Which cultural background shapes your day?","The nikah is constant — the celebrations around it are wonderfully yours."],
  "hindu":["Which region's customs are yours?","Every region does it differently, and every one is spectacular."],
- "civil":["What style of ceremony?","Your day, your rules — just point me in the right direction."]
+ "civil":["What style of ceremony?","Your day, your rules — just point me in the right direction."],
+ "buddhist":["Which Buddhist tradition is yours?","Thai, Sri Lankan, Tibetan — they share almost nothing at a wedding, so I'd rather use yours."],
+ "jain":["Which Jain tradition?","Svetambara and Digambara share the principles and differ in the practice."],
+ "bahai":["Which heritage shapes the day?","The ceremony is the same everywhere. What surrounds it usually isn't."]
 };
 const VDESCS = {
  "muslim":{
@@ -93,7 +104,11 @@ const CEREMONY_OPTS = {
  muslim:["Mosque","At home","Banqueting venue","Not sure yet"],
  hindu:["Temple","Banqueting venue with mandap","Outdoor mandap","Not sure yet"],
  sikh:["Gurdwara","Not sure yet"],
- civil:["Register office","Licensed venue","Outdoor ceremony","Not sure yet"]
+ civil:["Register office","Licensed venue","Outdoor ceremony","Not sure yet"],
+ buddhist:["Temple or vihara","Banqueting venue","At home","Not sure yet"],
+ jain:["Derasar","Banqueting venue with mandap","Outdoor mandap","Not sure yet"],
+ bahai:["Bahá'í centre","Hired venue","At home","Not sure yet"],
+ quaker:["Meeting house","Not sure yet"]
 };
 const RECEPTION_OPTS = ["Hotel","Banqueting hall","Marquee","Restaurant"];
 const RECEPTION_LEANS = ["Hotel","Banqueting hall","Marquee","Restaurant","Beach","Outdoor","Farm / barn","Other"];
@@ -432,6 +447,9 @@ function obSteps(){
         {v:"muslim", l:"Muslim", d:PACK_TAGS["muslim"]},
         {v:"hindu", l:"Hindu", d:PACK_TAGS["hindu"]},
         {v:"sikh", l:"Sikh", d:PACK_TAGS["sikh"]},
+        {v:"buddhist", l:"Buddhist", d:PACK_TAGS["buddhist"]},
+        {v:"jain", l:"Jain", d:PACK_TAGS["jain"]},
+        {v:"bahai", l:"Bahá'í", d:PACK_TAGS["bahai"]},
         {v:"mixed", l:"We're blending two traditions", d:"double the love, and I'm here for it"},
         {v:"civil", l:"None of these, actually", d:"we'll do it beautifully your way"}],
       get:()=>a.religion, set:v=>{ a.religion=v; a.packChoice=v;
@@ -443,7 +461,8 @@ function obSteps(){
       opts:[
         {v:"greek-orthodox", l:"Orthodox", d:"Greek, Russian, Serbian — we'll get specific next"},
         {v:"roman-catholic", l:"Roman Catholic", d:PACK_TAGS["roman-catholic"]},
-        {v:"protestant", l:"Protestant / Anglican", d:PACK_TAGS["protestant"]}],
+        {v:"protestant", l:"Protestant / Anglican", d:PACK_TAGS["protestant"]},
+        {v:"quaker", l:"Quaker", d:PACK_TAGS["quaker"]}],
       get:()=>a.packId, set:v=>{ a.packId=v; a.packId2=null; }},
     {id:"mix", t:"Two traditions, one love story", s:"Tell me whose is whose — I'll weave them together.", type:"mix",
       show:()=>a.packChoice==="mixed"},

@@ -125,6 +125,15 @@
       "default": false,
       "description": "In traditional communities, friends and family host festive meals for the couple on each of the seven nights after the wedding, ending with the seven blessings again. Each meal needs a minyan and, apart from Shabbat, at least one guest who was not at the wedding, the panim chadashot or new face. Sephardi families often centre the week on the Shabbat chatan, the celebratory Shabbat after the wedding. Most Reform and secular couples skip the week or keep just one dinner.",
       "hosts": "Different friends and relatives each night"
+    },
+    {
+      "id": "badeken",
+      "name": "Badeken — the veiling",
+      "when": "Immediately before the ceremony",
+      "optional": false,
+      "default": true,
+      "description": "The groom is escorted to the bride and lowers her veil, usually with singing and both sets of parents present. It takes a few minutes, but it needs to be in the schedule and in the photographer's brief: it happens in a side room and cannot be repeated.",
+      "hosts": "Both families"
     }
   ],
   "items": [
@@ -971,6 +980,11 @@
       "name": "Egalitarian and same-sex adaptations",
       "description": "Reform, Liberal, Reconstructionist and, since 2012, Conservative movements offer marriage ceremonies for same-sex couples, adapting the ketubah, the ring declarations and rituals like the bedeken and circling. Many opposite-sex couples in these movements use the same egalitarian forms — double rings, mutual declarations, both breaking the glass. Orthodox communities do not offer same-sex marriage ceremonies.",
       "optional": true
+    },
+    {
+      "name": "Badeken — the veiling",
+      "description": "Immediately before the chuppah the groom is brought to the bride, often with singing, and lowers her veil himself. It recalls Jacob being deceived into marrying Leah because he could not see her face, so the groom confirms he is marrying the right woman. It is brief, public and frequently the most emotional two minutes of the day, and many photographers who have not shot a Jewish wedding miss it entirely.",
+      "optional": false
     }
   ],
   "gotchas": [

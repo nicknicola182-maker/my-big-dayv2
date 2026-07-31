@@ -6,7 +6,7 @@
     "events": 5,
     "items": 42,
     "itemsOn": 20,
-    "timeline": 26,
+    "timeline": 27,
     "paperwork": 15,
     "runsheet": 5
   },
@@ -445,6 +445,13 @@
       "critical": true,
       "when": "12 months before",
       "task": "Check the calendar: Ramadan makes daytime catering impractical, Eid seasons book out suppliers, and many Shia families avoid the mourning months of Muharram and Safar"
+    },
+    {
+      "id": "t26",
+      "mb": 12,
+      "critical": false,
+      "when": "12 months before",
+      "task": "Let the families complete istikhara and any formal agreement between them before you book anything — deposits paid before that point are the ones most often lost"
     },
     {
       "id": "t3",

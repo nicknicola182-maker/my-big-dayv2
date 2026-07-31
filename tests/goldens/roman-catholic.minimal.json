@@ -6,8 +6,8 @@
     "events": 7,
     "items": 43,
     "itemsOn": 23,
-    "timeline": 32,
-    "paperwork": 16,
+    "timeline": 33,
+    "paperwork": 17,
     "runsheet": 7
   },
   "allocatedTotal": 24000,
@@ -521,6 +521,13 @@
       "task": "Start shopping for the dress, allowing for a long lead time plus alterations"
     },
     {
+      "id": "t32",
+      "mb": 9,
+      "critical": true,
+      "when": "9 months before",
+      "task": "If either of you was married before, or you are already married civilly, tell the priest at the first meeting — annulment and convalidation both take far longer than the rest of the planning"
+    },
+    {
       "id": "t11",
       "mb": 8,
       "critical": true,
@@ -748,6 +755,11 @@
       "id": "p15",
       "who": "Foreign nationals marrying in Italy",
       "item": "Nulla osta from your embassy"
+    },
+    {
+      "id": "p16",
+      "who": "Both",
+      "item": "Civil marriage certificate, if you are convalidating"
     }
   ]
 }

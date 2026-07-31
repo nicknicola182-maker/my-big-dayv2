@@ -6,8 +6,8 @@
     "events": 5,
     "items": 45,
     "itemsOn": 21,
-    "timeline": 29,
-    "paperwork": 16,
+    "timeline": 30,
+    "paperwork": 17,
     "runsheet": 5
   },
   "allocatedTotal": 44000,
@@ -475,6 +475,13 @@
       "task": "In England and Wales, check the registration service's availability for your date before you confirm the venue: the registrar and the venue are separate bookings and both must line up"
     },
     {
+      "id": "t26",
+      "mb": 13,
+      "critical": true,
+      "when": "Aug 2026",
+      "task": "Confirm in writing that your venue holds current approved-premises status and which room the approval covers, before you pay a deposit"
+    },
+    {
       "id": "t3",
       "mb": 12,
       "critical": true,
@@ -503,7 +510,7 @@
       "task": "Book the photographer and videographer"
     },
     {
-      "id": "t26",
+      "id": "t27",
       "mb": 11,
       "critical": true,
       "when": "Oct 2026",
@@ -531,7 +538,7 @@
       "task": "Send save the dates, especially if guests are travelling"
     },
     {
-      "id": "t27",
+      "id": "t28",
       "mb": 9,
       "critical": false,
       "when": "Dec 2026",
@@ -587,7 +594,7 @@
       "task": "Give notice: in England and Wales at your local register office at least 29 days before the ceremony (valid 12 months); in Scotland submit M10 forms no later than 29 days and no earlier than 3 months before; in Northern Ireland at least 28 days before"
     },
     {
-      "id": "t28",
+      "id": "t29",
       "mb": 4,
       "critical": true,
       "when": "May 2027",
@@ -732,6 +739,11 @@
       "id": "p14",
       "who": "Both, if you married abroad",
       "item": "Foreign marriage certificate"
+    },
+    {
+      "id": "p15",
+      "who": "The couple",
+      "item": "Check the venue is approved premises, or book the register office"
     },
     {
       "id": "p-dest",

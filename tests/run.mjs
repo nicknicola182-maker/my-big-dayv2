@@ -67,7 +67,7 @@ if (wants('packs')) {
   describe('packs — conformance to SCHEMA.md');
   const dir = path.join(ROOT, 'packs');
   const files = fs.readdirSync(dir).filter(n => n.endsWith('.json')).sort();
-  ok(files.length === 8, 'eight packs present', `found ${files.length}`);
+  ok(files.length >= 8, 'at least the eight launch packs are present', `found ${files.length}`);
 
   for (const file of files) {
     const p = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));

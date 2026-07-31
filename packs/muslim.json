@@ -804,6 +804,11 @@
       "monthsBefore": 0,
       "task": "Afterwards, collect the nikah certificate, register the marriage with the civil authority where that is a separate step, and hold the walima",
       "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Let the families complete istikhara and any formal agreement between them before you book anything — deposits paid before that point are the ones most often lost",
+      "critical": false
     }
   ],
   "paperwork": [
@@ -997,6 +1002,11 @@
     {
       "name": "The Fatiha and the lefe",
       "description": "In Hausa and much of northern Nigerian tradition the marriage is solemnised at the Fatiha, agreed between the families at the mosque, after which come days of cultural celebration: the lefe — suitcases of clothes, jewellery and perfume sent by the groom to the bride — the kamu, where the groom's side playfully pays to unveil the bride, and the budan kai unveiling. The religious core and the cultural festival are understood by everyone as distinct layers.",
+      "optional": true
+    },
+    {
+      "name": "Salat al-Istikhara",
+      "description": "A prayer for guidance, offered by one or both parties before committing to the match. There is no sign to wait for and no dream to interpret; the tradition is that you pray, then act on your settled inclination. It matters to the planning because it usually happens before any date is fixed, and families may not move on venues or invitations until it is done.",
       "optional": true
     }
   ],

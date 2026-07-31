@@ -1,0 +1,729 @@
+{
+  "id": "jain",
+  "name": "Jain",
+  "shortName": "Jain",
+  "faithGroup": "Other",
+  "blurb": "A Hindu-looking wedding with a different rulebook underneath: the offerings go to the Tirthankaras, the chants come from Jain scripture, and non-violence shapes the menu, the flowers and the guest list.",
+  "commonCountries": [
+    "IN",
+    "GB",
+    "US",
+    "CA",
+    "KE",
+    "AE",
+    "BE",
+    "AU",
+    "TZ"
+  ],
+  "typicalGuests": {
+    "low": 100,
+    "typical": 300,
+    "high": 1000
+  },
+  "typicalDays": 3,
+  "terms": {
+    "officiant": "pandit or Jain vidhikar",
+    "ceremonyVenue": "derasar or banqueting hall",
+    "ceremony": "the vivah vidhi",
+    "bestMan": "best man",
+    "maidOfHonour": "maid of honour",
+    "reception": "reception",
+    "firstDance": "first dance",
+    "witnesses": "witnesses"
+  },
+  "events": [
+    {
+      "id": "lagna-lekhan",
+      "name": "Lagna Lekhan",
+      "when": "Three to six months before",
+      "optional": false,
+      "default": true,
+      "description": "A small puja at the bride's home at which the auspicious date and time are written down and formally fixed. Close family attend. Everything else in the plan hangs off the date settled here.",
+      "hosts": "The bride's family"
+    },
+    {
+      "id": "sagai",
+      "name": "Sagai — the engagement",
+      "when": "Six to eighteen months before",
+      "optional": true,
+      "default": true,
+      "description": "The formal engagement, with gifts exchanged between the families and often a tilak for the groom.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "mandap-mahurat",
+      "name": "Mandap Mahurat and Griha Shanti",
+      "when": "One to two weeks before",
+      "optional": true,
+      "default": true,
+      "description": "Prayers at both homes before the wedding structures go up, asking for the removal of obstacles and peace on the household.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "bana-betai",
+      "name": "Bana Betai — the paste ceremony",
+      "when": "One or two days before",
+      "optional": true,
+      "default": true,
+      "description": "The equivalent of haldi, but the paste is made from chickpea flour rather than turmeric in many Jain families. Married women of the family apply it to the bride and groom at their own homes.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "mehndi",
+      "name": "Mehndi",
+      "when": "One or two days before",
+      "optional": true,
+      "default": true,
+      "description": "Henna for the bride and the women of both families, with music and food. Cultural rather than religious, and near-universal in Gujarati Jain families.",
+      "hosts": "The bride's family"
+    },
+    {
+      "id": "sangeet",
+      "name": "Sangeet",
+      "when": "One or two nights before",
+      "optional": true,
+      "default": true,
+      "description": "The big musical night — rehearsed dances from both families, and usually the largest party of the week after the wedding itself.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "barat",
+      "name": "Barat and Sanmuk Milap",
+      "when": "Wedding day, before the ceremony",
+      "optional": false,
+      "default": true,
+      "description": "The groom's procession arrives and the two families formally meet and embrace. Jain barats are typically without alcohol and often without the horse.",
+      "hosts": "The groom's family"
+    },
+    {
+      "id": "vivah",
+      "name": "The vivah vidhi",
+      "when": "Wedding day, at the muhurat",
+      "optional": false,
+      "default": true,
+      "description": "The ceremony itself: the granthi bandhan tying the couple's garments, the hasta melap joining of hands, and the pheras around the sacred fire. The offerings and chants are Jain, drawn from texts such as the Acar Dinkar, and are addressed to the Tirthankaras rather than to Hindu deities.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "vidaai",
+      "name": "Vidaai",
+      "when": "Straight after the ceremony",
+      "optional": false,
+      "default": true,
+      "description": "The bride's farewell to her family. Emotional, brief, and traditionally the point at which she leaves for the groom's home.",
+      "hosts": "The bride's family"
+    },
+    {
+      "id": "reception",
+      "name": "Reception",
+      "when": "Wedding evening or the following day",
+      "optional": false,
+      "default": true,
+      "description": "Hosted by the groom's family in most Jain communities. Strictly vegetarian, and in observant families without root vegetables.",
+      "hosts": "The groom's family"
+    },
+    {
+      "id": "derasar",
+      "name": "Temple visit",
+      "when": "After the wedding",
+      "optional": true,
+      "default": false,
+      "description": "The couple visit the derasar to offer prayers, often the day after.",
+      "hosts": "The couple"
+    }
+  ],
+  "items": [
+    {
+      "id": "pandit",
+      "name": "Pandit or vidhikar fee",
+      "section": "Ceremony",
+      "event": "vivah",
+      "note": "Ask specifically for someone who performs the Jain vidhi rather than the Hindu one. The structure looks similar but the mantras, the offerings and the number of pheras differ.",
+      "essential": true,
+      "shareOfBudget": 0.0107,
+      "unit": "fixed",
+      "supplierCategory": "Pandit",
+      "religiousRequirement": true
+    },
+    {
+      "id": "muhurat",
+      "name": "Lagna Lekhan and muhurat consultation",
+      "section": "Ceremony",
+      "event": "lagna-lekhan",
+      "note": "The date and time are fixed at this puja and everything else follows. Book the astrologer before the venue.",
+      "essential": true,
+      "shareOfBudget": 0.0071,
+      "unit": "fixed",
+      "supplierCategory": "Pandit",
+      "religiousRequirement": true
+    },
+    {
+      "id": "mandap",
+      "name": "Mandap hire and decoration",
+      "section": "Ceremony",
+      "event": "vivah",
+      "note": "The canopy over the sacred fire. Experienced mandap companies handle the venue's fire permissions, which is a good reason to use one.",
+      "essential": true,
+      "shareOfBudget": 0.049,
+      "unit": "fixed",
+      "supplierCategory": "Decorator",
+      "religiousRequirement": true
+    },
+    {
+      "id": "agni",
+      "name": "Puja items and havan samagri",
+      "section": "Ceremony",
+      "event": "vivah",
+      "note": "Everything the fire needs. Jain families often ask for the offerings to exclude honey and certain items — confirm with the vidhikar rather than the general supplier.",
+      "essential": true,
+      "shareOfBudget": 0.0071,
+      "unit": "fixed",
+      "supplierCategory": "Pandit",
+      "religiousRequirement": true
+    },
+    {
+      "id": "derasar-fee",
+      "name": "Derasar donation",
+      "section": "Ceremony",
+      "event": "derasar",
+      "note": "Where the ceremony or a blessing happens at the temple.",
+      "essential": false,
+      "shareOfBudget": 0.0089,
+      "unit": "fixed",
+      "supplierCategory": "Temple",
+      "religiousRequirement": true
+    },
+    {
+      "id": "varmala",
+      "name": "Varmala garlands",
+      "section": "Flowers & Styling",
+      "event": "vivah",
+      "note": "Made fresh on the morning. Some strict Jain families prefer fabric or beaded garlands, since picking flowers harms living plants.",
+      "essential": true,
+      "shareOfBudget": 0.0107,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": true
+    },
+    {
+      "id": "civil",
+      "name": "Civil marriage notice and registration",
+      "section": "Ceremony",
+      "event": "vivah",
+      "note": "In England and Wales the Jain ceremony alone usually has no legal effect, because most banqueting venues are not registered for marriage.",
+      "essential": true,
+      "shareOfBudget": 0.016,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": true
+    },
+    {
+      "id": "venue-cer",
+      "name": "Ceremony venue hire",
+      "section": "Ceremony",
+      "event": "vivah",
+      "note": "Ask about open flame for the fire before anything else.",
+      "essential": true,
+      "shareOfBudget": 0.0446,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "venue-rec",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Often the same venue as the ceremony, sometimes grander and on a different day.",
+      "essential": false,
+      "shareOfBudget": 0.049,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "cater-wed",
+      "name": "Wedding day catering",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Strictly vegetarian. Many observant Jain families also exclude root vegetables — onion, garlic, potato, carrot — because harvesting them kills the plant and the soil organisms around it. This is a competence, not a menu tick-box.",
+      "essential": true,
+      "shareOfBudget": 0.1784,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": true
+    },
+    {
+      "id": "cater-events",
+      "name": "Catering for mehndi, sangeet and bana betai",
+      "section": "Reception",
+      "event": "sangeet",
+      "note": "Three or four separate events, each fed. This line is why a Jain wedding budget is not one wedding.",
+      "essential": true,
+      "shareOfBudget": 0.0891,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "no-alcohol",
+      "name": "Soft drinks, mocktails and juices",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Jain weddings are alcohol-free. Spend the drinks budget on something interesting rather than jugs of squash.",
+      "essential": true,
+      "shareOfBudget": 0.0312,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": true
+    },
+    {
+      "id": "attire-bride",
+      "name": "Bridal outfit",
+      "section": "Attire",
+      "event": "vivah",
+      "note": "Panetar and gharchola in Gujarati Jain families. Made to order from India needs months plus shipping, customs and alterations. Ask about silk — some Jain families avoid it, since traditional silk production kills the silkworm.",
+      "essential": true,
+      "shareOfBudget": 0.0535,
+      "unit": "fixed",
+      "supplierCategory": "Bridal boutique",
+      "religiousRequirement": false
+    },
+    {
+      "id": "attire-bride2",
+      "name": "Outfits for the other events",
+      "section": "Attire",
+      "event": "sangeet",
+      "note": "Bana betai, mehndi, sangeet, reception. Four outfits is normal, not indulgent.",
+      "essential": true,
+      "shareOfBudget": 0.0267,
+      "unit": "fixed",
+      "supplierCategory": "Bridal boutique",
+      "religiousRequirement": false
+    },
+    {
+      "id": "attire-groom",
+      "name": "Groom's outfit",
+      "section": "Attire",
+      "event": "vivah",
+      "note": "Sherwani or dhoti-kurta, same lead times and fittings.",
+      "essential": true,
+      "shareOfBudget": 0.025,
+      "unit": "fixed",
+      "supplierCategory": "Tailor",
+      "religiousRequirement": false
+    },
+    {
+      "id": "jewellery",
+      "name": "Jewellery",
+      "section": "Attire",
+      "event": "vivah",
+      "note": "Gold given to the bride is security and a family statement, not decoration. Budget it as a line.",
+      "essential": false,
+      "shareOfBudget": 0.0446,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "mehndi-artist",
+      "name": "Mehndi artist",
+      "section": "Beauty",
+      "event": "mehndi",
+      "note": "Bridal mehndi takes three to eight hours and the stain needs a day to deepen. Nothing else can share that day.",
+      "essential": true,
+      "shareOfBudget": 0.016,
+      "unit": "fixed",
+      "supplierCategory": "Mehndi artist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "beauty",
+      "name": "Hair and make-up across the events",
+      "section": "Beauty",
+      "event": "vivah",
+      "note": "Several events, several looks, often starting before dawn to hit the muhurat.",
+      "essential": true,
+      "shareOfBudget": 0.0267,
+      "unit": "fixed",
+      "supplierCategory": "Beauty",
+      "religiousRequirement": false
+    },
+    {
+      "id": "photo",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "event": "vivah",
+      "note": "Must have shot a Jain or Gujarati wedding before. The key moments — granthi bandhan, hasta melap, the pheras — are quiet and easily missed in a loud room.",
+      "essential": true,
+      "shareOfBudget": 0.0624,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "video",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "event": "vivah",
+      "note": "Worth it for the vidhi itself, which is long, quiet and easily lost in a loud room.",
+      "essential": false,
+      "shareOfBudget": 0.0312,
+      "unit": "fixed",
+      "supplierCategory": "Videographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dj",
+      "name": "Sangeet DJ, sound and staging",
+      "section": "Music & Entertainment",
+      "event": "sangeet",
+      "note": "The biggest party of the week for most families.",
+      "essential": true,
+      "shareOfBudget": 0.0357,
+      "unit": "fixed",
+      "supplierCategory": "DJ",
+      "religiousRequirement": false
+    },
+    {
+      "id": "choreographer",
+      "name": "Sangeet choreographer",
+      "section": "Music & Entertainment",
+      "event": "sangeet",
+      "note": "Six weeks of rehearsals with both families. Book before the outfits.",
+      "essential": false,
+      "shareOfBudget": 0.016,
+      "unit": "fixed",
+      "supplierCategory": "Choreographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "dhol",
+      "name": "Dhol players for the barat",
+      "section": "Music & Entertainment",
+      "event": "barat",
+      "note": "The barat always runs late. Build slack between its start and the muhurat.",
+      "essential": false,
+      "shareOfBudget": 0.0134,
+      "unit": "fixed",
+      "supplierCategory": "Musicians",
+      "religiousRequirement": false
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers and styling",
+      "section": "Flowers & Styling",
+      "event": "reception",
+      "note": "Confirm with the family whether fresh flowers are used, or fabric alternatives.",
+      "essential": false,
+      "shareOfBudget": 0.0401,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "stationery",
+      "name": "Invitations",
+      "section": "Stationery",
+      "event": "reception",
+      "note": "Say plainly that the event is vegetarian and alcohol-free, and whether root vegetables are excluded, so guests and their dietary needs are not a surprise.",
+      "essential": true,
+      "shareOfBudget": 0.0223,
+      "unit": "fixed",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": true
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "section": "Transport",
+      "event": "barat",
+      "note": "Getting both families between homes, ceremony and reception across several days.",
+      "essential": false,
+      "shareOfBudget": 0.0178,
+      "unit": "fixed",
+      "supplierCategory": "Transport",
+      "religiousRequirement": false
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts between the families",
+      "section": "Rings & Gifts",
+      "event": "sagai",
+      "note": "Exchanged at the sagai and again at the wedding. Substantial and expected.",
+      "essential": false,
+      "shareOfBudget": 0.0267,
+      "unit": "fixed",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "charity",
+      "name": "Daan — charitable giving",
+      "section": "Rings & Gifts",
+      "event": "vivah",
+      "note": "Giving is built into Jain practice, and many families make a significant donation as part of the wedding rather than as an afterthought.",
+      "essential": false,
+      "shareOfBudget": 0.0178,
+      "unit": "fixed",
+      "supplierCategory": "",
+      "religiousRequirement": true
+    },
+    {
+      "id": "contingency",
+      "name": "Contingency",
+      "section": "Extras",
+      "event": "",
+      "note": "Hold something back. A week-long wedding with a fixed muhurat and several venues generates surprises that a one-day wedding does not.",
+      "essential": false,
+      "shareOfBudget": 0.0223,
+      "unit": "fixed",
+      "supplierCategory": "",
+      "religiousRequirement": false
+    }
+  ],
+  "timeline": [
+    {
+      "monthsBefore": 15,
+      "task": "Fix the muhurat through the Lagna Lekhan before booking anything — the auspicious time anchors every other booking",
+      "critical": true
+    },
+    {
+      "monthsBefore": 14,
+      "task": "Find a pandit or vidhikar who performs the Jain vidhi specifically, not the Hindu one",
+      "critical": true
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Book the venue, and get written permission for an open flame indoors for the fire",
+      "critical": true
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Establish with both families whether root vegetables are excluded, and how strictly — it decides which caterers are even possible",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Decide the civil plan now: a Jain ceremony in England and Wales usually has no legal effect on its own",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "Book a caterer who cooks Jain food properly, not an Indian caterer who will 'leave out the onion'",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Book the mandap company and let them handle the venue's fire safety between them",
+      "critical": false
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Order the bridal outfit and the groom's — months, plus shipping, customs and alterations",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Ask about silk and about flower garlands, since some families avoid both on ahimsa grounds",
+      "critical": false
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Book the photographer and videographer who have shot a Jain or Gujarati wedding",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Book the DJ and the choreographer, and set the sangeet rehearsal dates with both families",
+      "critical": false
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Confirm the guest list across all events — the sangeet and reception lists are usually different and both larger than you think",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Book the mehndi artist and block the whole day before the wedding for the bride",
+      "critical": true
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Plan the outfits for bana betai, mehndi and sangeet",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Send invitations stating clearly that the events are vegetarian and alcohol-free",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Give notice for the civil marriage",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Arrange the Mandap Mahurat and Griha Shanti at both homes",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Print a programme or brief an emcee to explain the vidhi as it goes, since much of the room will not know the Jain differences",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Confirm the puja items with the vidhikar, including anything the family wishes to exclude",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Build thirty to sixty minutes of slack between the barat's arrival and the muhurat",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Confirm final numbers with a buffer rather than an exact count",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Walk the run of the day against the muhurat with the pandit",
+      "critical": true
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Confirm the fire permission and the smoke detector arrangements in writing",
+      "critical": true
+    },
+    {
+      "monthsBefore": 0,
+      "task": "Register the civil marriage and collect the certificate",
+      "critical": true
+    }
+  ],
+  "paperwork": [
+    {
+      "item": "Civil marriage notice or licence",
+      "who": "Both",
+      "note": "In England and Wales a Jain ceremony in a banqueting hall or marquee has no legal effect on its own, because the venue is not registered for marriage. Couples who skip this are legally unmarried, which surfaces years later in property, inheritance and immigration."
+    },
+    {
+      "item": "Passports or birth certificates and proof of address",
+      "who": "Both",
+      "note": ""
+    },
+    {
+      "item": "Evidence of the ending of any previous marriage",
+      "who": "Either, if applicable",
+      "note": "Decree absolute or death certificate."
+    },
+    {
+      "item": "Written venue permission for an open flame",
+      "who": "The couple",
+      "note": "Specific to the havan, with a fire-safe mandap setup and an agreement about smoke detectors. Get it before the deposit, not after."
+    },
+    {
+      "item": "Registration after the ceremony in India",
+      "who": "Both, if marrying there",
+      "note": "Registration under the Hindu Marriage Act covers Jains, Buddhists and Sikhs as well. Courts have held that you need both the rites and the certificate."
+    },
+    {
+      "item": "Registrar booking for approved premises",
+      "who": "The couple",
+      "note": "If you want the legal ceremony at the venue rather than the register office. Registrars book out earlier than venues."
+    },
+    {
+      "item": "Confirmation of the caterer's Jain provision in writing",
+      "who": "The couple",
+      "note": "Put the root-vegetable question in the contract. Verbal agreement with a sales manager is not the same as the kitchen understanding it."
+    },
+    {
+      "item": "Council or police permission for a street procession",
+      "who": "The couple",
+      "note": "If the barat goes along a public road. Some venues also ban animals outright."
+    }
+  ],
+  "customs": [
+    {
+      "name": "The offerings are Jain, not Hindu",
+      "description": "The structure of the ceremony resembles a Gujarati Hindu wedding, but the offerings are made to the Tirthankaras and the mantras derive from Jain texts such as the Acar Dinkar. Booking a pandit who performs the Hindu vidhi and assuming it is close enough is the most common mistake.",
+      "optional": false
+    },
+    {
+      "name": "Granthi bandhan",
+      "description": "The bride's sari end and the groom's shawl are tied together in a knot before the pheras, so the couple are physically joined for the circling.",
+      "optional": false
+    },
+    {
+      "name": "The pheras",
+      "description": "Sources and communities differ on the number: some Jain communities take four pheras, others seven as in Gujarati Hindu practice, and Svetambara and Digambara custom is not uniform. Ask your own vidhikar and your family rather than working from a general guide.",
+      "optional": false
+    },
+    {
+      "name": "Bana Betai",
+      "description": "The paste ceremony that stands in for haldi. In many Jain families the paste is chickpea flour without turmeric, applied at each home by the married women of the family.",
+      "optional": true
+    },
+    {
+      "name": "Ahimsa shapes the day",
+      "description": "Non-violence is not an abstraction here. It reaches the menu, sometimes the flowers, sometimes the silk, and the absence of alcohol. Families vary in strictness, and the two sides may not match.",
+      "optional": false
+    },
+    {
+      "name": "No root vegetables, in observant families",
+      "description": "Onion, garlic, potato and carrot are avoided because uprooting the plant kills it and the organisms in the soil. Many caterers who advertise Jain food do not actually cook this way.",
+      "optional": true
+    },
+    {
+      "name": "Alcohol-free",
+      "description": "Jain weddings do not serve alcohol. This is settled rather than negotiable, and worth saying on the invitation.",
+      "optional": false
+    },
+    {
+      "name": "Daan",
+      "description": "Charitable giving is woven into the occasion rather than added to it, and many families give substantially at the time of a wedding.",
+      "optional": true
+    },
+    {
+      "name": "Digambara and Svetambara",
+      "description": "The two main traditions share the principles and differ in some practice. A vidhikar from one will usually say so if asked, and mixed marriages between them are common and unremarkable.",
+      "optional": true
+    },
+    {
+      "name": "Vidaai",
+      "description": "The bride's departure. Brief, and the moment most families find hardest.",
+      "optional": false
+    },
+    {
+      "name": "Chaturmas",
+      "description": "The four monsoon months are a period of restraint and study in which many families avoid weddings. Dates shift with the lunar calendar.",
+      "optional": true
+    }
+  ],
+  "gotchas": [
+    "Jain is not a subset of Hindu. Booking a Hindu pandit, a Hindu-format ceremony or a caterer who treats Jain food as 'Indian vegetarian' produces a wedding that the family will recognise as wrong.",
+    "The root vegetable question decides your caterer, not your menu. Ask both families how strictly they observe it before you shortlist anyone, and put the answer in the contract.",
+    "The number of pheras genuinely varies between Jain communities. Do not settle it from a website. Ask your vidhikar and both families, well before the programme is printed.",
+    "The havan means real fire indoors. Many Western venues refuse open flames or handle them badly. You need written permission, a fire-safe mandap and an agreement about smoke detectors.",
+    "In England and Wales the ceremony alone usually has no legal effect, because banqueting halls and marquees are not registered for marriage. Decide the civil plan at the start.",
+    "Alcohol is not a negotiation. Non-Jain guests and non-Jain in-laws sometimes assume there will be a bar 'just for the reception'. Say it on the invitation.",
+    "Silk and fresh flowers are a question in stricter families, because traditional silk production kills the silkworm and cut flowers are living things. Ask before you order the varmala.",
+    "The wedding is not one event. Bana betai, mehndi, sangeet, the wedding and the reception each need feeding, staffing and outfits. Budget for the week, not the day.",
+    "Bridal mehndi takes three to eight hours and the stain needs a day to deepen. Nothing that needs her hands can share that day.",
+    "The barat always runs late, and the muhurat does not move. Build thirty to sixty minutes of slack and tell the photographer where the pause will be.",
+    "Chaturmas closes several months for weddings in observant families, and the dates move with the lunar calendar each year."
+  ],
+  "sources": [
+    "https://www.culturalindia.net/weddings/regional-weddings/jain-wedding.html",
+    "https://weddingtalesmatrimony.com/blogs/knowledge-centre/what-are-the-common-jain-wedding-rituals-in-svetambara-and-digambara-communities",
+    "https://www.storiesbyarpit.com/2017/02/decoding-jain-vidhi-for-marriage-10.html",
+    "https://www.weddingwire.in/wedding-tips/jain-marriage--c2061",
+    "https://www.keralamarriage.com/blog/complete-guide-to-jain-wedding-rituals-in-india/70",
+    "https://www.astroyogi.com/wedding/jain",
+    "https://www.gov.uk/marriages-civil-partnerships",
+    "https://vardags.com/law-guide/legal-marriage-requirements/religious-ceremonies-sikh-muslim-hindu"
+  ]
+}

@@ -6,7 +6,7 @@
     "events": 5,
     "items": 46,
     "itemsOn": 24,
-    "timeline": 29,
+    "timeline": 30,
     "paperwork": 16,
     "runsheet": 5
   },
@@ -484,6 +484,13 @@
       "task": "Check the calendar: Ramadan makes daytime catering impractical, Eid seasons book out suppliers, and many Shia families avoid the mourning months of Muharram and Safar"
     },
     {
+      "id": "t26",
+      "mb": 12,
+      "critical": false,
+      "when": "Sept 2026",
+      "task": "Let the families complete istikhara and any formal agreement between them before you book anything — deposits paid before that point are the ones most often lost"
+    },
+    {
       "id": "t3",
       "mb": 11,
       "critical": true,
@@ -498,7 +505,7 @@
       "task": "Agree between the families who is hosting and paying for what — traditionally the bride's side hosts the main day and the groom's side the walima, but every family settles it differently"
     },
     {
-      "id": "t26",
+      "id": "t27",
       "mb": 11,
       "critical": true,
       "when": "Oct 2026",
@@ -540,7 +547,7 @@
       "task": "Plan the mehndi or henna night and book the henna artist for the day before it"
     },
     {
-      "id": "t27",
+      "id": "t28",
       "mb": 9,
       "critical": false,
       "when": "Dec 2026",
@@ -603,7 +610,7 @@
       "task": "Walk the venue and plan prayer space, washing access and where maghrib falls in the running order"
     },
     {
-      "id": "t28",
+      "id": "t29",
       "mb": 4,
       "critical": true,
       "when": "May 2027",
