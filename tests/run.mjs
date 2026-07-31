@@ -2,7 +2,7 @@
 /* The test runner. Asserts, reports, and exits non-zero on failure.
  *
  *   node tests/run.mjs              everything available
- *   node tests/run.mjs packs        one suite (packs | engine | state | sync | app)
+ *   node tests/run.mjs packs        one suite (packs | engine | branches | state | sync | app)
  *
  * Paths are resolved from the repo, not hardcoded, so this runs anywhere.
  * If Playwright isn't installed the browser suite is reported SKIPPED — loudly,
@@ -161,6 +161,12 @@ if (wants('engine')) {
 if (wants('state')) {
   const { run: runState } = await import('./state.mjs');
   guard('state', () => runState({ describe, ok, eq, group }));
+}
+
+/* ── branches: the delta layer over each pack ─────────────────── */
+if (wants('branches')) {
+  const { run: runBranches } = await import('./branches.mjs');
+  guard('branches', () => runBranches({ describe, ok, eq, group }));
 }
 
 /* ── sync: merge + conflict protocol ──────────────────────────── */

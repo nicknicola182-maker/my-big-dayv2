@@ -1055,6 +1055,342 @@
     "Bomboniera are conventionally one per household in Greece and Cyprus and one per person in much of the diaspora. Confirm which you are doing before ordering eight hundred of them.",
     "In Cyprus both of you need a thalassaemia screening certificate before the Church will marry you. It is quick, but it is one more appointment to book and one more certificate to chase."
   ],
+  "branches": {
+    "Greek / Cypriot": {
+      "label": "Greek / Cypriot Orthodox"
+    },
+    "Russian": {
+      "label": "Russian Orthodox",
+      "terms": {
+        "bestMan": "svidetel",
+        "maidOfHonour": "svidetelnitsa",
+        "witnesses": "svideteli"
+      },
+      "renameEvents": {
+        "ceremony": "The Betrothal and the Crowning (venchanie)"
+      },
+      "dropEvents": [
+        "resi",
+        "chairetisma"
+      ],
+      "addEvents": [
+        {
+          "id": "zags",
+          "name": "Civil registration at ZAGS",
+          "when": "Same day or shortly before",
+          "optional": "The couple",
+          "default": true,
+          "description": "In Russian practice the civil registration at the ZAGS office is a real ceremony in its own right, often with its own photographs and champagne, and it is what makes you legally married. The venchanie is the church marriage and follows it.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "vykup",
+          "name": "Vykup nevesty — the bride ransom",
+          "when": "Wedding morning",
+          "optional": true,
+          "default": true,
+          "description": "The groom must pass a series of comic tests and pay symbolic forfeits set by the bride's friends before he is allowed to collect her. Loud, staged and thoroughly enjoyed.",
+          "hosts": "The bride's family"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "zags-fee",
+          "name": "ZAGS registration fee and ceremony",
+          "section": "Ceremony",
+          "event": "zags",
+          "note": "The civil registration in Russia is a ceremony, not a form-filling appointment, and the grander halls are booked months ahead.",
+          "essential": true,
+          "shareOfBudget": 0.012,
+          "unit": "fixed",
+          "supplierCategory": "Registrar",
+          "religiousRequirement": true
+        },
+        {
+          "id": "vykup-props",
+          "name": "Vykup props and forfeits",
+          "section": "Extras",
+          "event": "vykup",
+          "note": "Small sums and silly props. Trivial in cost, central to the morning.",
+          "essential": false,
+          "shareOfBudget": 0.004,
+          "unit": "fixed",
+          "supplierCategory": "",
+          "religiousRequirement": false
+        },
+        {
+          "id": "crowns-held",
+          "name": "Crown-bearers' role",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "In Russian practice the crowns are usually held above the couple's heads throughout by the svideteli rather than placed on them. It is a long time to hold a crown steady — warn them.",
+          "essential": false,
+          "shareOfBudget": 0.003,
+          "unit": "fixed",
+          "supplierCategory": "Church supplies",
+          "religiousRequirement": true
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 6,
+          "task": "Book the ZAGS slot — in Russia the civil registration is the legal marriage and the desirable halls and dates go early",
+          "critical": true
+        },
+        {
+          "monthsBefore": 4,
+          "task": "Confirm with the priest whether the crowns are held above you or placed on your heads, since it changes who stands where",
+          "critical": false
+        },
+        {
+          "monthsBefore": 2,
+          "task": "Brief the svideteli that they may be holding the crowns aloft for the whole service",
+          "critical": false
+        }
+      ],
+      "addPaperwork": [
+        {
+          "item": "ZAGS registration",
+          "who": "Both",
+          "note": "In Russia the ZAGS certificate is the legal marriage. Most parishes will not perform the venchanie until they have seen it."
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Crowns held, not worn",
+          "description": "Where Greek practice places the stefana on the couple's heads, Russian practice usually has the witnesses hold ornate metal crowns above them for the length of the service.",
+          "optional": false
+        },
+        {
+          "name": "Karavai",
+          "description": "A round decorated loaf offered by the mothers when the couple arrive at the reception. Each bites without hands; the one who takes the larger piece is teased as head of the household.",
+          "optional": true
+        },
+        {
+          "name": "Gorko!",
+          "description": "Guests shout 'Gorko!' — bitter — through the reception, and the couple must kiss to sweeten it, while everyone counts aloud.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "The venchanie is not the legal marriage in Russia — the ZAGS registration is, and most priests will ask to see the certificate first.",
+        "Metal crowns held aloft for a forty-minute service is physically demanding. Pick witnesses who can manage it, and tell them in advance."
+      ]
+    },
+    "Serbian": {
+      "label": "Serbian Orthodox",
+      "terms": {
+        "bestMan": "kum",
+        "maidOfHonour": "kuma",
+        "witnesses": "kumovi"
+      },
+      "dropEvents": [
+        "resi",
+        "chairetisma"
+      ],
+      "addEvents": [
+        {
+          "id": "kupovina",
+          "name": "Buying the bride",
+          "when": "Wedding morning",
+          "optional": true,
+          "default": true,
+          "description": "The groom's party arrives at the bride's house and negotiates, loudly and comically, with her brother or cousin who blocks the door. An apple is often thrown from the roof and shot at.",
+          "hosts": "The bride's family"
+        },
+        {
+          "id": "kolo",
+          "name": "The kolo",
+          "when": "Wedding evening",
+          "optional": "Both families",
+          "default": true,
+          "description": "The circle dance that runs through the reception, drawing everyone in by the hands. Live musicians make the difference between a good kolo and a polite one.",
+          "hosts": "Both families"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "flag",
+          "name": "The wedding flag and flag-bearer",
+          "section": "Ceremony",
+          "event": "kupovina",
+          "note": "The barjaktar carries the flag at the head of the procession. A real role, given to a young unmarried relative.",
+          "essential": false,
+          "shareOfBudget": 0.006,
+          "unit": "fixed",
+          "supplierCategory": "",
+          "religiousRequirement": false
+        },
+        {
+          "id": "trubaci",
+          "name": "Trubači — the brass band",
+          "section": "Music & Entertainment",
+          "event": "kolo",
+          "note": "A Serbian wedding without brass is a quiet Serbian wedding. They play in the procession, at the door and through the night.",
+          "essential": true,
+          "shareOfBudget": 0.045,
+          "unit": "fixed",
+          "supplierCategory": "Musicians",
+          "religiousRequirement": false
+        },
+        {
+          "id": "apple",
+          "name": "The apple and the shooting",
+          "section": "Extras",
+          "event": "kupovina",
+          "note": "An apple thrown from the roof and shot at by the groom's party. Check what your venue and local law permit before anyone brings a rifle.",
+          "essential": false,
+          "shareOfBudget": 0.004,
+          "unit": "fixed",
+          "supplierCategory": "",
+          "religiousRequirement": false
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 9,
+          "task": "Book the trubači early — good brass bands are booked a year out in the season",
+          "critical": true
+        },
+        {
+          "monthsBefore": 6,
+          "task": "Choose the kum and kuma, remembering that in Serbian practice kumstvo is a lifelong family relationship, not a wedding-day role",
+          "critical": true
+        },
+        {
+          "monthsBefore": 3,
+          "task": "If the apple-shooting is happening, check the venue's rules and local firearms law rather than assuming",
+          "critical": true
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Kumstvo",
+          "description": "The kum is not a best man. It is a permanent spiritual kinship between families, often inherited, and the kum is expected at every christening thereafter.",
+          "optional": false
+        },
+        {
+          "name": "Slava",
+          "description": "Each Serbian family has a patron saint's day. If your wedding falls near either family's slava, expect that to complicate the calendar.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Kumstvo is inherited in many families. Choosing a kum without consulting both sets of parents can cause genuine offence.",
+        "The apple-shooting is illegal or impossible at most Western venues. Plan an alternative rather than discovering this on the morning."
+      ]
+    },
+    "Romanian": {
+      "label": "Romanian Orthodox",
+      "terms": {
+        "bestMan": "nas",
+        "maidOfHonour": "nasa",
+        "witnesses": "nasi"
+      },
+      "dropEvents": [
+        "resi",
+        "chairetisma",
+        "krevati"
+      ],
+      "addEvents": [
+        {
+          "id": "cununie-civila",
+          "name": "Cununia civilă — the civil ceremony",
+          "when": "Days or weeks before",
+          "optional": "The couple",
+          "default": true,
+          "description": "The civil marriage at the town hall, legally separate from the church service and usually a smaller occasion with its own outfits and photographs.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "dar",
+          "name": "The dar — the money dance and gift announcement",
+          "when": "Late in the reception",
+          "optional": "Both families",
+          "default": true,
+          "description": "Guests give money in envelopes, and in many families the amounts are announced. It is expected to cover much of the wedding, and it arrives at the very end of the night.",
+          "hosts": "Both families"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "nasi-role",
+          "name": "The nasi's contribution",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "The nasi traditionally pay for significant parts of the wedding, including the candles and often the venue. Agree who is paying for what early and explicitly.",
+          "essential": true,
+          "shareOfBudget": 0.01,
+          "unit": "fixed",
+          "supplierCategory": "",
+          "religiousRequirement": true
+        },
+        {
+          "id": "lumanari",
+          "name": "Lumânări — the tall wedding candles",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "Two very large decorated candles carried by the nasi. Often over a metre and awkward to transport.",
+          "essential": true,
+          "shareOfBudget": 0.008,
+          "unit": "fixed",
+          "supplierCategory": "Church supplies",
+          "religiousRequirement": true
+        },
+        {
+          "id": "dar-admin",
+          "name": "Managing the dar",
+          "section": "Extras",
+          "event": "dar",
+          "note": "Someone trusted must collect, record and secure a large amount of cash on the night. This needs a named person and a plan, not goodwill.",
+          "essential": false,
+          "shareOfBudget": 0.004,
+          "unit": "fixed",
+          "supplierCategory": "",
+          "religiousRequirement": false
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 10,
+          "task": "Ask the nasi formally and agree in writing what they are covering — in Romanian practice this is a substantial financial commitment, not a symbolic one",
+          "critical": true
+        },
+        {
+          "monthsBefore": 2,
+          "task": "Name the person who will collect and secure the dar, and agree how it will be recorded",
+          "critical": true
+        },
+        {
+          "monthsBefore": 1,
+          "task": "Arrange transport for the lumânări, which are too tall for most cars",
+          "critical": false
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "The nasi",
+          "description": "Godparents of the marriage, chosen from an established married couple, who sponsor the wedding financially and remain a lifelong presence.",
+          "optional": false
+        },
+        {
+          "name": "Furatul miresei",
+          "description": "The bride is playfully 'stolen' during the reception and the groom must pay or perform to get her back.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "The dar arrives at the end of the night, but suppliers want paying before it. Cash flow, not total cost, is what catches Romanian couples out.",
+        "Being asked to be nas is being asked to fund part of a wedding. Ask early, ask clearly, and put the split in writing."
+      ]
+    },
+    "Other Orthodox": {
+      "label": "Other Orthodox",
+      "addGotchas": [
+        "Jurisdictions differ more than outsiders expect on fasting seasons, permitted dates and who may act as sponsor. Your own priest's answer beats any general guide, including this one."
+      ]
+    }
+  },
   "sources": [
     "https://www.goarch.org/-/instructions-for-weddings-divorces-baptisms-funerals-and-memorials",
     "https://www.denver.goarch.org/marriage-guidelines",

@@ -679,6 +679,76 @@
     "Sinsod in Thai practice is a substantial, negotiated sum, not a symbolic gift, and it is displayed publicly. Families who have not discussed it in advance discover the gap on the day.",
     "A ceremony in Thailand or Sri Lanka is not automatically recognised at home. You need the local civil registration and, usually, a legalised translation."
   ],
+  "branches": {
+    "Thai": {
+      "label": "Thai",
+      "addGotchas": [
+        "Thai practice centres the khan maak procession and the sai sin thread. Sinsod is negotiated and displayed publicly."
+      ]
+    },
+    "Sri Lankan": {
+      "label": "Sri Lankan",
+      "addGotchas": [
+        "The poruwa ceremony and the nekath auspicious times are central, and an astrologer sets the minute for each stage of the day."
+      ]
+    },
+    "Vietnamese": {
+      "label": "Vietnamese",
+      "addEvents": [
+        {
+          "id": "le-gia-tien",
+          "name": "Lễ Gia Tiên — the ancestor ceremony",
+          "when": "Wedding morning",
+          "optional": false,
+          "default": true,
+          "description": "At both family altars the couple light incense and report the marriage to the ancestors. This, rather than any temple rite, is the heart of a Vietnamese wedding.",
+          "hosts": "Both families"
+        }
+      ],
+      "addGotchas": [
+        "Vietnamese Buddhist weddings are built around the family altars and the ancestor ceremony rather than a temple blessing. Red and gold are the colours; white is for funerals."
+      ]
+    },
+    "Chinese": {
+      "label": "Chinese",
+      "addEvents": [
+        {
+          "id": "tea",
+          "name": "The tea ceremony",
+          "when": "Wedding morning",
+          "optional": false,
+          "default": true,
+          "description": "The couple serve tea to elders in strict order of seniority, receiving red envelopes and jewellery in return. Getting the order wrong is a real offence.",
+          "hosts": "Both families"
+        }
+      ],
+      "addGotchas": [
+        "The tea ceremony order of seniority must be worked out in advance with both families, name by name.",
+        "White is a funeral colour in Chinese custom. The bride typically wears red for at least part of the day."
+      ]
+    },
+    "Tibetan": {
+      "label": "Tibetan",
+      "addGotchas": [
+        "Tibetan practice involves khata scarves and lama blessings, and dates are commonly set by a lama rather than an astrologer."
+      ]
+    },
+    "Japanese": {
+      "label": "Japanese",
+      "addGotchas": [
+        "Most Japanese weddings use Shinto or Christian-style ceremonies rather than Buddhist ones; Buddhist rites are more usual for funerals."
+      ]
+    },
+    "Western convert": {
+      "label": "Western convert",
+      "addGotchas": [
+        "Convert sanghas often have no established wedding form at all, so you are designing the ceremony with the teacher rather than inheriting one."
+      ]
+    },
+    "Other": {
+      "label": "Other"
+    }
+  },
   "sources": [
     "https://tibetanbuddhistencyclopedia.com/en/index.php/Thai_Buddhist_Wedding_ceremony",
     "https://tibetanbuddhistencyclopedia.com/en/index.php/Traditional_Buddhist_Wedding_Ceremony",

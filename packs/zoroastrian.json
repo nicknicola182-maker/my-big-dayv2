@@ -1,0 +1,660 @@
+{
+  "id": "zoroastrian",
+  "name": "Zoroastrian / Parsi",
+  "shortName": "Zoroastrian",
+  "faithGroup": "Other",
+  "blurb": "Good thoughts, good words, good deeds — and a ceremony conducted at dusk with rice thrown hard enough to sting.",
+  "commonCountries": [
+    "IN",
+    "GB",
+    "US",
+    "CA",
+    "AU",
+    "IR",
+    "PK",
+    "NZ",
+    "SG"
+  ],
+  "typicalGuests": {
+    "low": 60,
+    "typical": 200,
+    "high": 600
+  },
+  "typicalDays": 2,
+  "terms": {
+    "officiant": "mobed",
+    "ceremonyVenue": "agiary or baug",
+    "ceremony": "the Ashirvad",
+    "bestMan": "best man",
+    "maidOfHonour": "maid of honour",
+    "reception": "the reception",
+    "firstDance": "first dance",
+    "witnesses": "the two witnesses"
+  },
+  "events": [
+    {
+      "id": "rupia-peravanu",
+      "name": "Rupia Peravanu",
+      "when": "Two to six months before",
+      "optional": true,
+      "default": true,
+      "description": "The two families formally accept the match, the women of each household visiting the other with gifts of silver coins and sweets.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "madhavsaro",
+      "name": "Madhavsaro",
+      "when": "Four days before",
+      "optional": true,
+      "default": true,
+      "description": "A mango sapling in a pot is planted at both homes, symbolising fertility and growth. It is kept and planted out afterwards.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "adarni",
+      "name": "Adarni",
+      "when": "A few days before",
+      "optional": true,
+      "default": true,
+      "description": "The bride's family formally visits the groom's with gifts, and the two households are introduced properly.",
+      "hosts": "The bride's family"
+    },
+    {
+      "id": "supra-nu-murat",
+      "name": "Supra nu Murat",
+      "when": "The day before",
+      "optional": true,
+      "default": true,
+      "description": "Five married women pound turmeric and betel in flat bamboo trays, passing them in a set order. Turmeric paste is then applied to the couple at their own homes.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "nahan",
+      "name": "Nahan — the purificatory bath",
+      "when": "Wedding morning",
+      "optional": false,
+      "default": true,
+      "description": "A ritual bath and prayer before the ceremony, after which the couple wear white.",
+      "hosts": "The couple"
+    },
+    {
+      "id": "ashirvad",
+      "name": "The Ashirvad",
+      "when": "Wedding day, usually at dusk",
+      "optional": false,
+      "default": true,
+      "description": "The wedding itself. The couple sit facing each other separated by a cloth while the mobeds recite; the cloth drops and they race to throw rice at each other. Two mobeds and two witnesses are required, and the blessings are recited in Avestan and Pazand.",
+      "hosts": "Both families"
+    },
+    {
+      "id": "reception",
+      "name": "The reception",
+      "when": "Wedding evening",
+      "optional": false,
+      "default": true,
+      "description": "Traditionally a bhonu served on banana leaves in a set sequence, eaten with the hands, ending with lagan nu custard. Parsi wedding food is famously and specifically its own thing.",
+      "hosts": "The groom's family"
+    },
+    {
+      "id": "civil",
+      "name": "The civil marriage",
+      "when": "Before or alongside",
+      "optional": false,
+      "default": true,
+      "description": "In India, Parsi marriages are registered under the Parsi Marriage and Divorce Act 1936. Elsewhere the ceremony usually has no legal effect on its own.",
+      "hosts": "The couple"
+    }
+  ],
+  "items": [
+    {
+      "id": "mobed",
+      "name": "Mobeds' fees",
+      "section": "Ceremony",
+      "event": "ashirvad",
+      "note": "Two mobeds are required for the Ashirvad. Outside India and Iran there are very few, and they are frequently flown in — book before anything else.",
+      "essential": true,
+      "shareOfBudget": 0.0271,
+      "unit": "fixed",
+      "supplierCategory": "Mobed",
+      "religiousRequirement": true
+    },
+    {
+      "id": "agiary",
+      "name": "Agiary or baug hire",
+      "section": "Ceremony",
+      "event": "ashirvad",
+      "note": "In India, the baugs are the traditional venues and are booked a year or more ahead. Note that non-Zoroastrians may not enter the fire temple itself in most jurisdictions.",
+      "essential": true,
+      "shareOfBudget": 0.0452,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": true
+    },
+    {
+      "id": "ses",
+      "name": "Ses tray and ritual items",
+      "section": "Ceremony",
+      "event": "ashirvad",
+      "note": "The ses — a silver tray holding rice, coconut, betel, rosewater sprinkler and a small fire. Usually a family heirloom rather than bought.",
+      "essential": true,
+      "shareOfBudget": 0.0108,
+      "unit": "fixed",
+      "supplierCategory": "Temple supplies",
+      "religiousRequirement": true
+    },
+    {
+      "id": "rice",
+      "name": "Rice, coconut and garlands",
+      "section": "Ceremony",
+      "event": "ashirvad",
+      "note": "Thrown at the moment the cloth drops. Bring plenty; the throwing is competitive.",
+      "essential": true,
+      "shareOfBudget": 0.0072,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": true
+    },
+    {
+      "id": "chalk",
+      "name": "Chalk designs at the threshold",
+      "section": "Flowers & Styling",
+      "event": "ashirvad",
+      "note": "Traditional white chalk patterns drawn at doorways to welcome the couple.",
+      "essential": false,
+      "shareOfBudget": 0.0072,
+      "unit": "fixed",
+      "supplierCategory": "Decorator",
+      "religiousRequirement": false
+    },
+    {
+      "id": "torans",
+      "name": "Torans and floral hangings",
+      "section": "Flowers & Styling",
+      "event": "ashirvad",
+      "note": "Floral hangings at doorways and over the ceremony space.",
+      "essential": false,
+      "shareOfBudget": 0.0271,
+      "unit": "fixed",
+      "supplierCategory": "Florist",
+      "religiousRequirement": false
+    },
+    {
+      "id": "civil-fees",
+      "name": "Civil registration and certificates",
+      "section": "Ceremony",
+      "event": "civil",
+      "note": "In India under the Parsi Marriage and Divorce Act; elsewhere a separate civil ceremony.",
+      "essential": true,
+      "shareOfBudget": 0.0163,
+      "unit": "fixed",
+      "supplierCategory": "Registrar",
+      "religiousRequirement": true
+    },
+    {
+      "id": "venue-rec",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Traditionally a baug in India; anywhere with room for a banana-leaf service elsewhere.",
+      "essential": false,
+      "shareOfBudget": 0.0678,
+      "unit": "fixed",
+      "supplierCategory": "Venue",
+      "religiousRequirement": false
+    },
+    {
+      "id": "bhonu",
+      "name": "The bhonu — Parsi wedding catering",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Patra ni machhi, sali boti, pulao dar and lagan nu custard, served on banana leaves in a fixed order. Very few caterers outside the community can do it; the ones who can are booked far ahead.",
+      "essential": true,
+      "shareOfBudget": 0.2443,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": true
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "section": "Reception",
+      "event": "reception",
+      "note": "Parsi weddings are not dry, and the community's relationship with a good whisky is well established.",
+      "essential": false,
+      "shareOfBudget": 0.0542,
+      "unit": "perGuest",
+      "supplierCategory": "Caterer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "attire-bride",
+      "name": "Bridal white saree and garara",
+      "section": "Attire",
+      "event": "ashirvad",
+      "note": "The white saree worn in the Parsi style, over the right shoulder. Gara embroidery pieces are heirlooms and often restored rather than bought.",
+      "essential": true,
+      "shareOfBudget": 0.0633,
+      "unit": "fixed",
+      "supplierCategory": "Bridal boutique",
+      "religiousRequirement": true
+    },
+    {
+      "id": "attire-groom",
+      "name": "Groom's dagli and pheta",
+      "section": "Attire",
+      "event": "ashirvad",
+      "note": "The white dagli coat and the pheta hat. Tailored, and rarely available off the peg outside Mumbai.",
+      "essential": true,
+      "shareOfBudget": 0.0407,
+      "unit": "fixed",
+      "supplierCategory": "Tailor",
+      "religiousRequirement": true
+    },
+    {
+      "id": "gara-restore",
+      "name": "Gara restoration",
+      "section": "Attire",
+      "event": "ashirvad",
+      "note": "Antique gara embroidery passed down the family often needs specialist restoration, which takes months.",
+      "essential": false,
+      "shareOfBudget": 0.0226,
+      "unit": "fixed",
+      "supplierCategory": "Tailor",
+      "religiousRequirement": false
+    },
+    {
+      "id": "jewellery",
+      "name": "Jewellery",
+      "section": "Attire",
+      "event": "ashirvad",
+      "note": "Gold and pearls, often heirloom pieces brought out for the occasion.",
+      "essential": false,
+      "shareOfBudget": 0.0407,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "section": "Rings & Gifts",
+      "event": "civil",
+      "note": "Exchanged at the civil ceremony, since the Ashirvad has no ring exchange of its own.",
+      "essential": false,
+      "shareOfBudget": 0.0362,
+      "unit": "fixed",
+      "supplierCategory": "Jeweller",
+      "religiousRequirement": false
+    },
+    {
+      "id": "photo",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "event": "ashirvad",
+      "note": "The cloth dropping and the rice throwing is the shot. It happens once, fast, and in low light because the ceremony is usually at dusk.",
+      "essential": true,
+      "shareOfBudget": 0.0678,
+      "unit": "fixed",
+      "supplierCategory": "Photographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "video",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "event": "ashirvad",
+      "note": "The Avestan recitation is long and beautiful and almost nobody in the room understands it. A recording is often treasured later.",
+      "essential": false,
+      "shareOfBudget": 0.0316,
+      "unit": "fixed",
+      "supplierCategory": "Videographer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "music",
+      "name": "Musicians or DJ",
+      "section": "Music & Entertainment",
+      "event": "reception",
+      "note": "Anything you like. Parsi receptions are not solemn occasions.",
+      "essential": false,
+      "shareOfBudget": 0.0452,
+      "unit": "fixed",
+      "supplierCategory": "DJ",
+      "religiousRequirement": false
+    },
+    {
+      "id": "band",
+      "name": "Traditional band for the procession",
+      "section": "Music & Entertainment",
+      "event": "adarni",
+      "note": "A brass or traditional band for the adarni procession, where the family keeps that custom.",
+      "essential": false,
+      "shareOfBudget": 0.0163,
+      "unit": "fixed",
+      "supplierCategory": "Musicians",
+      "religiousRequirement": false
+    },
+    {
+      "id": "stationery",
+      "name": "Invitations",
+      "section": "Stationery",
+      "event": "reception",
+      "note": "Parsi invitations traditionally carry a distinctive wording and the families' full names.",
+      "essential": true,
+      "shareOfBudget": 0.0199,
+      "unit": "fixed",
+      "supplierCategory": "Stationer",
+      "religiousRequirement": false
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "section": "Transport",
+      "event": "ashirvad",
+      "note": "Getting both families between homes, ceremony and reception, at dusk.",
+      "essential": false,
+      "shareOfBudget": 0.0181,
+      "unit": "fixed",
+      "supplierCategory": "Transport",
+      "religiousRequirement": false
+    },
+    {
+      "id": "beauty",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "event": "ashirvad",
+      "note": "Draping a Parsi-style saree is a specific skill. Find someone who has done it.",
+      "essential": false,
+      "shareOfBudget": 0.0271,
+      "unit": "fixed",
+      "supplierCategory": "Beauty",
+      "religiousRequirement": false
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts between the families",
+      "section": "Rings & Gifts",
+      "event": "adarni",
+      "note": "Exchanged at the rupia peravanu and adarni. Silver coins are traditional.",
+      "essential": false,
+      "shareOfBudget": 0.0226,
+      "unit": "fixed",
+      "supplierCategory": "Gifts",
+      "religiousRequirement": false
+    },
+    {
+      "id": "charity",
+      "name": "Charitable giving",
+      "section": "Rings & Gifts",
+      "event": "ashirvad",
+      "note": "Giving is strongly emphasised, and many families make a donation to a Parsi trust or the agiary as part of the wedding.",
+      "essential": false,
+      "shareOfBudget": 0.0181,
+      "unit": "fixed",
+      "supplierCategory": "",
+      "religiousRequirement": true
+    },
+    {
+      "id": "contingency",
+      "name": "Contingency",
+      "section": "Extras",
+      "event": "",
+      "note": "Mobeds, gara restoration and Parsi caterers are all scarce. Hold something back.",
+      "essential": false,
+      "shareOfBudget": 0.0226,
+      "unit": "fixed",
+      "supplierCategory": "",
+      "religiousRequirement": false
+    }
+  ],
+  "timeline": [
+    {
+      "monthsBefore": 15,
+      "task": "Find and book the mobeds first. Outside India there are very few, and two are required for the Ashirvad",
+      "critical": true
+    },
+    {
+      "monthsBefore": 14,
+      "task": "If you are marrying in India, book the baug — the traditional venues go a year or more ahead",
+      "critical": true
+    },
+    {
+      "monthsBefore": 13,
+      "task": "Decide the legal plan: in India, registration is under the Parsi Marriage and Divorce Act 1936; elsewhere you will need a separate civil ceremony",
+      "critical": true
+    },
+    {
+      "monthsBefore": 12,
+      "task": "If either of you is not Zoroastrian, ask the mobeds directly and early whether they will officiate — practice on intermarriage differs sharply between and within communities",
+      "critical": true
+    },
+    {
+      "monthsBefore": 11,
+      "task": "Find a caterer who can cook a proper bhonu, and book them — there are very few outside the community",
+      "critical": true
+    },
+    {
+      "monthsBefore": 10,
+      "task": "Ask the family about the gara: heirloom pieces often need months of specialist restoration",
+      "critical": true
+    },
+    {
+      "monthsBefore": 9,
+      "task": "Commission the dagli and pheta, which are rarely available ready-made outside Mumbai",
+      "critical": true
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Confirm who holds the family ses and what it still contains",
+      "critical": false
+    },
+    {
+      "monthsBefore": 8,
+      "task": "Check whether non-Zoroastrian guests may enter the ceremony space, and plan the guest list accordingly",
+      "critical": true
+    },
+    {
+      "monthsBefore": 7,
+      "task": "Book the photographer and warn them the key moment is at dusk, lasts seconds and cannot be repeated",
+      "critical": false
+    },
+    {
+      "monthsBefore": 6,
+      "task": "Plan the Madhavsaro, Adarni and Supra nu Murat with the older women of both families, who will know the order",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Send invitations",
+      "critical": false
+    },
+    {
+      "monthsBefore": 5,
+      "task": "Arrange the mango saplings and the pots for Madhavsaro",
+      "critical": false
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Give civil notice, or arrange registration under the Parsi Act if in India",
+      "critical": true
+    },
+    {
+      "monthsBefore": 4,
+      "task": "Confirm the two witnesses for the Ashirvad",
+      "critical": true
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Order the rice, coconuts and garlands, generously",
+      "critical": false
+    },
+    {
+      "monthsBefore": 3,
+      "task": "Book the saree draper who knows the Parsi style",
+      "critical": false
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Walk the ceremony order with the mobeds, including where the cloth is held and by whom",
+      "critical": true
+    },
+    {
+      "monthsBefore": 2,
+      "task": "Confirm the bhonu menu and the banana leaves",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Confirm the nahan arrangements",
+      "critical": false
+    },
+    {
+      "monthsBefore": 1,
+      "task": "Brief guests unfamiliar with the rice-throwing that it is enthusiastic",
+      "critical": false
+    },
+    {
+      "monthsBefore": 0,
+      "task": "Register the marriage and collect the certificate",
+      "critical": true
+    }
+  ],
+  "paperwork": [
+    {
+      "item": "Registration under the Parsi Marriage and Divorce Act 1936",
+      "who": "Both, in India",
+      "note": "Parsi marriages in India are governed by their own Act, with their own registration route and their own grounds for divorce. It is not the Hindu or Special Marriage Act."
+    },
+    {
+      "item": "Civil notice of marriage",
+      "who": "Both, outside India",
+      "note": "In England and Wales at least 29 clear days before. The Ashirvad alone has no legal effect and most agiaries are not registered for marriage."
+    },
+    {
+      "item": "Passports or birth certificates and proof of address",
+      "who": "Both",
+      "note": ""
+    },
+    {
+      "item": "Evidence of the ending of any previous marriage",
+      "who": "Either, if applicable",
+      "note": "Decree absolute or death certificate."
+    },
+    {
+      "item": "Confirmation that the mobeds will officiate",
+      "who": "Both",
+      "note": "Particularly where one party is not Zoroastrian. Get the answer before booking anything else, because it may be no."
+    },
+    {
+      "item": "Navjote certificate, where asked",
+      "who": "Either or both",
+      "note": "Some mobeds and some communities ask for evidence of the navjote initiation."
+    },
+    {
+      "item": "Two witnesses to the Ashirvad",
+      "who": "Both",
+      "note": "Two adult Zoroastrian witnesses are required alongside the two mobeds."
+    },
+    {
+      "item": "Registration of the marriage afterwards",
+      "who": "Both",
+      "note": "Collect the certified copy. Relying on the religious ceremony alone leaves you legally unmarried outside India."
+    }
+  ],
+  "customs": [
+    {
+      "name": "Good thoughts, good words, good deeds",
+      "description": "Humata, hukhta, huvarshta — the phrase that organises Zoroastrian ethics, and the theme most often woven through the wedding's readings and speeches.",
+      "optional": false
+    },
+    {
+      "name": "The cloth and the rice",
+      "description": "The couple sit facing each other with a cloth held between them while the mobeds recite. When it drops, they race to throw rice at each other — whoever lands theirs first is teased as the one who will rule the household.",
+      "optional": false
+    },
+    {
+      "name": "Achu Michu",
+      "description": "Performed at the threshold by the mother-in-law with an egg, a coconut and water, circled around the head and broken to ward off harm.",
+      "optional": true
+    },
+    {
+      "name": "Hathevaro",
+      "description": "The couple's right hands are joined and bound with raw twine passed around them seven times while the mobeds recite.",
+      "optional": false
+    },
+    {
+      "name": "Dusk ceremonies",
+      "description": "Parsi weddings are traditionally held at or after sunset, which shapes the light, the photography and the schedule of the whole day.",
+      "optional": true
+    },
+    {
+      "name": "The bhonu",
+      "description": "The wedding meal is a fixed sequence served on banana leaves and eaten with the hands, ending with lagan nu custard. It is as specific and as loved as any part of the day.",
+      "optional": false
+    },
+    {
+      "name": "Two mobeds",
+      "description": "The Ashirvad requires two priests, not one. Outside India and Iran this is a genuine scarcity problem.",
+      "optional": false
+    },
+    {
+      "name": "Madhavsaro",
+      "description": "A mango sapling planted in a pot at both homes four days before, later planted out. One of the few wedding customs that leaves a living thing behind.",
+      "optional": true
+    },
+    {
+      "name": "White",
+      "description": "The bride wears white, and so does the groom in the dagli. It is the colour of purity here rather than of mourning or of Western bridal fashion.",
+      "optional": true
+    },
+    {
+      "name": "Charity",
+      "description": "Giving to Parsi trusts and to the agiary is customary at a wedding, and often substantial.",
+      "optional": true
+    }
+  ],
+  "gotchas": [
+    "There are very few mobeds outside India and Iran, and the Ashirvad needs two of them. This, not the venue, is the binding constraint on your date.",
+    "Practice on marrying a non-Zoroastrian differs sharply between communities and between individual mobeds, and in some jurisdictions a woman marrying out has historically faced exclusion. Ask directly, early, and get the answer before you spend anything.",
+    "Non-Zoroastrians are not admitted to the fire temple itself in most jurisdictions. If your guest list is mixed, the ceremony venue has to accommodate that.",
+    "A proper bhonu needs a caterer from within the community. Generic Indian catering is not the same food and the family will know immediately.",
+    "Heirloom gara embroidery often needs months of specialist restoration. Open the box early rather than three weeks before.",
+    "In India Parsi marriage is governed by its own 1936 Act, with its own registration and its own divorce law. Advice written for Hindu or Special Marriage Act weddings does not apply.",
+    "Outside India the Ashirvad has no legal effect and agiaries are generally not registered for marriage, so you need a separate civil ceremony.",
+    "The ceremony is at dusk and the decisive moment lasts seconds. Photographers used to daylight weddings routinely miss it.",
+    "The rice-throwing is genuinely vigorous. Warn guests with young children and anyone in contact lenses.",
+    "The community is small and shrinking, and family expectations around a wedding can be correspondingly intense. Agree between yourselves what you want before the two families start negotiating."
+  ],
+  "branches": {
+    "Parsi (India)": {
+      "label": "Parsi (India)",
+      "addGotchas": [
+        "Parsi marriage in India is governed by the Parsi Marriage and Divorce Act 1936, with its own registration and its own divorce law."
+      ]
+    },
+    "Iranian Zoroastrian": {
+      "label": "Iranian Zoroastrian",
+      "addGotchas": [
+        "Iranian Zoroastrian practice diverged from Parsi practice over centuries — different liturgical language conventions, different foods and a sofreh-ye aghd rather than a bhonu."
+      ]
+    },
+    "Diaspora": {
+      "label": "Diaspora",
+      "addGotchas": [
+        "Outside India and Iran the binding constraint is mobed availability, not the venue. Two are required, and there are very few."
+      ]
+    },
+    "Other": {
+      "label": "Other"
+    }
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Zoroastrian_wedding",
+    "https://en.wikipedia.org/wiki/Parsi_Marriage_and_Divorce_Act,_1936",
+    "https://www.culturalindia.net/weddings/regional-weddings/parsi-wedding.html",
+    "https://www.gov.uk/marriages-civil-partnerships",
+    "https://parsikhabar.net/",
+    "https://www.weddingwire.in/wedding-tips/parsi-wedding-rituals--c1893",
+    "https://theworldofparsis.com/"
+  ]
+}

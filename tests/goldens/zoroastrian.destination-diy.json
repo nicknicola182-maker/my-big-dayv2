@@ -1,0 +1,543 @@
+{
+  "packId": "zoroastrian",
+  "currency": "EUR",
+  "budgetTotal": 30000,
+  "counts": {
+    "events": 8,
+    "items": 29,
+    "itemsOn": 14,
+    "timeline": 25,
+    "paperwork": 9,
+    "runsheet": 8
+  },
+  "allocatedTotal": 30001,
+  "sections": {
+    "Attire": 4505,
+    "Ceremony": 4618,
+    "Extras": 433,
+    "Photos & Film": 2937,
+    "Reception": 16646,
+    "Stationery": 862
+  },
+  "events": [
+    {
+      "id": "rupia-peravanu",
+      "name": "Rupia Peravanu"
+    },
+    {
+      "id": "madhavsaro",
+      "name": "Madhavsaro"
+    },
+    {
+      "id": "adarni",
+      "name": "Adarni"
+    },
+    {
+      "id": "supra-nu-murat",
+      "name": "Supra nu Murat"
+    },
+    {
+      "id": "nahan",
+      "name": "Nahan — the purificatory bath"
+    },
+    {
+      "id": "ashirvad",
+      "name": "The Ashirvad"
+    },
+    {
+      "id": "reception",
+      "name": "The reception"
+    },
+    {
+      "id": "civil",
+      "name": "The civil marriage"
+    }
+  ],
+  "items": [
+    {
+      "id": "mobed",
+      "name": "Mobeds' fees",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0271,
+      "alloc": 1174
+    },
+    {
+      "id": "agiary",
+      "name": "Agiary or baug hire",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0452,
+      "alloc": 1958
+    },
+    {
+      "id": "ses",
+      "name": "Ses tray and ritual items",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0108,
+      "alloc": 468
+    },
+    {
+      "id": "rice",
+      "name": "Rice, coconut and garlands",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0072,
+      "alloc": 312
+    },
+    {
+      "id": "chalk",
+      "name": "Chalk designs at the threshold",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.0072,
+      "alloc": 0
+    },
+    {
+      "id": "torans",
+      "name": "Torans and floral hangings",
+      "section": "Flowers & Styling",
+      "on": false,
+      "religious": false,
+      "share": 0.0271,
+      "alloc": 0
+    },
+    {
+      "id": "civil-fees",
+      "name": "Civil registration and certificates",
+      "section": "Ceremony",
+      "on": true,
+      "religious": true,
+      "share": 0.0163,
+      "alloc": 706
+    },
+    {
+      "id": "venue-rec",
+      "name": "Reception venue hire",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0678,
+      "alloc": 0
+    },
+    {
+      "id": "bhonu",
+      "name": "The bhonu — Parsi wedding catering",
+      "section": "Reception",
+      "on": true,
+      "religious": true,
+      "share": 0.2443,
+      "alloc": 10582
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "section": "Reception",
+      "on": false,
+      "religious": false,
+      "share": 0.0542,
+      "alloc": 0
+    },
+    {
+      "id": "attire-bride",
+      "name": "Bridal white saree and garara",
+      "section": "Attire",
+      "on": true,
+      "religious": true,
+      "share": 0.0633,
+      "alloc": 2742
+    },
+    {
+      "id": "attire-groom",
+      "name": "Groom's dagli and pheta",
+      "section": "Attire",
+      "on": true,
+      "religious": true,
+      "share": 0.0407,
+      "alloc": 1763
+    },
+    {
+      "id": "gara-restore",
+      "name": "Gara restoration",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.0226,
+      "alloc": 0
+    },
+    {
+      "id": "jewellery",
+      "name": "Jewellery",
+      "section": "Attire",
+      "on": false,
+      "religious": false,
+      "share": 0.0407,
+      "alloc": 0
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.0362,
+      "alloc": 0
+    },
+    {
+      "id": "photo",
+      "name": "Photographer",
+      "section": "Photos & Film",
+      "on": true,
+      "religious": false,
+      "share": 0.0678,
+      "alloc": 2937
+    },
+    {
+      "id": "video",
+      "name": "Videographer",
+      "section": "Photos & Film",
+      "on": false,
+      "religious": false,
+      "share": 0.0316,
+      "alloc": 0
+    },
+    {
+      "id": "music",
+      "name": "Musicians or DJ",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.0452,
+      "alloc": 0
+    },
+    {
+      "id": "band",
+      "name": "Traditional band for the procession",
+      "section": "Music & Entertainment",
+      "on": false,
+      "religious": false,
+      "share": 0.0163,
+      "alloc": 0
+    },
+    {
+      "id": "stationery",
+      "name": "Invitations",
+      "section": "Stationery",
+      "on": true,
+      "religious": false,
+      "share": 0.0199,
+      "alloc": 862
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "section": "Transport",
+      "on": false,
+      "religious": false,
+      "share": 0.0181,
+      "alloc": 0
+    },
+    {
+      "id": "beauty",
+      "name": "Hair and make-up",
+      "section": "Beauty",
+      "on": false,
+      "religious": false,
+      "share": 0.0271,
+      "alloc": 0
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts between the families",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": false,
+      "share": 0.0226,
+      "alloc": 0
+    },
+    {
+      "id": "charity",
+      "name": "Charitable giving",
+      "section": "Rings & Gifts",
+      "on": false,
+      "religious": true,
+      "share": 0.0181,
+      "alloc": 0
+    },
+    {
+      "id": "contingency",
+      "name": "Contingency",
+      "section": "Extras",
+      "on": false,
+      "religious": false,
+      "share": 0.0226,
+      "alloc": 0
+    },
+    {
+      "id": "diy-structure",
+      "name": "Marquee or structure hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.1,
+      "alloc": 4332
+    },
+    {
+      "id": "diy-power",
+      "name": "Generators & power",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 866
+    },
+    {
+      "id": "diy-toilets",
+      "name": "Luxury toilet hire",
+      "section": "Reception",
+      "on": true,
+      "religious": false,
+      "share": 0.02,
+      "alloc": 866
+    },
+    {
+      "id": "diy-permit",
+      "name": "Site permission, licences & insurance",
+      "section": "Extras",
+      "on": true,
+      "religious": false,
+      "share": 0.01,
+      "alloc": 433
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t0",
+      "mb": 15,
+      "critical": true,
+      "when": "Jun 2026",
+      "task": "Find and book the mobeds first. Outside India there are very few, and two are required for the Ashirvad"
+    },
+    {
+      "id": "t1",
+      "mb": 14,
+      "critical": true,
+      "when": "Jul 2026",
+      "task": "If you are marrying in India, book the baug — the traditional venues go a year or more ahead"
+    },
+    {
+      "id": "t2",
+      "mb": 13,
+      "critical": true,
+      "when": "Aug 2026",
+      "task": "Decide the legal plan: in India, registration is under the Parsi Marriage and Divorce Act 1936; elsewhere you will need a separate civil ceremony"
+    },
+    {
+      "id": "t3",
+      "mb": 12,
+      "critical": true,
+      "when": "Sept 2026",
+      "task": "If either of you is not Zoroastrian, ask the mobeds directly and early whether they will officiate — practice on intermarriage differs sharply between and within communities"
+    },
+    {
+      "id": "t4",
+      "mb": 11,
+      "critical": true,
+      "when": "Oct 2026",
+      "task": "Find a caterer who can cook a proper bhonu, and book them — there are very few outside the community"
+    },
+    {
+      "id": "t22",
+      "mb": 11,
+      "critical": true,
+      "when": "Oct 2026",
+      "task": "Get the landowner's permission in writing, and walk the site — access for vehicles, water, noise, a wet-weather plan"
+    },
+    {
+      "id": "t5",
+      "mb": 10,
+      "critical": true,
+      "when": "Nov 2026",
+      "task": "Ask the family about the gara: heirloom pieces often need months of specialist restoration"
+    },
+    {
+      "id": "t6",
+      "mb": 9,
+      "critical": true,
+      "when": "Dec 2026",
+      "task": "Commission the dagli and pheta, which are rarely available ready-made outside Mumbai"
+    },
+    {
+      "id": "t23",
+      "mb": 9,
+      "critical": false,
+      "when": "Dec 2026",
+      "task": "Book the marquee or structure, generators and toilets — from-scratch venue kit gets booked out fast"
+    },
+    {
+      "id": "t7",
+      "mb": 8,
+      "critical": false,
+      "when": "Jan 2027",
+      "task": "Confirm who holds the family ses and what it still contains"
+    },
+    {
+      "id": "t8",
+      "mb": 8,
+      "critical": true,
+      "when": "Jan 2027",
+      "task": "Check whether non-Zoroastrian guests may enter the ceremony space, and plan the guest list accordingly"
+    },
+    {
+      "id": "t9",
+      "mb": 7,
+      "critical": false,
+      "when": "Feb 2027",
+      "task": "Book the photographer and warn them the key moment is at dusk, lasts seconds and cannot be repeated"
+    },
+    {
+      "id": "t10",
+      "mb": 6,
+      "critical": false,
+      "when": "Mar 2027",
+      "task": "Plan the Madhavsaro, Adarni and Supra nu Murat with the older women of both families, who will know the order"
+    },
+    {
+      "id": "t11",
+      "mb": 5,
+      "critical": false,
+      "when": "Apr 2027",
+      "task": "Send invitations"
+    },
+    {
+      "id": "t12",
+      "mb": 5,
+      "critical": false,
+      "when": "Apr 2027",
+      "task": "Arrange the mango saplings and the pots for Madhavsaro"
+    },
+    {
+      "id": "t13",
+      "mb": 4,
+      "critical": true,
+      "when": "May 2027",
+      "task": "Give civil notice, or arrange registration under the Parsi Act if in India"
+    },
+    {
+      "id": "t14",
+      "mb": 4,
+      "critical": true,
+      "when": "May 2027",
+      "task": "Confirm the two witnesses for the Ashirvad"
+    },
+    {
+      "id": "t24",
+      "mb": 4,
+      "critical": true,
+      "when": "May 2027",
+      "task": "Confirm how the legal ceremony happens — an unlicensed site usually means a separate signing"
+    },
+    {
+      "id": "t15",
+      "mb": 3,
+      "critical": false,
+      "when": "Jun 2027",
+      "task": "Order the rice, coconuts and garlands, generously"
+    },
+    {
+      "id": "t16",
+      "mb": 3,
+      "critical": false,
+      "when": "Jun 2027",
+      "task": "Book the saree draper who knows the Parsi style"
+    },
+    {
+      "id": "t17",
+      "mb": 2,
+      "critical": true,
+      "when": "Jul 2027",
+      "task": "Walk the ceremony order with the mobeds, including where the cloth is held and by whom"
+    },
+    {
+      "id": "t18",
+      "mb": 2,
+      "critical": false,
+      "when": "Jul 2027",
+      "task": "Confirm the bhonu menu and the banana leaves"
+    },
+    {
+      "id": "t19",
+      "mb": 1,
+      "critical": false,
+      "when": "Aug 2027",
+      "task": "Confirm the nahan arrangements"
+    },
+    {
+      "id": "t20",
+      "mb": 1,
+      "critical": false,
+      "when": "Aug 2027",
+      "task": "Brief guests unfamiliar with the rice-throwing that it is enthusiastic"
+    },
+    {
+      "id": "t21",
+      "mb": 0,
+      "critical": true,
+      "when": "Sept 2027",
+      "task": "Register the marriage and collect the certificate"
+    }
+  ],
+  "paperwork": [
+    {
+      "id": "p0",
+      "who": "Both, in India",
+      "item": "Registration under the Parsi Marriage and Divorce Act 1936"
+    },
+    {
+      "id": "p1",
+      "who": "Both, outside India",
+      "item": "Civil notice of marriage"
+    },
+    {
+      "id": "p2",
+      "who": "Both",
+      "item": "Passports or birth certificates and proof of address"
+    },
+    {
+      "id": "p3",
+      "who": "Either, if applicable",
+      "item": "Evidence of the ending of any previous marriage"
+    },
+    {
+      "id": "p4",
+      "who": "Both",
+      "item": "Confirmation that the mobeds will officiate"
+    },
+    {
+      "id": "p5",
+      "who": "Either or both",
+      "item": "Navjote certificate, where asked"
+    },
+    {
+      "id": "p6",
+      "who": "Both",
+      "item": "Two witnesses to the Ashirvad"
+    },
+    {
+      "id": "p7",
+      "who": "Both",
+      "item": "Registration of the marriage afterwards"
+    },
+    {
+      "id": "p-dest",
+      "who": "Both",
+      "item": "Check how a marriage in Cyprus is recognised at home, and what notice/documents your home country requires"
+    }
+  ]
+}

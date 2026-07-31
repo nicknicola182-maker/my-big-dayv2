@@ -1008,6 +1008,185 @@
     "An aufruf is a Shabbat event, so there is no photography and observant guests will not drive — keep it walkable and unplugged, and don't schedule the photographer.",
     "If you are keeping the week of sheva brachot, the couple's diary is full for seven nights, which surprises couples planning a honeymoon departure the morning after the wedding. Traditional couples often delay the honeymoon a week; others hold one sheva brachot dinner and leave."
   ],
+  "branches": {
+    "Orthodox": {
+      "label": "Orthodox",
+      "addEvents": [
+        {
+          "id": "shabbat-kallah",
+          "name": "Shabbat Kallah",
+          "when": "The Shabbat before",
+          "optional": true,
+          "default": true,
+          "description": "The bride's celebration with her friends, mirroring the groom's aufruf.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "shomer",
+          "name": "The week apart",
+          "when": "The week before",
+          "optional": true,
+          "default": true,
+          "description": "Many Orthodox couples do not see each other for the week before the wedding, which has real consequences for rehearsals, fittings and photographs.",
+          "hosts": "The couple"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "mechitza",
+          "name": "Mechitza and separate seating",
+          "section": "Reception",
+          "event": "reception",
+          "note": "A partition and separate dancing areas. The venue needs to know before the floor plan is drawn, not after.",
+          "essential": true,
+          "shareOfBudget": 0.02,
+          "unit": "fixed",
+          "supplierCategory": "Venue",
+          "religiousRequirement": true
+        },
+        {
+          "id": "kosher-super",
+          "name": "Kosher supervision (hashgacha)",
+          "section": "Reception",
+          "event": "reception",
+          "note": "A mashgiach present throughout. This is a supervision fee on top of the catering, and the certifying authority matters to the families.",
+          "essential": true,
+          "shareOfBudget": 0.03,
+          "unit": "fixed",
+          "supplierCategory": "Caterer",
+          "religiousRequirement": true
+        },
+        {
+          "id": "badchan",
+          "name": "Badchan or wedding entertainer",
+          "section": "Music & Entertainment",
+          "event": "reception",
+          "note": "Rhymed, personal and often very funny commentary during the meal.",
+          "essential": false,
+          "shareOfBudget": 0.015,
+          "unit": "fixed",
+          "supplierCategory": "Musicians",
+          "religiousRequirement": false
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 11,
+          "task": "Agree which kashrut authority the families accept before shortlisting caterers — this rules venues in and out",
+          "critical": true
+        },
+        {
+          "monthsBefore": 9,
+          "task": "Confirm the mesader kiddushin is acceptable to both families and, if relevant, to the Beth Din",
+          "critical": true
+        },
+        {
+          "monthsBefore": 3,
+          "task": "Plan around the week apart: fittings, rehearsals and any first-look photographs must happen before it",
+          "critical": true
+        }
+      ],
+      "addPaperwork": [
+        {
+          "item": "Beth Din confirmation of Jewish status",
+          "who": "Both",
+          "note": "Orthodox synagogues require documentary proof of Jewish status, which can mean tracing a mother's or grandmother's records. Start this very early; it is the single most common cause of delay."
+        },
+        {
+          "item": "Get, if either party was previously married",
+          "who": "Either",
+          "note": "A civil divorce is not enough. Without a get, an Orthodox remarriage cannot proceed and any children of the later marriage face serious status consequences."
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Yichud",
+          "description": "The couple withdraw alone together immediately after the ceremony, often to eat for the first time that day, having fasted.",
+          "optional": false
+        },
+        {
+          "name": "Separate dancing",
+          "description": "Men and women dance separately, usually with a mechitza across the floor.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Proving Jewish status to an Orthodox Beth Din can take many months and sometimes cannot be completed. Begin before you set a date.",
+        "Without a get, an Orthodox remarriage is impossible regardless of the civil divorce.",
+        "Nothing can be scheduled on Shabbat, from Friday sunset to Saturday nightfall, which removes most Friday evenings and all of Saturday daytime."
+      ]
+    },
+    "Masorti / Conservative": {
+      "label": "Masorti / Conservative",
+      "addCustoms": [
+        {
+          "name": "Egalitarian kiddushin",
+          "description": "Many Masorti ceremonies have both partners give and receive rings and say a declaration, rather than the traditional one-directional form.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Masorti practice on Shabbat, kashrut and egalitarian ritual sits between Orthodox and Reform, and varies by community. Ask your own rabbi rather than assuming."
+      ]
+    },
+    "Reform / Liberal": {
+      "label": "Reform / Liberal",
+      "addItems": [
+        {
+          "id": "ketubah-egal",
+          "name": "Egalitarian or bespoke ketubah",
+          "section": "Stationery",
+          "event": "ceremony",
+          "note": "Reform ketubot are frequently commissioned as artwork with text the couple have written themselves, in Hebrew and English.",
+          "essential": true,
+          "shareOfBudget": 0.02,
+          "unit": "fixed",
+          "supplierCategory": "Calligrapher",
+          "religiousRequirement": true
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 8,
+          "task": "If one of you is not Jewish, ask early whether your rabbi will officiate — practice varies sharply between Reform and Liberal communities and between individual rabbis",
+          "critical": true
+        },
+        {
+          "monthsBefore": 6,
+          "task": "Write the ketubah text together if you are commissioning a bespoke one",
+          "critical": false
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Interfaith ceremonies",
+          "description": "Liberal Judaism and many Reform rabbis will marry a Jewish and a non-Jewish partner; Orthodox will not. Where a rabbi declines, it is a matter of movement policy rather than a judgement of you.",
+          "optional": true
+        },
+        {
+          "name": "Both break the glass",
+          "description": "Increasingly both partners break a glass, and the ketubah is signed by both rather than acquired by one.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Whether a rabbi will officiate at an interfaith wedding varies by movement and by individual. Ask the specific rabbi, early, before booking anything.",
+        "A Reform conversion is not recognised by Orthodox authorities, which can matter later for family events in Israel or in an Orthodox synagogue."
+      ]
+    },
+    "Secular / cultural": {
+      "label": "Secular / cultural",
+      "addGotchas": [
+        "A secular Jewish ceremony led by a celebrant has no legal effect in England and Wales unless the legal formalities are done separately. The Jewish exemption applies to marriages under the auspices of a recognised synagogue body."
+      ]
+    },
+    "Other": {
+      "label": "Other",
+      "addGotchas": [
+        "Sephardi, Mizrahi and Bukharian practice differ from the Ashkenazi default assumed by most wedding guides — henna nights, different liturgy and different foods."
+      ]
+    }
+  },
   "sources": [
     "https://www.chabad.org/library/article_cdo/aid/476757/jewish/Jewish-Wedding-Ceremony-Traditions.htm",
     "https://www.chabad.org/library/article_cdo/aid/465162/jewish/The-Jewish-Marriage-Ceremony.htm",

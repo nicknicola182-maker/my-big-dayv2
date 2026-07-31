@@ -984,6 +984,356 @@
     "Pandits get booked like venues, on the same clustered dates. In the diaspora especially, book the pandit when you book the venue, confirm the language mix, whether he will explain rituals in English, and exactly which rituals your ceremony will include, since a full ceremony and a ninety-minute one are both authentic choices.",
     "The decisive ritual moments, the mangalsutra, the sindoor, the seventh step, each last seconds and happen low to the ground surrounded by seated family. A photographer who has never shot a Hindu wedding will miss them. Ask to see full Hindu wedding galleries, not portfolio highlights."
   ],
+  "branches": {
+    "North Indian": {
+      "label": "North Indian",
+      "addCustoms": [
+        {
+          "name": "Joota chupai",
+          "description": "The bride's sisters steal the groom's shoes during the ceremony and hold them to ransom. The negotiation is public and the sum is real.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "The baraat with a horse needs council permission on a public road, and many Western venues ban animals outright."
+      ]
+    },
+    "South Indian": {
+      "label": "South Indian",
+      "terms": {
+        "ceremony": "the muhurtham",
+        "ceremonyVenue": "kalyana mandapam"
+      },
+      "dropEvents": [
+        "sangeet",
+        "baraat"
+      ],
+      "addEvents": [
+        {
+          "id": "nischayathartham",
+          "name": "Nischayathartham — the formal engagement",
+          "when": "Three to twelve months before",
+          "optional": "Both families",
+          "default": true,
+          "description": "The formal betrothal at which the horoscopes are matched publicly and the muhurtham is announced. More binding in feel than a Western engagement.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "kashi-yatra",
+          "name": "Kashi Yatra",
+          "when": "Wedding morning",
+          "optional": true,
+          "default": true,
+          "description": "The groom mock-departs for Kashi to become an ascetic, carrying an umbrella and a fan, and the bride's father persuades him back to married life. Brief, funny and universally photographed.",
+          "hosts": "The bride's family"
+        },
+        {
+          "id": "nalangu",
+          "name": "Nalangu",
+          "when": "Wedding evening",
+          "optional": true,
+          "default": true,
+          "description": "Games between the couple and both families after the ceremony — rolling a coconut, finding a ring in a pot. It is how the two families actually meet each other.",
+          "hosts": "Both families"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "thali",
+          "name": "Thali or mangalsutra",
+          "section": "Rings & Gifts",
+          "event": "ceremony",
+          "note": "The thali tied by the groom is the central act of a South Indian wedding. Commissioned from a family jeweller, often to a design specific to the community.",
+          "essential": true,
+          "shareOfBudget": 0.05,
+          "unit": "fixed",
+          "supplierCategory": "Jeweller",
+          "religiousRequirement": true
+        },
+        {
+          "id": "nadaswaram",
+          "name": "Nadaswaram and thavil musicians",
+          "section": "Music & Entertainment",
+          "event": "ceremony",
+          "note": "Live temple music, played at full volume for hours. Not optional in most South Indian families, and worth every penny.",
+          "essential": true,
+          "shareOfBudget": 0.03,
+          "unit": "fixed",
+          "supplierCategory": "Musicians",
+          "religiousRequirement": true
+        },
+        {
+          "id": "mandapam",
+          "name": "Kalyana mandapam hire",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "Purpose-built wedding halls with the mandapam already in place. Very different from hiring a hotel ballroom.",
+          "essential": true,
+          "shareOfBudget": 0.05,
+          "unit": "fixed",
+          "supplierCategory": "Venue",
+          "religiousRequirement": false
+        },
+        {
+          "id": "kanjeevaram",
+          "name": "Kanjeevaram silk sarees",
+          "section": "Attire",
+          "event": "ceremony",
+          "note": "Multiple silk sarees, often gifted between the families. A major line, and one where the family jeweller and the family silk shop are institutions.",
+          "essential": true,
+          "shareOfBudget": 0.06,
+          "unit": "fixed",
+          "supplierCategory": "Bridal boutique",
+          "religiousRequirement": false
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 14,
+          "task": "Have the horoscopes matched and the muhurtham fixed — in South Indian practice the time is often in the early morning, sometimes before 6am",
+          "critical": true
+        },
+        {
+          "monthsBefore": 12,
+          "task": "Book the kalyana mandapam, which is booked by muhurtham rather than by date",
+          "critical": true
+        },
+        {
+          "monthsBefore": 10,
+          "task": "Commission the thali from the family jeweller",
+          "critical": true
+        },
+        {
+          "monthsBefore": 8,
+          "task": "Book the nadaswaram and thavil players",
+          "critical": false
+        },
+        {
+          "monthsBefore": 6,
+          "task": "Order the Kanjeevaram sarees, allowing for weaving time rather than shop stock",
+          "critical": true
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "The muhurtham can be before dawn",
+          "description": "South Indian auspicious times frequently fall between 4am and 7am. The whole day, including hair, make-up and guest travel, is built backwards from it.",
+          "optional": false
+        },
+        {
+          "name": "Oonjal",
+          "description": "The couple are seated on a decorated swing and rocked gently while the women sing and circle them with lamps.",
+          "optional": true
+        },
+        {
+          "name": "Saptapadi and the toe rings",
+          "description": "The seven steps, and the metti — silver toe rings — placed on the bride's feet by the groom.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "A pre-dawn muhurtham means make-up artists starting around 2am and guests arriving in the dark. Book suppliers who have done it before and say the time out loud when you book.",
+        "There is usually no baraat and no sangeet in traditional South Indian practice. Planners who assume a North Indian structure will build the wrong week.",
+        "Kalyana mandapams are booked by auspicious slot, and the good ones release dates only after the almanac is published."
+      ]
+    },
+    "Gujarati": {
+      "label": "Gujarati",
+      "addEvents": [
+        {
+          "id": "mandvo",
+          "name": "Mandvo and Griha Shanti",
+          "when": "One to two weeks before",
+          "optional": true,
+          "default": true,
+          "description": "Prayers at both homes before the wedding structures go up, asking for peace on the household.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "garba",
+          "name": "Garba night",
+          "when": "One or two nights before",
+          "optional": true,
+          "default": true,
+          "description": "The Gujarati sangeet is a garba — circle dancing with sticks and skirts, and everyone joins in rather than watching a rehearsed performance.",
+          "hosts": "Both families"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "garba-live",
+          "name": "Live garba band and dandiya sticks",
+          "section": "Music & Entertainment",
+          "event": "garba",
+          "note": "A live band changes a garba completely. Dandiya sticks for a few hundred people are a real line.",
+          "essential": true,
+          "shareOfBudget": 0.035,
+          "unit": "fixed",
+          "supplierCategory": "Musicians",
+          "religiousRequirement": false
+        },
+        {
+          "id": "panetar",
+          "name": "Panetar and gharchola",
+          "section": "Attire",
+          "event": "ceremony",
+          "note": "The white-and-red panetar from the bride's family and the red gharchola from the groom's — two garments, two givers, both expected.",
+          "essential": true,
+          "shareOfBudget": 0.045,
+          "unit": "fixed",
+          "supplierCategory": "Bridal boutique",
+          "religiousRequirement": false
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 7,
+          "task": "Book a live garba band — recorded garba is a noticeably lesser evening",
+          "critical": false
+        },
+        {
+          "monthsBefore": 5,
+          "task": "Order the panetar and gharchola, agreeing which family provides which",
+          "critical": false
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Ponkhvu",
+          "description": "The groom is greeted at the mandap by the bride's mother, who playfully tries to grab his nose to remind him he has come asking.",
+          "optional": true
+        },
+        {
+          "name": "Jaimala from a height",
+          "description": "In many Gujarati weddings the couple are lifted by cousins during the garland exchange, turning it into a contest.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Gujarati weddings are frequently entirely vegetarian and alcohol-free. Establish both with the two families before booking a caterer or a bar."
+      ]
+    },
+    "Bengali": {
+      "label": "Bengali",
+      "terms": {
+        "ceremony": "the biye"
+      },
+      "addEvents": [
+        {
+          "id": "aiburo-bhat",
+          "name": "Aiburo bhat",
+          "when": "One or two days before",
+          "optional": true,
+          "default": true,
+          "description": "The last meal eaten as an unmarried person, cooked by the family and served on a banana leaf.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "gaye-holud",
+          "name": "Gaye holud",
+          "when": "One or two days before",
+          "optional": true,
+          "default": true,
+          "description": "The Bengali turmeric ceremony, with the paste carried in procession from one house to the other.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "bou-bhat",
+          "name": "Bou bhat",
+          "when": "The day after",
+          "optional": true,
+          "default": true,
+          "description": "The bride serves rice to her new family for the first time, and is given a gift in return. The reception proper often follows.",
+          "hosts": "Both families"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "topor",
+          "name": "Topor and mukut headwear",
+          "section": "Attire",
+          "event": "ceremony",
+          "note": "The conical white shola topor for the groom and mukut for the bride. Fragile, traditional and hard to source outside Bengal.",
+          "essential": true,
+          "shareOfBudget": 0.02,
+          "unit": "fixed",
+          "supplierCategory": "Bridal boutique",
+          "religiousRequirement": true
+        },
+        {
+          "id": "shankha",
+          "name": "Shankha and pola bangles",
+          "section": "Attire",
+          "event": "ceremony",
+          "note": "Conch-shell and red coral bangles put on the bride, worn thereafter.",
+          "essential": true,
+          "shareOfBudget": 0.02,
+          "unit": "fixed",
+          "supplierCategory": "Jeweller",
+          "religiousRequirement": true
+        },
+        {
+          "id": "ulu",
+          "name": "Conch and ululation",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "The shankha blown and the women's ululation mark each stage. No cost, but tell your videographer it is coming.",
+          "essential": false,
+          "shareOfBudget": 0.002,
+          "unit": "fixed",
+          "supplierCategory": "",
+          "religiousRequirement": true
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 6,
+          "task": "Source the topor and mukut early — they are made of shola pith, break easily and rarely survive posting",
+          "critical": true
+        },
+        {
+          "monthsBefore": 4,
+          "task": "Plan the bou bhat as a separate day with its own catering and guest list",
+          "critical": false
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Subho drishti",
+          "description": "The bride is carried in on a low stool circling the groom seven times with her face hidden by betel leaves, then lowers them for the first look. It is the shot of the wedding.",
+          "optional": false
+        },
+        {
+          "name": "Sindoor daan",
+          "description": "The groom applies sindoor to the bride's parting, and she is then covered with a new sari given by his family.",
+          "optional": false
+        }
+      ],
+      "addGotchas": [
+        "Bengali weddings traditionally take place in the evening and run late into the night, which conflicts with most Western venue curfews.",
+        "Fish and meat are usual at Bengali weddings, unlike many other Indian traditions. Do not let a caterer assume vegetarian."
+      ]
+    },
+    "Punjabi Hindu": {
+      "label": "Punjabi Hindu",
+      "addCustoms": [
+        {
+          "name": "Chooda and kalire",
+          "description": "Red and ivory bangles put on by the maternal uncle, with ornaments tied on by unmarried friends.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Punjabi Hindu and Sikh weddings share much of the surrounding celebration but not the ceremony. Be clear with suppliers which you are having."
+      ]
+    },
+    "Other / diaspora": {
+      "label": "Other / diaspora",
+      "addGotchas": [
+        "Diaspora families often blend regional practices across two or three generations. Ask your own elders what they expect rather than working from a regional guide."
+      ]
+    }
+  },
   "sources": [
     "https://www.hinduamerican.org/hindu-wedding-primer/",
     "https://iskconeducationalservices.org/HoH/practice/rites-of-passage/vivaha-marriage/",

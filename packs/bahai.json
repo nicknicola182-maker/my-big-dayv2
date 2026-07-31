@@ -612,6 +612,26 @@
     "Where families come from several countries, catering is a real design problem rather than a menu choice: halal, kosher, vegetarian and Persian expectations often sit at the same table.",
     "A previous Bahá'í marriage must be properly ended under Bahá'í law as well as civil law, and the two processes are separate and differently timed."
   ],
+  "branches": {
+    "Persian heritage": {
+      "label": "Persian heritage",
+      "addGotchas": [
+        "The ninety-five day limit between consent and ceremony is applied to believers of Persian background. Confirm with your Assembly."
+      ]
+    },
+    "South Asian heritage": {
+      "label": "South Asian heritage"
+    },
+    "African heritage": {
+      "label": "African heritage"
+    },
+    "Western": {
+      "label": "Western"
+    },
+    "Other": {
+      "label": "Other"
+    }
+  },
   "sources": [
     "https://en.wikipedia.org/wiki/Bah%C3%A1%CA%BC%C3%AD_marriage",
     "https://bahaipedia.org/Marriage",

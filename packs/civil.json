@@ -993,6 +993,50 @@
     "Humanist celebrants and independent celebrants are not the same thing: humanist celebrants conduct non-religious ceremonies only, while independent celebrants will include religious or spiritual content if you ask. In Scotland and Northern Ireland, also check your celebrant is legally authorised to marry you, since only authorised celebrants can.",
     "Registrar fees differ by day of the week and by setting: a weekend ceremony at an approved venue costs several times a weekday register office slot. If the budget is tight, a weekday or an off-season date moves this line and usually the venue price too."
   ],
+  "branches": {
+    "Register office": {
+      "label": "Register office",
+      "addGotchas": [
+        "Register office ceremonies are short, often 15–20 minutes, with a fixed guest capacity that is smaller than couples expect."
+      ]
+    },
+    "Licensed venue": {
+      "label": "Licensed venue",
+      "addTimeline": [
+        {
+          "monthsBefore": 13,
+          "task": "Book the registrar before the venue — registrars run out long before venues do, and the venue cannot marry you without one",
+          "critical": true
+        }
+      ],
+      "addGotchas": [
+        "Approval covers named rooms, not the whole property, and it can lapse. Ask for the approval in writing and check which room."
+      ]
+    },
+    "Celebrant-led": {
+      "label": "Celebrant-led",
+      "addTimeline": [
+        {
+          "monthsBefore": 12,
+          "task": "Book the separate legal ceremony first, then the celebrant-led one — the celebrant ceremony has no legal effect in England and Wales",
+          "critical": true
+        }
+      ],
+      "addGotchas": [
+        "A celebrant-led ceremony is not legally binding in England and Wales. You need a register office appointment as well, usually a day or two before.",
+        "In Scotland, by contrast, Humanist and some Pagan celebrants can solemnise a legal marriage anywhere."
+      ]
+    },
+    "Humanist": {
+      "label": "Humanist",
+      "addGotchas": [
+        "Humanist marriages are legal in Scotland, Northern Ireland, Jersey and Guernsey, but not in England and Wales, where a separate civil ceremony is required."
+      ]
+    },
+    "Other": {
+      "label": "Other"
+    }
+  },
   "sources": [
     "https://www.gov.uk/marriages-civil-partnerships",
     "https://www.gov.uk/marriages-civil-partnerships/give-notice",

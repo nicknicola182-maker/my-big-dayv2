@@ -1060,6 +1060,197 @@
     "Costs land in places couples do not plan for: the parish offering, a separate offering to the priest, the course fee, the inventory scoring fee, certificate and courier costs, and the parish coordinator. None is large on its own; together they are a real line.",
     "If your families are from different Catholic cultures, agree early which customs are in. A Filipino family may expect eight named sponsors and a Polish family may expect a full second party the next day, and neither will read as optional to the people who expect it."
   ],
+  "branches": {
+    "Irish": {
+      "label": "Irish",
+      "addItems": [
+        {
+          "id": "handfast",
+          "name": "Handfasting ribbon",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "An Irish addition inside the Catholic rite, binding the couple's hands with a ribbon or cloth.",
+          "essential": false,
+          "shareOfBudget": 0.004,
+          "unit": "fixed",
+          "supplierCategory": "Church supplies",
+          "religiousRequirement": false
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "The Claddagh ring",
+          "description": "Often used as the wedding ring or given alongside it.",
+          "optional": true
+        },
+        {
+          "name": "Magic hankie",
+          "description": "A lace handkerchief carried by the bride, later made into a christening bonnet.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "In Ireland you must give three months' notice to the HSE registrar as well as completing the church paperwork, and the two run on separate clocks."
+      ]
+    },
+    "Polish": {
+      "label": "Polish",
+      "addEvents": [
+        {
+          "id": "blogoslawienstwo",
+          "name": "The parents' blessing",
+          "when": "Wedding morning",
+          "optional": false,
+          "default": true,
+          "description": "Both sets of parents bless the couple at home before they leave for the church. Quiet, brief and often the moment parents remember.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "oczepiny",
+          "name": "Oczepiny",
+          "when": "Midnight",
+          "optional": true,
+          "default": true,
+          "description": "The unveiling at midnight, followed by games and the passing of the veil to the next unmarried woman.",
+          "hosts": "Both families"
+        },
+        {
+          "id": "poprawiny",
+          "name": "Poprawiny",
+          "when": "The day after",
+          "optional": true,
+          "default": true,
+          "description": "The second day of the wedding, held for the same guests, with more food and less formality.",
+          "hosts": "Both families"
+        }
+      ],
+      "addItems": [
+        {
+          "id": "bread-salt",
+          "name": "Bread and salt greeting",
+          "section": "Reception",
+          "event": "reception",
+          "note": "The parents greet the couple with bread, salt and vodka at the reception door.",
+          "essential": true,
+          "shareOfBudget": 0.004,
+          "unit": "fixed",
+          "supplierCategory": "",
+          "religiousRequirement": false
+        },
+        {
+          "id": "poprawiny-cater",
+          "name": "Poprawiny catering",
+          "section": "Reception",
+          "event": "poprawiny",
+          "note": "A second day of feeding the same guests. Polish weddings are routinely two days, and budgets that assume one are half right.",
+          "essential": true,
+          "shareOfBudget": 0.07,
+          "unit": "perGuest",
+          "supplierCategory": "Caterer",
+          "religiousRequirement": false
+        }
+      ],
+      "addTimeline": [
+        {
+          "monthsBefore": 8,
+          "task": "Decide whether you are having poprawiny, because it doubles the catering and the accommodation",
+          "critical": true
+        }
+      ],
+      "addGotchas": [
+        "A Polish wedding is commonly two days. Guests expect the poprawiny and will have booked accommodation accordingly.",
+        "Vodka is served at the table by the bottle rather than from a bar. Budget accordingly and tell a non-Polish venue what is coming."
+      ]
+    },
+    "Italian": {
+      "label": "Italian",
+      "addCustoms": [
+        {
+          "name": "La busta",
+          "description": "Guests give money in envelopes at the reception rather than gifts from a list.",
+          "optional": true
+        },
+        {
+          "name": "Confetti and bomboniere",
+          "description": "Sugared almonds in odd numbers, presented in favours given to every guest.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Italian receptions run long and food-led — five or more courses is normal, and a three-hour venue hire will not work."
+      ]
+    },
+    "Filipino": {
+      "label": "Filipino",
+      "addItems": [
+        {
+          "id": "cord-veil",
+          "name": "Cord, veil and arras",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "The veil, cord and thirteen coins, with sponsors appointed to place each. Central to a Filipino Catholic wedding.",
+          "essential": true,
+          "shareOfBudget": 0.012,
+          "unit": "fixed",
+          "supplierCategory": "Church supplies",
+          "religiousRequirement": true
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Ninong and ninang",
+          "description": "Principal sponsors, often many of them, who are named in the invitation and take a real role in the ceremony and its costs.",
+          "optional": false
+        },
+        {
+          "name": "The money dance",
+          "description": "Guests pin notes to the couple during a dedicated dance.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Filipino weddings can have a dozen or more principal sponsors, each named and each with a role. Agree the list early — it affects the seating, the programme and the invitations."
+      ]
+    },
+    "Latin American": {
+      "label": "Latin American",
+      "addItems": [
+        {
+          "id": "arras-la",
+          "name": "Las arras and el lazo",
+          "section": "Ceremony",
+          "event": "ceremony",
+          "note": "Thirteen coins and the lazo cord placed by padrinos during the mass.",
+          "essential": true,
+          "shareOfBudget": 0.012,
+          "unit": "fixed",
+          "supplierCategory": "Church supplies",
+          "religiousRequirement": true
+        }
+      ],
+      "addCustoms": [
+        {
+          "name": "Padrinos",
+          "description": "Sponsor couples who fund specific elements — the cake, the flowers, the lazo — and are honoured in the programme.",
+          "optional": false
+        },
+        {
+          "name": "La hora loca",
+          "description": "The 'crazy hour' late in the reception: masks, props, horns and a change of tempo.",
+          "optional": true
+        }
+      ],
+      "addGotchas": [
+        "Padrinos traditionally fund named elements. Agreeing who sponsors what early avoids two families both buying the cake, or neither."
+      ]
+    },
+    "Other": {
+      "label": "Other",
+      "addGotchas": [
+        "Diocesan requirements for paperwork and preparation courses vary more than couples expect, even between neighbouring dioceses."
+      ]
+    }
+  },
   "sources": [
     "https://www.foryourmarriage.org/rite-for-celebrating-marriage-within-mass/",
     "https://www.foryourmarriage.org/rite-for-celebrating-marriage-outside-of-mass/",

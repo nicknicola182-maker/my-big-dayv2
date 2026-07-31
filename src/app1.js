@@ -50,7 +50,9 @@ const PACK_TAGS = {
  "buddhist":"monks bless, and the day is yours to build",
  "jain":"ahimsa in the vows and on every plate",
  "bahai":"one sentence, two witnesses, every parent's blessing",
- "quaker":"a room full of silence until someone is moved"
+ "quaker":"a room full of silence until someone is moved",
+ "zoroastrian":"the cloth drops and the rice flies",
+ "pagan":"a circle cast, hands bound, the broom jumped"
 };
 const VARIANTS = {
  "greek-orthodox":["Greek / Cypriot","Russian","Serbian","Romanian","Other Orthodox"],
@@ -64,7 +66,9 @@ const VARIANTS = {
  "buddhist":["Thai","Sri Lankan","Vietnamese","Chinese","Tibetan","Japanese","Western convert","Other"],
  "jain":["Svetambara","Digambara","Gujarati Jain","Marwari Jain","Other"],
  "bahai":["Persian heritage","South Asian heritage","African heritage","Western","Other"],
- "quaker":null
+ "quaker":null,
+ "zoroastrian":["Parsi (India)","Iranian Zoroastrian","Diaspora","Other"],
+ "pagan":["Wiccan","Druid","Heathen","Eclectic / non-aligned","Other"]
 };
 ["greek-orthodox","roman-catholic","protestant","muslim","hindu"].forEach(k=>{
   if(VARIANTS[k] && !VARIANTS[k].some(v=>/^Other/.test(v))) VARIANTS[k].push("Other");
@@ -79,7 +83,9 @@ const VTITLES = {
  "civil":["What style of ceremony?","Your day, your rules — just point me in the right direction."],
  "buddhist":["Which Buddhist tradition is yours?","Thai, Sri Lankan, Tibetan — they share almost nothing at a wedding, so I'd rather use yours."],
  "jain":["Which Jain tradition?","Svetambara and Digambara share the principles and differ in the practice."],
- "bahai":["Which heritage shapes the day?","The ceremony is the same everywhere. What surrounds it usually isn't."]
+ "bahai":["Which heritage shapes the day?","The ceremony is the same everywhere. What surrounds it usually isn't."],
+ "zoroastrian":["Which community is yours?","Parsi and Iranian Zoroastrian practice diverged over a thousand years ago."],
+ "pagan":["Which path is yours?","Wiccan, Druid, Heathen — the shape of the rite differs, and so does who may lead it."]
 };
 const VDESCS = {
  "muslim":{
@@ -108,7 +114,9 @@ const CEREMONY_OPTS = {
  buddhist:["Temple or vihara","Banqueting venue","At home","Not sure yet"],
  jain:["Derasar","Banqueting venue with mandap","Outdoor mandap","Not sure yet"],
  bahai:["Bahá'í centre","Hired venue","At home","Not sure yet"],
- quaker:["Meeting house","Not sure yet"]
+ quaker:["Meeting house","Not sure yet"],
+ zoroastrian:["Agiary or baug","Hired venue","At home","Not sure yet"],
+ pagan:["Woodland or grove","Stone circle or ancient site","Beach or hilltop","Private land","Not sure yet"]
 };
 const RECEPTION_OPTS = ["Hotel","Banqueting hall","Marquee","Restaurant"];
 const RECEPTION_LEANS = ["Hotel","Banqueting hall","Marquee","Restaurant","Beach","Outdoor","Farm / barn","Other"];
@@ -237,13 +245,46 @@ function fmt(n){ const s = CURSYM[S.cur]||"£"; if(n==null||isNaN(n)) return "�
   return s + Math.round(n).toLocaleString("en-GB"); }
 function esc(t){ return String(t??"").replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 function uid(){ return Math.random().toString(36).slice(2,9); }
-function pack(){ return PACKS[S.ans.packId]; }
-function pack2(){ return S.ans.packId2 ? PACKS[S.ans.packId2] : null; }
+/* ---------- branch layer ----------
+   A branch (Russian Orthodox, Gujarati Hindu, Reform Jewish) is a delta over its
+   base pack: it renames and drops events, adds events, items, tasks, paperwork,
+   customs and gotchas, and overrides terms. Merged here so buildPlan and every
+   view see one resolved pack and know nothing about branches. */
+const _branchCache = {};
+function applyBranch(p, variant){
+  if(!p || !variant || !p.branches || !p.branches[variant]) return p;
+  const key = p.id + "|" + variant;
+  if(_branchCache[key]) return _branchCache[key];
+  const b = p.branches[variant];
+  const drop = new Set(b.dropEvents || []);
+  const rename = b.renameEvents || {};
+  const out = Object.assign({}, p);
+  out.terms = Object.assign({}, p.terms, b.terms || {});
+  out.events = p.events
+    .filter(e => !drop.has(e.id))
+    .map(e => rename[e.id] ? Object.assign({}, e, {name: rename[e.id]}) : e)
+    .concat(b.addEvents || []);
+  /* an item whose event this branch dropped goes with it */
+  const live = new Set(out.events.map(e => e.id));
+  out.items = p.items.filter(i => !i.event || live.has(i.event)).concat(b.addItems || []);
+  /* shares must still sum to ~1 after adding and removing lines */
+  const sum = out.items.reduce((n,i) => n + (i.shareOfBudget || 0), 0) || 1;
+  out.items = out.items.map(i => Object.assign({}, i, {shareOfBudget: Math.round(i.shareOfBudget/sum*1e4)/1e4}));
+  out.timeline  = p.timeline.concat(b.addTimeline || []).slice().sort((x,y)=>y.monthsBefore-x.monthsBefore);
+  out.paperwork = p.paperwork.concat(b.addPaperwork || []);
+  out.customs   = p.customs.concat(b.addCustoms || []);
+  out.gotchas   = p.gotchas.concat(b.addGotchas || []);
+  out.branchLabel = b.label || variant;
+  _branchCache[key] = out;
+  return out;
+}
+function pack(){ return applyBranch(PACKS[S.ans.packId], S.ans.variant); }
+function pack2(){ return S.ans.packId2 ? applyBranch(PACKS[S.ans.packId2], S.ans.variant2) : null; }
 function term(k){ const p = pack(); return (p && p.terms && p.terms[k]) || k; }
 function countryOf(code){ return COUNTRIES.find(c=>c[0]===code) || COUNTRIES[0]; }
 function dispName(){ const p = pack(); if(!p) return "";
+  if(p.branchLabel && p.branchLabel !== p.name) return p.branchLabel;
   if(p.id==="greek-orthodox"){ const v = S.ans.variant||"";
-    if(/Russian|Serbian|Romanian/.test(v)) return v.split(" ")[0]+" Orthodox";
     if(/Other/.test(v) || !v) return "Orthodox";
   }
   return p.name; }
@@ -450,6 +491,8 @@ function obSteps(){
         {v:"buddhist", l:"Buddhist", d:PACK_TAGS["buddhist"]},
         {v:"jain", l:"Jain", d:PACK_TAGS["jain"]},
         {v:"bahai", l:"Bahá'í", d:PACK_TAGS["bahai"]},
+        {v:"zoroastrian", l:"Zoroastrian / Parsi", d:PACK_TAGS["zoroastrian"]},
+        {v:"pagan", l:"Pagan / handfasting", d:PACK_TAGS["pagan"]},
         {v:"mixed", l:"We're blending two traditions", d:"double the love, and I'm here for it"},
         {v:"civil", l:"None of these, actually", d:"we'll do it beautifully your way"}],
       get:()=>a.religion, set:v=>{ a.religion=v; a.packChoice=v;

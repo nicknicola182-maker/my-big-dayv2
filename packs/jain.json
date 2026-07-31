@@ -716,6 +716,35 @@
     "The barat always runs late, and the muhurat does not move. Build thirty to sixty minutes of slack and tell the photographer where the pause will be.",
     "Chaturmas closes several months for weddings in observant families, and the dates move with the lunar calendar each year."
   ],
+  "branches": {
+    "Svetambara": {
+      "label": "Svetambara",
+      "addGotchas": [
+        "Svetambara and Digambara ritual differs in detail. Ask your vidhikar which form they perform."
+      ]
+    },
+    "Digambara": {
+      "label": "Digambara",
+      "addGotchas": [
+        "Digambara practice is generally more austere. Confirm the form with your vidhikar rather than assuming the Gujarati Svetambara default."
+      ]
+    },
+    "Gujarati Jain": {
+      "label": "Gujarati Jain",
+      "addGotchas": [
+        "Gujarati Jain weddings look closest to Gujarati Hindu ones from the outside, which is exactly why suppliers get it wrong."
+      ]
+    },
+    "Marwari Jain": {
+      "label": "Marwari Jain",
+      "addGotchas": [
+        "Marwari weddings run large and long, with several days of events and a guest list that grows after it is finalised."
+      ]
+    },
+    "Other": {
+      "label": "Other"
+    }
+  },
   "sources": [
     "https://www.culturalindia.net/weddings/regional-weddings/jain-wedding.html",
     "https://weddingtalesmatrimony.com/blogs/knowledge-centre/what-are-the-common-jain-wedding-rituals-in-svetambara-and-digambara-communities",

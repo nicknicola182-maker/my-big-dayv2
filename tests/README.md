@@ -115,3 +115,29 @@ is held until they choose rather than silently replaced.
 RSVP, task and paperwork ticks, custom todos, item on/off, agreed/paid/deposit). **If
 you add a new synced mutation, call `touch()` on the row** — an unstamped row is treated
 as older than a stamped one, so a missing stamp means that edit quietly loses.
+
+## Branches (`tests/branches.mjs`)
+
+A branch — Russian Orthodox, Gujarati Hindu, Reform Jewish — is a **delta over its
+base pack**, never a second pack. It renames and drops events, adds events, items,
+tasks, paperwork, customs and gotchas, and overrides terms. `applyBranch()` in
+`src/app1.js` merges it so `buildPlan()` and every view see one resolved pack and
+know nothing about branches.
+
+The suite exists because a branch can corrupt a plan in ways a base pack cannot:
+
+- an added item that unbalances `shareOfBudget` (the merge re-normalises; the test
+  proves it still sums to ~1.0)
+- a `dropEvents` entry that strands the items pointing at it
+- a `dropEvents` or `renameEvents` id that doesn't exist in the base — a typo that
+  would otherwise fail silently
+- duplicate ids where a branch adds something the base already had
+
+`mergeLikeEngine()` in the test deliberately reimplements the merge rather than
+importing it. If someone changes `applyBranch()` without changing the test, the two
+diverge and the suite fails — which is the point.
+
+**Placeholder branches are counted out loud**, not hidden. A label-only branch is
+allowed (it still gives the couple the right word for their tradition) but the run
+prints how many there are, so "we have 67 branches" never quietly means "8 of them
+do nothing".
