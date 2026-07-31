@@ -489,7 +489,10 @@ VIEWS.more = function(){
   </div>`; })()}
   <div class="card" onclick="restartOB()" style="cursor:pointer"><h3>↻ Change my answers</h3><div class="small">Re-run the questions — your guests, payments and ticks are kept where possible.</div></div>
   <div class="card" onclick="if(confirm('Really start completely fresh? Everything goes.')){localStorage.removeItem('weddingapp');location.reload();}" style="cursor:pointer"><h3 style="color:var(--red)">Start over</h3></div>
-  <div class="small center" style="padding:10px 0 20px">My Big Day · prototype v0.24 · packs v1 · engine v1</div>`;
+  ${betaUnlocked()? `<div class="card" style="border-color:var(--rose)"><h3>Beta build</h3>
+    <div class="small">Everything is unlocked for testing — no payment is taken and none is due.
+    This is not how the released app behaves.</div></div>`:""}
+  <div class="small center" style="padding:10px 0 20px">My Big Day · prototype v0.24 · packs v1 · engine v1${betaUnlocked()? " · beta":""}</div>`;
 };
 function restartOB(){ S.onboarded=false; S.obIx=0; S.plan=null; save(); render(); }
 /* The gate promises "swap any time" — this is that promise, and it is one

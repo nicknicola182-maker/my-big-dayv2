@@ -66,6 +66,13 @@ app1 = open("src/app1.js").read()
 sync = open("src/sync.js").read()
 app2 = open("src/app2.js").read()
 
+# --beta emits a second build with the paywall pre-unlocked, for testers. It is
+# a SEPARATE artifact (dist/beta/index.html) rather than a modified index.html,
+# so an unlocked build can never be mistaken for the shipping one — the real
+# build is byte-identical whether or not this flag is passed.
+BETA = "--beta" in sys.argv
+beta_js = "const BETA_UNLOCK = %s;" % ("true" if BETA else "false")
+
 html = f"""<!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -82,6 +89,7 @@ html = f"""<!DOCTYPE html>
 <script>{fflate}</script>
 <script>{qr}</script>
 <script>{packs_js}</script>
+<script>{beta_js}</script>
 <script>{worlds}</script>
 <script>{app1}</script>
 <script>{sync}</script>
@@ -90,5 +98,10 @@ html = f"""<!DOCTYPE html>
 </html>"""
 
 os.makedirs("dist", exist_ok=True)
-open("dist/index.html","w").write(html)
-print("built dist/index.html:", round(len(html)/1024), "KB")
+if BETA:
+    os.makedirs("dist/beta", exist_ok=True)
+    open("dist/beta/index.html","w").write(html)
+    print("built dist/beta/index.html:", round(len(html)/1024), "KB  (paywall pre-unlocked)")
+else:
+    open("dist/index.html","w").write(html)
+    print("built dist/index.html:", round(len(html)/1024), "KB")
