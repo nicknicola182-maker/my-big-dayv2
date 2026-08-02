@@ -157,6 +157,38 @@ if (wants('engine')) {
   }
 }
 
+/* ── ceremony options: every tradition reaches its own set ─────── */
+if (wants('packs')) {
+  describe('packs — the ceremony question offers the right places');
+  {
+    /* The option set is chosen by pack id first, falling back to faithGroup for
+       the three Christian packs that share the church set. Keyed off faithGroup
+       ALONE, six traditions fell through to the civil list while their correct
+       options sat unreachable — Quaker offered a church rather than a meeting
+       house, and Buddhist, Jain, Baha'i, Zoroastrian and Pagan offered a
+       register office.
+
+       This is a static check: it needs no engine, and it fails the moment a new
+       pack is added without a ceremony set. */
+    const src = fs.readFileSync(path.join(ROOT, 'src', 'app1.js'), 'utf8');
+    const optsBlock = src.split('const CEREMONY_OPTS = {')[1].split('\n};')[0];
+    const sets = new Set([...optsBlock.matchAll(/^\s*([a-z]+)\s*:/gm)].map(m => m[1]));
+    ok(sets.size >= 12, 'the ceremony option sets are defined', [...sets].join(' · '));
+
+    const dir = path.join(ROOT, 'packs');
+    for (const file of fs.readdirSync(dir).filter(n => n.endsWith('.json'))) {
+      const p = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
+      const reachable = sets.has(p.id) || p.faithGroup === 'Christian';
+      ok(reachable, `${p.id}: reaches a ceremony set of its own (or the shared church set)`,
+        `faithGroup=${p.faithGroup}`);
+    }
+    // Quaker is the trap: grouped as Christian, but must NOT get the church set.
+    ok(sets.has('quaker'), 'Quaker has its own set — Quakers marry in a meeting house, not a church');
+    ok(/CEREMONY_OPTS\[p\.id\] \? p\.id/.test(src), 'and the lookup prefers the pack id over faithGroup');
+    group('ceremony options', `${sets.size} sets, every pack reaches one`);
+  }
+}
+
 /* ── state: persistence, migration, recovery ──────────────────── */
 if (wants('state')) {
   const { run: runState } = await import('./state.mjs');

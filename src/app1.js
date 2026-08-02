@@ -528,7 +528,20 @@ function renderLanding(){
 /* ---------- onboarding ---------- */
 function obSteps(){
   const a = S.ans, p = a.packId ? PACKS[a.packId] : null;
-  const cSet = p ? (p.faithGroup==="Christian" ? "church" : ({Jewish:"jewish",Muslim:"muslim",Hindu:"hindu",Sikh:"sikh",None:"civil"}[p.faithGroup]||"civil")) : "civil";
+  /* Which ceremony-location options to offer. Prefer a set named for the pack
+     itself — CEREMONY_OPTS has one for most traditions — and only fall back to
+     faithGroup for the three Christian packs that share the church set.
+
+     This was keyed off faithGroup alone, which handles Christian, Jewish,
+     Muslim, Hindu, Sikh and None and drops everything else into the civil list.
+     Six traditions were therefore asked the wrong question while their correct
+     options sat unreachable: Quaker is grouped as Christian and was offered a
+     church, when Quakers marry in a meeting house; Buddhist, Jain, Bahá'í,
+     Zoroastrian and Pagan were offered a register office. */
+  const cSet = !p ? "civil"
+    : CEREMONY_OPTS[p.id] ? p.id
+    : p.faithGroup==="Christian" ? "church"
+    : ({Jewish:"jewish",Muslim:"muslim",Hindu:"hindu",Sikh:"sikh",None:"civil"}[p.faithGroup] || "civil");
   const n1 = a.n1||"you", n2 = a.n2||"your love";
   const steps = [
     {id:"names", t:"Introduce me to the happy couple", s:"The two names going on everything — the invitations, the monogram, my heart.", type:"names"},
